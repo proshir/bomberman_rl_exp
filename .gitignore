@@ -1,0 +1,29 @@
+# Code has its own Git repository.
+/src/
+
+# Local Python environment and agent tooling.
+/env/
+/.agents/
+/.codex/
+
+# Secrets and local configuration.
+.env
+.env.*
+matador.json
+
+# Python caches and generated logs.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.log
+
+# Large generated experiment artifacts; keep references in tracked notes.
+/experiments/**/checkpoints/
+/experiments/**/replays/
+*.pt
+*.pth
+*.ckpt
+
+# Keep report files out of the public repository.
+/report/
+/reports/
