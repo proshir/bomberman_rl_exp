@@ -1,0 +1,12 @@
+{
+    "agents": [
+        "coin_collector_agent"
+    ],
+    "scenario": "coin-heaven",
+    "seed": 11,
+    "agent_seed": 0,
+    "seat": 2,
+    "max_steps": 400,
+    "log_dir": "experiments/coin_supplied_pilot/games/0032",
+    "agent_log_dir": "experiments/coin_supplied_pilot/games/0032/agents"
+}

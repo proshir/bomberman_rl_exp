@@ -1,56 +1,119 @@
-# Shared project plan and experiment record
+# Implementation roadmap
 
-## How we work
+Build and preserve a diverse collection of learning agents, discover which ideas
+work best for Bomberman, and submit the strongest supported candidate. Develop at
+least **two genuinely different learning models**, including one based on lecture
+methods. The search is not limited to techniques suggested in the project brief.
+See [the project brief](final_project.md), especially sections 4, 7, and 9.
 
-You choose the direction; Codex explains options, recommends approaches, and helps implement the agreed step. This file records our next work and evidence for the report. Proposed experiments are not approved runs.
+## Goal and stages
 
-The [project brief](final_project.md), especially sections 4, 7, and 9, asks for manageable subgoals, meaningful comparisons, hyperparameter optimization, and explanations of improvements and failures. We must develop at least two learning models, with one based on lecture techniques. Keep detailed assignment requirements in the brief rather than repeating them here.
+The four tasks in the brief are progressive **benchmarks**, not limits on agent
+design. Search broadly across learning algorithms, representations/features,
+decision structures, rewards, and training methods. Possible families include
+compact value-based agents, function approximation, spatial neural models, and
+modular agents; none is selected yet.
 
-## What we will do together
+1. **Coin navigation:** build the shared experiment pipeline and supplied-agent
+   baselines, then cheaply screen several distinct agent ideas in `coin-heaven`.
+   Compare coins collected, steps, and learning behaviour.
+2. **Crates and survival:** extend promising and new branches with bomb, danger,
+   escape, and crate information. Compare representations, rewards, curricula, and
+   key hyperparameters; measure coins, crates, and self-deaths. Recheck Task 1.
+3. **Hunting:** evaluate against `peaceful_agent`, then `coin_collector_agent`.
+   Investigate opponent representation, attack, and risk; measure score, kills,
+   deaths, and survival.
+4. **Competition:** compare complete agents against `rule_based_agent` and fixed
+   supplied-opponent lineups. Investigate any motivated game-playing idea, including
+   planning and risk management; prioritize official score and track diagnostics.
+5. **Final comparison:** give promising agents comparable tuning budgets, select
+   on development data, evaluate frozen finalists on fresh games, and test the
+   winner under official constraints.
 
-1. Understand the game and establish a reproducible supplied-agent baseline.
-2. Choose and implement a first learning model, progressing through coins → crates and escape → peaceful opponents → competitive play.
-3. Use observed problems to propose and test improvements. Discuss the second model early enough to compare both properly.
-4. Compare the models, select a submission candidate, and check it in the original tournament framework.
-5. Build the report from saved experiments and our explanations as we work.
+For each idea: **hypothesis → cheap pilot → fair comparison → keep, revise, or
+reject**. Diagnose behaviour to generate further ideas; use focused changes and
+ablations to explain improvements. Preserve all implemented branches and results.
+A seed or hyperparameter change is a variant, while a substantive change to what
+or how the agent learns may define a different model.
 
-For each improvement: **question → options → your decision → implementation → experiment → interpretation → next decision**. Recheck earlier capabilities after major changes.
+**Accepted decision:** exclude self-play. Use the defined tasks and fixed supplied
+opponents so effort stays on finding and comparing diverse agent ideas.
 
-## Proposed experiment method — awaiting agreement
+The user approves model choices, experimental strategy, and substantial runs;
+Codex advises and implements approved work.
 
-Use small exploratory runs to debug and tune, then a separately planned comparison of selected versions. Before that comparison, fix the question, baseline, primary metric, meaningful improvement size, training budget, evaluation conditions, checkpoint-selection rule, and sample size. The research supports controlled comparisons and uncertainty estimates; the choices below adapt that guidance to our project. [Empirical Design in RL](https://jmlr.org/papers/volume25/23-0183/23-0183.pdf)
+## Statistical experiment rules
 
-- **Measure the right outcome.** For coin collection, propose coins collected within a fixed step budget, with completion rate/time as supporting measures. For competitive play, propose mean official score per game, with kills, coins, self-deaths, survival, and runtime as diagnostics. Report shaped training reward separately. Keep different scenarios/opponent lineups separate unless we agree on aggregation weights beforehand.
-- **Distinguish two questions.** Testing a fixed checkpoint asks how that player performs. Comparing learning methods also requires independent training runs. For example, 10 separately trained agents evaluated over 200 games each give 10 training replicates, not 2,000. Save both training-run and game identities.
-- **Make comparisons fair.** Evaluate frozen policies with recorded exploration behavior, comparable training interaction and tuning budgets, the same scenario/opponent schedule, and balanced starting positions. Record training steps as well as episodes and elapsed time. Change one component for a focused experiment; use a small combined comparison if two changes may interact.
-- **Control randomness and selection.** Separate training, development, and final evaluation seed schedules. Account for environment and agent/opponent randomness. Use matched evaluation conditions where feasible; identical seed numbers alone do not guarantee identical game trajectories. Select checkpoints on development results, then evaluate them on fresh final games.
-- **Report differences and uncertainty.** Propose the mean score difference with a 95% bootstrap confidence interval, preserving training runs as groups and any genuine pairing. Show individual run results too. For a fixed benchmark suite, a run-level interval describes training variability conditional on that suite; claims about new boards need uncertainty over sampled boards as well. Reused boards/seats must retain their grouping. Bootstrap intervals do not make a tiny sample reliable. [Reliable RL evaluation methods](https://github.com/google-research/rliable)
-- **Choose sample sizes after a pilot.** There is no guaranteed “five seeds is enough” rule. Use pilot variability, a practically meaningful effect, and compute cost to agree on the main sample size through power or precision analysis. Freeze the main budget before inspecting its result; do not keep adding runs until significance appears. If resources cannot resolve a small difference, report it as inconclusive. [How Many Random Seeds?](https://arxiv.org/html/1806.08295v2)
-- **Avoid selective conclusions.** Preserve unsuccessful runs and explain crashes. Do not report only the best seed, checkpoint, opponent, or metric. Confirm exploratory winners on fresh data; if testing many formal claims, agree on multiple-comparison handling. An interval containing zero does not establish equality.
+1. **Define the question first.** Fix the baseline, changed components, primary
+   metric, smallest meaningful effect, budgets, and stopping rule before the main
+   comparison. Use one-component changes for attribution or a planned interaction
+   experiment. Never add runs simply until a desired result appears.
+2. **Compare fairly.** Use comparable training and tuning budgets, the same
+   evaluation scenarios/opponents, balanced seats, and documented exploration.
+   Control environment and agent randomness; matching seeds alone does not ensure
+   matching trajectories.
+3. **Separate tuning from testing.** Use distinct training, development, and final
+   evaluation seeds. Confirm exploratory winners on fresh data. Report scenarios
+   separately unless aggregation weights were fixed in advance.
+4. **Repeat independently.** Learning-method comparisons need independent training
+   runs; many games from one checkpoint are not independent training replicates.
+   Use pilot variability and a precision/power target to choose runs and games.
+5. **Report uncertainty and failures.** Report effects, 95% confidence intervals
+   respecting training-run and game grouping, sample counts, and individual-run
+   results. Preserve failed runs; avoid best-seed reporting. Unresolved differences
+   are inconclusive. Plan multiple-comparison handling for multiple formal claims.
+6. **Measure real performance.** Use task outcomes as primary metrics: initially
+   coins within a fixed step budget; for competition, proposed mean official score.
+   Track kills, self-deaths, survival, and runtime as diagnostics; record shaped
+   reward separately. Generate figures from saved data.
 
-Exact models, metrics, run counts, and statistical implementation remain undecided. We will approve a concrete protocol for the first experiment after a small baseline/pilot.
+These are practical rules for meeting the brief's scientific-experiment requirement;
+exact models, budgets, and statistical procedures remain experiment-specific choices.
 
-## What we save for each main experiment
+## Keep every tested variant
 
-Raw configurations and outputs go in root-level `experiments/`; code stays in `src/`. Append a short entry here using this template:
+- `src/`: reusable experiment scripts and implementations of every developed model.
+- `experiments/`: unique variant/run IDs, configurations, code versions, commands,
+  dependencies, seeds, budgets, raw results, plots, and evaluated checkpoints or
+  durable checkpoint references. Never overwrite another variant's artifacts.
+- `codex/`: idea backlog, decisions, and experiment index. For each experiment:
+  **ID/status → hypothesis → parent variant and change → protocol/artifacts →
+  result with uncertainty → interpretation and next decision**.
 
-- **ID / date / status / contributors:**
-- **Question and reason:** What did previous evidence suggest?
-- **Agreed change and comparison:** What changed, and what stayed fixed?
-- **Reproduction:** Command, code version, configuration, dependencies, seeds, budgets, opponent setup, and checkpoint/run links.
-- **Results:** Primary outcome, uncertainty, sample counts, diagnostic metrics, and plot/raw-data links.
-- **Interpretation and next decision:** What is supported, what is uncertain, and what did we decide?
+Label proposals, approved work, exploratory observations, and confirmed results
+clearly. Preserve unsuccessful variants as well as finalists.
 
-Generate report figures from saved data. Record sources and assistance honestly. These entries support Methods, Training, and Experiments and Results; contributions and decisions also support Project planning. The team reviews and refines the report and keeps it out of the public code repository.
+## Where to start now
 
-## Done so far
+**Accepted implementation scope:** build the shared evaluation runner first,
+using supplied agents to establish reference performance before developing learners.
+The runner must also support `classic` with fixed opponent lineups.
 
-- Agreed the roles of `src/`, `experiments/`, `codex/`, and `env/`, and the user-led advisory workflow.
-- Agreed to keep two Git repositories: the project root for instructions, notes, and selected experiment files, and the existing `src/` repository for code. Root ignore rules exclude `src/` and `env/`; related changes need separate commits. Root initialization and the first commit are pending because `.git/` is read-only, including with elevated execution.
-- Created the condensed Markdown brief and repository instructions.
-- Reviewed the brief's experimental requirements and the research linked above; proposed the method in this file. It is not yet an accepted protocol.
-- Read-only framework inspection found existing `--save-stats` support. Its per-round output currently aggregates coins/kills/suicides across agents, so we must check what additional per-agent episode evidence is needed.
-- Found separate world and agent randomness: `src/environment.py` uses a seeded generator, while `src/agent_code/rule_based_agent/callbacks.py` calls `np.random.seed()` without a fixed seed and uses Python's random shuffle.
-- No custom learning agent, baseline experiment, or training result has been produced in our work so far.
+Implemented `src/run_benchmark.py`. Run it from the project root, for example:
 
-**Next decision:** agree on the scope of the baseline/pilot and its measurements before implementation.
+```bash
+env/bin/python src/run_benchmark.py --agents peaceful_agent coin_collector_agent --seeds 10 11 12 --output experiments/coin_pilot
+```
+
+The first named agent is the baseline. Add `--opponents rule_based_agent` and
+`--scenario classic` for later competitive evaluation. It records individual games,
+world and action seeds, four corner rotations, and
+per-agent outcomes in unique experiment directories. Supplied agents now accept
+controlled randomness during benchmarking. Ordinary game commands retain unseeded
+behaviour. Exploratory comparisons use paired differences from the first candidate
+and 95% bootstrap intervals over board means, grouping seats and action seeds together.
+This compares fixed policies; independent training replicates and their analysis
+remain necessary when comparing learning methods.
+
+No baseline performance comparison or custom learner has been produced yet.
+Small software checks are validation, not evidence that one agent is better.
+Validation: the benchmark smoke test and existing game smoke test pass in
+`src/test.py`. Run from `src/` using the project's Python interpreter and
+`-m unittest test`.
+
+**Proposed next step:** agree on and run a small supplied-agent pilot in
+`coin-heaven`, inspect behaviour and variability, then fix the main comparison
+budget and protocol. Next create the Task 1 agent-idea shortlist: learning method,
+representation, distinctive idea, hypothesis, and cheapest useful pilot. Choose
+a diverse initial group together and implement the approved candidates, retaining
+the remaining idea backlog.

@@ -1,0 +1,23 @@
+{
+    "seed": 16,
+    "agent_seed": 1,
+    "seat": 2,
+    "steps": 400,
+    "elapsed_seconds": 0.03425464100018871,
+    "agents": [
+        {
+            "name": "peaceful_agent",
+            "start": [
+                15,
+                1
+            ],
+            "score": 17,
+            "coins": 17,
+            "crates": 0,
+            "kills": 0,
+            "suicides": 0,
+            "steps": 400,
+            "dead": false
+        }
+    ]
+}

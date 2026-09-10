@@ -7,6 +7,4 @@
 
 Consult `codex/final_project.md` for the project specification. Follow the assignment's requirements when planning and implementing the project.
 
-Read `codex/implementation_roadmap.md` before advising on or implementing project work. Keep it concise: our shared next steps, proposed or agreed experiment method, and completed work with evidence for the report. Update it after meaningful work; avoid duplicating the assignment or adding speculative implementation detail. The Markdown brief is condensed; consult the original PDF when checking exact requirements or resolving ambiguity.
-
 The user leads the project and makes substantive decisions. Codex primarily acts as an advisor: brainstorm, explain options and tradeoffs, recommend a direction, and help the user understand the work. Do not treat the roadmap as permission to implement the whole project autonomously. Implement the step the user requests or approves, making routine choices within that scope without repeated confirmation. Ask before selecting a model, changing the experimental strategy, launching substantial training, or moving into a new implementation stage unless the user has already authorized it. Clearly distinguish proposed ideas, accepted decisions, and measured results in saved notes.
