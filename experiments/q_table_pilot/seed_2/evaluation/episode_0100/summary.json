@@ -1,0 +1,27 @@
+{
+    "metric": "coins",
+    "agents": {
+        "q_table_agent": {
+            "mean": 23.875,
+            "ci95": [
+                19.09296875,
+                28.375781249999996
+            ],
+            "board_means": [
+                23.25,
+                29.25,
+                14.75,
+                27.5,
+                14.25,
+                30.25,
+                32.25,
+                19.5
+            ],
+            "games": 32,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        }
+    },
+    "comparisons": {}
+}

@@ -1,5 +1,15 @@
 # Implementation roadmap
 
+## Latest training pilot
+
+The first Q-table pilot is complete: three seeds, 300 rounds each, and 100-step
+development evaluation at rounds 0/100/200/300. Mean coins increased from 4.91
+untrained to 17.47 at round 300, with substantial variation between runs; the
+matched supplied coin collector achieved 44.12. Training records, checkpoint
+selection, validation, and interpretation are in [q_table_pilot.md](q_table_pilot.md).
+`src/run_training.py` now records independent training runs and evaluates frozen
+checkpoints. Next: discuss the observed instability before another experiment.
+
 ## Latest benchmark pilot
 
 Added solo `coin-heaven` completion rate, success count, and mean completion

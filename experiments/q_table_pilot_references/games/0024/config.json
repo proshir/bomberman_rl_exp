@@ -1,0 +1,13 @@
+{
+    "model_path": null,
+    "agents": [
+        "random_agent"
+    ],
+    "scenario": "coin-heaven",
+    "seed": 10002,
+    "agent_seed": 0,
+    "seat": 0,
+    "max_steps": 100,
+    "log_dir": "experiments/q_table_pilot_references/games/0024",
+    "agent_log_dir": "experiments/q_table_pilot_references/games/0024/agents"
+}
