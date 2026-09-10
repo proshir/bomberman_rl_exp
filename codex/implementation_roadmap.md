@@ -105,15 +105,29 @@ and 95% bootstrap intervals over board means, grouping seats and action seeds to
 This compares fixed policies; independent training replicates and their analysis
 remain necessary when comparing learning methods.
 
-No baseline performance comparison or custom learner has been produced yet.
+An exploratory supplied-agent baseline is saved in
+`experiments/coin_supplied_pilot/`: eight board seeds, two action seeds, and four
+starting corners per agent. `coin_collector_agent` collected all 50 coins in all
+64 games (mean completion time 127.83 steps, range 113--143); `peaceful_agent`
+averaged 16.89 coins and `random_agent` 2.11. These are exploratory results, not a
+fresh-seed confirmation comparison. No custom learner has been produced yet.
 Small software checks are validation, not evidence that one agent is better.
 Validation: the benchmark smoke test and existing game smoke test pass in
-`src/test.py`. Run from `src/` using the project's Python interpreter and
-`-m unittest test`.
+`src/tests/test_framework.py`. Tests are kept locally in the Git-ignored
+`src/tests/` folder. Run from `src/` using the project's Python interpreter and
+`-m unittest discover -s tests`.
 
-**Proposed next step:** agree on and run a small supplied-agent pilot in
-`coin-heaven`, inspect behaviour and variability, then fix the main comparison
-budget and protocol. Next create the Task 1 agent-idea shortlist: learning method,
-representation, distinctive idea, hypothesis, and cheapest useful pilot. Choose
-a diverse initial group together and implement the approved candidates, retaining
-the remaining idea backlog.
+**Accepted Stage 1 direction:** cheaply implement and screen all candidate families,
+then give promising and inconclusive candidates fair confirmation budgets. The
+detailed candidate list, implementation order, metrics, and exit criteria are in
+[`stage1_coin_navigation_plan.md`](stage1_coin_navigation_plan.md).
+
+**Accepted first learner comparison:** implement plain tabular Q-learning, observe
+its learning and evaluation behaviour, then add symmetry canonicalization as one
+controlled change. This supplies a clear step-by-step experiment for the report and
+tests whether sharing equivalent states improves sample efficiency.
+
+**Next implementation step:** add completion rate and completion-step summaries to
+the benchmark, then measure supplied-agent performance at shorter fixed step budgets
+to choose the primary screening budget. Then implement the plain tabular Q-learning
+agent before its symmetry variant.
