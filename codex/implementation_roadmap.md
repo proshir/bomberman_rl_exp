@@ -1,5 +1,27 @@
 # Implementation roadmap
 
+## Latest benchmark pilot
+
+Added solo `coin-heaven` completion rate, success count, and mean completion
+steps (null when no game finishes). Fixed an unseeded Python random generator
+used by `coin_collector_agent`; the earlier pilot did not fully control its randomness.
+The initial `experiments/coin_supplied_{50,100,150,200}_steps/` runs are preserved
+for diagnosis. Use the corresponding `_steps_seeded/` runs for this comparison.
+
+Each corrected budget has 192 games: three agents, board seeds 10--17, action
+seeds 0--1, and four corners. Mean coins at 50/100/150/200 steps:
+`random_agent` 2.11/2.11/2.11/2.11; `peaceful_agent` 3.81/5.70/7.62/9.72;
+`coin_collector_agent` 23.64/43.08/50/50. Only the collector completed games:
+64/64 at both 150 and 200 steps, with mean completion time 127.17 steps.
+Its completed game records match across those two budgets.
+
+**Proposal, not yet selected:** use 100 steps for initial coin-count screening;
+the collector has not reached the ceiling, while weaker agents still collect coins.
+These are exploratory supplied-agent results, not learning-agent results.
+Temporary summary checks, the existing benchmark smoke test, and checks of all
+768 corrected game records passed. Shared training records remain the next
+implementation task after choosing the screening budget.
+
 Build and preserve a diverse collection of learning agents, discover which ideas
 work best for Bomberman, and submit the strongest supported candidate. Develop at
 least **two genuinely different learning models**, including one based on lecture

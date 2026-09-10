@@ -1,0 +1,12 @@
+{
+    "agents": [
+        "random_agent"
+    ],
+    "scenario": "coin-heaven",
+    "seed": 15,
+    "agent_seed": 1,
+    "seat": 2,
+    "max_steps": 50,
+    "log_dir": "experiments/coin_supplied_50_steps/games/0138",
+    "agent_log_dir": "experiments/coin_supplied_50_steps/games/0138/agents"
+}

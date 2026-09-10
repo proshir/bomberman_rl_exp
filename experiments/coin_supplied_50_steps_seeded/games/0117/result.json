@@ -1,0 +1,25 @@
+{
+    "seed": 14,
+    "agent_seed": 1,
+    "seat": 3,
+    "steps": 26,
+    "elapsed_seconds": 0.005351285999950051,
+    "agents": [
+        {
+            "name": "random_agent",
+            "start": [
+                15,
+                15
+            ],
+            "score": 4,
+            "coins": 4,
+            "crates": 0,
+            "kills": 0,
+            "suicides": 1,
+            "steps": 26,
+            "dead": true,
+            "completed": false,
+            "completion_steps": null
+        }
+    ]
+}

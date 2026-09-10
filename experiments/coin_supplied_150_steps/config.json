@@ -1,0 +1,35 @@
+{
+    "agents": [
+        "random_agent",
+        "peaceful_agent",
+        "coin_collector_agent"
+    ],
+    "opponents": [],
+    "scenario": "coin-heaven",
+    "seeds": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+    ],
+    "agent_seeds": [
+        0,
+        1
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "max_steps": 150,
+    "metric": null,
+    "output": "experiments/coin_supplied_150_steps",
+    "bootstrap_samples": 2000,
+    "analysis_seed": 0,
+    "worker": null
+}

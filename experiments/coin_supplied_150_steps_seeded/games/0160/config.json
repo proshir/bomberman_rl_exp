@@ -1,0 +1,12 @@
+{
+    "agents": [
+        "peaceful_agent"
+    ],
+    "scenario": "coin-heaven",
+    "seed": 16,
+    "agent_seed": 1,
+    "seat": 1,
+    "max_steps": 150,
+    "log_dir": "experiments/coin_supplied_150_steps_seeded/games/0160",
+    "agent_log_dir": "experiments/coin_supplied_150_steps_seeded/games/0160/agents"
+}

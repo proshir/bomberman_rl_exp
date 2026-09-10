@@ -1,0 +1,84 @@
+{
+    "metric": "coins",
+    "agents": {
+        "random_agent": {
+            "mean": 2.109375,
+            "ci95": [
+                1.90625,
+                2.28125
+            ],
+            "board_means": [
+                2.0,
+                1.5,
+                2.25,
+                2.25,
+                2.0,
+                2.375,
+                2.5,
+                2.0
+            ],
+            "games": 64,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        "peaceful_agent": {
+            "mean": 3.8125,
+            "ci95": [
+                3.328125,
+                4.25
+            ],
+            "board_means": [
+                2.625,
+                3.375,
+                4.375,
+                4.375,
+                3.0,
+                4.25,
+                4.625,
+                3.875
+            ],
+            "games": 64,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        "coin_collector_agent": {
+            "mean": 23.640625,
+            "ci95": [
+                23.15625,
+                24.15625
+            ],
+            "board_means": [
+                23.875,
+                24.0,
+                22.875,
+                25.125,
+                22.75,
+                23.375,
+                23.125,
+                24.0
+            ],
+            "games": 64,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        }
+    },
+    "comparisons": {
+        "peaceful_agent": {
+            "mean_difference": 1.703125,
+            "ci95": [
+                1.327734375,
+                2.03125
+            ]
+        },
+        "coin_collector_agent": {
+            "mean_difference": 21.53125,
+            "ci95": [
+                20.96875,
+                22.09375
+            ]
+        }
+    }
+}

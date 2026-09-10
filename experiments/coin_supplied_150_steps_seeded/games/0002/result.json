@@ -1,0 +1,25 @@
+{
+    "seed": 10,
+    "agent_seed": 0,
+    "seat": 0,
+    "steps": 117,
+    "elapsed_seconds": 0.07154987100011567,
+    "agents": [
+        {
+            "name": "coin_collector_agent",
+            "start": [
+                1,
+                1
+            ],
+            "score": 50,
+            "coins": 50,
+            "crates": 0,
+            "kills": 0,
+            "suicides": 0,
+            "steps": 117,
+            "dead": false,
+            "completed": true,
+            "completion_steps": 117
+        }
+    ]
+}

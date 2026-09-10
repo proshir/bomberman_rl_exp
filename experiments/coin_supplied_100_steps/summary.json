@@ -1,0 +1,84 @@
+{
+    "metric": "coins",
+    "agents": {
+        "random_agent": {
+            "mean": 2.109375,
+            "ci95": [
+                1.90625,
+                2.28125
+            ],
+            "board_means": [
+                2.0,
+                1.5,
+                2.25,
+                2.25,
+                2.0,
+                2.375,
+                2.5,
+                2.0
+            ],
+            "games": 64,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        "peaceful_agent": {
+            "mean": 5.703125,
+            "ci95": [
+                5.203125,
+                6.15625
+            ],
+            "board_means": [
+                4.625,
+                5.0,
+                6.625,
+                6.125,
+                4.875,
+                6.125,
+                6.375,
+                5.875
+            ],
+            "games": 64,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        "coin_collector_agent": {
+            "mean": 42.71875,
+            "ci95": [
+                41.65625,
+                43.734375
+            ],
+            "board_means": [
+                43.875,
+                43.75,
+                41.625,
+                41.5,
+                40.125,
+                43.0,
+                45.125,
+                42.75
+            ],
+            "games": 64,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        }
+    },
+    "comparisons": {
+        "peaceful_agent": {
+            "mean_difference": 3.59375,
+            "ci95": [
+                3.21875,
+                3.9375
+            ]
+        },
+        "coin_collector_agent": {
+            "mean_difference": 40.609375,
+            "ci95": [
+                39.546875,
+                41.609765624999994
+            ]
+        }
+    }
+}
