@@ -1,0 +1,36 @@
+[
+    {
+        "seed": 0,
+        "episode": 0,
+        "interactions": 0,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/linear_sarsa_smoke/seed_0/checkpoints/episode_0000.pkl",
+        "mean": 0.75,
+        "ci95": null,
+        "board_means": [
+            0.75
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 1.5,
+        "games": 4,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 0,
+        "episode": 2,
+        "interactions": 10,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/linear_sarsa_smoke/seed_0/checkpoints/episode_0002.pkl",
+        "mean": 0.5,
+        "ci95": null,
+        "board_means": [
+            0.5
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 0.75,
+        "games": 4,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    }
+]

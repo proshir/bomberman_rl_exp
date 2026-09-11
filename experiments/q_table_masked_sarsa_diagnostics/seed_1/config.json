@@ -1,0 +1,34 @@
+{
+    "agents": [
+        "q_table_masked_agent"
+    ],
+    "opponents": [],
+    "scenario": "coin-heaven",
+    "seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007
+    ],
+    "agent_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "max_steps": 100,
+    "metric": null,
+    "output": "experiments/q_table_masked_sarsa_diagnostics/seed_1",
+    "model_path": "/mnt/Program/projects/bomberman_rl/experiments/q_table_masked_pilot_confirm/seed_1/checkpoints/episode_0300.pkl",
+    "feature_mode": "distance",
+    "bootstrap_samples": 2000,
+    "analysis_seed": 0,
+    "worker": null
+}

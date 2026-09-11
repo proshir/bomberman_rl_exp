@@ -1,0 +1,73 @@
+{
+    "status": "exploratory development pilot",
+    "runs": {
+        "masked_q": [
+            {
+                "seed": 0,
+                "mean_coins": 21.875,
+                "mean_repeated_states": 51.4375,
+                "mean_invalid_actions": 0.0,
+                "interactions": 30000,
+                "training_seconds": 8.801859670985323
+            },
+            {
+                "seed": 1,
+                "mean_coins": 18.5625,
+                "mean_repeated_states": 60.625,
+                "mean_invalid_actions": 0.0,
+                "interactions": 30000,
+                "training_seconds": 7.243704879998404
+            },
+            {
+                "seed": 2,
+                "mean_coins": 19.5625,
+                "mean_repeated_states": 56.90625,
+                "mean_invalid_actions": 0.0,
+                "interactions": 30000,
+                "training_seconds": 6.851112588988144
+            }
+        ],
+        "linear_sarsa": [
+            {
+                "seed": 0,
+                "mean_coins": 4.6875,
+                "mean_repeated_states": 89.59375,
+                "mean_invalid_actions": 0.0,
+                "interactions": 30000,
+                "training_seconds": 8.297930215001315
+            },
+            {
+                "seed": 1,
+                "mean_coins": 26.375,
+                "mean_repeated_states": 42.6875,
+                "mean_invalid_actions": 0.0,
+                "interactions": 30000,
+                "training_seconds": 6.182127917999196
+            },
+            {
+                "seed": 2,
+                "mean_coins": 6.03125,
+                "mean_repeated_states": 85.46875,
+                "mean_invalid_actions": 0.0,
+                "interactions": 30000,
+                "training_seconds": 6.67934635599795
+            }
+        ]
+    },
+    "agents": {
+        "masked_q": {
+            "mean_coins": 20.0,
+            "mean_repeated_states": 56.322916666666664,
+            "mean_invalid_actions": 0.0,
+            "coins_sd_across_runs": 1.6990346523835234
+        },
+        "linear_sarsa": {
+            "mean_coins": 12.364583333333334,
+            "mean_repeated_states": 72.58333333333333,
+            "mean_invalid_actions": 0.0,
+            "coins_sd_across_runs": 12.151964754550326
+        }
+    },
+    "mean_coin_difference": -7.635416666666666,
+    "limitation": "Three training runs on reused development boards; descriptive results, not a confirmed ranking or an isolated algorithm-component effect."
+}

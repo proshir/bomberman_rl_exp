@@ -1,0 +1,106 @@
+[
+    {
+        "episode": 0,
+        "interactions": 0,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/linear_sarsa_pilot/seed_0/checkpoints/episode_0000.pkl",
+        "mean": 9.65625,
+        "ci95": [
+            9.0,
+            10.21875
+        ],
+        "board_means": [
+            10.5,
+            9.5,
+            9.5,
+            10.25,
+            10.5,
+            10.5,
+            8.25,
+            8.25
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 50.125,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "episode": 100,
+        "interactions": 10000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/linear_sarsa_pilot/seed_0/checkpoints/episode_0100.pkl",
+        "mean": 7.21875,
+        "ci95": [
+            5.34375,
+            9.40625
+        ],
+        "board_means": [
+            7.0,
+            5.75,
+            7.5,
+            4.5,
+            13.25,
+            3.0,
+            8.75,
+            8.0
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 84.1875,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "episode": 200,
+        "interactions": 20000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/linear_sarsa_pilot/seed_0/checkpoints/episode_0200.pkl",
+        "mean": 23.0,
+        "ci95": [
+            20.4984375,
+            25.5
+        ],
+        "board_means": [
+            26.25,
+            18.75,
+            19.0,
+            28.75,
+            19.5,
+            26.0,
+            21.25,
+            24.5
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 48.21875,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "episode": 300,
+        "interactions": 30000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/linear_sarsa_pilot/seed_0/checkpoints/episode_0300.pkl",
+        "mean": 4.6875,
+        "ci95": [
+            3.90625,
+            5.5625
+        ],
+        "board_means": [
+            4.0,
+            4.75,
+            2.75,
+            7.25,
+            5.25,
+            4.75,
+            3.75,
+            5.0
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 89.59375,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    }
+]

@@ -1,0 +1,14 @@
+{
+    "model_path": "/mnt/Program/projects/bomberman_rl/experiments/linear_sarsa_pilot/seed_0/checkpoints/episode_0000.pkl",
+    "feature_mode": "distance",
+    "agents": [
+        "linear_sarsa_agent"
+    ],
+    "scenario": "coin-heaven",
+    "seed": 10000,
+    "agent_seed": 0,
+    "seat": 1,
+    "max_steps": 100,
+    "log_dir": "/mnt/Program/projects/bomberman_rl/experiments/linear_sarsa_pilot/seed_0/evaluation/episode_0000/games/0001",
+    "agent_log_dir": "/mnt/Program/projects/bomberman_rl/experiments/linear_sarsa_pilot/seed_0/evaluation/episode_0000/games/0001/agents"
+}

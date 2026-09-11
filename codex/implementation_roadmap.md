@@ -1,5 +1,22 @@
 # Implementation roadmap
 
+## Current position: second learning model pilot completed
+
+Implemented a self-contained linear SARSA(lambda) agent with the masked
+Q-table's state information and legal moves. The approved matched three-seed,
+300-round pilot finished: final mean coins at 100 steps were 12.36 for SARSA
+versus 20.00 for masked Q-learning. SARSA run means were 4.69, 26.38, and 6.03;
+variation and repeated-state counts were substantially higher. This initial
+configuration did not improve the baseline. It is not a rejection of the whole
+model family or a fresh-seed confirmation result.
+
+Details, protocol, validation, and artifacts: [linear_sarsa_pilot.md](linear_sarsa_pilot.md).
+Recommendation: retain masked Q-learning as the working baseline and discuss
+a focused failure diagnosis before more tuning, features, or model families.
+Moving to bomb survival remains a separate stage decision. Earlier "next step"
+paragraphs below are historical; benchmark, Q-table, masking, and this SARSA
+pilot have been completed. Symmetry and fresh-seed confirmation remain pending.
+
 ## Feature representation pilot
 
 Tested four feature modes with the same Q-learning settings, three training

@@ -1,0 +1,2 @@
+{"episode": 1, "board_seed": 1000, "agent_seed": 0, "seat": 0, "steps": 5, "interactions": 5, "coins": 1, "score": 1, "reward": 0.95, "epsilon": 1.0, "training_seconds": 0.0019614029999956983, "weight_count": 130}
+{"episode": 2, "board_seed": 1001, "agent_seed": 0, "seat": 1, "steps": 5, "interactions": 10, "coins": 1, "score": 1, "reward": 0.95, "epsilon": 0.995, "training_seconds": 0.0033786500000587694, "weight_count": 130}

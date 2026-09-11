@@ -1,0 +1,50 @@
+{
+    "agent": "linear_sarsa_agent",
+    "feature_mode": "distance",
+    "seeds": [
+        0,
+        1,
+        2
+    ],
+    "rounds": 300,
+    "max_steps": 100,
+    "eval_every": 100,
+    "eval_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007
+    ],
+    "output": "/mnt/Program/projects/bomberman_rl/experiments/linear_sarsa_pilot/seed_1",
+    "worker": null,
+    "hyperparameters": {
+        "LEARNING_RATE": 0.1,
+        "DISCOUNT": 0.95,
+        "TRACE_DECAY": 0.8,
+        "EPSILON_START": 1.0,
+        "EPSILON_MIN": 0.05,
+        "EPSILON_DECAY": 0.995,
+        "COIN_REWARD": 1.0,
+        "STEP_COST": 0.01
+    },
+    "code_version": "3d8ee7937af229278633d61cf9ad9af2ec94c733",
+    "source_hashes": {
+        "run_training.py": "72af4890e90268142b2d50e87e37b085bed0e3fc11ef51acf119202a615d00df",
+        "run_benchmark.py": "78c60d9a97fd580c28e323e0d19dd51550a018ab14cf95d4cad39b115d2c4452",
+        "environment.py": "853d9376605cee66d25f27c65b0c1213766d77f71bf35d444b00db06c36ae4ff",
+        "agents.py": "81741eb8a52694e5c3234cd6891367562360e08bec42d9f12fa52cf8fa241c67",
+        "settings.py": "f0b97a16aae57bfc0131d76fca064749435e4d82c23fb967f7e09bd1ace9603a",
+        "events.py": "8d7633de52d7abdc021e1ccfbf759f3fbc71c84be96445665fcdd82910739ed5",
+        "agent_code/linear_sarsa_agent/callbacks.py": "a2281f0fcca591b9849c40388a4df1fed9246310163a1a2b3e4bf9d328318682",
+        "agent_code/linear_sarsa_agent/train.py": "ba103b7667974853af9232ff98c4c736838ec8d26c73d67ee1a311ac102bb434",
+        "agent_code/linear_sarsa_agent/features.py": "70b38c5ad6b71c5e9c749b3989eeb4b9972b09c4e17b2048ec040a3ba7da9898"
+    },
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "numpy": "2.5.3",
+    "seed": 1,
+    "board_start": 1300
+}
