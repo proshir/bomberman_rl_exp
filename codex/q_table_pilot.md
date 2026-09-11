@@ -103,3 +103,23 @@ a separate legal-action-mask variant for the wall-hitting failure. It would need
 consistent masking in exploration, greedy selection, and bootstrap targets.
 That change alone cannot eliminate cycles made entirely of legal movements;
 those need a separate investigation before choosing a representation change.
+
+## Feature variant prepared
+
+The existing `q_table_agent` now uses a richer state representation for the next
+pilot: absolute `(x, y)` position, four blocked-neighbour flags, nearest-coin
+direction signs, a maze-distance bucket (`0`, `1`, `2`, `3--4`, `5--7`, `8+`),
+and a remaining-coins bucket (`0`, `1--5`, `6--15`, `16--30`, `31+`). The
+Q-learning rule, rewards, hyperparameters, and experiment protocol are unchanged.
+The previous baseline results remain in `experiments/q_table_pilot/`.
+
+A two-round training/save/load/evaluation smoke test passed with the new state
+keys. No feature-variant learning result has been measured yet.
+
+The subsequent feature pilot tested `compact`, `position`, `distance`, and
+`rich` modes. `distance` was selected as the current default after the highest
+round-300 mean (18.18 coins), ahead of compact (17.47), while position (11.10)
+and rich (7.55) suffered from larger tables and sparse visits. The full table
+and seed results are recorded in the roadmap and preserved in
+`experiments/q_table_features_*`. The distance result is exploratory because
+one of its three seeds reached only 8.56 coins.

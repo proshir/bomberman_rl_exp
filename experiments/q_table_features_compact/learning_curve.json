@@ -1,0 +1,302 @@
+[
+    {
+        "seed": 0,
+        "episode": 0,
+        "interactions": 0,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_compact/seed_0/checkpoints/episode_0000.pkl",
+        "mean": 4.90625,
+        "ci95": [
+            4.5,
+            5.3125
+        ],
+        "board_means": [
+            4.5,
+            5.5,
+            4.75,
+            4.75,
+            5.75,
+            5.5,
+            4.5,
+            4.0
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 0,
+        "episode": 100,
+        "interactions": 10000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_compact/seed_0/checkpoints/episode_0100.pkl",
+        "mean": 17.28125,
+        "ci95": [
+            14.03125,
+            20.25
+        ],
+        "board_means": [
+            18.25,
+            17.75,
+            13.25,
+            21.0,
+            16.0,
+            8.25,
+            24.25,
+            19.5
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 0,
+        "episode": 200,
+        "interactions": 20000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_compact/seed_0/checkpoints/episode_0200.pkl",
+        "mean": 10.03125,
+        "ci95": [
+            7.06171875,
+            13.25
+        ],
+        "board_means": [
+            6.0,
+            6.25,
+            8.5,
+            18.0,
+            8.25,
+            7.75,
+            7.0,
+            18.5
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 0,
+        "episode": 300,
+        "interactions": 30000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_compact/seed_0/checkpoints/episode_0300.pkl",
+        "mean": 12.84375,
+        "ci95": [
+            11.6875,
+            14.0
+        ],
+        "board_means": [
+            11.5,
+            14.0,
+            14.5,
+            15.25,
+            12.5,
+            9.75,
+            11.5,
+            13.75
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 1,
+        "episode": 0,
+        "interactions": 0,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_compact/seed_1/checkpoints/episode_0000.pkl",
+        "mean": 4.90625,
+        "ci95": [
+            4.5,
+            5.3125
+        ],
+        "board_means": [
+            4.5,
+            5.5,
+            4.75,
+            4.75,
+            5.75,
+            5.5,
+            4.5,
+            4.0
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 1,
+        "episode": 100,
+        "interactions": 10000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_compact/seed_1/checkpoints/episode_0100.pkl",
+        "mean": 17.3125,
+        "ci95": [
+            13.71796875,
+            20.719531249999996
+        ],
+        "board_means": [
+            13.75,
+            25.75,
+            13.75,
+            21.25,
+            19.25,
+            7.5,
+            19.75,
+            17.5
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 1,
+        "episode": 200,
+        "interactions": 20000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_compact/seed_1/checkpoints/episode_0200.pkl",
+        "mean": 19.1875,
+        "ci95": [
+            14.68671875,
+            23.407031249999996
+        ],
+        "board_means": [
+            25.5,
+            25.75,
+            13.75,
+            25.25,
+            19.5,
+            7.5,
+            12.5,
+            23.75
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 1,
+        "episode": 300,
+        "interactions": 30000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_compact/seed_1/checkpoints/episode_0300.pkl",
+        "mean": 17.375,
+        "ci95": [
+            13.6875,
+            21.125781249999996
+        ],
+        "board_means": [
+            18.5,
+            21.25,
+            11.0,
+            25.25,
+            12.25,
+            11.0,
+            15.5,
+            24.25
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 2,
+        "episode": 0,
+        "interactions": 0,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_compact/seed_2/checkpoints/episode_0000.pkl",
+        "mean": 4.90625,
+        "ci95": [
+            4.5,
+            5.3125
+        ],
+        "board_means": [
+            4.5,
+            5.5,
+            4.75,
+            4.75,
+            5.75,
+            5.5,
+            4.5,
+            4.0
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 2,
+        "episode": 100,
+        "interactions": 10000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_compact/seed_2/checkpoints/episode_0100.pkl",
+        "mean": 23.875,
+        "ci95": [
+            19.09296875,
+            28.375781249999996
+        ],
+        "board_means": [
+            23.25,
+            29.25,
+            14.75,
+            27.5,
+            14.25,
+            30.25,
+            32.25,
+            19.5
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 2,
+        "episode": 200,
+        "interactions": 20000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_compact/seed_2/checkpoints/episode_0200.pkl",
+        "mean": 21.53125,
+        "ci95": [
+            16.78125,
+            25.93906249999999
+        ],
+        "board_means": [
+            24.0,
+            27.0,
+            10.5,
+            17.25,
+            14.25,
+            30.25,
+            29.5,
+            19.5
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 2,
+        "episode": 300,
+        "interactions": 30000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_compact/seed_2/checkpoints/episode_0300.pkl",
+        "mean": 22.1875,
+        "ci95": [
+            17.15625,
+            26.71875
+        ],
+        "board_means": [
+            24.0,
+            24.75,
+            10.5,
+            17.25,
+            13.5,
+            30.0,
+            30.25,
+            27.25
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    }
+]

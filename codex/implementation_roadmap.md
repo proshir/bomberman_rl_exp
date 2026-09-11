@@ -1,5 +1,33 @@
 # Implementation roadmap
 
+## Feature representation pilot
+
+Tested four feature modes with the same Q-learning settings, three training
+seeds, 300 rounds per seed, and 100-step evaluation at rounds 0, 100, 200, and
+300. The only changed component was `state_to_features`; all modes used the
+same board and evaluation seeds.
+
+| Feature mode | State contents | Round-300 mean coins | Final table sizes |
+|---|---|---:|---:|
+| `compact` | local walls, nearest-coin direction | 17.47 | 60, 60, 60 |
+| `position` | absolute position, local walls, direction | 11.10 | 1102, 1097, 1102 |
+| `distance` | local walls, direction, distance and remaining-coin buckets | **18.18** | 374, 389, 402 |
+| `rich` | absolute position plus all distance features | 7.55 | 2884, 2821, 2790 |
+
+The `distance` mode is the current feature choice because it had the highest
+pilot mean and added useful distance/progress information without the large
+table of the absolute-position modes. Its three final run means were 22.72,
+8.56, and 23.25, so the result is unstable and needs a fresh confirmation
+comparison. The `position` mode did not help despite distinguishing locations;
+the table became sparse. The `rich` mode was worse still. These are exploratory
+results, not evidence that distance features are universally best.
+
+The default `q_table_agent` mode is now `distance`. All four experiment
+directories are preserved under `experiments/q_table_features_*`; the original
+compact baseline remains available. Next decision: confirm `distance` against
+`compact` with a fixed independent-run budget, then investigate legal-action
+masking or symmetry as separate changes.
+
 ## Latest training pilot
 
 The first Q-table pilot is complete: three seeds, 300 rounds each, and 100-step
@@ -163,3 +191,41 @@ tests whether sharing equivalent states improves sample efficiency.
 the benchmark, then measure supplied-agent performance at shorter fixed step budgets
 to choose the primary screening budget. Then implement the plain tabular Q-learning
 agent before its symmetry variant.
+
+## Legal-action masking variant
+
+Created `src/agent_code/q_table_masked_agent/` as a separate learner. It keeps
+the selected distance features, rewards, Q-learning settings, training budget,
+and evaluation seeds from the `q_table_agent` pilot. Its only learning-policy
+change is to remove blocked movement actions during exploration, greedy choice,
+and next-state Q-value bootstrapping. The original `q_table_agent` remains the
+feature baseline.
+
+The matched three-seed pilot is in
+`experiments/q_table_masked_pilot_confirm/`. Mean coins within 100 steps:
+
+| Round | Distance features | Masked agent |
+|---|---:|---:|
+| 0 | 4.91 | 9.66 |
+| 100 | 13.71 | 13.17 |
+| 200 | 16.98 | 17.00 |
+| 300 | 18.18 | **20.00** |
+
+Final masked run means were 21.88, 18.56, and 19.56 coins. Its final Q-table
+sizes were 405, 383, and 422 states, close to the unmasked distance branch
+(374, 389, 402). Masking improved the final pilot mean by 1.82 coins without
+substantially increasing the table. The first masked evaluation also started
+higher because random tie-breaking could not choose blocked moves.
+
+The masked agent remains far below the supplied `coin_collector_agent` (43.08
+coins at 100 steps). This pilot supports masking as a useful improvement, not
+as a complete solution. The partial directory `experiments/q_table_masked_pilot/`
+was a failed launch with a feature-mode mismatch and is retained as a failed
+run; it is excluded from the comparison above. Current branches are
+`q_table_agent` as the feature baseline and `q_table_masked_agent` as the best
+pilot result. Further work should diagnose legal movement cycles and test the
+masked branch on fresh seeds before selecting a final learner.
+
+Direct replay of the final seed-0 masked checkpoint on its 32 development games
+recorded 21.875 mean coins and zero invalid actions. This verifies the mask is
+active in the policy; it does not explain the remaining legal movement cycles.

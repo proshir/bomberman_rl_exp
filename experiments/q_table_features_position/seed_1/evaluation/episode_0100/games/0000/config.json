@@ -1,0 +1,14 @@
+{
+    "model_path": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_position/seed_1/checkpoints/episode_0100.pkl",
+    "feature_mode": "position",
+    "agents": [
+        "q_table_agent"
+    ],
+    "scenario": "coin-heaven",
+    "seed": 10000,
+    "agent_seed": 0,
+    "seat": 0,
+    "max_steps": 100,
+    "log_dir": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_position/seed_1/evaluation/episode_0100/games/0000",
+    "agent_log_dir": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_position/seed_1/evaluation/episode_0100/games/0000/agents"
+}

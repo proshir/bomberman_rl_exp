@@ -1,0 +1,48 @@
+{
+    "agent": "q_table_agent",
+    "feature_mode": "rich",
+    "seeds": [
+        0,
+        1,
+        2
+    ],
+    "rounds": 300,
+    "max_steps": 100,
+    "eval_every": 100,
+    "eval_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007
+    ],
+    "output": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_rich/seed_0",
+    "worker": null,
+    "hyperparameters": {
+        "LEARNING_RATE": 0.1,
+        "DISCOUNT": 0.95,
+        "EPSILON_START": 1.0,
+        "EPSILON_MIN": 0.05,
+        "EPSILON_DECAY": 0.995,
+        "COIN_REWARD": 1.0,
+        "STEP_COST": 0.01
+    },
+    "code_version": "dadacf2adebeaeb56b7853ba4ff6423dcd6c99fe",
+    "source_hashes": {
+        "run_training.py": "bbce16703fbc79a14331b09fa4a264efc9b8478d2cd9a41f20b1df78efc4df72",
+        "run_benchmark.py": "7247c6cc0f3ec88d7dccdf1c12bcc13297e3cfd1b385336068eaf0743539cf28",
+        "environment.py": "853d9376605cee66d25f27c65b0c1213766d77f71bf35d444b00db06c36ae4ff",
+        "agents.py": "81741eb8a52694e5c3234cd6891367562360e08bec42d9f12fa52cf8fa241c67",
+        "settings.py": "f0b97a16aae57bfc0131d76fca064749435e4d82c23fb967f7e09bd1ace9603a",
+        "events.py": "8d7633de52d7abdc021e1ccfbf759f3fbc71c84be96445665fcdd82910739ed5",
+        "agent_code/q_table_agent/callbacks.py": "1a7ca9c1d0684f483881d78de82e9c400dbb2d4349784db58a5f9ca485eff104",
+        "agent_code/q_table_agent/train.py": "34e3cab1f1b3abe0745314231fbc410cd1df38269ea9debd6db78d14e3a2183d"
+    },
+    "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+    "numpy": "2.5.3",
+    "seed": 0,
+    "board_start": 1000
+}

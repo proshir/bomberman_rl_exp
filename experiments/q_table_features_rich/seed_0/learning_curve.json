@@ -1,0 +1,98 @@
+[
+    {
+        "episode": 0,
+        "interactions": 0,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_rich/seed_0/checkpoints/episode_0000.pkl",
+        "mean": 4.90625,
+        "ci95": [
+            4.5,
+            5.3125
+        ],
+        "board_means": [
+            4.5,
+            5.5,
+            4.75,
+            4.75,
+            5.75,
+            5.5,
+            4.5,
+            4.0
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "episode": 100,
+        "interactions": 10000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_rich/seed_0/checkpoints/episode_0100.pkl",
+        "mean": 4.96875,
+        "ci95": [
+            3.1875,
+            6.90625
+        ],
+        "board_means": [
+            2.5,
+            4.5,
+            3.0,
+            1.5,
+            5.5,
+            9.0,
+            4.5,
+            9.25
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "episode": 200,
+        "interactions": 20000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_rich/seed_0/checkpoints/episode_0200.pkl",
+        "mean": 5.71875,
+        "ci95": [
+            5.125,
+            6.3125
+        ],
+        "board_means": [
+            5.0,
+            5.5,
+            5.5,
+            7.25,
+            5.5,
+            6.25,
+            4.25,
+            6.5
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "episode": 300,
+        "interactions": 30000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_rich/seed_0/checkpoints/episode_0300.pkl",
+        "mean": 7.3125,
+        "ci95": [
+            5.625,
+            9.03125
+        ],
+        "board_means": [
+            10.5,
+            7.0,
+            5.0,
+            8.0,
+            10.75,
+            5.0,
+            3.5,
+            8.75
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    }
+]

@@ -1,0 +1,98 @@
+[
+    {
+        "episode": 0,
+        "interactions": 0,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_distance/seed_2/checkpoints/episode_0000.pkl",
+        "mean": 4.90625,
+        "ci95": [
+            4.5,
+            5.3125
+        ],
+        "board_means": [
+            4.5,
+            5.5,
+            4.75,
+            4.75,
+            5.75,
+            5.5,
+            4.5,
+            4.0
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "episode": 100,
+        "interactions": 10000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_distance/seed_2/checkpoints/episode_0100.pkl",
+        "mean": 12.8125,
+        "ci95": [
+            10.65625,
+            15.28125
+        ],
+        "board_means": [
+            10.0,
+            19.25,
+            8.75,
+            10.0,
+            12.25,
+            16.0,
+            15.25,
+            11.0
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "episode": 200,
+        "interactions": 20000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_distance/seed_2/checkpoints/episode_0200.pkl",
+        "mean": 22.6875,
+        "ci95": [
+            19.75,
+            25.938281249999996
+        ],
+        "board_means": [
+            17.25,
+            24.75,
+            23.5,
+            19.75,
+            19.0,
+            18.25,
+            31.0,
+            28.0
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "episode": 300,
+        "interactions": 30000,
+        "checkpoint": "/mnt/Program/projects/bomberman_rl/experiments/q_table_features_distance/seed_2/checkpoints/episode_0300.pkl",
+        "mean": 23.25,
+        "ci95": [
+            20.125,
+            26.375
+        ],
+        "board_means": [
+            15.75,
+            25.0,
+            23.75,
+            19.25,
+            18.5,
+            26.5,
+            26.5,
+            30.75
+        ],
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    }
+]
