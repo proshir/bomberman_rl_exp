@@ -1,5 +1,43 @@
 # Implementation roadmap
 
+## SARSA loop follow-up and test removal
+
+At the user's request, removed `src/test.py` and `src/test_loop_policy.py`;
+earlier mentions of passing tests below are historical. Temporary recovery
+copies are in `/tmp/bomberman-removed-tests-TiVPOB/`. No unittest files remain
+in `src/`; this follow-up was checked directly and through saved game results.
+
+Added the same frozen-policy loop intervention to linear SARSA. Across the
+same 96 development games, mean coins rose from 12.36 to 22.33. All three
+checkpoints improved, but their loop-variant means were 27.47, 31.28, and 8.25,
+so a weak run remains. Repeated states fell from 72.58 to 48.45, with 11.44
+interventions per game and zero invalid actions. Original weights and results
+were preserved; no retraining or fresh-seed confirmation was performed.
+
+Masked Q-learning with loop escape remains the strongest measured hybrid in
+this comparison (30.09 mean coins). Details and reproduction commands are in
+[loop_breaking_pilot.md](loop_breaking_pilot.md).
+
+## Latest result: frozen-policy loop intervention
+
+The user approved a cutoff audit and a loop-breaking comparison, without
+retraining. The three final masked-Q checkpoints improved from 20.00 to 30.09
+mean coins within 100 steps when a repeated-position detector occasionally
+substituted another legal movement. Each checkpoint improved; repeated states
+fell from 56.32 to 29.89 per game, with 6.17 interventions and zero invalid
+actions on average. This is a promising hybrid policy on reused development
+boards, not an improvement to the learned Q-tables or a confirmed final winner.
+
+The audit confirmed both learners treat the 100-step training boundary as
+terminal while omitting remaining time from their features. All 900 episodes
+of each learner ended at that boundary. Whether to use a time-aware finite
+horizon or treat 100 steps as truncation requires an explicit objective choice;
+no training changes have been made. The issue is not a demonstrated cause of
+the loops. Details and results: [loop_breaking_pilot.md](loop_breaking_pilot.md).
+
+Proposed next decisions: confirm the frozen loop variant on fresh boards and
+choose the intended training horizon before another learning experiment.
+
 ## Current position: second learning model pilot completed
 
 Implemented a self-contained linear SARSA(lambda) agent with the masked

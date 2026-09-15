@@ -1,0 +1,28 @@
+{
+    "seed": 10004,
+    "agent_seed": 0,
+    "seat": 1,
+    "steps": 100,
+    "elapsed_seconds": 0.015613001000019722,
+    "agents": [
+        {
+            "name": "linear_sarsa_loop_agent",
+            "start": [
+                1,
+                15
+            ],
+            "score": 18,
+            "coins": 18,
+            "crates": 0,
+            "kills": 0,
+            "suicides": 0,
+            "steps": 100,
+            "dead": false,
+            "invalid_actions": 0,
+            "repeated_states": 56,
+            "loop_interventions": 12,
+            "completed": false,
+            "completion_steps": null
+        }
+    ]
+}

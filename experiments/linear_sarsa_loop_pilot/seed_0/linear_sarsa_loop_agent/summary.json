@@ -1,0 +1,30 @@
+{
+    "metric": "coins",
+    "agents": {
+        "linear_sarsa_loop_agent": {
+            "mean": 27.46875,
+            "ci95": [
+                24.96875,
+                29.75
+            ],
+            "board_means": [
+                27.25,
+                22.75,
+                29.75,
+                30.5,
+                22.0,
+                26.25,
+                32.75,
+                28.5
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 40.375,
+            "mean_loop_interventions": 13.09375,
+            "games": 32,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        }
+    },
+    "comparisons": {}
+}

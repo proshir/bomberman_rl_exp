@@ -1,0 +1,183 @@
+{
+    "status": "exploratory frozen-policy comparison",
+    "runs": [
+        {
+            "training_seed": 0,
+            "agent": "q_table_masked_agent",
+            "mean": 21.875,
+            "ci95": [
+                18.5625,
+                24.875781249999996
+            ],
+            "board_means": [
+                25.5,
+                26.5,
+                25.5,
+                27.0,
+                20.0,
+                13.0,
+                19.25,
+                18.25
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 51.4375,
+            "games": 32,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        {
+            "training_seed": 0,
+            "agent": "q_table_loop_agent",
+            "mean": 29.46875,
+            "ci95": [
+                26.84375,
+                32.25
+            ],
+            "board_means": [
+                26.5,
+                33.5,
+                28.75,
+                27.0,
+                33.25,
+                27.0,
+                35.75,
+                24.0
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 31.5,
+            "mean_loop_interventions": 6.46875,
+            "games": 32,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        {
+            "training_seed": 1,
+            "agent": "q_table_masked_agent",
+            "mean": 18.5625,
+            "ci95": [
+                14.59375,
+                22.094531249999996
+            ],
+            "board_means": [
+                17.5,
+                20.25,
+                26.75,
+                23.0,
+                19.75,
+                6.0,
+                18.25,
+                17.0
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 60.625,
+            "games": 32,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        {
+            "training_seed": 1,
+            "agent": "q_table_loop_agent",
+            "mean": 30.9375,
+            "ci95": [
+                29.0625,
+                32.594531249999996
+            ],
+            "board_means": [
+                25.5,
+                32.25,
+                30.75,
+                33.5,
+                32.25,
+                27.75,
+                31.5,
+                34.0
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 27.0,
+            "mean_loop_interventions": 5.75,
+            "games": 32,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        {
+            "training_seed": 2,
+            "agent": "q_table_masked_agent",
+            "mean": 19.5625,
+            "ci95": [
+                14.90625,
+                25.03125
+            ],
+            "board_means": [
+                28.0,
+                34.5,
+                12.5,
+                20.25,
+                18.75,
+                9.5,
+                17.25,
+                15.75
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 56.90625,
+            "games": 32,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        {
+            "training_seed": 2,
+            "agent": "q_table_loop_agent",
+            "mean": 29.875,
+            "ci95": [
+                26.65546875,
+                32.625
+            ],
+            "board_means": [
+                27.75,
+                35.0,
+                28.0,
+                30.0,
+                34.75,
+                20.0,
+                32.0,
+                31.5
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 31.15625,
+            "mean_loop_interventions": 6.28125,
+            "games": 32,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        }
+    ],
+    "per_checkpoint_coin_differences": [
+        7.59375,
+        12.375,
+        10.3125
+    ],
+    "mean_coin_difference": 10.09375,
+    "board_paired_ci95_conditional_on_checkpoints": [
+        7.020833333333333,
+        13.072916666666668
+    ],
+    "limitation": "Reused development boards; interval conditions on these three fixed policies, not new training runs.",
+    "agents": {
+        "q_table_masked_agent": {
+            "mean": 20.0,
+            "mean_repeated_states": 56.322916666666664,
+            "mean_invalid_actions": 0.0,
+            "mean_loop_interventions": 0.0
+        },
+        "q_table_loop_agent": {
+            "mean": 30.09375,
+            "mean_repeated_states": 29.885416666666668,
+            "mean_invalid_actions": 0.0,
+            "mean_loop_interventions": 6.166666666666667
+        }
+    }
+}

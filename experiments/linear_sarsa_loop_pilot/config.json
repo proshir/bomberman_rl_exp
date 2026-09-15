@@ -1,0 +1,48 @@
+{
+    "baseline": "/mnt/Program/projects/bomberman_rl/experiments/linear_sarsa_pilot",
+    "training_seeds": [
+        0,
+        1,
+        2
+    ],
+    "board_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007
+    ],
+    "action_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "max_steps": 100,
+    "episode": 300,
+    "agents": [
+        "linear_sarsa_agent",
+        "linear_sarsa_loop_agent"
+    ],
+    "history_length": 8,
+    "repeat_threshold": 3,
+    "source_hashes": {
+        "/mnt/Program/projects/bomberman_rl/src/run_loop_comparison.py": "34216c1afcf35214435d94f90d9ce7e187d08c8118f03db64d52745ee4639314",
+        "/mnt/Program/projects/bomberman_rl/src/run_benchmark.py": "67082055adc96eae70c59ee85149d73174a70abf5efb1474e5e214fdbc40b213",
+        "/mnt/Program/projects/bomberman_rl/src/agent_code/linear_sarsa_agent/callbacks.py": "a2281f0fcca591b9849c40388a4df1fed9246310163a1a2b3e4bf9d328318682",
+        "/mnt/Program/projects/bomberman_rl/src/agent_code/linear_sarsa_loop_agent/callbacks.py": "ae1d003f892f0b65962b70fc7c5d3733b325ebdf1b8f605e2fb4bc4f8be29e04",
+        "/mnt/Program/projects/bomberman_rl/src/agent_code/linear_sarsa_agent/features.py": "70b38c5ad6b71c5e9c749b3989eeb4b9972b09c4e17b2048ec040a3ba7da9898",
+        "/mnt/Program/projects/bomberman_rl/src/agent_code/linear_sarsa_loop_agent/features.py": "70b38c5ad6b71c5e9c749b3989eeb4b9972b09c4e17b2048ec040a3ba7da9898"
+    },
+    "checkpoint_hashes": {
+        "0": "d1700bc622e2e85b530a97263ff7cb87ddf1eb044f79c49389efacd407df2778",
+        "1": "8c40129eeed83cb2e8b7d82b84ab8141c96b742791eb73cc5e26839511e2161b",
+        "2": "a4d0534d6f09842c18bdd82c73cf41bc7d4fe0cff7be3dc59c29f814c56986f3"
+    }
+}

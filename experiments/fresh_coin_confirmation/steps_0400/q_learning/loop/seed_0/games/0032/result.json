@@ -1,0 +1,28 @@
+{
+    "seed": 20008,
+    "agent_seed": 0,
+    "seat": 0,
+    "steps": 400,
+    "elapsed_seconds": 0.06265649799979656,
+    "agents": [
+        {
+            "name": "q_table_loop_agent",
+            "start": [
+                1,
+                1
+            ],
+            "score": 45,
+            "coins": 45,
+            "crates": 0,
+            "kills": 0,
+            "suicides": 0,
+            "steps": 400,
+            "dead": false,
+            "invalid_actions": 0,
+            "repeated_states": 221,
+            "loop_interventions": 55,
+            "completed": false,
+            "completion_steps": null
+        }
+    ]
+}

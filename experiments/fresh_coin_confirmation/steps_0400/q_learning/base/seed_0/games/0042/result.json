@@ -1,0 +1,27 @@
+{
+    "seed": 20010,
+    "agent_seed": 0,
+    "seat": 2,
+    "steps": 400,
+    "elapsed_seconds": 0.05725155000027371,
+    "agents": [
+        {
+            "name": "q_table_masked_agent",
+            "start": [
+                15,
+                1
+            ],
+            "score": 17,
+            "coins": 17,
+            "crates": 0,
+            "kills": 0,
+            "suicides": 0,
+            "steps": 400,
+            "dead": false,
+            "invalid_actions": 0,
+            "repeated_states": 363,
+            "completed": false,
+            "completion_steps": null
+        }
+    ]
+}

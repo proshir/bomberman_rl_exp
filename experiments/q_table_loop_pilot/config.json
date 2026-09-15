@@ -1,0 +1,42 @@
+{
+    "baseline": "/mnt/Program/projects/bomberman_rl/experiments/q_table_masked_pilot_confirm",
+    "training_seeds": [
+        0,
+        1,
+        2
+    ],
+    "board_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007
+    ],
+    "action_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "max_steps": 100,
+    "episode": 300,
+    "history_length": 8,
+    "repeat_threshold": 3,
+    "source_hashes": {
+        "/mnt/Program/projects/bomberman_rl/src/run_loop_comparison.py": "2015fd08113c07c4152270eaf687cd112c653af7dc2974d0c70edf99150a929f",
+        "/mnt/Program/projects/bomberman_rl/src/run_benchmark.py": "67082055adc96eae70c59ee85149d73174a70abf5efb1474e5e214fdbc40b213",
+        "/mnt/Program/projects/bomberman_rl/src/agent_code/q_table_masked_agent/callbacks.py": "53899a394507f4cb6ab22314620b3ec23c32dbdde822517001a621d588c57100",
+        "/mnt/Program/projects/bomberman_rl/src/agent_code/q_table_loop_agent/callbacks.py": "6d5c4965e9951cd84c554cfc2405a376e072ed2fb7785d81eb099502dd2bf404"
+    },
+    "checkpoint_hashes": {
+        "0": "f9554c48e7c1fc9fd5ef34d78e2698a847153de6653e9f232791a50406bd5728",
+        "1": "35307aa35d0c1986539f001ad98cce474edd3b860ac2cdb34f3b000aa376ea4b",
+        "2": "27b0f9a7080b627ae1f391c758baec89bad0534c2950f7453ff2a8b13720ed9a"
+    }
+}

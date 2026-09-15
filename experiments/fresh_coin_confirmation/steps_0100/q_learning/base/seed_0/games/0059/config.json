@@ -1,0 +1,14 @@
+{
+    "model_path": "/mnt/Program/projects/bomberman_rl/experiments/q_table_masked_pilot_confirm/seed_0/checkpoints/episode_0300.pkl",
+    "feature_mode": "distance",
+    "agents": [
+        "q_table_masked_agent"
+    ],
+    "scenario": "coin-heaven",
+    "seed": 20014,
+    "agent_seed": 0,
+    "seat": 3,
+    "max_steps": 100,
+    "log_dir": "experiments/fresh_coin_confirmation/steps_0100/q_learning/base/seed_0/games/0059",
+    "agent_log_dir": "experiments/fresh_coin_confirmation/steps_0100/q_learning/base/seed_0/games/0059/agents"
+}

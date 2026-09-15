@@ -1,0 +1,47 @@
+{
+    "status": "fresh-board frozen-policy confirmation",
+    "board_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009,
+        20010,
+        20011,
+        20012,
+        20013,
+        20014,
+        20015
+    ],
+    "action_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "step_budgets": [
+        100,
+        400
+    ],
+    "checkpoint_episode": 300,
+    "source_hashes": {
+        "/mnt/Program/projects/bomberman_rl/src/run_fresh_coin_confirmation.py": "d540011752a3cb537b1c170c8dc52c0cc2eabfecd4874a84a3f46fcba8b5eae2",
+        "/mnt/Program/projects/bomberman_rl/src/run_benchmark.py": "67082055adc96eae70c59ee85149d73174a70abf5efb1474e5e214fdbc40b213",
+        "/mnt/Program/projects/bomberman_rl/src/agent_code/q_table_masked_agent/callbacks.py": "53899a394507f4cb6ab22314620b3ec23c32dbdde822517001a621d588c57100",
+        "/mnt/Program/projects/bomberman_rl/src/agent_code/q_table_loop_agent/callbacks.py": "6d5c4965e9951cd84c554cfc2405a376e072ed2fb7785d81eb099502dd2bf404",
+        "/mnt/Program/projects/bomberman_rl/src/agent_code/linear_sarsa_agent/callbacks.py": "a2281f0fcca591b9849c40388a4df1fed9246310163a1a2b3e4bf9d328318682",
+        "/mnt/Program/projects/bomberman_rl/src/agent_code/linear_sarsa_loop_agent/callbacks.py": "ae1d003f892f0b65962b70fc7c5d3733b325ebdf1b8f605e2fb4bc4f8be29e04",
+        "/mnt/Program/projects/bomberman_rl/src/agent_code/linear_sarsa_agent/features.py": "70b38c5ad6b71c5e9c749b3989eeb4b9972b09c4e17b2048ec040a3ba7da9898",
+        "/mnt/Program/projects/bomberman_rl/src/agent_code/linear_sarsa_loop_agent/features.py": "70b38c5ad6b71c5e9c749b3989eeb4b9972b09c4e17b2048ec040a3ba7da9898",
+        "/mnt/Program/projects/bomberman_rl/src/agent_code/coin_collector_agent/callbacks.py": "163274894ef8618df42af93069e9dbc293e6b2c69328ac6e2e45eef4600b5bd4"
+    },
+    "note": "All learner checkpoints are frozen. The supplied collector is a non-learning reference. Loop variants add evaluation-time history and random escape actions."
+}
