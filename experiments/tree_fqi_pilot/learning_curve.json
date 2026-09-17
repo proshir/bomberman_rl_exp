@@ -1,0 +1,326 @@
+[
+    {
+        "seed": 0,
+        "episode": 0,
+        "interactions": 0,
+        "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_pilot/seed_0/checkpoints/episode_0000.pkl",
+        "mean": 9.65625,
+        "ci95": [
+            9.0,
+            10.21875
+        ],
+        "board_means": [
+            10.5,
+            9.5,
+            9.5,
+            10.25,
+            10.5,
+            10.5,
+            8.25,
+            8.25
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 50.125,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 0,
+        "episode": 100,
+        "interactions": 10000,
+        "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_pilot/seed_0/checkpoints/episode_0100.pkl",
+        "mean": 17.90625,
+        "ci95": [
+            15.3125,
+            20.063281249999996
+        ],
+        "board_means": [
+            20.0,
+            12.0,
+            19.25,
+            21.25,
+            14.25,
+            14.5,
+            22.0,
+            20.0
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 62.8125,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 0,
+        "episode": 200,
+        "interactions": 20000,
+        "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_pilot/seed_0/checkpoints/episode_0200.pkl",
+        "mean": 22.59375,
+        "ci95": [
+            20.0625,
+            24.625
+        ],
+        "board_means": [
+            14.75,
+            22.25,
+            21.25,
+            25.25,
+            22.0,
+            24.75,
+            25.25,
+            25.25
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 51.65625,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 0,
+        "episode": 300,
+        "interactions": 30000,
+        "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_pilot/seed_0/checkpoints/episode_0300.pkl",
+        "mean": 22.71875,
+        "ci95": [
+            18.65625,
+            26.625
+        ],
+        "board_means": [
+            29.5,
+            25.5,
+            20.25,
+            21.75,
+            12.75,
+            16.75,
+            31.25,
+            24.0
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 51.90625,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 1,
+        "episode": 0,
+        "interactions": 0,
+        "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_pilot/seed_1/checkpoints/episode_0000.pkl",
+        "mean": 9.65625,
+        "ci95": [
+            9.0,
+            10.21875
+        ],
+        "board_means": [
+            10.5,
+            9.5,
+            9.5,
+            10.25,
+            10.5,
+            10.5,
+            8.25,
+            8.25
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 50.125,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 1,
+        "episode": 100,
+        "interactions": 10000,
+        "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_pilot/seed_1/checkpoints/episode_0100.pkl",
+        "mean": 13.5,
+        "ci95": [
+            10.28046875,
+            16.75
+        ],
+        "board_means": [
+            17.5,
+            15.25,
+            15.75,
+            12.0,
+            6.25,
+            8.75,
+            22.0,
+            10.5
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 71.5625,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 1,
+        "episode": 200,
+        "interactions": 20000,
+        "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_pilot/seed_1/checkpoints/episode_0200.pkl",
+        "mean": 20.40625,
+        "ci95": [
+            18.5,
+            22.157031249999996
+        ],
+        "board_means": [
+            19.75,
+            16.25,
+            19.0,
+            24.25,
+            21.0,
+            21.5,
+            17.5,
+            24.0
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 56.4375,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 1,
+        "episode": 300,
+        "interactions": 30000,
+        "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_pilot/seed_1/checkpoints/episode_0300.pkl",
+        "mean": 22.34375,
+        "ci95": [
+            18.75,
+            25.875
+        ],
+        "board_means": [
+            20.25,
+            19.0,
+            22.0,
+            29.75,
+            14.0,
+            22.25,
+            20.75,
+            30.75
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 53.625,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 2,
+        "episode": 0,
+        "interactions": 0,
+        "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_pilot/seed_2/checkpoints/episode_0000.pkl",
+        "mean": 9.65625,
+        "ci95": [
+            9.0,
+            10.21875
+        ],
+        "board_means": [
+            10.5,
+            9.5,
+            9.5,
+            10.25,
+            10.5,
+            10.5,
+            8.25,
+            8.25
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 50.125,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 2,
+        "episode": 100,
+        "interactions": 10000,
+        "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_pilot/seed_2/checkpoints/episode_0100.pkl",
+        "mean": 15.90625,
+        "ci95": [
+            12.40625,
+            19.21875
+        ],
+        "board_means": [
+            10.5,
+            18.5,
+            6.75,
+            16.0,
+            20.5,
+            19.25,
+            22.5,
+            13.25
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 66.40625,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 2,
+        "episode": 200,
+        "interactions": 20000,
+        "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_pilot/seed_2/checkpoints/episode_0200.pkl",
+        "mean": 21.40625,
+        "ci95": [
+            18.09375,
+            24.594531249999996
+        ],
+        "board_means": [
+            20.0,
+            29.0,
+            20.5,
+            17.0,
+            20.75,
+            13.5,
+            25.0,
+            25.5
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 53.5,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 2,
+        "episode": 300,
+        "interactions": 30000,
+        "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_pilot/seed_2/checkpoints/episode_0300.pkl",
+        "mean": 25.5,
+        "ci95": [
+            22.5,
+            28.5625
+        ],
+        "board_means": [
+            20.75,
+            27.75,
+            24.75,
+            21.5,
+            19.0,
+            32.5,
+            29.75,
+            28.0
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 46.4375,
+        "games": 32,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    }
+]

@@ -1,0 +1,27 @@
+{
+    "seed": 10004,
+    "agent_seed": 0,
+    "seat": 0,
+    "steps": 100,
+    "elapsed_seconds": 0.07931437100023686,
+    "agents": [
+        {
+            "name": "tree_fqi_agent",
+            "start": [
+                1,
+                1
+            ],
+            "score": 11,
+            "coins": 11,
+            "crates": 0,
+            "kills": 0,
+            "suicides": 0,
+            "steps": 100,
+            "dead": false,
+            "invalid_actions": 0,
+            "repeated_states": 78,
+            "completed": false,
+            "completion_steps": null
+        }
+    ]
+}

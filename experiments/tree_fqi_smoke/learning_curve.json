@@ -1,0 +1,36 @@
+[
+    {
+        "seed": 0,
+        "episode": 0,
+        "interactions": 0,
+        "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_smoke/seed_0/checkpoints/episode_0000.pkl",
+        "mean": 2.25,
+        "ci95": null,
+        "board_means": [
+            2.25
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 2.0,
+        "games": 4,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "seed": 0,
+        "episode": 2,
+        "interactions": 20,
+        "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_smoke/seed_0/checkpoints/episode_0002.pkl",
+        "mean": 2.0,
+        "ci95": null,
+        "board_means": [
+            2.0
+        ],
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 3.5,
+        "games": 4,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    }
+]

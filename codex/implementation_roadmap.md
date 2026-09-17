@@ -1,5 +1,17 @@
 # Implementation roadmap
 
+## Tree-based fitted Q implementation
+
+The user approved implementing tree-based fitted Q iteration in a simple style.
+Added `tree_fqi_agent` with one regression tree per action, existing distance
+features and legal-action masking, and round-end batch fitting. A two-round
+smoke run and direct numerical checks passed. The approved three-seed, 300-round
+pilot then reached a final mean of 23.52 coins within 100 steps, versus 20.00
+for the masked-Q pilot on the same reused development schedule. This is promising
+exploratory evidence, not fresh-board confirmation or a final selection. Horizon
+remains to be agreed before another training variant. See
+[tree_fqi_agent.md](tree_fqi_agent.md).
+
 ## SARSA loop follow-up and test removal
 
 At the user's request, removed `src/test.py` and `src/test_loop_policy.py`;

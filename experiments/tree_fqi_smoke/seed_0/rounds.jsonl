@@ -1,0 +1,2 @@
+{"episode": 1, "board_seed": 1000, "agent_seed": 0, "seat": 0, "steps": 10, "interactions": 10, "coins": 1, "score": 1, "reward": 0.8999999999999999, "epsilon": 1.0, "training_seconds": 0.04187413700037723, "tree_nodes": 5, "buffer_size": 10}
+{"episode": 2, "board_seed": 1001, "agent_seed": 0, "seat": 1, "steps": 10, "interactions": 20, "coins": 2, "score": 2, "reward": 1.9, "epsilon": 0.995, "training_seconds": 0.06495293300031335, "tree_nodes": 5, "buffer_size": 20}
