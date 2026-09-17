@@ -207,7 +207,7 @@ The runner must also support `classic` with fixed opponent lineups.
 Implemented `src/run_benchmark.py`. Run it from the project root, for example:
 
 ```bash
-env/bin/python src/run_benchmark.py --agents peaceful_agent coin_collector_agent --seeds 10 11 12 --output experiments/coin_pilot
+python src/run_benchmark.py --agents peaceful_agent coin_collector_agent --seeds 10 11 12 --output experiments/coin_pilot
 ```
 
 The first named agent is the baseline. Add `--opponents rule_based_agent` and

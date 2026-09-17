@@ -3,7 +3,6 @@
 - `src/` contains the Bomberman reinforcement learning project. Keep project code and implementation changes there.
 - `experiments/` contains experiment configurations and outputs, such as metrics, plots, and checkpoint references. Keep experiment scripts in `src/`.
 - `codex/` contains project briefs and durable working notes for Codex, such as plans, decisions, experiment insights, and progress worth retaining for future sessions. When asked to save a plan or explanation for future use, write it here in a clearly named Markdown file. Check relevant existing notes before continuing earlier work, and update them when decisions change.
-- `env/` is the project's Python environment. Use its Python interpreter (`env/bin/python`) for project commands; do not store project code or notes in it.
 
 Consult `codex/final_project.md` for the project specification. Follow the assignment's requirements when planning and implementing the project.
 

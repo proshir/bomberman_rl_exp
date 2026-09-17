@@ -9,7 +9,7 @@ evaluation, not a final model comparison or hyperparameter search.
 Run from the project root:
 
 ```bash
-env/bin/python src/run_training.py --seeds 0 1 2 --rounds 300 --max-steps 100 --eval-every 100 --eval-seeds 10000 10001 10002 10003 10004 10005 10006 10007 --output experiments/q_table_pilot
+python src/run_training.py --seeds 0 1 2 --rounds 300 --max-steps 100 --eval-every 100 --eval-seeds 10000 10001 10002 10003 10004 10005 10006 10007 --output experiments/q_table_pilot
 ```
 
 Three independent training runs use 300 rounds each, with board seeds

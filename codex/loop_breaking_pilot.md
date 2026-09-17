@@ -52,7 +52,7 @@ The shared comparison runner now accepts `--loop-agent` and derives the original
 agent name from the saved pilot configuration. Reproduce with a fresh output:
 
 ```bash
-env/bin/python src/run_loop_comparison.py --baseline experiments/linear_sarsa_pilot --loop-agent linear_sarsa_loop_agent --output experiments/linear_sarsa_loop_pilot
+python src/run_loop_comparison.py --baseline experiments/linear_sarsa_pilot --loop-agent linear_sarsa_loop_agent --output experiments/linear_sarsa_loop_pilot
 ```
 
 ## Approved scope
@@ -185,7 +185,7 @@ the final source files match the recorded protocol hashes.
 From the project root:
 
 ```bash
-env/bin/python src/run_loop_comparison.py --output experiments/q_table_loop_pilot
+python src/run_loop_comparison.py --output experiments/q_table_loop_pilot
 ```
 
 Use a new output directory when reproducing. The runner records the protocol

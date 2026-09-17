@@ -96,11 +96,11 @@ actions and solo coin-navigation repeated states. Existing metrics are retained.
 Run the pilot from the project root:
 
 ```bash
-env/bin/python src/run_training.py --agent linear_sarsa_agent --seeds 0 1 2 --rounds 300 --max-steps 100 --eval-every 100 --eval-seeds 10000 10001 10002 10003 10004 10005 10006 10007 --output experiments/linear_sarsa_pilot
+python src/run_training.py --agent linear_sarsa_agent --seeds 0 1 2 --rounds 300 --max-steps 100 --eval-every 100 --eval-seeds 10000 10001 10002 10003 10004 10005 10006 10007 --output experiments/linear_sarsa_pilot
 ```
 
 Use a new output directory when reproducing. After the baseline diagnostic
-replays, `env/bin/python src/compare_sarsa_pilot.py` validates matched protocols,
+replays, `python src/compare_sarsa_pilot.py` validates matched protocols,
 rewards, finite checkpoints, and replay coin counts. It writes per-run results,
 descriptive variability, and all learning curves to
 `experiments/linear_sarsa_comparison/summary.json` and `learning_curves.csv`.
