@@ -138,3 +138,37 @@ matched all scores, starts, seeds, action-derived diagnostics, and completion
 records exactly between batched and original execution; only wall-clock timing
 differs. The old interrupted unbatched attempt remains in
 `experiments/tree_fqi_fresh_confirmation/` and is not used in the result.
+
+## Fresh-board loop-wrapper comparison
+
+The user approved testing the same frozen-policy loop escape used for masked
+Q-learning and SARSA on tree FQI. `tree_fqi_loop_agent` copies the base policy's
+features, legal mask, greedy tie-breaking, and frozen trees. It maintains the
+last eight positions since coin progress; when the present position has occurred
+three times, it selects a uniformly random alternative legal movement. It does
+not select WAIT, clears history after intervening, and uses a separate seeded
+random generator so its draws do not change the learned policy's tie-breaking.
+No model was retrained or modified.
+
+The matched comparison used 16 further fresh boards (20032--20047), action seed
+0, and all four corners: 768 games across three frozen checkpoints, two policy
+variants, and 100- and 400-step budgets. Results are in
+`experiments/tree_fqi_loop_fresh_confirmation/`.
+
+| Budget | Original tree FQI | Loop wrapper | Difference |
+|---|---:|---:|---:|
+| 100 steps | 24.34 | **31.79** | +7.45 |
+| 400 steps | 24.35 | **35.65** | +11.30 |
+
+All three checkpoints improved: their 100-step gains were 11.00, 6.48, and
+4.88 coins. The paired board-bootstrap 95% interval for the 100-step gain is
+[6.02, 9.10], conditional on these checkpoints; at 400 steps it is
+[9.58, 13.10]. The wrapper made 5.68 interventions per 100-step game and
+56.08 per 400-step game. Repeated states fell from 47.33 to 26.93 at 100 steps
+and from 347.21 to 298.74 at 400. Both variants had zero invalid actions.
+
+The loop wrapper completed 13 of 192 games at 400 steps; neither variant
+completed any game by 100 steps. It is the strongest measured coin-navigation
+policy so far, but it is a hybrid evaluation policy with history and random
+actions. It does not demonstrate that the fitted trees learned to avoid loops,
+and fresh boards do not supply uncertainty over new training runs.

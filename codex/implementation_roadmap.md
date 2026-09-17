@@ -12,8 +12,10 @@ exploratory evidence. Fresh-board frozen-policy evaluation then reached 26.33
 for tree FQI versus 22.18 for masked Q-learning at 100 steps (16 new boards,
 three fixed checkpoints per method); this supports tree FQI as the current
 stronger Stage 1 candidate, with the fixed-checkpoint and small-run limitations.
-The 400-step result showed that neither policy completes collection because of
-continued movement cycles. Horizon remains to be agreed before another training
+On another fresh 16-board set, the tree-FQI loop wrapper increased 100-step
+collection from 24.34 to 31.79 and 400-step collection from 24.35 to 35.65.
+It completed 13 of 192 400-step games, but is a history-based hybrid policy,
+not improved learning. Horizon remains to be agreed before another training
 variant. See
 [tree_fqi_agent.md](tree_fqi_agent.md).
 

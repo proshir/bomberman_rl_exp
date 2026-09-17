@@ -1,0 +1,14 @@
+{
+    "model_path": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_pilot/seed_2/checkpoints/episode_0300.pkl",
+    "feature_mode": "distance",
+    "agents": [
+        "tree_fqi_loop_agent"
+    ],
+    "scenario": "coin-heaven",
+    "seed": 20045,
+    "agent_seed": 0,
+    "seat": 2,
+    "max_steps": 400,
+    "log_dir": "experiments/tree_fqi_loop_fresh_confirmation/steps_0400/loop/seed_2/games/0054",
+    "agent_log_dir": "experiments/tree_fqi_loop_fresh_confirmation/steps_0400/loop/seed_2/games/0054/agents"
+}

@@ -1,0 +1,46 @@
+{
+    "status": "fresh-board frozen-policy loop comparison",
+    "board_seeds": [
+        20032,
+        20033,
+        20034,
+        20035,
+        20036,
+        20037,
+        20038,
+        20039,
+        20040,
+        20041,
+        20042,
+        20043,
+        20044,
+        20045,
+        20046,
+        20047
+    ],
+    "action_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "step_budgets": [
+        100,
+        400
+    ],
+    "checkpoint_episode": 300,
+    "history_length": 8,
+    "repeat_threshold": 3,
+    "source_hashes": {
+        "/teamspace/studios/this_studio/bomberman_rl/src/run_tree_fqi_loop_confirmation.py": "eaff8b65bf1c980ca1326814bc4b0d596bfc324ec1137555eb761e5fd5a74fa2",
+        "/teamspace/studios/this_studio/bomberman_rl/src/run_benchmark.py": "367808e0ee18e20b3fb15de5fc2b916268daabeeeac9e9b798410abc1392b264",
+        "/teamspace/studios/this_studio/bomberman_rl/src/agent_code/tree_fqi_agent/callbacks.py": "eb2e2a85be8a9791484585c03e56c8b0a3d621d0342fa79f8b2c9226f358e115",
+        "/teamspace/studios/this_studio/bomberman_rl/src/agent_code/tree_fqi_agent/features.py": "70b38c5ad6b71c5e9c749b3989eeb4b9972b09c4e17b2048ec040a3ba7da9898",
+        "/teamspace/studios/this_studio/bomberman_rl/src/agent_code/tree_fqi_loop_agent/callbacks.py": "517e071482b205bf84466f0ee36afcbabbd9d5e7036d101576644c3e5517ba36",
+        "/teamspace/studios/this_studio/bomberman_rl/src/agent_code/tree_fqi_loop_agent/features.py": "9ee26b2032316012c7d3930bd3d91bddecbc8e6a0c6d8d5e5941ebb7a40ebe73"
+    },
+    "note": "The loop variant retains the learned trees and substitutes a random legal movement only after a repeated-position detector fires."
+}
