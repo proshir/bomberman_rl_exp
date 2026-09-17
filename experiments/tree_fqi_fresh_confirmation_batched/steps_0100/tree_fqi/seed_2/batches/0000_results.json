@@ -1,0 +1,1730 @@
+[
+    {
+        "seed": 20016,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.07419961799951125,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 26,
+                "coins": 26,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 37,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20016,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.04685231700022996,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 29,
+                "coins": 29,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 33,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20016,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.04582122800002253,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 37,
+                "coins": 37,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 16,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20016,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.055184651999297785,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 31,
+                "coins": 31,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 21,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20017,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.057223282999984804,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 32,
+                "coins": 32,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 32,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20017,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.08000730799994926,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 24,
+                "coins": 24,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 50,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20017,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.06649452099918562,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 35,
+                "coins": 35,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 34,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20017,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.06616860900066968,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 34,
+                "coins": 34,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 28,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20018,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.06082027100001142,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 23,
+                "coins": 23,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 51,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20018,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.07120718799978931,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 21,
+                "coins": 21,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 55,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20018,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.07376172699969175,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 35,
+                "coins": 35,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 22,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20018,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.07015199699981167,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 35,
+                "coins": 35,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 24,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20019,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.06838283500019315,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 35,
+                "coins": 35,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 27,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20019,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.05986478900013026,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 14,
+                "coins": 14,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 67,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20019,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.06233841700031917,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 35,
+                "coins": 35,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 32,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20019,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.05107686100018327,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 37,
+                "coins": 37,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 26,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20020,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.07264602399936848,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 8,
+                "coins": 8,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 76,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20020,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.07492138399993564,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 9,
+                "coins": 9,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 83,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20020,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.04685524200067448,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 34,
+                "coins": 34,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 15,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20020,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.0637712020006802,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 37,
+                "coins": 37,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 13,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20021,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.06721096399996895,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 26,
+                "coins": 26,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 51,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20021,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.062187841000195476,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 26,
+                "coins": 26,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 47,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20021,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.06315611100035312,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 28,
+                "coins": 28,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 34,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20021,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.07063361899963638,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 15,
+                "coins": 15,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 62,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20022,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.06846907599992846,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 27,
+                "coins": 27,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 51,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20022,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.05908117899980425,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 16,
+                "coins": 16,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 71,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20022,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.06383722600003239,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 30,
+                "coins": 30,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 45,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20022,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.06143895299919677,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 35,
+                "coins": 35,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 28,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20023,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.06076284200025839,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 23,
+                "coins": 23,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 54,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20023,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.06329825700049696,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 28,
+                "coins": 28,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 42,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20023,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.05640577400026814,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 36,
+                "coins": 36,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 30,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20023,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.06426822699995682,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 9,
+                "coins": 9,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 79,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20024,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.06608428399977129,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 28,
+                "coins": 28,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 41,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20024,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.05406538700026431,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 22,
+                "coins": 22,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 48,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20024,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.06708225999955175,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 28,
+                "coins": 28,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 39,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20024,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.061288341999897966,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 22,
+                "coins": 22,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 54,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20025,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.06907019400023273,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 24,
+                "coins": 24,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 49,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20025,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.061125362999518984,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 32,
+                "coins": 32,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 36,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20025,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.06356753099953494,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 31,
+                "coins": 31,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 33,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20025,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.06117004099996848,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 34,
+                "coins": 34,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 16,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20026,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.07430640599977778,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 35,
+                "coins": 35,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 31,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20026,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.06582324000009976,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 36,
+                "coins": 36,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 19,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20026,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.06008534400007193,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 25,
+                "coins": 25,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 55,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20026,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.05620930799977941,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 31,
+                "coins": 31,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 29,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20027,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.061826482000469696,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 21,
+                "coins": 21,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 57,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20027,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.05648161600038293,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 30,
+                "coins": 30,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 29,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20027,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.05944378699950903,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 28,
+                "coins": 28,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 38,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20027,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.07210573100019246,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 27,
+                "coins": 27,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 39,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20028,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.04866784300065774,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 20,
+                "coins": 20,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 45,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20028,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.06679732900011004,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 24,
+                "coins": 24,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 49,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20028,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.045659204999537906,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 14,
+                "coins": 14,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 75,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20028,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.06338917599987326,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 28,
+                "coins": 28,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 34,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20029,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.055643742000029306,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 35,
+                "coins": 35,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 29,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20029,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.054292052000164404,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 34,
+                "coins": 34,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 29,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20029,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.06935606400020333,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 9,
+                "coins": 9,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 81,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20029,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.054549195000618056,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 27,
+                "coins": 27,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 50,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20030,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.04644250999990618,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 37,
+                "coins": 37,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 25,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20030,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.05567456399967341,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 30,
+                "coins": 30,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 35,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20030,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.062477675000081945,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 35,
+                "coins": 35,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 24,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20030,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.054695609000191325,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 35,
+                "coins": 35,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 22,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20031,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.05558355199991638,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 38,
+                "coins": 38,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 14,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20031,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.07263479100038239,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 36,
+                "coins": 36,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 28,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20031,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.05945100499957334,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 26,
+                "coins": 26,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 43,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20031,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.05107809899982385,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 27,
+                "coins": 27,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 40,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    }
+]

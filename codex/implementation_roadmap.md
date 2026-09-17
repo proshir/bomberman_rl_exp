@@ -8,8 +8,13 @@ features and legal-action masking, and round-end batch fitting. A two-round
 smoke run and direct numerical checks passed. The approved three-seed, 300-round
 pilot then reached a final mean of 23.52 coins within 100 steps, versus 20.00
 for the masked-Q pilot on the same reused development schedule. This is promising
-exploratory evidence, not fresh-board confirmation or a final selection. Horizon
-remains to be agreed before another training variant. See
+exploratory evidence. Fresh-board frozen-policy evaluation then reached 26.33
+for tree FQI versus 22.18 for masked Q-learning at 100 steps (16 new boards,
+three fixed checkpoints per method); this supports tree FQI as the current
+stronger Stage 1 candidate, with the fixed-checkpoint and small-run limitations.
+The 400-step result showed that neither policy completes collection because of
+continued movement cycles. Horizon remains to be agreed before another training
+variant. See
 [tree_fqi_agent.md](tree_fqi_agent.md).
 
 ## SARSA loop follow-up and test removal

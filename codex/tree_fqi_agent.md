@@ -93,3 +93,48 @@ Freeze the current trees and confirm tree FQI, masked Q-learning, and any
 selected loop variants on fresh boards before selecting a Stage 1 candidate.
 The separate choice of training horizon remains needed before another training
 variant or a move to crates and survival.
+
+## Fresh-board frozen-policy confirmation
+
+Completed a comparison of the round-300 tree-FQI and masked-Q checkpoints on
+16 boards not used by training, development, or the earlier fresh evaluation:
+seeds 20016--20031. Each checkpoint played every board from all four corners
+with action seed 0. No learner trained or changed during evaluation. The
+comparison has 768 games: three checkpoints, two policies, two step budgets,
+16 boards, and four corners. Artifacts are in
+`experiments/tree_fqi_fresh_confirmation_batched/`.
+
+| Budget | Tree FQI | Masked Q-learning | Tree minus masked Q |
+|---|---:|---:|---:|
+| 100 steps | **26.33** | 22.18 | +4.15 |
+| 400 steps | **26.33** | 22.91 | +3.42 |
+
+At 100 steps, the three tree-FQI checkpoint means were 24.14, 27.05, and
+27.80; the matched masked-Q means were 20.80, 21.30, and 24.44. The paired
+board-bootstrap 95% interval for the 100-step difference is [2.45, 5.92],
+conditional on the six fixed checkpoints. Both policies had zero invalid
+actions. Neither tree policy completed a game by 400 steps; tree FQI's repeated
+state count rose from 43.89 at 100 steps to 343.89 at 400, so it usually looped
+after its early collection phase. This makes 100-step collection speed the more
+informative result for the present Stage 1 task.
+
+Fresh boards support carrying tree FQI forward as the current stronger Stage 1
+coin-navigation candidate. They do not establish a result for newly trained
+models: only three preselected training runs were used, tree FQI changes both
+the function approximator and fitting procedure, and the models still do not
+finish collection. The decision to add loop escape, change the horizon, or move
+to crates and survival remains separate.
+
+## Evaluation speed fix
+
+The original benchmark launched a Python process for every game. Tree-FQI game
+logic itself took about 0.07 seconds at 100 steps and 0.26 seconds at 400 steps,
+but loading the scikit-learn tree checkpoint in each fresh process took about
+1.7 seconds. `run_benchmark.py` now accepts `--batch-size`: one worker can run
+several games, creating a fresh world and agent each time. The default remains
+one game per worker, preserving existing commands. The confirmation runner uses
+one 64-game batch for each policy/checkpoint/budget. A four-game comparison
+matched all scores, starts, seeds, action-derived diagnostics, and completion
+records exactly between batched and original execution; only wall-clock timing
+differs. The old interrupted unbatched attempt remains in
+`experiments/tree_fqi_fresh_confirmation/` and is not used in the result.

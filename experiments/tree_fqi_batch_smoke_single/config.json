@@ -1,0 +1,28 @@
+{
+    "agents": [
+        "tree_fqi_agent"
+    ],
+    "opponents": [],
+    "scenario": "coin-heaven",
+    "seeds": [
+        20016
+    ],
+    "agent_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "max_steps": 10,
+    "metric": null,
+    "output": "experiments/tree_fqi_batch_smoke_single",
+    "model_path": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_pilot/seed_0/checkpoints/episode_0300.pkl",
+    "feature_mode": "distance",
+    "bootstrap_samples": 2000,
+    "analysis_seed": 0,
+    "batch_size": 1,
+    "worker": null
+}

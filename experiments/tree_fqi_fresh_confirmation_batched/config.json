@@ -1,0 +1,43 @@
+{
+    "status": "fresh-board frozen-policy comparison",
+    "board_seeds": [
+        20016,
+        20017,
+        20018,
+        20019,
+        20020,
+        20021,
+        20022,
+        20023,
+        20024,
+        20025,
+        20026,
+        20027,
+        20028,
+        20029,
+        20030,
+        20031
+    ],
+    "action_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "step_budgets": [
+        100,
+        400
+    ],
+    "checkpoint_episode": 300,
+    "source_hashes": {
+        "/teamspace/studios/this_studio/bomberman_rl/src/run_tree_fqi_confirmation.py": "836cd6cb1651dec53d7f1f55e9ecf29ae94697bdf637412fdd6cf9c6d2a81382",
+        "/teamspace/studios/this_studio/bomberman_rl/src/run_benchmark.py": "367808e0ee18e20b3fb15de5fc2b916268daabeeeac9e9b798410abc1392b264",
+        "/teamspace/studios/this_studio/bomberman_rl/src/agent_code/tree_fqi_agent/callbacks.py": "eb2e2a85be8a9791484585c03e56c8b0a3d621d0342fa79f8b2c9226f358e115",
+        "/teamspace/studios/this_studio/bomberman_rl/src/agent_code/tree_fqi_agent/features.py": "70b38c5ad6b71c5e9c749b3989eeb4b9972b09c4e17b2048ec040a3ba7da9898",
+        "/teamspace/studios/this_studio/bomberman_rl/src/agent_code/q_table_masked_agent/callbacks.py": "53899a394507f4cb6ab22314620b3ec23c32dbdde822517001a621d588c57100"
+    },
+    "note": "All learner checkpoints are frozen. Board seeds 20016--20031 were not used by the training, development, or earlier fresh-board evaluations."
+}

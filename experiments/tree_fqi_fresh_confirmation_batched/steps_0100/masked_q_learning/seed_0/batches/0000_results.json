@@ -1,0 +1,1730 @@
+[
+    {
+        "seed": 20016,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.013242444999377767,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 27,
+                "coins": 27,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 40,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20016,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.011165122999955202,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 36,
+                "coins": 36,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 17,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20016,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.007418483999572345,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 19,
+                "coins": 19,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 52,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20016,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.007719781000560033,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 19,
+                "coins": 19,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 54,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20017,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.00791498699982185,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 16,
+                "coins": 16,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 67,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20017,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.011652327999399859,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 5,
+                "coins": 5,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 86,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20017,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.00698777700017672,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 20,
+                "coins": 20,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 65,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20017,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.008188617999621783,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 14,
+                "coins": 14,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 70,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20018,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.007720827999946778,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 14,
+                "coins": 14,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 74,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20018,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.007270568999956595,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 24,
+                "coins": 24,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 38,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20018,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.006937455999832309,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 1,
+                "coins": 1,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 96,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20018,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.011112829999547102,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 20,
+                "coins": 20,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 56,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20019,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.01557608200073446,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 36,
+                "coins": 36,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 15,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20019,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.0179673479997291,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 14,
+                "coins": 14,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 64,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20019,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.006993416999648616,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 98,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20019,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.008160293999935675,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 32,
+                "coins": 32,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 39,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20020,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.00837631199919997,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 8,
+                "coins": 8,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 74,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20020,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.00772006799979863,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 6,
+                "coins": 6,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 87,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20020,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.010968558000058692,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 27,
+                "coins": 27,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 46,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20020,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.006731499999659718,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 32,
+                "coins": 32,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 29,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20021,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.007788247000462434,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 15,
+                "coins": 15,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 74,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20021,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.007168390000515501,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 38,
+                "coins": 38,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 9,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20021,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.010005369000282371,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 18,
+                "coins": 18,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 60,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20021,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.014306519999990996,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 15,
+                "coins": 15,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 60,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20022,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.008824797999295697,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 37,
+                "coins": 37,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 16,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20022,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.01331796399972518,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 16,
+                "coins": 16,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 69,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20022,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.01093540799956827,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 32,
+                "coins": 32,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 39,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20022,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.012010021000605775,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 11,
+                "coins": 11,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 75,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20023,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.0157857240001249,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 30,
+                "coins": 30,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 38,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20023,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.012991878999855544,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 31,
+                "coins": 31,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 35,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20023,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.009648949000620632,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 37,
+                "coins": 37,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 18,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20023,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.013025610000113375,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 17,
+                "coins": 17,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 52,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20024,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.006919153000126244,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 8,
+                "coins": 8,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 81,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20024,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.007715469999311608,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 8,
+                "coins": 8,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 80,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20024,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.010890066999309056,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 30,
+                "coins": 30,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 34,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20024,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.011190220000571571,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 19,
+                "coins": 19,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 62,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20025,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.010106277999511804,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 23,
+                "coins": 23,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 53,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20025,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.008913136999581184,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 36,
+                "coins": 36,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 6,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20025,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.008752916000048572,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 35,
+                "coins": 35,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 12,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20025,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.01147366500026692,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 24,
+                "coins": 24,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 38,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20026,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.013693199000044842,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 33,
+                "coins": 33,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 34,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20026,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.012620441999388277,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 16,
+                "coins": 16,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 61,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20026,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.010365205999733007,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 37,
+                "coins": 37,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 12,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20026,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.01361441199969704,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 16,
+                "coins": 16,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 64,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20027,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.010511196000152268,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 11,
+                "coins": 11,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 76,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20027,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.00777030500012188,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 35,
+                "coins": 35,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 6,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20027,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.008265929000117467,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 98,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20027,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.011090749000686628,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 23,
+                "coins": 23,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 47,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20028,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.011053328999878431,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 19,
+                "coins": 19,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 50,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20028,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.010276216999955068,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 36,
+                "coins": 36,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 13,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20028,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.010328483999728633,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 22,
+                "coins": 22,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 49,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20028,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.010247660999993968,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 16,
+                "coins": 16,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 66,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20029,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.008578472999943187,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 21,
+                "coins": 21,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 62,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20029,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.010810056000082113,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 26,
+                "coins": 26,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 50,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20029,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.012356983999779914,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 13,
+                "coins": 13,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 72,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20029,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.009887895000247227,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 98,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20030,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.010137934000340465,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 8,
+                "coins": 8,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 78,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20030,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.009859093000159191,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 27,
+                "coins": 27,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 51,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20030,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.010737831999904301,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 24,
+                "coins": 24,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 52,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20030,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.008830005999698187,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 30,
+                "coins": 30,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 43,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20031,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.013658908000252268,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 4,
+                "coins": 4,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 88,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20031,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.008540820000234817,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 35,
+                "coins": 35,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 27,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20031,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.01228500500019436,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 23,
+                "coins": 23,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 52,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20031,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.011298356000224885,
+        "agents": [
+            {
+                "name": "q_table_masked_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 6,
+                "coins": 6,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 83,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    }
+]

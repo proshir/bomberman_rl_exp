@@ -1,0 +1,110 @@
+[
+    {
+        "seed": 20016,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 10,
+        "elapsed_seconds": 0.02482237099957274,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 6,
+                "coins": 6,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 10,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 0,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20016,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 10,
+        "elapsed_seconds": 0.006980201000260422,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 6,
+                "coins": 6,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 10,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 0,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20016,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 10,
+        "elapsed_seconds": 0.004752259999804664,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 5,
+                "coins": 5,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 10,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 0,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 20016,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 10,
+        "elapsed_seconds": 0.004562232999887783,
+        "agents": [
+            {
+                "name": "tree_fqi_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 4,
+                "coins": 4,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "steps": 10,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 0,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    }
+]
