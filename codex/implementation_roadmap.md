@@ -1,5 +1,15 @@
 # Implementation roadmap
 
+## Navigation diagnosis: stay in Stage 1
+
+Replayed 384 frozen tree-FQI games with action/value traces. All base policies
+ended in either two-position cycles (154 games) or WAIT traps (38). Identical
+feature tuples sometimes hide conflicting nearest-coin route choices; 81.7%
+of loop interventions with two following steps return to their starting tile
+without collecting a coin. This motivates a focused representation experiment,
+subject to agreement, rather than treating navigation as solved. No policies
+or training settings changed. See [tree_navigation_diagnosis.md](tree_navigation_diagnosis.md).
+
 ## Tree-based fitted Q implementation
 
 The user approved implementing tree-based fitted Q iteration in a simple style.

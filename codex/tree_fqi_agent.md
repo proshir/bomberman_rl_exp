@@ -136,8 +136,9 @@ one game per worker, preserving existing commands. The confirmation runner uses
 one 64-game batch for each policy/checkpoint/budget. A four-game comparison
 matched all scores, starts, seeds, action-derived diagnostics, and completion
 records exactly between batched and original execution; only wall-clock timing
-differs. The old interrupted unbatched attempt remains in
-`experiments/tree_fqi_fresh_confirmation/` and is not used in the result.
+differs. The old interrupted unbatched attempt in
+`experiments/tree_fqi_fresh_confirmation/` was deleted at the user's request;
+it was not used in the result.
 
 ## Fresh-board loop-wrapper comparison
 
