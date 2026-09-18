@@ -1,0 +1,32 @@
+{
+    "metric": "coins",
+    "agents": {
+        "combat_dqn_agent": {
+            "mean": 32.15625,
+            "ci95": [
+                28.28125,
+                35.875781249999996
+            ],
+            "board_means": [
+                38.25,
+                36.0,
+                39.0,
+                23.0,
+                34.75,
+                31.5,
+                29.75,
+                25.0
+            ],
+            "mean_score": 32.15625,
+            "mean_coins": 32.15625,
+            "mean_crates": 82.46875,
+            "mean_kills": 0.0,
+            "mean_suicides": 0.0,
+            "mean_bombs": 28.90625,
+            "mean_steps": 400.0,
+            "survival_rate": 1.0,
+            "mean_invalid_actions": 0.0
+        }
+    },
+    "comparisons": {}
+}

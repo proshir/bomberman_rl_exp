@@ -20,6 +20,7 @@ __pycache__/
 # Large generated experiment artifacts; keep references in tracked notes.
 /experiments/**/checkpoints/
 /experiments/**/replays/
+experiments/**/training.pkl
 *.pt
 *.pth
 *.ckpt

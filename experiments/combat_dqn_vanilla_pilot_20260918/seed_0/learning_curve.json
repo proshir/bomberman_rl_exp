@@ -1,0 +1,122 @@
+[
+    {
+        "episode": 0,
+        "scenario": "loot-crate",
+        "interactions": 0,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_dqn_vanilla_pilot_20260918/seed_0/checkpoints/episode_0000.pkl",
+        "mean": 0.0,
+        "ci95": [
+            0.0,
+            0.0
+        ],
+        "board_means": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "mean_score": 0.0,
+        "mean_coins": 0.0,
+        "mean_crates": 0.0,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 0.0,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0
+    },
+    {
+        "episode": 100,
+        "scenario": "loot-crate",
+        "interactions": 40000,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_dqn_vanilla_pilot_20260918/seed_0/checkpoints/episode_0100.pkl",
+        "mean": 24.90625,
+        "ci95": [
+            21.12421875,
+            29.09375
+        ],
+        "board_means": [
+            26.5,
+            22.0,
+            28.0,
+            17.0,
+            19.75,
+            38.25,
+            24.0,
+            23.75
+        ],
+        "mean_score": 24.90625,
+        "mean_coins": 24.90625,
+        "mean_crates": 67.96875,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 24.375,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0
+    },
+    {
+        "episode": 200,
+        "scenario": "loot-crate",
+        "interactions": 80000,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_dqn_vanilla_pilot_20260918/seed_0/checkpoints/episode_0200.pkl",
+        "mean": 29.21875,
+        "ci95": [
+            24.84375,
+            34.157031249999996
+        ],
+        "board_means": [
+            35.0,
+            19.25,
+            32.5,
+            28.25,
+            22.75,
+            27.25,
+            42.5,
+            26.25
+        ],
+        "mean_score": 29.21875,
+        "mean_coins": 29.21875,
+        "mean_crates": 78.5625,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 27.75,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0
+    },
+    {
+        "episode": 300,
+        "scenario": "loot-crate",
+        "interactions": 120000,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_dqn_vanilla_pilot_20260918/seed_0/checkpoints/episode_0300.pkl",
+        "mean": 32.15625,
+        "ci95": [
+            28.28125,
+            35.875781249999996
+        ],
+        "board_means": [
+            38.25,
+            36.0,
+            39.0,
+            23.0,
+            34.75,
+            31.5,
+            29.75,
+            25.0
+        ],
+        "mean_score": 32.15625,
+        "mean_coins": 32.15625,
+        "mean_crates": 82.46875,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 28.90625,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0
+    }
+]
