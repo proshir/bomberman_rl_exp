@@ -1,0 +1,53 @@
+{
+    "agent": "tree_fqi_history_agent",
+    "feature_mode": "distance",
+    "seeds": [
+        0,
+        1,
+        2
+    ],
+    "rounds": 300,
+    "max_steps": 400,
+    "eval_max_steps": 100,
+    "eval_every": 300,
+    "eval_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007
+    ],
+    "output": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_history_400step_pilot/seed_0",
+    "worker": null,
+    "hyperparameters": {
+        "DISCOUNT": 0.95,
+        "EPSILON_START": 1.0,
+        "EPSILON_MIN": 0.05,
+        "EPSILON_DECAY": 0.995,
+        "COIN_REWARD": 1.0,
+        "STEP_COST": 0.01,
+        "BUFFER_SIZE": 30000,
+        "FIT_ITERATIONS": 5,
+        "MAX_DEPTH": 8,
+        "MIN_SAMPLES_LEAF": 5
+    },
+    "code_version": "d99f2ea122994a3caa2bf537f94e6a34c248c50b",
+    "source_hashes": {
+        "run_training.py": "045f3bf99f2eaf0d31da7713d0e2c670da8eacaed393c1199a28d2d6c2a3c01c",
+        "run_benchmark.py": "367808e0ee18e20b3fb15de5fc2b916268daabeeeac9e9b798410abc1392b264",
+        "environment.py": "853d9376605cee66d25f27c65b0c1213766d77f71bf35d444b00db06c36ae4ff",
+        "agents.py": "81741eb8a52694e5c3234cd6891367562360e08bec42d9f12fa52cf8fa241c67",
+        "settings.py": "f0b97a16aae57bfc0131d76fca064749435e4d82c23fb967f7e09bd1ace9603a",
+        "events.py": "8d7633de52d7abdc021e1ccfbf759f3fbc71c84be96445665fcdd82910739ed5",
+        "agent_code/tree_fqi_history_agent/callbacks.py": "493042c989f5c579c29c91c99ab1222168f9951808132a2b0e5973a16b4efe57",
+        "agent_code/tree_fqi_history_agent/train.py": "03f3acfd496e9c2a9c734447a1113cb5bac3e4916c6ebd178d5f6caa10ca5588",
+        "agent_code/tree_fqi_history_agent/features.py": "55cf8f726d513844a24e9495ce512c68dcd9f655aa60acfe00c5f6ea0dc98505"
+    },
+    "python": "3.12.11 | packaged by Anaconda, Inc. | (main, Jun  5 2025, 13:09:17) [GCC 11.2.0]",
+    "numpy": "2.5.3",
+    "seed": 0,
+    "board_start": 1000
+}

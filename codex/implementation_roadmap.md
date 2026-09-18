@@ -339,3 +339,14 @@ masked branch on fresh seeds before selecting a final learner.
 Direct replay of the final seed-0 masked checkpoint on its 32 development games
 recorded 21.875 mean coins and zero invalid actions. This verifies the mask is
 active in the policy; it does not explain the remaining legal movement cycles.
+
+## Master-branch navigation diagnosis incorporated
+
+The master-branch replay diagnosis found that base policies ended mainly in
+two-position cycles or WAIT traps, with feature aliasing between conflicting
+nearest-coin route choices. The retained history agent also shows terminal
+no-progress cycles and route-choice aliasing. These results keep the project in
+Stage 1 and motivate focused representation experiments before advancing to
+crates and bombs. Details are in
+[`tree_navigation_diagnosis.md`](tree_navigation_diagnosis.md) and
+[`tree_fqi_history_loop_diagnosis.md`](tree_fqi_history_loop_diagnosis.md).

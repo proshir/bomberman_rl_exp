@@ -1,0 +1,42 @@
+{
+    "status": "fresh-board frozen-policy comparison of training horizons",
+    "board_seeds": [
+        22048,
+        22049,
+        22050,
+        22051,
+        22052,
+        22053,
+        22054,
+        22055,
+        22056,
+        22057,
+        22058,
+        22059,
+        22060,
+        22061,
+        22062,
+        22063
+    ],
+    "agent_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "step_budgets": [
+        100,
+        400
+    ],
+    "checkpoint_episode": 300,
+    "source_hashes": {
+        "/teamspace/studios/this_studio/bomberman_rl/src/run_tree_fqi_history_horizon_confirmation.py": "7e66ee109f12eb8daf8af8e72a63c88a548d67ecf24a5bda65c79ae991b28a19",
+        "/teamspace/studios/this_studio/bomberman_rl/src/run_benchmark.py": "367808e0ee18e20b3fb15de5fc2b916268daabeeeac9e9b798410abc1392b264",
+        "/teamspace/studios/this_studio/bomberman_rl/src/agent_code/tree_fqi_history_agent/callbacks.py": "493042c989f5c579c29c91c99ab1222168f9951808132a2b0e5973a16b4efe57",
+        "/teamspace/studios/this_studio/bomberman_rl/src/agent_code/tree_fqi_history_agent/features.py": "55cf8f726d513844a24e9495ce512c68dcd9f655aa60acfe00c5f6ea0dc98505"
+    },
+    "note": "Final checkpoints from matched three-seed runs; boards 22048--22063 were not used for training or development evaluation."
+}

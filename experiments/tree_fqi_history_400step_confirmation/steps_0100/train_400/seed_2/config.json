@@ -1,0 +1,43 @@
+{
+    "agents": [
+        "tree_fqi_history_agent"
+    ],
+    "opponents": [],
+    "scenario": "coin-heaven",
+    "seeds": [
+        22048,
+        22049,
+        22050,
+        22051,
+        22052,
+        22053,
+        22054,
+        22055,
+        22056,
+        22057,
+        22058,
+        22059,
+        22060,
+        22061,
+        22062,
+        22063
+    ],
+    "agent_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "max_steps": 100,
+    "metric": null,
+    "output": "experiments/tree_fqi_history_400step_confirmation/steps_0100/train_400/seed_2",
+    "model_path": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_history_400step_pilot/seed_2/checkpoints/episode_0300.pkl",
+    "feature_mode": "distance",
+    "bootstrap_samples": 2000,
+    "analysis_seed": 0,
+    "batch_size": 64,
+    "worker": null
+}
