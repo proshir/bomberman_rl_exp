@@ -206,6 +206,13 @@ maximum next action. Double-DQN and other extensions are intentionally deferred.
 A short fresh-process smoke run passed; no substantial performance pilot has
 been registered yet.
 
+The first combat DQN pilot reached 18.48 mean loot-crate coins at round 300,
+slightly below matched history FQI at 19.35. A fresh 600-round run peaked at
+9.96 around round 200 and declined to 6.28 at round 600. The earlier runner
+did not seed PyTorch model initialization; this has been corrected before the
+topology-feature neural ablation. The 14-value local-topology block remains a
+separate controlled DQN experiment, not a change to the default representation.
+
 ## 6. Harvy / Arbiter advanced hybrid
 
 This is not purely PPO, DQN, or hand-written planning. The structural split is:

@@ -18,6 +18,20 @@ selection, random mini-batches, and periodic target-network copies. Double-DQN
 and other enhancements are deferred until this baseline is measured. See
 [`combat_dqn_agent.md`](combat_dqn_agent.md).
 
+The first 300-round vanilla-DQN pilot reached 18.48 mean loot-crate coins at
+round 300 versus 19.35 for matched history FQI. A fresh 600-round extension
+peaked at 9.96 around round 200 and declined to 6.28 at round 600. The combat
+runner previously failed to seed PyTorch, so these runs also exposed a
+reproducibility defect; `torch.manual_seed` is now applied before model
+construction. The report should distinguish this measured failure from the
+software implementation result.
+
+The next representation ablation reuses the 14-value local-topology block in a
+separate vanilla-DQN agent. This tests whether the MLP can share information
+from the block that shallow trees failed to use, while retaining the 32-feature
+DQN control and the same reward/safety protocol. See
+[`combat_dqn_topology_agent.md`](combat_dqn_topology_agent.md).
+
 ## Local-topology feature ablation completed
 
 Added a separate 46-feature combat FQI variant that appends a 3x3 wall/crate

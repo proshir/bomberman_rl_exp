@@ -32,6 +32,8 @@ sets, or evaluation protocols without an explicit note.
 | Local topology, 300 rounds | 3x3 patch and local openness | 37.79 Coin Heaven and 8.62 loot-crate coins; below control | [`combat_fqi_history_antistag_topology_agent.md`](combat_fqi_history_antistag_topology_agent.md) |
 | Local topology, 600 rounds | Longer-training follow-up | Best balanced checkpoint around round 400; round 600 degraded to 28.07 / 3.06; rejected as default | [`combat_fqi_history_antistag_topology_agent.md`](combat_fqi_history_antistag_topology_agent.md) |
 | Combat vanilla DQN implementation | Minimal PyTorch DQN comparison | Implemented and smoke-tested; substantial performance pilot not yet run | [`combat_dqn_agent.md`](combat_dqn_agent.md) |
+| Combat vanilla DQN pilot | 32-feature neural combat baseline | 300-round mean 18.48 versus 19.35 for matched FQI; fresh 600-round run peaked at 9.96 and degraded to 6.28 | [`combat_dqn_agent.md`](combat_dqn_agent.md) |
+| Combat topology-feature DQN | Neural ablation of the failed 14-feature FQI topology block | Implemented; controlled pilot pending with corrected PyTorch seeding | [`combat_dqn_topology_agent.md`](combat_dqn_topology_agent.md) |
 
 ## Current interpretation
 
@@ -42,5 +44,7 @@ evidence supports retaining the 32-feature history/anti-stagnation agent as a
 control while testing a spatial neural or action-conditioned hybrid with the
 same safety gates. No opponent-training result is promoted to a final
 submission without held-out survival, invalid-action, and performance checks.
-The next controlled algorithm comparison is a minimal vanilla DQN; Double-DQN
-and other enhancements are intentionally deferred.
+The 32-feature vanilla DQN is now a measured neural baseline, but it has not
+beaten history FQI and longer training degraded in the fresh 600-round run.
+The next controlled representation comparison is the topology-feature DQN;
+Double-DQN and other algorithmic enhancements remain intentionally deferred.

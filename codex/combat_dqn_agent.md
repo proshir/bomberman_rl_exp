@@ -42,3 +42,26 @@ contents, and one optimizer update. A two-round, 20-step CPU smoke run also
 completed fresh-process evaluation and checkpoint loading. It is software
 validation only and did not reach replay warmup, so no performance conclusion
 is drawn from it.
+
+## Combat DQN pilot results
+
+The fresh 300-round pilot used three seeds, 400 training steps per round, and
+the same eight held-out boards and four seats for each checkpoint. Its final
+round-300 mean was 18.48 coins (seed results 32.16, 10.03, and 13.25). The
+matched history/anti-stagnation FQI control reached 19.35 coins on the same
+96-game evaluation suite. Both policies had 100% survival and zero invalid
+actions.
+
+A fresh 600-round extension did not improve the result. Its aggregate curve
+was 8.43, 9.96, 8.58, 9.20, 6.65, and 6.28 coins at rounds 100, 200, 300,
+400, 500, and 600 respectively. The best checkpoint was round 200; the final
+checkpoint degraded. All final evaluation games remained safe, with zero
+invalid actions. The run completed in 11:34 and performed 58,751 optimizer
+updates per seed.
+
+The first runner seeded Python and NumPy but not PyTorch, so these fresh DQN
+runs were not exactly reproducible despite matching nominal seeds. The combat
+runner now calls `torch.manual_seed(seed)` (and CUDA seed initialization when
+available) before constructing the model. Future comparisons must use this
+corrected runner and select checkpoints by held-out evaluation rather than
+assuming the last round is best.
