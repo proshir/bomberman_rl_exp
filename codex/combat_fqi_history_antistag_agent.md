@@ -21,7 +21,7 @@ the representation.
 
 The agent lives in `src/agent_code/combat_fqi_history_antistag_agent/`.
 
-- It keeps the original 30 combat features and appends the previous action,
+- It keeps the original 29 combat features and appends the previous action,
   the capped number of visits to the current tile in the last eight positions,
   and a bucketed steps-since-progress value.
 - Progress resets on a visible-coin-set change, crate destruction, opponent
