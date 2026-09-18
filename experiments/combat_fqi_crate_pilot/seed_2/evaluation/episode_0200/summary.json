@@ -1,0 +1,32 @@
+{
+    "metric": "coins",
+    "agents": {
+        "combat_fqi_agent": {
+            "mean": 6.40625,
+            "ci95": [
+                4.87421875,
+                7.875
+            ],
+            "board_means": [
+                6.5,
+                5.25,
+                8.5,
+                7.0,
+                8.5,
+                3.0,
+                3.25,
+                9.25
+            ],
+            "mean_score": 6.40625,
+            "mean_coins": 6.40625,
+            "mean_crates": 21.21875,
+            "mean_kills": 0.0,
+            "mean_suicides": 0.0,
+            "mean_bombs": 8.53125,
+            "mean_steps": 400.0,
+            "survival_rate": 1.0,
+            "mean_invalid_actions": 0.0
+        }
+    },
+    "comparisons": {}
+}

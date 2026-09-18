@@ -1,5 +1,28 @@
 # Implementation roadmap
 
+## Combat crate pilot completed
+
+The approved three-seed, 300-round, 400-step crate pilot completed. Round-300
+mean coins were 3.34, 6.41, and 9.88 (aggregate 6.54), below the matched
+untrained mean of 11.56. All 96 round-300 frozen games had zero invalid actions
+and survived, so the safety gates passed while the learning-improvement gate
+failed. The initial combat tree/reward setup is therefore safe but not yet a
+useful crate learner; opponent training is not justified from this result.
+Raw records and checkpoints are in `experiments/combat_fqi_crate_pilot/`.
+Details are in [`combat_fqi_agent.md`](combat_fqi_agent.md).
+
+## Bomb-aware combat FQI implementation
+
+The user approved implementing the first bomb-aware agent. Added a separate
+`combat_fqi_agent` with six actions, blast and danger calculation, a time-aware
+escape mask, combat features, fitted-Q training, focused safety tests, and a
+new `run_combat_training.py` runner for crate and opponent curricula. Ten tests
+pass, and tiny crate/classic smoke runs exercised bombing, tree fitting, and
+checkpoint evaluation without suicides or invalid actions. These are software
+checks only: no substantial training or scientific comparison has been run,
+and no final model has been selected or copied into the agent directory. See
+[`combat_fqi_agent.md`](combat_fqi_agent.md).
+
 ## Tree-based fitted Q implementation
 
 The user approved implementing tree-based fitted Q iteration in a simple style.
