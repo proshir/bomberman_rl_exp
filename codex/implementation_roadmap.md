@@ -1,6 +1,6 @@
 # Implementation roadmap
 
-## Combat topology failure and Double-DQN transition
+## Combat topology failure and staged algorithm progression
 
 The 46-feature local-topology tree variant was extended from 300 to 600 rounds
 to test whether its lower score was only under-training. It was not: the best
@@ -11,14 +11,9 @@ failure is documented in
 [`combat_fqi_history_antistag_topology_agent.md`](combat_fqi_history_antistag_topology_agent.md).
 
 Because the representation was becoming more complex than shallow tree FQI
-handled well, added `combat_dqn_agent` as a non-destructive PyTorch Double-DQN
-comparison. It preserves the 32-feature history representation, reward/events,
-legal/safety filtering, and callback interfaces while replacing tree refitting
-with replay, target-network, masked Double-DQN targets, Huber/Adam updates,
-gradient clipping, and complete checkpoints. Twenty-seven focused and existing
-tests pass; only a small software smoke run has been performed so far.
-
-See [`combat_dqn_agent.md`](combat_dqn_agent.md).
+handled well, the next algorithm should be a minimal PyTorch vanilla-DQN
+comparison using the existing 32-feature representation. Double-DQN and other
+enhancements are deferred until this baseline is measured.
 
 ## Local-topology feature ablation completed
 

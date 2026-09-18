@@ -75,13 +75,14 @@ the local-topology tree variant is rejected as a default. The strongest
 balanced checkpoint was around round 400, but it still trailed the 32-feature
 mixed control (39.14 Coin Heaven and 10.41 loot-crate coins at round 300).
 
-## Why this failure motivates a DQN comparison
+## Why this failure motivates a simpler neural comparison
 
 The topology block increased the tree input from 32 to 46 values without
 reducing aliasing or repeated-state loops. This is consistent with the known
 limitation of shallow-tree FQI: adding spatial dimensions fragments the finite
 replay sample rather than giving the learner a shared spatial representation.
-The measured failure therefore motivates a PyTorch Double-DQN comparison using
-the original validated 32-feature extractor first. The tree implementation is
-retained unchanged as the control; the DQN is a separate agent and checkpoint
-format, not a destructive replacement.
+The measured failure motivates a staged PyTorch comparison using the original
+validated 32-feature extractor first. The next step is deliberately vanilla
+DQN; Double-DQN, dueling, prioritized replay, and other enhancements are
+deferred until that baseline is measured. The tree implementation remains the
+control.

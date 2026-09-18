@@ -31,7 +31,6 @@ sets, or evaluation protocols without an explicit note.
 | Mixed curriculum control | Coin Heaven and loot-crate training | Round-300: 39.14 Coin Heaven coins and 10.41 loot-crate coins; safe but stagnant | [`combat_fqi_history_antistag_agent.md`](combat_fqi_history_antistag_agent.md) |
 | Local topology, 300 rounds | 3x3 patch and local openness | 37.79 Coin Heaven and 8.62 loot-crate coins; below control | [`combat_fqi_history_antistag_topology_agent.md`](combat_fqi_history_antistag_topology_agent.md) |
 | Local topology, 600 rounds | Longer-training follow-up | Best balanced checkpoint around round 400; round 600 degraded to 28.07 / 3.06; rejected as default | [`combat_fqi_history_antistag_topology_agent.md`](combat_fqi_history_antistag_topology_agent.md) |
-| Combat Double-DQN implementation | PyTorch masked Double-DQN comparison | Implemented and software-validated; substantial performance pilot not yet run | [`combat_dqn_agent.md`](combat_dqn_agent.md) |
 
 ## Current interpretation
 
@@ -42,3 +41,5 @@ evidence supports retaining the 32-feature history/anti-stagnation agent as a
 control while testing a spatial neural or action-conditioned hybrid with the
 same safety gates. No opponent-training result is promoted to a final
 submission without held-out survival, invalid-action, and performance checks.
+The next controlled algorithm comparison is a minimal vanilla DQN; Double-DQN
+and other enhancements are intentionally deferred.
