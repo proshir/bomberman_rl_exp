@@ -1,0 +1,994 @@
+[
+    {
+        "seed": 30000,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.6980821159668267,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 3,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 1,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 392,
+                "diagnostic_max_no_progress_steps": 389,
+                "diagnostic_progress_events": 1,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 2,
+                "diagnostic_final_visible_coins": 2
+            }
+        ]
+    },
+    {
+        "seed": 30000,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.6045768619515002,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 0,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 398,
+                "diagnostic_max_no_progress_steps": 399,
+                "diagnostic_progress_events": 0,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 0,
+                "diagnostic_final_visible_coins": 0
+            }
+        ]
+    },
+    {
+        "seed": 30000,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.6118278037756681,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 8,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 3,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 381,
+                "diagnostic_max_no_progress_steps": 374,
+                "diagnostic_progress_events": 3,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 3,
+                "diagnostic_final_visible_coins": 3
+            }
+        ]
+    },
+    {
+        "seed": 30000,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.6681721638888121,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 13,
+                "coins": 13,
+                "crates": 37,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 14,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 287,
+                "diagnostic_max_no_progress_steps": 276,
+                "diagnostic_progress_events": 26,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 7,
+                "diagnostic_final_visible_coins": 5
+            }
+        ]
+    },
+    {
+        "seed": 30001,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.5790564208291471,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 3,
+                "coins": 3,
+                "crates": 15,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 5,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 363,
+                "diagnostic_max_no_progress_steps": 353,
+                "diagnostic_progress_events": 8,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 5,
+                "diagnostic_final_visible_coins": 3
+            }
+        ]
+    },
+    {
+        "seed": 30001,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.590528842061758,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 0,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 398,
+                "diagnostic_max_no_progress_steps": 399,
+                "diagnostic_progress_events": 0,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 0,
+                "diagnostic_final_visible_coins": 0
+            }
+        ]
+    },
+    {
+        "seed": 30001,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.5919318427331746,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 4,
+                "coins": 4,
+                "crates": 11,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 3,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 374,
+                "diagnostic_max_no_progress_steps": 365,
+                "diagnostic_progress_events": 7,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 3,
+                "diagnostic_final_visible_coins": 2
+            }
+        ]
+    },
+    {
+        "seed": 30001,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.5755301266908646,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 5,
+                "coins": 5,
+                "crates": 15,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 6,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 354,
+                "diagnostic_max_no_progress_steps": 349,
+                "diagnostic_progress_events": 9,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 3,
+                "diagnostic_final_visible_coins": 1
+            }
+        ]
+    },
+    {
+        "seed": 30002,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.6395596810616553,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 2,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 1,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 392,
+                "diagnostic_max_no_progress_steps": 388,
+                "diagnostic_progress_events": 1,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 1,
+                "diagnostic_final_visible_coins": 1
+            }
+        ]
+    },
+    {
+        "seed": 30002,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.5951088853180408,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 0,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 398,
+                "diagnostic_max_no_progress_steps": 399,
+                "diagnostic_progress_events": 0,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 0,
+                "diagnostic_final_visible_coins": 0
+            }
+        ]
+    },
+    {
+        "seed": 30002,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.6824517250061035,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 2,
+                "coins": 2,
+                "crates": 13,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 7,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 351,
+                "diagnostic_max_no_progress_steps": 343,
+                "diagnostic_progress_events": 9,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 6,
+                "diagnostic_final_visible_coins": 5
+            }
+        ]
+    },
+    {
+        "seed": 30002,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.7174389739520848,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 2,
+                "coins": 2,
+                "crates": 10,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 5,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 364,
+                "diagnostic_max_no_progress_steps": 351,
+                "diagnostic_progress_events": 7,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 4,
+                "diagnostic_final_visible_coins": 4
+            }
+        ]
+    },
+    {
+        "seed": 30003,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.6652016527950764,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 5,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 2,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 387,
+                "diagnostic_max_no_progress_steps": 382,
+                "diagnostic_progress_events": 2,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 2,
+                "diagnostic_final_visible_coins": 2
+            }
+        ]
+    },
+    {
+        "seed": 30003,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.7264033379033208,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 13,
+                "coins": 13,
+                "crates": 30,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 13,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 298,
+                "diagnostic_max_no_progress_steps": 272,
+                "diagnostic_progress_events": 24,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 5,
+                "diagnostic_final_visible_coins": 1
+            }
+        ]
+    },
+    {
+        "seed": 30003,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.5972907012328506,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 1,
+                "coins": 1,
+                "crates": 14,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 4,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 372,
+                "diagnostic_max_no_progress_steps": 368,
+                "diagnostic_progress_events": 5,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 3,
+                "diagnostic_final_visible_coins": 3
+            }
+        ]
+    },
+    {
+        "seed": 30003,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.7461158079095185,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 3,
+                "coins": 3,
+                "crates": 13,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 6,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 362,
+                "diagnostic_max_no_progress_steps": 344,
+                "diagnostic_progress_events": 8,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 2,
+                "diagnostic_final_visible_coins": 1
+            }
+        ]
+    },
+    {
+        "seed": 30004,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.5934441639110446,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 2,
+                "coins": 2,
+                "crates": 12,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 4,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 370,
+                "diagnostic_max_no_progress_steps": 361,
+                "diagnostic_progress_events": 6,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 5,
+                "diagnostic_final_visible_coins": 5
+            }
+        ]
+    },
+    {
+        "seed": 30004,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.6617998699657619,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 9,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 3,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 378,
+                "diagnostic_max_no_progress_steps": 371,
+                "diagnostic_progress_events": 3,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 2,
+                "diagnostic_final_visible_coins": 2
+            }
+        ]
+    },
+    {
+        "seed": 30004,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.5718292398378253,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 1,
+                "coins": 1,
+                "crates": 14,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 4,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 375,
+                "diagnostic_max_no_progress_steps": 367,
+                "diagnostic_progress_events": 5,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 5,
+                "diagnostic_final_visible_coins": 5
+            }
+        ]
+    },
+    {
+        "seed": 30004,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.6223460887558758,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 2,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 1,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 392,
+                "diagnostic_max_no_progress_steps": 387,
+                "diagnostic_progress_events": 1,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 1,
+                "diagnostic_final_visible_coins": 1
+            }
+        ]
+    },
+    {
+        "seed": 30005,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.6712984968908131,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 2,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 2,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 385,
+                "diagnostic_max_no_progress_steps": 381,
+                "diagnostic_progress_events": 2,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 0,
+                "diagnostic_final_visible_coins": 0
+            }
+        ]
+    },
+    {
+        "seed": 30005,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.5856062187813222,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 0,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 398,
+                "diagnostic_max_no_progress_steps": 399,
+                "diagnostic_progress_events": 0,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 0,
+                "diagnostic_final_visible_coins": 0
+            }
+        ]
+    },
+    {
+        "seed": 30005,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.5731095303781331,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 1,
+                "coins": 1,
+                "crates": 6,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 3,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 379,
+                "diagnostic_max_no_progress_steps": 372,
+                "diagnostic_progress_events": 4,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 1,
+                "diagnostic_final_visible_coins": 1
+            }
+        ]
+    },
+    {
+        "seed": 30005,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.6601400580257177,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 3,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 1,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 392,
+                "diagnostic_max_no_progress_steps": 387,
+                "diagnostic_progress_events": 1,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 2,
+                "diagnostic_final_visible_coins": 2
+            }
+        ]
+    },
+    {
+        "seed": 30006,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.584188757929951,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 9,
+                "coins": 9,
+                "crates": 32,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 13,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 314,
+                "diagnostic_max_no_progress_steps": 295,
+                "diagnostic_progress_events": 18,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 7,
+                "diagnostic_final_visible_coins": 5
+            }
+        ]
+    },
+    {
+        "seed": 30006,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.600245192181319,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 0,
+                "coins": 0,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 0,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 398,
+                "diagnostic_max_no_progress_steps": 399,
+                "diagnostic_progress_events": 0,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 0,
+                "diagnostic_final_visible_coins": 0
+            }
+        ]
+    },
+    {
+        "seed": 30006,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.6709065339528024,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 2,
+                "coins": 2,
+                "crates": 9,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 3,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 379,
+                "diagnostic_max_no_progress_steps": 372,
+                "diagnostic_progress_events": 5,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 5,
+                "diagnostic_final_visible_coins": 3
+            }
+        ]
+    },
+    {
+        "seed": 30006,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.6434805090539157,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 10,
+                "coins": 10,
+                "crates": 33,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 14,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 303,
+                "diagnostic_max_no_progress_steps": 256,
+                "diagnostic_progress_events": 22,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 6,
+                "diagnostic_final_visible_coins": 4
+            }
+        ]
+    },
+    {
+        "seed": 30007,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.6881171269342303,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 1,
+                "coins": 1,
+                "crates": 11,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 4,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 371,
+                "diagnostic_max_no_progress_steps": 362,
+                "diagnostic_progress_events": 5,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 3,
+                "diagnostic_final_visible_coins": 3
+            }
+        ]
+    },
+    {
+        "seed": 30007,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.6992254550568759,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 10,
+                "coins": 10,
+                "crates": 47,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 16,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 284,
+                "diagnostic_max_no_progress_steps": 260,
+                "diagnostic_progress_events": 25,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 4,
+                "diagnostic_final_visible_coins": 2
+            }
+        ]
+    },
+    {
+        "seed": 30007,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.6004767818376422,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 1,
+                "coins": 1,
+                "crates": 13,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 6,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 355,
+                "diagnostic_max_no_progress_steps": 350,
+                "diagnostic_progress_events": 7,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 3,
+                "diagnostic_final_visible_coins": 3
+            }
+        ]
+    },
+    {
+        "seed": 30007,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.6281307782046497,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_topology_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 5,
+                "coins": 5,
+                "crates": 12,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 6,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0,
+                "diagnostic_repeated_states": 353,
+                "diagnostic_max_no_progress_steps": 347,
+                "diagnostic_progress_events": 10,
+                "diagnostic_initial_visible_coins": 0,
+                "diagnostic_max_visible_coins": 3,
+                "diagnostic_final_visible_coins": 2
+            }
+        ]
+    }
+]
