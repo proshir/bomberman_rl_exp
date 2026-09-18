@@ -161,6 +161,14 @@ The online network selects the next action and the target network evaluates it
 
 ## 5. Bomb-aware combat FQI
 
+Audit correction (18 September 2026): the current combat DQN does **not** yet
+mask Bellman targets, despite the intended shared masking rule above. Frozen
+checkpoint diagnostics also found a replay/action stagnation-clock mismatch
+and demonstrated route aliasing even with 46 inputs. Its failed pilots cannot
+isolate neural capacity or the topology block's causal effect. See
+[`dqn_training_audit_20260918.md`](dqn_training_audit_20260918.md) for evidence,
+research sources, and the proposed correctness-first progression.
+
 ### Combat representation
 
 The base combat feature vector adds legal/safe-action flags, local danger,
@@ -203,8 +211,8 @@ safety-constrained action selection, then replaces tree refitting with a
 exploration, random mini-batch updates, and periodic target copies. Its target
 is the standard vanilla form: the target network both selects and evaluates the
 maximum next action. Double-DQN and other extensions are intentionally deferred.
-A short fresh-process smoke run passed; no substantial performance pilot has
-been registered yet.
+A short fresh-process smoke run and the performance pilots below completed;
+the later audit identified correctness gaps not covered by the smoke tests.
 
 The first combat DQN pilot reached 18.48 mean loot-crate coins at round 300,
 slightly below matched history FQI at 19.35. A fresh 600-round run peaked at

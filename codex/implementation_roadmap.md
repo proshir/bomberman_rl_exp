@@ -38,6 +38,30 @@ with perfect survival and zero invalid actions. It was both below the
 32-feature DQN control and high-variance across seeds, so the extra 14 values
 are not promoted.
 
+## DQN debugging and analysis session completed
+
+The frozen vanilla-DQN and topology-DQN checkpoints were audited after the
+topology result. The session reproduced the saved games and measured three
+causes that must be separated from model capacity:
+
+- DQN action selection applies the safety/usefulness mask, while its Bellman
+  target maximizes over all six actions. Excluded actions supplied the target
+  maximum in roughly 90--98% of audited decisions, and their values grew to
+  implausible magnitudes in the collapsing topology run.
+- Replay reconstructs a next-state stagnation bucket that can differ from the
+  bucket at the following real decision because the engine increments the step
+  counter before acting. The audit found 1,028 mismatches in 19,152 adjacent
+  decisions.
+- A constructed pair of boards produces identical 46-feature vectors while
+  requiring opposite moves to reduce the BFS route distance to a coin. More
+  MLP capacity cannot recover information removed by the feature extractor.
+
+The full evidence, public implementation comparison, and proposed experiment
+sequence are in [`dqn_training_audit_20260918.md`](dqn_training_audit_20260918.md).
+The next progression step is to repair target masking and feature consistency,
+then rerun matched 32- and 46-feature vanilla DQN controls before testing
+Double-DQN or a richer spatial representation.
+
 ## Local-topology feature ablation completed
 
 Added a separate 46-feature combat FQI variant that appends a 3x3 wall/crate

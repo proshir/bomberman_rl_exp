@@ -62,6 +62,9 @@ updates per seed.
 The first runner seeded Python and NumPy but not PyTorch, so these fresh DQN
 runs were not exactly reproducible despite matching nominal seeds. The combat
 runner now calls `torch.manual_seed(seed)` (and CUDA seed initialization when
-available) before constructing the model. Future comparisons must use this
-corrected runner and select checkpoints by held-out evaluation rather than
-assuming the last round is best.
+available) before constructing the model. A later frozen-checkpoint audit found
+that the target calculation did not apply the action-time safety mask and that
+replay could reconstruct a mismatched stagnation bucket. Therefore these pilot
+scores are retained as pre-fix baselines; the corrected target and replay
+comparison must be run before selecting a submission checkpoint. See
+[`dqn_training_audit_20260918.md`](dqn_training_audit_20260918.md).

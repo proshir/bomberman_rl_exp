@@ -4,6 +4,12 @@ Sahand was here.
 
 ## Purpose
 
+Interpretation update: the subsequent
+[`training audit`](dqn_training_audit_20260918.md) found unmasked DQN targets and
+a history-clock mismatch. The poor scores below remain valid, but attributing
+the failure specifically to topology features is not justified until corrected
+32-/46-feature controls are compared. Retain this as an experimental candidate.
+
 This is a controlled neural ablation of `combat_dqn_agent`. It reuses the
 14-feature local-topology block that was tested and rejected with shallow-tree
 FQI. The 32-feature vanilla DQN remains unchanged as the control.
