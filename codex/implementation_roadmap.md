@@ -1,5 +1,25 @@
 # Implementation roadmap
 
+## Combat topology failure and Double-DQN transition
+
+The 46-feature local-topology tree variant was extended from 300 to 600 rounds
+to test whether its lower score was only under-training. It was not: the best
+balanced checkpoint was around round 400 at 33.70 Coin Heaven coins and 7.03
+loot-crate coins, while round 600 fell to 28.07 and 3.06. All 576 frozen games
+were safe (100% survival, zero invalid actions), but loops remained high. This
+failure is documented in
+[`combat_fqi_history_antistag_topology_agent.md`](combat_fqi_history_antistag_topology_agent.md).
+
+Because the representation was becoming more complex than shallow tree FQI
+handled well, added `combat_dqn_agent` as a non-destructive PyTorch Double-DQN
+comparison. It preserves the 32-feature history representation, reward/events,
+legal/safety filtering, and callback interfaces while replacing tree refitting
+with replay, target-network, masked Double-DQN targets, Huber/Adam updates,
+gradient clipping, and complete checkpoints. Twenty-seven focused and existing
+tests pass; only a small software smoke run has been performed so far.
+
+See [`combat_dqn_agent.md`](combat_dqn_agent.md).
+
 ## Local-topology feature ablation completed
 
 Added a separate 46-feature combat FQI variant that appends a 3x3 wall/crate

@@ -31,6 +31,7 @@ sets, or evaluation protocols without an explicit note.
 | Mixed curriculum control | Coin Heaven and loot-crate training | Round-300: 39.14 Coin Heaven coins and 10.41 loot-crate coins; safe but stagnant | [`combat_fqi_history_antistag_agent.md`](combat_fqi_history_antistag_agent.md) |
 | Local topology, 300 rounds | 3x3 patch and local openness | 37.79 Coin Heaven and 8.62 loot-crate coins; below control | [`combat_fqi_history_antistag_topology_agent.md`](combat_fqi_history_antistag_topology_agent.md) |
 | Local topology, 600 rounds | Longer-training follow-up | Best balanced checkpoint around round 400; round 600 degraded to 28.07 / 3.06; rejected as default | [`combat_fqi_history_antistag_topology_agent.md`](combat_fqi_history_antistag_topology_agent.md) |
+| Combat Double-DQN implementation | PyTorch masked Double-DQN comparison | Implemented and software-validated; substantial performance pilot not yet run | [`combat_dqn_agent.md`](combat_dqn_agent.md) |
 
 ## Current interpretation
 
