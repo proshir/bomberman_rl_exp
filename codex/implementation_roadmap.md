@@ -23,6 +23,19 @@ checks only: no substantial training or scientific comparison has been run,
 and no final model has been selected or copied into the agent directory. See
 [`combat_fqi_agent.md`](combat_fqi_agent.md).
 
+## Learned movement-history agent: promising, Stage 1 decision remains
+
+Added a simple tree-FQI variant whose only new inputs are preceding action and
+the capped count of recent visits to the present tile since coin progress. It
+lets learning condition on movement history without prescribing an escape action.
+A two-round smoke run and the matched three-seed, 300-round pilot passed. Its
+round-300 development mean was 35.76 versus 23.52 for base tree FQI. On 16 fresh
+boards, it scored 36.26 versus 25.13 at 100 steps and completed 64/192 games
+within 400 steps, versus 1/192 for base FQI. This supports learned history as a
+useful Stage 1 change, though most fresh games still did not complete. Agree on
+the Stage 1 exit criterion before moving to crates and survival. See
+[tree_fqi_history_agent.md](tree_fqi_history_agent.md).
+
 ## Tree-based fitted Q implementation
 
 The user approved implementing tree-based fitted Q iteration in a simple style.
