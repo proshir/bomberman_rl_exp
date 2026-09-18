@@ -46,6 +46,10 @@ To evaluate a different checkpoint, edit `eval_suite/suite.json` and retain the
 same board seeds, seats, scenario, and horizon. Do not compare results from a
 different protocol without recording that change in the experiment registry.
 
+`latest_fixed_dqn.json` is a follow-up manifest using fresh board seeds
+`31000`--`31007`; it is intended to check whether the repaired DQN result
+generalizes beyond the comparison suite's boards.
+
 ## Promotion gate
 
 Before moving to `classic` opponents, inspect both scenarios and all safety

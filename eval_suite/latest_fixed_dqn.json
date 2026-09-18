@@ -1,0 +1,19 @@
+{
+    "board_seeds": [31000, 31001, 31002, 31003, 31004, 31005, 31006, 31007],
+    "agent_seeds": [0],
+    "seats": [0, 1, 2, 3],
+    "scenarios": ["coin-heaven", "loot-crate"],
+    "max_steps": 400,
+    "diagnostics": true,
+    "candidates": [
+        {
+            "name": "latest_fixed_dqn",
+            "agent": "combat_dqn_agent",
+            "checkpoints": [
+                "experiments/combat_dqn_vanilla_300round_masked_20260918/seed_0/checkpoints/episode_0300.pkl",
+                "experiments/combat_dqn_vanilla_300round_masked_20260918/seed_1/checkpoints/episode_0300.pkl",
+                "experiments/combat_dqn_vanilla_300round_masked_20260918/seed_2/checkpoints/episode_0300.pkl"
+            ]
+        }
+    ]
+}
