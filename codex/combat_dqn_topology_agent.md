@@ -43,6 +43,17 @@ experiment seed before model construction. This correction is required because
 the earlier vanilla-DQN pilots had unseeded PyTorch initialization and showed
 large seed-to-seed variation.
 
-The topology DQN pilot is registered separately from the 32-feature control;
-its result must be reported on the same held-out boards and seats before any
-submission-model decision.
+## Corrected-seed 600-round pilot
+
+The three-seed run used 600 rounds of 400 steps and the same held-out
+evaluation protocol as the vanilla control. The best aggregate checkpoint was
+round 100 at 16.53 mean coins (seed means 9.69, 34.03, and 5.88). Performance
+then declined to 2.86 mean coins at round 600. The final 96-game evaluation
+had 100% survival, zero invalid actions, and 14.5 mean crates. Seed variance
+was large; seed 1 also ended with a much higher training loss (1.96 versus
+0.08 and 0.18).
+
+This is below the 32-feature vanilla-DQN 300-round result (18.48 mean coins)
+and below matched history-FQI (19.35). The topology block therefore did not
+improve the neural baseline and is rejected as the default representation.
+The 32-feature agent remains the control for the next algorithmic progression.

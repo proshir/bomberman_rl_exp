@@ -32,6 +32,12 @@ from the block that shallow trees failed to use, while retaining the 32-feature
 DQN control and the same reward/safety protocol. See
 [`combat_dqn_topology_agent.md`](combat_dqn_topology_agent.md).
 
+That ablation is now complete. Its corrected-seed 600-round run peaked at
+16.53 mean loot-crate coins at round 100 and degraded to 2.86 at round 600,
+with perfect survival and zero invalid actions. It was both below the
+32-feature DQN control and high-variance across seeds, so the extra 14 values
+are not promoted.
+
 ## Local-topology feature ablation completed
 
 Added a separate 46-feature combat FQI variant that appends a 3x3 wall/crate

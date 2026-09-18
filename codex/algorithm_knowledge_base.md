@@ -210,8 +210,10 @@ The first combat DQN pilot reached 18.48 mean loot-crate coins at round 300,
 slightly below matched history FQI at 19.35. A fresh 600-round run peaked at
 9.96 around round 200 and declined to 6.28 at round 600. The earlier runner
 did not seed PyTorch model initialization; this has been corrected before the
-topology-feature neural ablation. The 14-value local-topology block remains a
-separate controlled DQN experiment, not a change to the default representation.
+topology-feature neural ablation. That 600-round DQN ablation peaked at 16.53
+mean loot-crate coins at round 100 and ended at 2.86, below the 32-feature
+control; the 14-value block remains a rejected experimental representation, not
+a change to the default.
 
 ## 6. Harvy / Arbiter advanced hybrid
 

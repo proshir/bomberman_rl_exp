@@ -33,7 +33,7 @@ sets, or evaluation protocols without an explicit note.
 | Local topology, 600 rounds | Longer-training follow-up | Best balanced checkpoint around round 400; round 600 degraded to 28.07 / 3.06; rejected as default | [`combat_fqi_history_antistag_topology_agent.md`](combat_fqi_history_antistag_topology_agent.md) |
 | Combat vanilla DQN implementation | Minimal PyTorch DQN comparison | Implemented and smoke-tested; substantial performance pilot not yet run | [`combat_dqn_agent.md`](combat_dqn_agent.md) |
 | Combat vanilla DQN pilot | 32-feature neural combat baseline | 300-round mean 18.48 versus 19.35 for matched FQI; fresh 600-round run peaked at 9.96 and degraded to 6.28 | [`combat_dqn_agent.md`](combat_dqn_agent.md) |
-| Combat topology-feature DQN | Neural ablation of the failed 14-feature FQI topology block | Implemented; controlled pilot pending with corrected PyTorch seeding | [`combat_dqn_topology_agent.md`](combat_dqn_topology_agent.md) |
+| Combat topology-feature DQN | Neural ablation of the failed 14-feature FQI topology block | 600-round best 16.53 at round 100, final 2.86; below 32-feature DQN and FQI; rejected | [`combat_dqn_topology_agent.md`](combat_dqn_topology_agent.md) |
 
 ## Current interpretation
 
@@ -46,5 +46,7 @@ same safety gates. No opponent-training result is promoted to a final
 submission without held-out survival, invalid-action, and performance checks.
 The 32-feature vanilla DQN is now a measured neural baseline, but it has not
 beaten history FQI and longer training degraded in the fresh 600-round run.
-The next controlled representation comparison is the topology-feature DQN;
-Double-DQN and other algorithmic enhancements remain intentionally deferred.
+The topology-feature DQN ablation also failed to improve the 32-feature
+control: its best checkpoint was 16.53 and its final checkpoint 2.86. Double-
+DQN and other algorithmic enhancements remain intentionally deferred until the
+vanilla baseline and checkpoint-selection protocol are stabilized.
