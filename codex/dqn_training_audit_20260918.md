@@ -8,7 +8,23 @@ This is a diagnosis, not a new algorithm or training result. Inspected source
 commit `71b0f5a4e9ff1bf06d0cf71ab84fb2902097b00b`, the algorithm knowledge base,
 project specification, combat experiments, and earlier navigation/anti-loop
 diagnoses. Checked upstream engine semantics and several public forks/projects.
-No agent implementation or trained checkpoint was changed.
+No agent implementation or trained checkpoint was changed during the audit.
+
+## Correctness repairs completed
+
+Following this audit, the vanilla DQN was repaired on the combat branch.
+Replay now stores a six-action next-state mask; terminal rows store an empty
+mask. The vanilla target applies that mask before taking the target-network
+maximum and gives terminal or empty-mask rows zero bootstrap. Transition
+commitment now uses the feature cache from the exact following `act()` call,
+so replay and inference share the same step and history context.
+
+Regression coverage now includes masked high-value targets, terminal empty
+masks, replay-mask preservation, and exact cached next-feature usage. The full
+suite passes **29 tests**, and a fresh three-round, 30-step CPU smoke run
+completed checkpoint saving and evaluation. The historical measurements below
+remain pre-repair evidence; no performance claim is made until a corrected
+matched pilot is run.
 
 The strongest finding is a correctness error: DQN constrains actions during
 play but bootstraps from unconstrained next actions during learning. A second

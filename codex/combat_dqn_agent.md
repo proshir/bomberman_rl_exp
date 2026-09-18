@@ -27,12 +27,15 @@ vanilla DQN:
 ```python
 with torch.no_grad():
     next_q_values = target_net(next_states)
+    next_q_values = next_q_values.masked_fill(~next_action_masks, -torch.inf)
     next_values = next_q_values.max(dim=1).values
     targets = rewards + gamma * (1.0 - dones) * next_values
 ```
 
-No Double-DQN, dueling network, prioritized replay, n-step returns, new
-features, or new reward shaping is included.
+The mask is the same safe/useful candidate set used by `act`; terminal rows
+carry an empty mask and receive zero bootstrap. No Double-DQN, dueling network,
+prioritized replay, n-step returns, new features, or new reward shaping is
+included.
 
 ## Validation
 
@@ -68,3 +71,9 @@ replay could reconstruct a mismatched stagnation bucket. Therefore these pilot
 scores are retained as pre-fix baselines; the corrected target and replay
 comparison must be run before selecting a submission checkpoint. See
 [`dqn_training_audit_20260918.md`](dqn_training_audit_20260918.md).
+
+The audit repairs are now implemented and covered by 29 regression tests,
+including masked targets, terminal masks, replay-mask preservation, and
+action-time next-feature consistency. A fresh three-round CPU smoke run saved
+and evaluated a checkpoint successfully. Existing pilot numbers remain
+pre-repair baselines until a corrected matched run is completed.

@@ -161,11 +161,13 @@ The online network selects the next action and the target network evaluates it
 
 ## 5. Bomb-aware combat FQI
 
-Audit correction (18 September 2026): the current combat DQN does **not** yet
-mask Bellman targets, despite the intended shared masking rule above. Frozen
-checkpoint diagnostics also found a replay/action stagnation-clock mismatch
-and demonstrated route aliasing even with 46 inputs. Its failed pilots cannot
-isolate neural capacity or the topology block's causal effect. See
+Audit correction and repair (18 September 2026): the historical combat DQN
+pilots did **not** mask Bellman targets, despite the intended shared masking
+rule above. Frozen-checkpoint diagnostics also found a replay/action
+stagnation-clock mismatch and demonstrated route aliasing even with 46 inputs.
+Target masking and action-time replay feature consistency are now repaired and
+covered by regression tests; the failed historical pilots still cannot isolate
+neural capacity or the topology block's causal effect. See
 [`dqn_training_audit_20260918.md`](dqn_training_audit_20260918.md) for evidence,
 research sources, and the proposed correctness-first progression.
 

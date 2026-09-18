@@ -58,8 +58,9 @@ causes that must be separated from model capacity:
 
 The full evidence, public implementation comparison, and proposed experiment
 sequence are in [`dqn_training_audit_20260918.md`](dqn_training_audit_20260918.md).
-The next progression step is to repair target masking and feature consistency,
-then rerun matched 32- and 46-feature vanilla DQN controls before testing
+Target masking and action-time replay feature consistency are now repaired and
+covered by 29 tests plus a fresh CPU smoke run. The next progression step is a
+corrected matched 32- and 46-feature vanilla-DQN pilot before testing
 Double-DQN or a richer spatial representation.
 
 ## Local-topology feature ablation completed

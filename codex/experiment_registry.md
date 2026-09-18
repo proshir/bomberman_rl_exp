@@ -31,7 +31,7 @@ sets, or evaluation protocols without an explicit note.
 | Mixed curriculum control | Coin Heaven and loot-crate training | Round-300: 39.14 Coin Heaven coins and 10.41 loot-crate coins; safe but stagnant | [`combat_fqi_history_antistag_agent.md`](combat_fqi_history_antistag_agent.md) |
 | Local topology, 300 rounds | 3x3 patch and local openness | 37.79 Coin Heaven and 8.62 loot-crate coins; below control | [`combat_fqi_history_antistag_topology_agent.md`](combat_fqi_history_antistag_topology_agent.md) |
 | Local topology, 600 rounds | Longer-training follow-up | Best balanced checkpoint around round 400; round 600 degraded to 28.07 / 3.06; rejected as default | [`combat_fqi_history_antistag_topology_agent.md`](combat_fqi_history_antistag_topology_agent.md) |
-| Combat vanilla DQN implementation | Minimal PyTorch DQN comparison | Implemented, smoke-tested, and performance-tested; later audit found target-mask and replay-feature bugs | [`combat_dqn_agent.md`](combat_dqn_agent.md) |
+| Combat vanilla DQN implementation | Minimal PyTorch DQN comparison | Implemented; target masking and action-time replay consistency repaired; 29 tests and smoke test pass | [`combat_dqn_agent.md`](combat_dqn_agent.md) |
 | Combat vanilla DQN pilot | 32-feature neural combat baseline | 300-round mean 18.48 versus 19.35 for matched FQI; fresh 600-round run peaked at 9.96 and degraded to 6.28 | [`combat_dqn_agent.md`](combat_dqn_agent.md) |
 | Combat topology-feature DQN | Neural ablation of the failed 14-feature FQI topology block | 600-round best 16.53 at round 100, final 2.86; below 32-feature DQN and FQI; rejected | [`combat_dqn_topology_agent.md`](combat_dqn_topology_agent.md) |
 
@@ -55,7 +55,8 @@ The 18 September 2026 debugging session then audited the frozen DQN
 checkpoints and found that action-time safety masks were absent from vanilla
 DQN Bellman targets, replay next-state stagnation features could disagree with
 the next action-time features, and the 46-feature representation still merged
-states requiring opposite route choices. These findings change the progression
-order: correctness repair and a matched rerun come before architecture or
+states requiring opposite route choices. Target masking and action-time replay
+consistency have now been repaired and tested. These findings change the
+progression order: a corrected matched rerun comes before architecture or
 Double-DQN comparisons. See
 [`dqn_training_audit_20260918.md`](dqn_training_audit_20260918.md).
