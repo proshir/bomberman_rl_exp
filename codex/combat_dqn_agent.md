@@ -99,3 +99,21 @@ A fresh-board follow-up using seeds 31000--31007 confirmed the pattern: the
 repaired DQN scored 5.87 Coin Heaven coins and 45.51 Loot Crate coins, again
 with 100% survival and zero invalid actions. These evaluations are still
 solo, no-opponent gates and do not establish competition readiness.
+
+## Classic opponent evaluation
+
+The same three repaired-DQN checkpoints were then evaluated on 288 fresh
+classic games: eight boards (`32000`--`32007`), four seats, 400 steps, and the
+supplied `peaceful_agent`, `coin_collector_agent`, and `rule_based_agent`.
+
+| Opponent | Mean score | Mean coins | Mean kills | Survival | Invalid actions/game |
+|---|---:|---:|---:|---:|---:|
+| `peaceful_agent` | 3.01 | 2.13 | 0.18 | 90.6% | 0.00 |
+| `coin_collector_agent` | 2.72 | 2.25 | 0.09 | 88.5% | 0.16 |
+| `rule_based_agent` | 2.50 | 2.19 | 0.06 | 35.4% | 0.75 |
+
+The DQN can produce competent individual games, but it is not yet a reliable
+competition agent: survival collapses against `rule_based_agent`, invalid
+actions increase, and the mean kill rate remains low. The visual recordings
+in the evaluation scratch area include both a favorable game and a zero-score
+death selected from the completed evaluation records.
