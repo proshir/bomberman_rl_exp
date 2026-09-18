@@ -1,0 +1,26 @@
+{
+    "agents": [
+        "combat_dqn_agent"
+    ],
+    "opponents": [],
+    "scenario": "loot-crate",
+    "seeds": [
+        31100
+    ],
+    "agent_seeds": [
+        0
+    ],
+    "seats": [
+        0
+    ],
+    "max_steps": 20,
+    "metric": "coins",
+    "output": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_dqn_smoke/seed_0/evaluation/episode_0002",
+    "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_dqn_smoke/seed_0/checkpoints/episode_0002.pkl",
+    "feature_mode": "distance",
+    "bootstrap_samples": 2000,
+    "analysis_seed": 0,
+    "batch_size": 1,
+    "diagnostics": false,
+    "worker": null
+}
