@@ -130,3 +130,33 @@ should prevent catastrophic forgetting: initialize or distill navigation from
 the selected Stage-1 policy, then train with a mixed Coin Heaven/loot-crate
 curriculum and checkpoint selection that requires both metrics.  Reward-balance
 changes should be tested separately, not combined with that curriculum change.
+
+## Task 2 diagnostics and mixed curriculum pilot
+
+The first Task 2 diagnostic pass instrumented the frozen round-300 crate
+policy with repeated-state counts, maximum no-progress stretches, progress
+events, visible-coin counts, crate destruction, bombs, and safety outcomes.
+Across 96 games it averaged 17.02 coins, 49.67 crates, and 20.03 bombs, with
+100% survival and zero invalid actions. It nevertheless averaged 245.6
+diagnostic repeated states and a 227.2-step maximum no-progress stretch.
+
+The controlled follow-up alternated Coin Heaven and loot-crate episodes during
+training (`--curriculum mixed`) using three seeds, 300 rounds, the official
+400-step horizon, round-0/100/200/300 frozen evaluations, eight fixed boards,
+all four seats, and diagnostics. Results are in
+`experiments/combat_fqi_history_antistag_mixed_pilot/`.
+
+| Checkpoint | Coin Heaven coins | Completion | Loot-crate coins | Loot crates | Survival |
+|---:|---:|---:|---:|---:|---:|
+| 0 | 21.59 | 0.0% | 11.56 | 44.66 | 100% |
+| 100 | 42.03 | 2.1% | 6.45 | 21.80 | 100% |
+| 200 | 40.06 | 9.4% | 10.26 | 31.68 | 100% |
+| 300 | 39.14 | 1.0% | 10.41 | 30.31 | 100% |
+
+The mixed curriculum restores most of the lost Coin Heaven navigation (39.14
+coins versus 19.70 for the crate-only regression), but it does not yet retain
+the crate pilot's 19.35-coin result. At round 300, diagnostic maximum
+no-progress stretches were about 293 steps in Coin Heaven and 289 in loot
+crate. No opponent stage should start yet; checkpoint selection must require
+both scenario thresholds, followed by a controlled test that reduces crate
+forgetting.

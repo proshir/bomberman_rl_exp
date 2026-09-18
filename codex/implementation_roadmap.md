@@ -1,5 +1,21 @@
 # Implementation roadmap
 
+## Task 2 diagnostics and mixed curriculum pilot completed
+
+Added benchmark diagnostics for repeated states, no-progress stretches,
+progress events, visible coins, crates, bombs, invalid actions, and survival,
+plus a mixed Coin Heaven/loot-crate training mode. The baseline crate audit
+was safe but stagnant: 17.02 coins, 49.67 crates, 245.6 repeated states, and
+a 227.2-step maximum no-progress stretch over 96 games.
+
+The three-seed, 300-round mixed pilot recovered Coin Heaven navigation to 39.14
+mean coins at round 300, compared with 19.70 for the crate-only regression, but
+loot-crate performance was 10.41 coins versus 19.35 for the crate-only pilot.
+Survival remained 100% and invalid actions zero. Raw results are in
+`experiments/combat_fqi_history_antistag_mixed_pilot/`. This is a promising
+Task 2 transition result, not yet an opponent-training gate: checkpoint
+selection must require both scenario thresholds and reduce crate forgetting.
+
 ## History-aware anti-stagnation combat pilot completed
 
 Added `combat_fqi_history_antistag_agent`, which retains the original combat
