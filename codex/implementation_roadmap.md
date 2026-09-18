@@ -31,6 +31,17 @@ Longer training episodes alone do not resolve the remaining navigation loops.
 Stay in Stage 1 and target the looping/action-value issue before adding crates
 and bombs; full protocol and results are in [tree_fqi_history_agent.md](tree_fqi_history_agent.md).
 
+Replay diagnosis of the retained history agent confirms that all 121 incomplete
+fresh-board games ended in a terminal no-progress cycle: 56 stationary WAIT
+cycles and 50 two-position reversals. In their post-coin tails, the greedy
+policy chose an action that did not reduce shortest-path distance to any coin
+74.9% of the time despite a reducing legal move existing. Remaining feature
+aliasing also persists: 95 observed history-feature tuples demand disjoint
+route-improving actions in different states. The next controlled Stage 1
+hypothesis is a learned history-FQI variant with a small training-only
+route-progress reward, while retaining learned action selection. See
+[tree_fqi_history_loop_diagnosis.md](tree_fqi_history_loop_diagnosis.md).
+
 ## Tree-based fitted Q implementation
 
 The user approved implementing tree-based fitted Q iteration in a simple style.
@@ -334,3 +345,7 @@ masked branch on fresh seeds before selecting a final learner.
 Direct replay of the final seed-0 masked checkpoint on its 32 development games
 recorded 21.875 mean coins and zero invalid actions. This verifies the mask is
 active in the policy; it does not explain the remaining legal movement cycles.
+
+## Progress-reward history FQI — rejected
+
+To address the diagnosed terminal WAIT and reversal cycles, `tree_fqi_progress_agent` retained the history-FQI features, tree learner, legal mask, and learned action selection, changing only the training reward by adding `0.05 ×` the reduction in BFS distance to the nearest unchanged visible coin. The 300-episode, three-seed pilot and a fresh 16-board / four-corner confirmation are recorded in `experiments/tree_fqi_progress_pilot/` and `experiments/tree_fqi_progress_confirmation_rerun/`. At 400 steps, progress reward averaged 36.95 coins, 10.4% completions, and 283.55 repeated states, compared with history FQI’s 40.13, 28.1%, and 230.71. It is a worse candidate, so history FQI remains the Stage 1 leader.
