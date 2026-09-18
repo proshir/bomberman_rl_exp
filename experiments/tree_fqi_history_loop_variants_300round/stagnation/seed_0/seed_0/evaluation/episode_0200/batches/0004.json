@@ -1,0 +1,19 @@
+{
+    "games": [
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_loop_variants_300round/stagnation/seed_0/seed_0/checkpoints/episode_0200.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 23001,
+            "agent_seed": 0,
+            "seat": 0,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_loop_variants_300round/stagnation/seed_0/seed_0/evaluation/episode_0200/games/0004",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_loop_variants_300round/stagnation/seed_0/seed_0/evaluation/episode_0200/games/0004/agents"
+        }
+    ],
+    "result_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_loop_variants_300round/stagnation/seed_0/seed_0/evaluation/episode_0200/batches/0004_results.json"
+}

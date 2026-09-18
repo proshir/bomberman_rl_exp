@@ -1,0 +1,43 @@
+{
+    "agents": [
+        "combat_fqi_history_antistag_agent"
+    ],
+    "opponents": [],
+    "scenario": "coin-heaven",
+    "seeds": [
+        32000,
+        32001,
+        32002,
+        32003,
+        32004,
+        32005,
+        32006,
+        32007,
+        32008,
+        32009,
+        32010,
+        32011,
+        32012,
+        32013,
+        32014,
+        32015
+    ],
+    "agent_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "max_steps": 400,
+    "metric": "coins",
+    "output": "../bomberman_rl_exp/experiments/combat_fqi_history_antistag_coin_regression/seed_0",
+    "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_fqi_history_antistag_crate_pilot/seed_0/checkpoints/episode_0300.pkl",
+    "feature_mode": "distance",
+    "bootstrap_samples": 2000,
+    "analysis_seed": 0,
+    "batch_size": 64,
+    "worker": null
+}

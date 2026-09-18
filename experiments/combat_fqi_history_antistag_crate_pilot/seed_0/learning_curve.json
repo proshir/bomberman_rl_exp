@@ -1,0 +1,118 @@
+[
+    {
+        "episode": 0,
+        "interactions": 0,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_fqi_history_antistag_crate_pilot/seed_0/checkpoints/episode_0000.pkl",
+        "mean": 11.5625,
+        "ci95": [
+            10.8125,
+            12.40625
+        ],
+        "board_means": [
+            14.0,
+            10.25,
+            11.5,
+            10.5,
+            10.25,
+            12.25,
+            12.25,
+            11.5
+        ],
+        "mean_score": 11.5625,
+        "mean_coins": 11.5625,
+        "mean_crates": 44.65625,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 19.78125,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0
+    },
+    {
+        "episode": 100,
+        "interactions": 40000,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_fqi_history_antistag_crate_pilot/seed_0/checkpoints/episode_0100.pkl",
+        "mean": 5.4375,
+        "ci95": [
+            3.34296875,
+            7.5625
+        ],
+        "board_means": [
+            6.0,
+            3.5,
+            10.0,
+            5.5,
+            10.0,
+            1.75,
+            5.0,
+            1.75
+        ],
+        "mean_score": 5.4375,
+        "mean_coins": 5.4375,
+        "mean_crates": 18.375,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 7.125,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0
+    },
+    {
+        "episode": 200,
+        "interactions": 80000,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_fqi_history_antistag_crate_pilot/seed_0/checkpoints/episode_0200.pkl",
+        "mean": 18.21875,
+        "ci95": [
+            15.90625,
+            21.34375
+        ],
+        "board_means": [
+            28.0,
+            16.0,
+            14.25,
+            20.75,
+            16.75,
+            15.25,
+            17.75,
+            17.0
+        ],
+        "mean_score": 18.21875,
+        "mean_coins": 18.21875,
+        "mean_crates": 50.625,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 20.75,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0
+    },
+    {
+        "episode": 300,
+        "interactions": 120000,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_fqi_history_antistag_crate_pilot/seed_0/checkpoints/episode_0300.pkl",
+        "mean": 17.15625,
+        "ci95": [
+            15.9375,
+            18.71875
+        ],
+        "board_means": [
+            15.75,
+            15.5,
+            19.5,
+            15.75,
+            21.25,
+            15.5,
+            16.5,
+            17.5
+        ],
+        "mean_score": 17.15625,
+        "mean_coins": 17.15625,
+        "mean_crates": 46.5625,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 19.4375,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0
+    }
+]

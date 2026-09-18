@@ -1,0 +1,42 @@
+{
+    "seeds": [
+        0,
+        1,
+        2
+    ],
+    "rounds": 300,
+    "train_steps": 400,
+    "eval_steps": 100,
+    "eval_every": 100,
+    "eval_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007
+    ],
+    "board_start": 1600,
+    "output": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_2",
+    "device": "cuda",
+    "agent": "dqn_coin_agent",
+    "device_selected": "cuda",
+    "torch": "2.7.1+cu118",
+    "cuda_available": true,
+    "cuda_device": "Quadro RTX 6000",
+    "source_hashes": {
+        "run_dqn_coin_training.py": "d9c729bfd97a6a155dd70c14458dd93aef77ee734874de737bc4429e73a91647",
+        "run_benchmark.py": "7dc0f5eb99d95130dbe62f4351dd47afe150973a71117a7883ea981a581463ab",
+        "environment.py": "853d9376605cee66d25f27c65b0c1213766d77f71bf35d444b00db06c36ae4ff",
+        "agents.py": "81741eb8a52694e5c3234cd6891367562360e08bec42d9f12fa52cf8fa241c67",
+        "settings.py": "f0b97a16aae57bfc0131d76fca064749435e4d82c23fb967f7e09bd1ace9603a",
+        "events.py": "8d7633de52d7abdc021e1ccfbf759f3fbc71c84be96445665fcdd82910739ed5",
+        "agent_code/dqn_coin_agent/callbacks.py": "f6924f42d1cb07b9eb723b64fe6d282a5a54cc24403317dcf55981e1903cd341",
+        "agent_code/dqn_coin_agent/features.py": "2a38f071edcb888df559e17c0f8d2e6d1cb0f51e6ae4f0fdbd860ab2a0be4905",
+        "agent_code/dqn_coin_agent/model.py": "a71fcbc356270ecaadbb96e1bd1031510dbc2a5d3ac7d650d083f274710ea392",
+        "agent_code/dqn_coin_agent/train.py": "f8976ee36626616fb4773ca83cb5a8e33b34adc0af51f67ff9e4b9d666a87347"
+    },
+    "seed": 2
+}

@@ -1,0 +1,117 @@
+{
+    "games": [
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/checkpoints/episode_0000.pt",
+            "feature_mode": "distance",
+            "agents": [
+                "dqn_coin_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 10002,
+            "agent_seed": 0,
+            "seat": 0,
+            "max_steps": 100,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0008",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0008/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/checkpoints/episode_0000.pt",
+            "feature_mode": "distance",
+            "agents": [
+                "dqn_coin_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 10002,
+            "agent_seed": 0,
+            "seat": 1,
+            "max_steps": 100,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0009",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0009/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/checkpoints/episode_0000.pt",
+            "feature_mode": "distance",
+            "agents": [
+                "dqn_coin_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 10002,
+            "agent_seed": 0,
+            "seat": 2,
+            "max_steps": 100,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0010",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0010/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/checkpoints/episode_0000.pt",
+            "feature_mode": "distance",
+            "agents": [
+                "dqn_coin_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 10002,
+            "agent_seed": 0,
+            "seat": 3,
+            "max_steps": 100,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0011",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0011/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/checkpoints/episode_0000.pt",
+            "feature_mode": "distance",
+            "agents": [
+                "dqn_coin_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 10003,
+            "agent_seed": 0,
+            "seat": 0,
+            "max_steps": 100,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0012",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0012/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/checkpoints/episode_0000.pt",
+            "feature_mode": "distance",
+            "agents": [
+                "dqn_coin_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 10003,
+            "agent_seed": 0,
+            "seat": 1,
+            "max_steps": 100,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0013",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0013/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/checkpoints/episode_0000.pt",
+            "feature_mode": "distance",
+            "agents": [
+                "dqn_coin_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 10003,
+            "agent_seed": 0,
+            "seat": 2,
+            "max_steps": 100,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0014",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0014/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/checkpoints/episode_0000.pt",
+            "feature_mode": "distance",
+            "agents": [
+                "dqn_coin_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 10003,
+            "agent_seed": 0,
+            "seat": 3,
+            "max_steps": 100,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0015",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/games/0015/agents"
+        }
+    ],
+    "result_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/dqn_coin_pilot/seed_0/evaluation/episode_0000/batches/0001_results.json"
+}

@@ -1,0 +1,23 @@
+	Command being timed: "bomberman_rl/.venv/bin/python bomberman_rl/run_benchmark.py --agents ruehl_based_agent --scenario coin-heaven --seeds 32000 32001 32002 32003 32004 32005 32006 32007 32008 32009 32010 32011 32012 32013 32014 32015 --agent-seeds 0 --seats 0 1 2 3 --max-steps 400 --metric coins --output bomberman_rl_exp/runs/ruehl_coin_heaven_20260918 --bootstrap-samples 2000 --batch-size 8"
+	User time (seconds): 44.96
+	System time (seconds): 7.42
+	Percent of CPU this job got: 89%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:58.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 428200
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 938932
+	Voluntary context switches: 60336
+	Involuntary context switches: 19086
+	Swaps: 0
+	File system inputs: 144
+	File system outputs: 840
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

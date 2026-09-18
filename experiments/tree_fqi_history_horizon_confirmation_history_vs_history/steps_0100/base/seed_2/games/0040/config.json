@@ -1,0 +1,14 @@
+{
+    "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_pilot/seed_2/training.pkl",
+    "feature_mode": "distance",
+    "agents": [
+        "tree_fqi_history_agent"
+    ],
+    "scenario": "coin-heaven",
+    "seed": 22026,
+    "agent_seed": 0,
+    "seat": 0,
+    "max_steps": 100,
+    "log_dir": "experiments/tree_fqi_history_horizon_confirmation_history_vs_history/steps_0100/base/seed_2/games/0040",
+    "agent_log_dir": "experiments/tree_fqi_history_horizon_confirmation_history_vs_history/steps_0100/base/seed_2/games/0040/agents"
+}

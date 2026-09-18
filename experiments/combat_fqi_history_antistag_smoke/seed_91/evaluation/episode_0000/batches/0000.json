@@ -1,0 +1,19 @@
+{
+    "games": [
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_fqi_history_antistag_smoke/seed_91/checkpoints/episode_0000.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "combat_fqi_history_antistag_agent"
+            ],
+            "scenario": "loot-crate",
+            "seed": 39091,
+            "agent_seed": 0,
+            "seat": 0,
+            "max_steps": 20,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_fqi_history_antistag_smoke/seed_91/evaluation/episode_0000/games/0000",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_fqi_history_antistag_smoke/seed_91/evaluation/episode_0000/games/0000/agents"
+        }
+    ],
+    "result_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_fqi_history_antistag_smoke/seed_91/evaluation/episode_0000/batches/0000_results.json"
+}

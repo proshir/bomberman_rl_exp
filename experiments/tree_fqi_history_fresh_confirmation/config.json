@@ -1,0 +1,44 @@
+{
+    "status": "fresh-board frozen-policy comparison",
+    "board_seeds": [
+        22016,
+        22017,
+        22018,
+        22019,
+        22020,
+        22021,
+        22022,
+        22023,
+        22024,
+        22025,
+        22026,
+        22027,
+        22028,
+        22029,
+        22030,
+        22031
+    ],
+    "agent_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "step_budgets": [
+        100,
+        400
+    ],
+    "checkpoint_episode": 300,
+    "source_hashes": {
+        "/teamspace/studios/this_studio/bomberman_rl/src/run_tree_fqi_history_confirmation.py": "f8847e20305c91aa0d95134d9d5757f94fde63db3d9a3a4586079dcfce699d1f",
+        "/teamspace/studios/this_studio/bomberman_rl/src/run_benchmark.py": "367808e0ee18e20b3fb15de5fc2b916268daabeeeac9e9b798410abc1392b264",
+        "/teamspace/studios/this_studio/bomberman_rl/src/agent_code/tree_fqi_agent/callbacks.py": "eb2e2a85be8a9791484585c03e56c8b0a3d621d0342fa79f8b2c9226f358e115",
+        "/teamspace/studios/this_studio/bomberman_rl/src/agent_code/tree_fqi_agent/features.py": "70b38c5ad6b71c5e9c749b3989eeb4b9972b09c4e17b2048ec040a3ba7da9898",
+        "/teamspace/studios/this_studio/bomberman_rl/src/agent_code/tree_fqi_history_agent/callbacks.py": "493042c989f5c579c29c91c99ab1222168f9951808132a2b0e5973a16b4efe57",
+        "/teamspace/studios/this_studio/bomberman_rl/src/agent_code/tree_fqi_history_agent/features.py": "55cf8f726d513844a24e9495ce512c68dcd9f655aa60acfe00c5f6ea0dc98505"
+    },
+    "note": "Final checkpoints from three matched 300-round pilots; boards 22016--22031 were not used by these pilots or earlier evaluations."
+}

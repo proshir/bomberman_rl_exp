@@ -1,0 +1,14 @@
+{
+    "model_path": null,
+    "feature_mode": "distance",
+    "agents": [
+        "harvy"
+    ],
+    "scenario": "loot-crate",
+    "seed": 31008,
+    "agent_seed": 0,
+    "seat": 0,
+    "max_steps": 400,
+    "log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0032",
+    "agent_log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0032/agents"
+}

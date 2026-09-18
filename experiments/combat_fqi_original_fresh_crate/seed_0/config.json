@@ -1,0 +1,43 @@
+{
+    "agents": [
+        "combat_fqi_agent"
+    ],
+    "opponents": [],
+    "scenario": "loot-crate",
+    "seeds": [
+        31000,
+        31001,
+        31002,
+        31003,
+        31004,
+        31005,
+        31006,
+        31007,
+        31008,
+        31009,
+        31010,
+        31011,
+        31012,
+        31013,
+        31014,
+        31015
+    ],
+    "agent_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "max_steps": 400,
+    "metric": "coins",
+    "output": "../bomberman_rl_exp/experiments/combat_fqi_original_fresh_crate/seed_0",
+    "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_fqi_crate_pilot/seed_0/checkpoints/episode_0300.pkl",
+    "feature_mode": "distance",
+    "bootstrap_samples": 2000,
+    "analysis_seed": 0,
+    "batch_size": 64,
+    "worker": null
+}

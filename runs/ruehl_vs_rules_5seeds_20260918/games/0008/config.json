@@ -1,0 +1,17 @@
+{
+    "model_path": null,
+    "feature_mode": "distance",
+    "agents": [
+        "ruehl_based_agent",
+        "rule_based_agent",
+        "rule_based_agent",
+        "rule_based_agent"
+    ],
+    "scenario": "classic",
+    "seed": 2,
+    "agent_seed": 0,
+    "seat": 0,
+    "max_steps": 400,
+    "log_dir": "bomberman_rl_exp/runs/ruehl_vs_rules_5seeds_20260918/games/0008",
+    "agent_log_dir": "bomberman_rl_exp/runs/ruehl_vs_rules_5seeds_20260918/games/0008/agents"
+}

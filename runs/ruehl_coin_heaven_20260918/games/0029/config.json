@@ -1,0 +1,14 @@
+{
+    "model_path": null,
+    "feature_mode": "distance",
+    "agents": [
+        "ruehl_based_agent"
+    ],
+    "scenario": "coin-heaven",
+    "seed": 32007,
+    "agent_seed": 0,
+    "seat": 1,
+    "max_steps": 400,
+    "log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0029",
+    "agent_log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0029/agents"
+}

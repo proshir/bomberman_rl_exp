@@ -1,0 +1,29 @@
+{
+    "metric": "coins",
+    "agents": {
+        "tree_fqi_history_agent": {
+            "mean": 21.28125,
+            "ci95": [
+                19.34375,
+                23.28125
+            ],
+            "board_means": [
+                20.5,
+                17.0,
+                22.0,
+                24.0,
+                20.5,
+                19.25,
+                20.0,
+                27.0
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 53.8125,
+            "games": 32,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        }
+    },
+    "comparisons": {}
+}

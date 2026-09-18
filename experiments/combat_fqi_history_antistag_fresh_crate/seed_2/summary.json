@@ -1,0 +1,40 @@
+{
+    "metric": "coins",
+    "agents": {
+        "combat_fqi_history_antistag_agent": {
+            "mean": 16.921875,
+            "ci95": [
+                13.625,
+                20.125781249999996
+            ],
+            "board_means": [
+                23.0,
+                23.5,
+                18.0,
+                19.75,
+                22.75,
+                15.25,
+                8.75,
+                27.25,
+                11.5,
+                14.0,
+                4.5,
+                9.25,
+                27.5,
+                16.5,
+                10.0,
+                19.25
+            ],
+            "mean_score": 16.921875,
+            "mean_coins": 16.921875,
+            "mean_crates": 51.3125,
+            "mean_kills": 0.0,
+            "mean_suicides": 0.0,
+            "mean_bombs": 21.078125,
+            "mean_steps": 400.0,
+            "survival_rate": 1.0,
+            "mean_invalid_actions": 0.0
+        }
+    },
+    "comparisons": {}
+}

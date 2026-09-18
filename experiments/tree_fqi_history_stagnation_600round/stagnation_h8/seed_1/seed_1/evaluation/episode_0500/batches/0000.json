@@ -1,0 +1,229 @@
+{
+    "games": [
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25000,
+            "agent_seed": 0,
+            "seat": 0,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0000",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0000/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25000,
+            "agent_seed": 0,
+            "seat": 1,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0001",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0001/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25000,
+            "agent_seed": 0,
+            "seat": 2,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0002",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0002/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25000,
+            "agent_seed": 0,
+            "seat": 3,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0003",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0003/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25001,
+            "agent_seed": 0,
+            "seat": 0,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0004",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0004/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25001,
+            "agent_seed": 0,
+            "seat": 1,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0005",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0005/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25001,
+            "agent_seed": 0,
+            "seat": 2,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0006",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0006/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25001,
+            "agent_seed": 0,
+            "seat": 3,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0007",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0007/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25002,
+            "agent_seed": 0,
+            "seat": 0,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0008",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0008/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25002,
+            "agent_seed": 0,
+            "seat": 1,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0009",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0009/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25002,
+            "agent_seed": 0,
+            "seat": 2,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0010",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0010/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25002,
+            "agent_seed": 0,
+            "seat": 3,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0011",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0011/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25003,
+            "agent_seed": 0,
+            "seat": 0,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0012",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0012/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25003,
+            "agent_seed": 0,
+            "seat": 1,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0013",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0013/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25003,
+            "agent_seed": 0,
+            "seat": 2,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0014",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0014/agents"
+        },
+        {
+            "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/checkpoints/episode_0500.pkl",
+            "feature_mode": "distance",
+            "agents": [
+                "tree_fqi_history_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 25003,
+            "agent_seed": 0,
+            "seat": 3,
+            "max_steps": 400,
+            "log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0015",
+            "agent_log_dir": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/games/0015/agents"
+        }
+    ],
+    "result_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_stagnation_600round/stagnation_h8/seed_1/seed_1/evaluation/episode_0500/batches/0000_results.json"
+}
