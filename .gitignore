@@ -23,7 +23,10 @@ __pycache__/
 experiments/**/training.pkl
 /experiments/**/evaluation/**/batches/
 /experiments/**/evaluation/**/games/
+/experiments/**/batches/
+/experiments/**/games/
 /experiments/*smoke*/
+/experiments/*diagnostics*/
 *.pt
 *.pth
 *.ckpt
