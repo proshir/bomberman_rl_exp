@@ -34,28 +34,39 @@ def run_suite(manifest_path: Path, output: Path, python: str) -> None:
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     summaries = []
     run_index = 0
+    scenarios = manifest.get("scenarios", [])
+    lineups = manifest.get("opponent_lineups")
+    if lineups is None:
+        lineups = [{"name": "solo", "scenario": scenario, "opponents": []}
+                   for scenario in scenarios]
     for candidate in manifest["candidates"]:
         checkpoints = candidate["checkpoints"]
         if len(checkpoints) != 3:
             raise ValueError(f'{candidate["name"]} must provide three checkpoints')
-        for scenario in manifest["scenarios"]:
+        for lineup in lineups:
+            scenario = lineup.get("scenario", "classic")
+            opponents = lineup.get("opponents", [])
+            lineup_name = lineup["name"]
+            metric = "score" if opponents else "coins"
             candidate_summary = []
             for checkpoint_index, checkpoint in enumerate(checkpoints):
                 checkpoint_path = (ROOT / checkpoint).resolve()
                 if not checkpoint_path.is_file():
                     raise FileNotFoundError(checkpoint_path)
-                run_name = f'{candidate["name"]}_{scenario}_{checkpoint_index}'
+                run_name = (f'{candidate["name"]}_{lineup_name}_'
+                            f'{checkpoint_index}')
                 run_output = output / run_name
                 command = [
                     python, str(BENCHMARK),
                     "--agents", candidate["agent"],
+                    "--opponents", *opponents,
                     "--model-path", str(checkpoint_path),
                     "--scenario", scenario,
                     "--seeds", *map(str, manifest["board_seeds"]),
                     "--agent-seeds", *map(str, manifest["agent_seeds"]),
                     "--seats", *map(str, manifest["seats"]),
                     "--max-steps", str(manifest["max_steps"]),
-                    "--metric", "coins",
+                    "--metric", metric,
                     "--diagnostics" if manifest.get("diagnostics") else "",
                     "--output", str(run_output),
                 ]
@@ -73,6 +84,8 @@ def run_suite(manifest_path: Path, output: Path, python: str) -> None:
                 "candidate": candidate["name"],
                 "agent": candidate["agent"],
                 "scenario": scenario,
+                "lineup": lineup_name,
+                "opponents": opponents,
                 "checkpoints": candidate_summary,
             })
     result = {

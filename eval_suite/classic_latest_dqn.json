@@ -1,0 +1,23 @@
+{
+    "board_seeds": [32000, 32001, 32002, 32003, 32004, 32005, 32006, 32007],
+    "agent_seeds": [0],
+    "seats": [0, 1, 2, 3],
+    "max_steps": 400,
+    "diagnostics": true,
+    "opponent_lineups": [
+        {"name": "peaceful", "scenario": "classic", "opponents": ["peaceful_agent"]},
+        {"name": "coin_collector", "scenario": "classic", "opponents": ["coin_collector_agent"]},
+        {"name": "rule_based", "scenario": "classic", "opponents": ["rule_based_agent"]}
+    ],
+    "candidates": [
+        {
+            "name": "latest_fixed_dqn",
+            "agent": "combat_dqn_agent",
+            "checkpoints": [
+                "experiments/combat_dqn_vanilla_300round_masked_20260918/seed_0/checkpoints/episode_0300.pkl",
+                "experiments/combat_dqn_vanilla_300round_masked_20260918/seed_1/checkpoints/episode_0300.pkl",
+                "experiments/combat_dqn_vanilla_300round_masked_20260918/seed_2/checkpoints/episode_0300.pkl"
+            ]
+        }
+    ]
+}

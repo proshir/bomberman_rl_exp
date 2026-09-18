@@ -50,6 +50,10 @@ different protocol without recording that change in the experiment registry.
 `31000`--`31007`; it is intended to check whether the repaired DQN result
 generalizes beyond the comparison suite's boards.
 
+`classic_latest_dqn.json` evaluates the same three repaired-DQN checkpoints
+against the supplied `peaceful_agent`, `coin_collector_agent`, and
+`rule_based_agent` on fresh classic boards (`32000`--`32007`).
+
 ## Promotion gate
 
 Before moving to `classic` opponents, inspect both scenarios and all safety
