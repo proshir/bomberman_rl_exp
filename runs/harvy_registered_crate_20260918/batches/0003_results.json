@@ -1,0 +1,202 @@
+[
+    {
+        "seed": 30006,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 8.013245597947389,
+        "agents": [
+            {
+                "name": "harvy",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 40,
+                "coins": 40,
+                "crates": 107,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 28,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30006,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 7.747136428952217,
+        "agents": [
+            {
+                "name": "harvy",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 43,
+                "coins": 43,
+                "crates": 107,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 29,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30006,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 8.321373396087438,
+        "agents": [
+            {
+                "name": "harvy",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 45,
+                "coins": 45,
+                "crates": 108,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 29,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30006,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 7.159383804071695,
+        "agents": [
+            {
+                "name": "harvy",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 43,
+                "coins": 43,
+                "crates": 100,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 26,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30007,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 13.103548187296838,
+        "agents": [
+            {
+                "name": "harvy",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 43,
+                "coins": 43,
+                "crates": 109,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 26,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30007,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 7.329647719860077,
+        "agents": [
+            {
+                "name": "harvy",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 41,
+                "coins": 41,
+                "crates": 111,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 25,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30007,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 7.061884148046374,
+        "agents": [
+            {
+                "name": "harvy",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 41,
+                "coins": 41,
+                "crates": 110,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 28,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30007,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 7.224518821109086,
+        "agents": [
+            {
+                "name": "harvy",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 37,
+                "coins": 37,
+                "crates": 98,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 31,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    }
+]

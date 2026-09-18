@@ -1,0 +1,226 @@
+[
+    {
+        "seed": 10004,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.03676408622413874,
+        "agents": [
+            {
+                "name": "dqn_coin_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 17,
+                "coins": 17,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 59,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 10004,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.02774822199717164,
+        "agents": [
+            {
+                "name": "dqn_coin_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 27,
+                "coins": 27,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 38,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 10004,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.028701600152999163,
+        "agents": [
+            {
+                "name": "dqn_coin_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 36,
+                "coins": 36,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 12,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 10004,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.02937944605946541,
+        "agents": [
+            {
+                "name": "dqn_coin_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 34,
+                "coins": 34,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 24,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 10005,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 100,
+        "elapsed_seconds": 0.032483819872140884,
+        "agents": [
+            {
+                "name": "dqn_coin_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 11,
+                "coins": 11,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 79,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 10005,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 100,
+        "elapsed_seconds": 0.030101892072707415,
+        "agents": [
+            {
+                "name": "dqn_coin_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 43,
+                "coins": 43,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 0,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 10005,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 100,
+        "elapsed_seconds": 0.029930660035461187,
+        "agents": [
+            {
+                "name": "dqn_coin_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 42,
+                "coins": 42,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 0,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    },
+    {
+        "seed": 10005,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 100,
+        "elapsed_seconds": 0.02929485496133566,
+        "agents": [
+            {
+                "name": "dqn_coin_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 27,
+                "coins": 27,
+                "crates": 0,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 0,
+                "steps": 100,
+                "dead": false,
+                "invalid_actions": 0,
+                "repeated_states": 55,
+                "completed": false,
+                "completion_steps": null
+            }
+        ]
+    }
+]

@@ -1,0 +1,75 @@
+[
+    {
+        "seed": 4,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 1.4557332983240485,
+        "agents": [
+            {
+                "name": "ruehl_based_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 4,
+                "coins": 4,
+                "crates": 44,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 49,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 6
+            },
+            {
+                "name": "rule_based_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 2,
+                "coins": 2,
+                "crates": 20,
+                "kills": 0,
+                "suicides": 1,
+                "bombs": 17,
+                "steps": 189,
+                "dead": true,
+                "invalid_actions": 9
+            },
+            {
+                "name": "rule_based_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 6,
+                "coins": 1,
+                "crates": 29,
+                "kills": 1,
+                "suicides": 0,
+                "bombs": 33,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 9
+            },
+            {
+                "name": "rule_based_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 2,
+                "coins": 2,
+                "crates": 20,
+                "kills": 0,
+                "suicides": 1,
+                "bombs": 17,
+                "steps": 183,
+                "dead": true,
+                "invalid_actions": 7
+            }
+        ]
+    }
+]

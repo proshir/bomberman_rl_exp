@@ -1,0 +1,72 @@
+{
+    "agent": "combat_fqi_history_antistag_agent",
+    "scenario": "loot-crate",
+    "opponents": [],
+    "seeds": [
+        0,
+        1,
+        2
+    ],
+    "rounds": 300,
+    "max_steps": 400,
+    "eval_every": 100,
+    "eval_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007
+    ],
+    "eval_seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "parallel_seeds": true,
+    "output": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_fqi_history_antistag_crate_pilot/seed_2",
+    "worker": null,
+    "hyperparameters": {
+        "DISCOUNT": 0.95,
+        "EPSILON_START": 1.0,
+        "EPSILON_MIN": 0.05,
+        "EPSILON_DECAY": 0.995,
+        "BUFFER_SIZE": 30000,
+        "FIT_ITERATIONS": 3,
+        "MAX_DEPTH": 10,
+        "MIN_SAMPLES_LEAF": 5,
+        "COIN_REWARD": 1.0,
+        "KILL_REWARD": 5.0,
+        "CRATE_REWARD": 0.2,
+        "COIN_FOUND_REWARD": 0.2,
+        "SURVIVAL_REWARD": 0.5,
+        "DEATH_PENALTY": 5.0,
+        "INVALID_ACTION_PENALTY": 1.0,
+        "USELESS_BOMB_PENALTY": 0.1,
+        "ESCAPE_REWARD": 0.1,
+        "STEP_COST": 0.01
+    },
+    "code_version": "b5216c644305aedb07681e16b4b91b0a610d0439",
+    "source_hashes": {
+        "run_combat_training.py": "ab3e678973e18257923345adc55c53e8fdb4f754640ea8d5b62f275b622f9de2",
+        "run_benchmark.py": "7dc0f5eb99d95130dbe62f4351dd47afe150973a71117a7883ea981a581463ab",
+        "environment.py": "853d9376605cee66d25f27c65b0c1213766d77f71bf35d444b00db06c36ae4ff",
+        "agents.py": "81741eb8a52694e5c3234cd6891367562360e08bec42d9f12fa52cf8fa241c67",
+        "settings.py": "f0b97a16aae57bfc0131d76fca064749435e4d82c23fb967f7e09bd1ace9603a",
+        "events.py": "8d7633de52d7abdc021e1ccfbf759f3fbc71c84be96445665fcdd82910739ed5",
+        "agent_code/combat_fqi_history_antistag_agent/callbacks.py": "a41eb7c7c720210448c36350b9083fb4d4e82e9d34da5340992610e0d4e23f7d",
+        "agent_code/combat_fqi_history_antistag_agent/features.py": "c1f97d7a28d911f8ebbf6ee673cd33cc4f6701301f44db2cba4bdab0784992e0",
+        "agent_code/combat_fqi_history_antistag_agent/safety.py": "49001c2065209892129feebc474c90875cf104f9fad2c3b1c142340af25c4d03",
+        "agent_code/combat_fqi_history_antistag_agent/train.py": "2ebf7316800dcd2b56a6f2ff6817f2ffdbd28b878af622ef875c960d38827dea",
+        "agent_code/combat_fqi_agent/features.py": "bf62239017a23d8301a9685b6079441286e6ef539d92ba4810db6c9888c45c41",
+        "agent_code/combat_fqi_agent/safety.py": "fbe5823d37c8bc75cc3e9d3e370e08689079891821a9cbb913d61a626861e68f"
+    },
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "1.26.4",
+    "sklearn": "1.9.1",
+    "seed": 2,
+    "board_start": 4600
+}

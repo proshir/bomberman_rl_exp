@@ -1,0 +1,122 @@
+[
+    {
+        "episode": 0,
+        "interactions": 0,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_loop_variants_300round/time/seed_2/seed_2/checkpoints/episode_0000.pkl",
+        "mean": 21.875,
+        "ci95": [
+            20.3125,
+            23.6875
+        ],
+        "board_means": [
+            21.25,
+            24.5,
+            22.0,
+            19.75
+        ],
+        "mean_score": 21.875,
+        "mean_coins": 21.875,
+        "mean_crates": 0.0,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 0.0,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 260.9375,
+        "games": 16,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "episode": 100,
+        "interactions": 39821,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_loop_variants_300round/time/seed_2/seed_2/checkpoints/episode_0100.pkl",
+        "mean": 39.0,
+        "ci95": [
+            34.625,
+            43.0
+        ],
+        "board_means": [
+            41.75,
+            44.25,
+            32.25,
+            37.75
+        ],
+        "mean_score": 39.0,
+        "mean_coins": 39.0,
+        "mean_crates": 0.0,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 0.0,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 301.8125,
+        "games": 16,
+        "successes": 0,
+        "completion_rate": 0.0,
+        "mean_completion_steps": null
+    },
+    {
+        "episode": 200,
+        "interactions": 72013,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_loop_variants_300round/time/seed_2/seed_2/checkpoints/episode_0200.pkl",
+        "mean": 29.6875,
+        "ci95": [
+            23.125,
+            36.3125
+        ],
+        "board_means": [
+            39.75,
+            20.25,
+            26.0,
+            32.75
+        ],
+        "mean_score": 29.6875,
+        "mean_coins": 29.6875,
+        "mean_crates": 0.0,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 0.0,
+        "mean_steps": 382.6875,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 312.875,
+        "games": 16,
+        "successes": 2,
+        "completion_rate": 0.125,
+        "mean_completion_steps": 261.5
+    },
+    {
+        "episode": 300,
+        "interactions": 99690,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_loop_variants_300round/time/seed_2/seed_2/checkpoints/episode_0300.pkl",
+        "mean": 42.0625,
+        "ci95": [
+            38.25,
+            45.875
+        ],
+        "board_means": [
+            44.25,
+            47.5,
+            40.0,
+            36.5
+        ],
+        "mean_score": 42.0625,
+        "mean_coins": 42.0625,
+        "mean_crates": 0.0,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 0.0,
+        "mean_steps": 370.8125,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0,
+        "mean_repeated_states": 265.25,
+        "games": 16,
+        "successes": 2,
+        "completion_rate": 0.125,
+        "mean_completion_steps": 166.5
+    }
+]

@@ -1,0 +1,802 @@
+[
+    {
+        "seed": 30000,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.5876344479620457,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 14,
+                "coins": 14,
+                "crates": 42,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 16,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30000,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.6197063513100147,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 41,
+                "coins": 41,
+                "crates": 108,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 40,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30000,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.591980995144695,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 2,
+                "coins": 2,
+                "crates": 12,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 5,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30000,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.6115099741145968,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 38,
+                "coins": 38,
+                "crates": 98,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 40,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30001,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.5877127391286194,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 14,
+                "coins": 14,
+                "crates": 39,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 19,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30001,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.6236531333997846,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 8,
+                "coins": 8,
+                "crates": 27,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 11,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30001,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.6148538906127214,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 32,
+                "coins": 32,
+                "crates": 67,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 26,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30001,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.6451541390269995,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 2,
+                "coins": 2,
+                "crates": 4,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 2,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30002,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.6633600671775639,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 28,
+                "coins": 28,
+                "crates": 77,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 30,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30002,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.7536707851104438,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 2,
+                "coins": 2,
+                "crates": 17,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 7,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30002,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.5659650019370019,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 8,
+                "coins": 8,
+                "crates": 22,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 11,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30002,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.626210633199662,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 44,
+                "coins": 44,
+                "crates": 93,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 42,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30003,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.6056332755833864,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 2,
+                "coins": 2,
+                "crates": 14,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 5,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30003,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.6743128672242165,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 20,
+                "coins": 20,
+                "crates": 51,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 22,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30003,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.6092303954064846,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 16,
+                "coins": 16,
+                "crates": 48,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 15,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30003,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.667550970800221,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 8,
+                "coins": 8,
+                "crates": 37,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 15,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30004,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.6020063362084329,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 16,
+                "coins": 16,
+                "crates": 47,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 19,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30004,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.6177577851340175,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 28,
+                "coins": 28,
+                "crates": 81,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 39,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30004,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.6388074569404125,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 2,
+                "coins": 2,
+                "crates": 9,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 3,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30004,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.6064311219379306,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 18,
+                "coins": 18,
+                "crates": 45,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 18,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30005,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.6116063143126667,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 10,
+                "coins": 10,
+                "crates": 49,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 20,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30005,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.6243597380816936,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 2,
+                "coins": 2,
+                "crates": 20,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 5,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30005,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.6030012439005077,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 23,
+                "coins": 23,
+                "crates": 73,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 26,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30005,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.5708896918222308,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 23,
+                "coins": 23,
+                "crates": 56,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 22,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30006,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.6815132750198245,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 22,
+                "coins": 22,
+                "crates": 53,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 23,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30006,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.6894011599943042,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 25,
+                "coins": 25,
+                "crates": 59,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 29,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30006,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.6138084921985865,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 31,
+                "coins": 31,
+                "crates": 77,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 35,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30006,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.6156227267347276,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 3,
+                "coins": 3,
+                "crates": 24,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 8,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30007,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.6409445437602699,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 6,
+                "coins": 6,
+                "crates": 33,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 13,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30007,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.7809599870815873,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 2,
+                "coins": 2,
+                "crates": 11,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 3,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30007,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.6259811711497605,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 36,
+                "coins": 36,
+                "crates": 90,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 38,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 30007,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.6974440650083125,
+        "agents": [
+            {
+                "name": "combat_fqi_history_antistag_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 30,
+                "coins": 30,
+                "crates": 68,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 28,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    }
+]

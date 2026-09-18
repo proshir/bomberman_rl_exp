@@ -1,0 +1,23 @@
+	Command being timed: "bomberman_rl/.venv/bin/python bomberman_rl/run_benchmark.py --agents harvy --opponents random_agent peaceful_agent rule_based_agent --scenario classic --seeds 0 --agent-seeds 0 --seats 0 --max-steps 60 --metric score --output bomberman_rl_exp/runs/harvy_smoke_20260918 --bootstrap-samples 200"
+	User time (seconds): 3.47
+	System time (seconds): 0.93
+	Percent of CPU this job got: 80%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.45
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 426556
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 115
+	Minor (reclaiming a frame) page faults: 121894
+	Voluntary context switches: 5477
+	Involuntary context switches: 1559
+	Swaps: 0
+	File system inputs: 31784
+	File system outputs: 48
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

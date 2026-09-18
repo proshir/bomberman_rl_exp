@@ -1,5 +1,91 @@
 # Implementation roadmap
 
+## History-aware anti-stagnation combat pilot completed
+
+Added `combat_fqi_history_antistag_agent`, which retains the original combat
+reward, fitted-Q settings, and deterministic safety layer while appending the
+successful Coin Heaven history-8 and steps-since-progress signals. Eleven
+focused agent tests plus two framework tests pass. The three-seed, 300-round,
+400-step crate pilot reached 19.35 mean coins at round 300, compared with 6.54
+for the original combat agent. On matched fresh crate boards it reached 16.68
+versus 7.35, with 100% survival and no invalid actions or suicides.
+
+The Coin Heaven regression failed: 19.70 mean coins and 1.0% completion versus
+43.77 and 48.4% for the selected Stage-1 control. Opponent training was
+therefore correctly stopped at the registered gate. The next experiment should
+preserve Stage-1 navigation through initialization/distillation and a mixed
+coin/crate curriculum before introducing opponents. See
+[`combat_fqi_history_antistag_agent.md`](combat_fqi_history_antistag_agent.md).
+
+## Stagnation feature with history 8/16, 600-round extension completed
+
+The stagnation feature was retrained for 600 rounds with history windows 8 and
+16. On development boards, stagnation+history-8 peaked at round 300 (45.25
+coins, 54.2% completion), while stagnation+history-16 peaked at round 400--500
+(43.69--44.25 coins, 41.7--45.8% completion). Both round-600 checkpoints
+degraded sharply. All runs had zero invalid actions and deaths. Held-out
+evaluation of the development-optimal checkpoints is required before selection.
+See [`tree_fqi_history_stagnation_600round.md`](tree_fqi_history_stagnation_600round.md).
+
+Held-out confirmation selected stagnation + history-8 at round 300: 43.27 mean
+coins, 50.0% completion, and 162 repeated states at 400 steps. Stagnation +
+history-16 reached 42.90/39.1% at round 400 and 40.70/32.8% at round 500, so
+the longer history window did not generalize better.
+
+## Loop-focused variant comparison completed
+
+Held-out evaluation of five loop-focused variants found that the
+steps-since-last-coin feature reached 50.0% full completion with 162 repeated
+states per game, while a 0.05 revisit penalty reached 49.5% completion with
+165 repeated states. The original history-8 baseline reached 25.5% completion
+with 225 repeated states and had the highest mean coins (44.06 versus 43.27
+for stagnation and 41.32 for revisit penalty). Longer history alone was weaker,
+and the remaining-time feature hurt performance. See
+[`tree_fqi_loop_variant_confirmation.md`](tree_fqi_loop_variant_confirmation.md).
+
+## Compact DQN coin pilot completed
+
+The compact DQN completed a three-seed, 300-round pilot with 400 training
+steps per round and 100-step frozen evaluation. Its best mean was 29.71 coins
+at round 200, falling slightly to 29.30 at round 300. Invalid actions were
+zero, survival was 100%, and no game completed all coins. Under the current
+evidence it trails the learned-history tree agent, although the protocols and
+board sets are not identical. See [`dqn_coin_pilot.md`](dqn_coin_pilot.md).
+
+## 600-round history-agent extension completed
+
+The 400-step history agent was trained for 600 rounds across three seeds. On
+the four-board development evaluation, mean coins peaked at 46.21 at round
+300, while completion peaked at 43.8% at rounds 400 and 500. The round-600
+checkpoint fell to 34.93 coins and 4.2% completion. Invalid actions and deaths
+remained zero. Training longer is therefore useful for finding a better
+checkpoint, but the final checkpoint is not automatically the best one. Fresh
+16-board confirmation of rounds 300, 400, and 500 is the next step. See
+[`tree_fqi_history_600round_pilot.md`](tree_fqi_history_600round_pilot.md).
+
+Held-out confirmation selected round 400 as the balanced Stage 1 candidate: it
+reached 41.65 coins and 49.0% completion at 400 steps. Round 300 had the
+highest mean (44.06) but only 25.5% completion; round 500 reached 43.04 coins
+and 47.9% completion. All held-out evaluations had zero invalid actions and
+zero self-deaths.
+
+## 400-step history-agent training pilot completed
+
+The learned movement-history tree agent was retrained with the official
+400-step episode horizon for 300 rounds across three independent seeds. On a
+four-board frozen check with all four seats, the round-300 mean was 43.92 coins
+(42.62, 44.81, and 44.31 by seed), versus 41.45 for the earlier 100-step-
+trained agent on a different 16-board fresh set. Fifteen of 48 games completed
+all coins; invalid actions and deaths were zero. This is promising but not a
+definitive comparison because the board sets differ. The next step is matched
+16-board evaluation on boards 22016--22031 at both 100 and 400 steps.
+
+That matched confirmation is now complete. The 400-step-trained checkpoints
+scored 39.80 versus 36.26 at a 100-step budget and 44.06 versus 41.45 at a
+400-step budget. Invalid actions were zero throughout. However, 400-step full
+completion was 25.5% for the new agent versus 33.3% for the old one, so the
+longer-horizon training improves mean collection but not every success metric.
+
 ## Combat crate pilot completed
 
 The approved three-seed, 300-round, 400-step crate pilot completed. Round-300

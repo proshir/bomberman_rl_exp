@@ -1,0 +1,202 @@
+[
+    {
+        "seed": 31002,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.4596709697507322,
+        "agents": [
+            {
+                "name": "ruehl_based_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 32,
+                "coins": 32,
+                "crates": 105,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 27,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 31002,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.4641905860044062,
+        "agents": [
+            {
+                "name": "ruehl_based_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 9,
+                "coins": 9,
+                "crates": 39,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 9,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 31002,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.4561544619500637,
+        "agents": [
+            {
+                "name": "ruehl_based_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 13,
+                "coins": 13,
+                "crates": 57,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 12,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 31002,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.4564500548876822,
+        "agents": [
+            {
+                "name": "ruehl_based_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 14,
+                "coins": 14,
+                "crates": 52,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 14,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 31003,
+        "agent_seed": 0,
+        "seat": 0,
+        "steps": 400,
+        "elapsed_seconds": 0.4537861533463001,
+        "agents": [
+            {
+                "name": "ruehl_based_agent",
+                "start": [
+                    1,
+                    1
+                ],
+                "score": 18,
+                "coins": 18,
+                "crates": 71,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 19,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 31003,
+        "agent_seed": 0,
+        "seat": 1,
+        "steps": 400,
+        "elapsed_seconds": 0.4554239856079221,
+        "agents": [
+            {
+                "name": "ruehl_based_agent",
+                "start": [
+                    1,
+                    15
+                ],
+                "score": 29,
+                "coins": 29,
+                "crates": 90,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 22,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 31003,
+        "agent_seed": 0,
+        "seat": 2,
+        "steps": 400,
+        "elapsed_seconds": 0.45491805067285895,
+        "agents": [
+            {
+                "name": "ruehl_based_agent",
+                "start": [
+                    15,
+                    1
+                ],
+                "score": 15,
+                "coins": 15,
+                "crates": 42,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 11,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    },
+    {
+        "seed": 31003,
+        "agent_seed": 0,
+        "seat": 3,
+        "steps": 400,
+        "elapsed_seconds": 0.45450721913948655,
+        "agents": [
+            {
+                "name": "ruehl_based_agent",
+                "start": [
+                    15,
+                    15
+                ],
+                "score": 17,
+                "coins": 17,
+                "crates": 54,
+                "kills": 0,
+                "suicides": 0,
+                "bombs": 11,
+                "steps": 400,
+                "dead": false,
+                "invalid_actions": 0
+            }
+        ]
+    }
+]

@@ -1,0 +1,22 @@
+{
+    "metric": "score",
+    "agents": {
+        "harvy": {
+            "mean": 3.0,
+            "ci95": null,
+            "board_means": [
+                3.0
+            ],
+            "mean_score": 3.0,
+            "mean_coins": 3.0,
+            "mean_crates": 24.0,
+            "mean_kills": 0.0,
+            "mean_suicides": 0.0,
+            "mean_bombs": 5.0,
+            "mean_steps": 60.0,
+            "survival_rate": 1.0,
+            "mean_invalid_actions": 0.0
+        }
+    },
+    "comparisons": {}
+}

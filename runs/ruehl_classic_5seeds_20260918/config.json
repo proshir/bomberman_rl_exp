@@ -1,0 +1,36 @@
+{
+    "agents": [
+        "ruehl_based_agent"
+    ],
+    "opponents": [
+        "random_agent",
+        "peaceful_agent",
+        "rule_based_agent"
+    ],
+    "scenario": "classic",
+    "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+    ],
+    "agent_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "max_steps": 400,
+    "metric": "score",
+    "output": "bomberman_rl_exp/runs/ruehl_classic_5seeds_20260918",
+    "model_path": null,
+    "feature_mode": "distance",
+    "bootstrap_samples": 2000,
+    "analysis_seed": 0,
+    "batch_size": 1,
+    "worker": null
+}

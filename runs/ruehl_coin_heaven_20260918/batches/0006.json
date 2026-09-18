@@ -1,0 +1,117 @@
+{
+    "games": [
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 32012,
+            "agent_seed": 0,
+            "seat": 0,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0048",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0048/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 32012,
+            "agent_seed": 0,
+            "seat": 1,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0049",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0049/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 32012,
+            "agent_seed": 0,
+            "seat": 2,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0050",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0050/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 32012,
+            "agent_seed": 0,
+            "seat": 3,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0051",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0051/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 32013,
+            "agent_seed": 0,
+            "seat": 0,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0052",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0052/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 32013,
+            "agent_seed": 0,
+            "seat": 1,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0053",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0053/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 32013,
+            "agent_seed": 0,
+            "seat": 2,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0054",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0054/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "coin-heaven",
+            "seed": 32013,
+            "agent_seed": 0,
+            "seat": 3,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0055",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/games/0055/agents"
+        }
+    ],
+    "result_path": "bomberman_rl_exp/runs/ruehl_coin_heaven_20260918/batches/0006_results.json"
+}

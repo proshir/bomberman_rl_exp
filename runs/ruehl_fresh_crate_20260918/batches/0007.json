@@ -1,0 +1,117 @@
+{
+    "games": [
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31014,
+            "agent_seed": 0,
+            "seat": 0,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0056",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0056/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31014,
+            "agent_seed": 0,
+            "seat": 1,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0057",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0057/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31014,
+            "agent_seed": 0,
+            "seat": 2,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0058",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0058/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31014,
+            "agent_seed": 0,
+            "seat": 3,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0059",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0059/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31015,
+            "agent_seed": 0,
+            "seat": 0,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0060",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0060/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31015,
+            "agent_seed": 0,
+            "seat": 1,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0061",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0061/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31015,
+            "agent_seed": 0,
+            "seat": 2,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0062",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0062/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "ruehl_based_agent"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31015,
+            "agent_seed": 0,
+            "seat": 3,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0063",
+            "agent_log_dir": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/games/0063/agents"
+        }
+    ],
+    "result_path": "bomberman_rl_exp/runs/ruehl_fresh_crate_20260918/batches/0007_results.json"
+}

@@ -1,0 +1,29 @@
+{
+    "metric": "score",
+    "agents": {
+        "ruehl_based_agent": {
+            "mean": 7.85,
+            "ci95": [
+                6.95,
+                8.7
+            ],
+            "board_means": [
+                6.5,
+                9.25,
+                7.5,
+                8.75,
+                7.25
+            ],
+            "mean_score": 7.85,
+            "mean_coins": 4.85,
+            "mean_crates": 65.4,
+            "mean_kills": 0.6,
+            "mean_suicides": 0.3,
+            "mean_bombs": 29.0,
+            "mean_steps": 306.7,
+            "survival_rate": 0.55,
+            "mean_invalid_actions": 1.25
+        }
+    },
+    "comparisons": {}
+}

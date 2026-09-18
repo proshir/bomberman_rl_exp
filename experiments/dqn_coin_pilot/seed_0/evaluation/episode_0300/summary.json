@@ -1,0 +1,37 @@
+{
+    "metric": "coins",
+    "agents": {
+        "dqn_coin_agent": {
+            "mean": 28.65625,
+            "ci95": [
+                25.40625,
+                31.78125
+            ],
+            "board_means": [
+                20.0,
+                26.75,
+                30.25,
+                34.5,
+                33.5,
+                24.25,
+                27.5,
+                32.5
+            ],
+            "mean_score": 28.65625,
+            "mean_coins": 28.65625,
+            "mean_crates": 0.0,
+            "mean_kills": 0.0,
+            "mean_suicides": 0.0,
+            "mean_bombs": 0.0,
+            "mean_steps": 100.0,
+            "survival_rate": 1.0,
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 38.1875,
+            "games": 32,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        }
+    },
+    "comparisons": {}
+}

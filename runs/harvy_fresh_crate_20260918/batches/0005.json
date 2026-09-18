@@ -1,0 +1,117 @@
+{
+    "games": [
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "harvy"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31010,
+            "agent_seed": 0,
+            "seat": 0,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0040",
+            "agent_log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0040/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "harvy"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31010,
+            "agent_seed": 0,
+            "seat": 1,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0041",
+            "agent_log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0041/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "harvy"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31010,
+            "agent_seed": 0,
+            "seat": 2,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0042",
+            "agent_log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0042/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "harvy"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31010,
+            "agent_seed": 0,
+            "seat": 3,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0043",
+            "agent_log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0043/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "harvy"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31011,
+            "agent_seed": 0,
+            "seat": 0,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0044",
+            "agent_log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0044/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "harvy"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31011,
+            "agent_seed": 0,
+            "seat": 1,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0045",
+            "agent_log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0045/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "harvy"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31011,
+            "agent_seed": 0,
+            "seat": 2,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0046",
+            "agent_log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0046/agents"
+        },
+        {
+            "model_path": null,
+            "feature_mode": "distance",
+            "agents": [
+                "harvy"
+            ],
+            "scenario": "loot-crate",
+            "seed": 31011,
+            "agent_seed": 0,
+            "seat": 3,
+            "max_steps": 400,
+            "log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0047",
+            "agent_log_dir": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/games/0047/agents"
+        }
+    ],
+    "result_path": "bomberman_rl_exp/runs/harvy_fresh_crate_20260918/batches/0005_results.json"
+}

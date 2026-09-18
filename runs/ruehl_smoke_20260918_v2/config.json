@@ -1,0 +1,29 @@
+{
+    "agents": [
+        "ruehl_based_agent"
+    ],
+    "opponents": [
+        "random_agent",
+        "peaceful_agent",
+        "rule_based_agent"
+    ],
+    "scenario": "classic",
+    "seeds": [
+        0
+    ],
+    "agent_seeds": [
+        0
+    ],
+    "seats": [
+        0
+    ],
+    "max_steps": 60,
+    "metric": "score",
+    "output": "bomberman_rl_exp/runs/ruehl_smoke_20260918_v2",
+    "model_path": null,
+    "feature_mode": "distance",
+    "bootstrap_samples": 200,
+    "analysis_seed": 0,
+    "batch_size": 1,
+    "worker": null
+}

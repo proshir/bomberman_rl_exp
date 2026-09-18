@@ -1,0 +1,40 @@
+[
+    {
+        "episode": 0,
+        "interactions": 0,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_fqi_history_antistag_smoke/seed_91/checkpoints/episode_0000.pkl",
+        "mean": 0.0,
+        "ci95": null,
+        "board_means": [
+            0.0
+        ],
+        "mean_score": 0.0,
+        "mean_coins": 0.0,
+        "mean_crates": 3.0,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 2.0,
+        "mean_steps": 20.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0
+    },
+    {
+        "episode": 2,
+        "interactions": 40,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_fqi_history_antistag_smoke/seed_91/checkpoints/episode_0002.pkl",
+        "mean": 0.0,
+        "ci95": null,
+        "board_means": [
+            0.0
+        ],
+        "mean_score": 0.0,
+        "mean_coins": 0.0,
+        "mean_crates": 0.0,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 0.0,
+        "mean_steps": 20.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0
+    }
+]

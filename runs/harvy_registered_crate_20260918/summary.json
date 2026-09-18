@@ -1,0 +1,32 @@
+{
+    "metric": "coins",
+    "agents": {
+        "harvy": {
+            "mean": 42.96875,
+            "ci95": [
+                41.84375,
+                44.1875
+            ],
+            "board_means": [
+                41.75,
+                42.5,
+                44.75,
+                41.5,
+                44.0,
+                46.0,
+                42.75,
+                40.5
+            ],
+            "mean_score": 42.96875,
+            "mean_coins": 42.96875,
+            "mean_crates": 109.1875,
+            "mean_kills": 0.0,
+            "mean_suicides": 0.0,
+            "mean_bombs": 27.875,
+            "mean_steps": 400.0,
+            "survival_rate": 1.0,
+            "mean_invalid_actions": 0.0
+        }
+    },
+    "comparisons": {}
+}

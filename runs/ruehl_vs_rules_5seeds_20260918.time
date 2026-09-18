@@ -1,0 +1,23 @@
+	Command being timed: "bomberman_rl/.venv/bin/python bomberman_rl/run_benchmark.py --agents ruehl_based_agent --opponents rule_based_agent rule_based_agent rule_based_agent --scenario classic --seeds 0 1 2 3 4 --agent-seeds 0 --seats 0 1 2 3 --max-steps 400 --metric score --output bomberman_rl_exp/runs/ruehl_vs_rules_5seeds_20260918 --bootstrap-samples 2000"
+	User time (seconds): 59.68
+	System time (seconds): 15.75
+	Percent of CPU this job got: 83%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:30.36
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 418504
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2038713
+	Voluntary context switches: 112368
+	Involuntary context switches: 27011
+	Swaps: 0
+	File system inputs: 336
+	File system outputs: 536
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

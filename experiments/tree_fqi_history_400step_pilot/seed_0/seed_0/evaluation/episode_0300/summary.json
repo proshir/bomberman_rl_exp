@@ -1,0 +1,33 @@
+{
+    "metric": "coins",
+    "agents": {
+        "tree_fqi_history_agent": {
+            "mean": 42.625,
+            "ci95": [
+                39.6875,
+                46.8125
+            ],
+            "board_means": [
+                41.75,
+                41.0,
+                48.75,
+                39.0
+            ],
+            "mean_score": 42.625,
+            "mean_coins": 42.625,
+            "mean_crates": 0.0,
+            "mean_kills": 0.0,
+            "mean_suicides": 0.0,
+            "mean_bombs": 0.0,
+            "mean_steps": 334.5,
+            "survival_rate": 1.0,
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 225.5,
+            "games": 16,
+            "successes": 4,
+            "completion_rate": 0.25,
+            "mean_completion_steps": 138.0
+        }
+    },
+    "comparisons": {}
+}

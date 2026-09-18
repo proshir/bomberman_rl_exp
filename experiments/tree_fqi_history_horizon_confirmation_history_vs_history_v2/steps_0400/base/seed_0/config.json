@@ -1,0 +1,43 @@
+{
+    "agents": [
+        "tree_fqi_history_agent"
+    ],
+    "opponents": [],
+    "scenario": "coin-heaven",
+    "seeds": [
+        22016,
+        22017,
+        22018,
+        22019,
+        22020,
+        22021,
+        22022,
+        22023,
+        22024,
+        22025,
+        22026,
+        22027,
+        22028,
+        22029,
+        22030,
+        22031
+    ],
+    "agent_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "max_steps": 400,
+    "metric": null,
+    "output": "experiments/tree_fqi_history_horizon_confirmation_history_vs_history_v2/steps_0400/base/seed_0",
+    "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/tree_fqi_history_pilot/seed_0/training.pkl",
+    "feature_mode": "distance",
+    "bootstrap_samples": 2000,
+    "analysis_seed": 0,
+    "batch_size": 64,
+    "worker": null
+}
