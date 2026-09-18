@@ -1,0 +1,28 @@
+{
+    "board_seeds": [30000, 30001, 30002, 30003, 30004, 30005, 30006, 30007],
+    "agent_seeds": [0],
+    "seats": [0, 1, 2, 3],
+    "scenarios": ["coin-heaven", "loot-crate"],
+    "max_steps": 400,
+    "diagnostics": true,
+    "candidates": [
+        {
+            "name": "history_fqi_control",
+            "agent": "combat_fqi_history_antistag_agent",
+            "checkpoints": [
+                "experiments/combat_fqi_history_antistag_crate_pilot/seed_0/checkpoints/episode_0300.pkl",
+                "experiments/combat_fqi_history_antistag_crate_pilot/seed_1/checkpoints/episode_0300.pkl",
+                "experiments/combat_fqi_history_antistag_crate_pilot/seed_2/checkpoints/episode_0300.pkl"
+            ]
+        },
+        {
+            "name": "masked_vanilla_dqn",
+            "agent": "combat_dqn_agent",
+            "checkpoints": [
+                "experiments/combat_dqn_vanilla_300round_masked_20260918/seed_0/checkpoints/episode_0300.pkl",
+                "experiments/combat_dqn_vanilla_300round_masked_20260918/seed_1/checkpoints/episode_0300.pkl",
+                "experiments/combat_dqn_vanilla_300round_masked_20260918/seed_2/checkpoints/episode_0300.pkl"
+            ]
+        }
+    ]
+}

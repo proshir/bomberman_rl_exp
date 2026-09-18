@@ -27,6 +27,8 @@ experiments/**/training.pkl
 /experiments/**/games/
 /experiments/*smoke*/
 /experiments/*diagnostics*/
+# Generated pre-combat suite outputs; retain the manifest and protocol only.
+/eval_suite/results/
 *.pt
 *.pth
 *.ckpt
