@@ -66,7 +66,10 @@ def run_suite(manifest_path: Path, output: Path, python: str,
                 checkpoint_path = (ROOT / checkpoint).resolve()
                 if not checkpoint_path.is_file():
                     raise FileNotFoundError(checkpoint_path)
-                run_name = (f'{candidate["name"]}_{lineup_name}_'
+                # Include the scenario because the default solo lineup is
+                # generated once per scenario and therefore has the same
+                # lineup name for Coin Heaven and Loot Crate.
+                run_name = (f'{candidate["name"]}_{scenario}_{lineup_name}_'
                             f'{checkpoint_index}')
                 run_output = output / run_name
                 command = [
