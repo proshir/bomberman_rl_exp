@@ -194,6 +194,18 @@ pilot with zero invalid actions/self-deaths but lost substantial Coin Heaven
 navigation performance, showing that combat learning can cause catastrophic
 forgetting without a mixed curriculum or navigation distillation.
 
+### Combat Double-DQN — Implemented/software validated
+
+`combat_dqn_agent` preserves the 32-feature history-aware combat
+representation, reward/events, and time-aware safety mask while replacing tree
+refitting with a PyTorch MLP, separate target network, bounded replay,
+legal-action-restricted epsilon-greedy selection, and Double-DQN targets. It
+uses Huber loss, Adam, gradient clipping, and periodic target synchronization.
+The tree agents remain available as controlled baselines. Twenty-seven
+framework and agent tests pass, and a small fresh-process smoke run validates
+checkpoint serialization/loading; no substantial combat-DQN performance result
+has been registered yet.
+
 ## 6. Harvy / Arbiter advanced hybrid
 
 This is not purely PPO, DQN, or hand-written planning. The structural split is:
