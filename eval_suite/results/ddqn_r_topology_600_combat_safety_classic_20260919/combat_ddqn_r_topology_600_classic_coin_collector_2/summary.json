@@ -1,0 +1,38 @@
+{
+    "metric": "score",
+    "agents": {
+        "combat_dqn_r_topology_agent": {
+            "mean": 4.78125,
+            "ci95": [
+                4.09375,
+                5.53125
+            ],
+            "board_means": [
+                4.0,
+                6.5,
+                3.25,
+                4.25,
+                4.5,
+                5.0,
+                4.5,
+                6.25
+            ],
+            "mean_score": 4.78125,
+            "mean_coins": 4.3125,
+            "mean_crates": 62.0625,
+            "mean_kills": 0.09375,
+            "mean_suicides": 0.15625,
+            "mean_bombs": 27.0625,
+            "mean_steps": 320.9375,
+            "survival_rate": 0.78125,
+            "mean_invalid_actions": 0.40625,
+            "mean_diagnostic_repeated_states": 95.4375,
+            "mean_diagnostic_max_no_progress_steps": 74.1875,
+            "mean_diagnostic_progress_events": 47.0,
+            "mean_diagnostic_initial_visible_coins": 0.0,
+            "mean_diagnostic_max_visible_coins": 3.0,
+            "mean_diagnostic_final_visible_coins": 0.21875
+        }
+    },
+    "comparisons": {}
+}

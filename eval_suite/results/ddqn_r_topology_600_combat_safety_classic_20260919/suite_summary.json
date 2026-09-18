@@ -1,0 +1,417 @@
+{
+  "manifest": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/eval_suite/classic_combat_ddqn_r_topology_600.json",
+  "generated_at": "2026-09-18T22:18:37.508624+00:00",
+  "runs": [
+    {
+      "candidate": "combat_ddqn_r_topology_600",
+      "agent": "combat_dqn_r_topology_agent",
+      "scenario": "classic",
+      "lineup": "peaceful",
+      "opponents": [
+        "peaceful_agent"
+      ],
+      "checkpoints": [
+        {
+          "checkpoint_index": 0,
+          "checkpoint": "experiments/combat_ddqn_r_topology_300round_20260918/seed_0/checkpoints/episode_0600.pkl",
+          "summary": {
+            "metric": "score",
+            "agents": {
+              "combat_dqn_r_topology_agent": {
+                "mean": 1.6875,
+                "ci95": [
+                  1.15625,
+                  2.1875
+                ],
+                "board_means": [
+                  2.5,
+                  1.75,
+                  2.25,
+                  2.75,
+                  0.75,
+                  1.25,
+                  1.75,
+                  0.5
+                ],
+                "mean_score": 1.6875,
+                "mean_coins": 1.6875,
+                "mean_crates": 30.4375,
+                "mean_kills": 0.0,
+                "mean_suicides": 0.0,
+                "mean_bombs": 12.71875,
+                "mean_steps": 400.0,
+                "survival_rate": 1.0,
+                "mean_invalid_actions": 0.03125,
+                "mean_diagnostic_repeated_states": 311.5,
+                "mean_diagnostic_max_no_progress_steps": 290.53125,
+                "mean_diagnostic_progress_events": 14.0625,
+                "mean_diagnostic_initial_visible_coins": 0.0,
+                "mean_diagnostic_max_visible_coins": 1.03125,
+                "mean_diagnostic_final_visible_coins": 0.59375
+              }
+            },
+            "comparisons": {}
+          }
+        },
+        {
+          "checkpoint_index": 1,
+          "checkpoint": "experiments/combat_ddqn_r_topology_300round_20260918/seed_1/checkpoints/episode_0600.pkl",
+          "summary": {
+            "metric": "score",
+            "agents": {
+              "combat_dqn_r_topology_agent": {
+                "mean": 6.8125,
+                "ci95": [
+                  4.74921875,
+                  8.8125
+                ],
+                "board_means": [
+                  7.0,
+                  1.25,
+                  8.75,
+                  5.25,
+                  10.25,
+                  5.75,
+                  11.0,
+                  5.25
+                ],
+                "mean_score": 6.8125,
+                "mean_coins": 5.09375,
+                "mean_crates": 72.0,
+                "mean_kills": 0.34375,
+                "mean_suicides": 0.0,
+                "mean_bombs": 27.375,
+                "mean_steps": 398.90625,
+                "survival_rate": 1.0,
+                "mean_invalid_actions": 0.0,
+                "mean_diagnostic_repeated_states": 195.125,
+                "mean_diagnostic_max_no_progress_steps": 163.03125,
+                "mean_diagnostic_progress_events": 31.5,
+                "mean_diagnostic_initial_visible_coins": 0.0,
+                "mean_diagnostic_max_visible_coins": 1.65625,
+                "mean_diagnostic_final_visible_coins": 0.3125
+              }
+            },
+            "comparisons": {}
+          }
+        },
+        {
+          "checkpoint_index": 2,
+          "checkpoint": "experiments/combat_ddqn_r_topology_300round_20260918/seed_2/checkpoints/episode_0600.pkl",
+          "summary": {
+            "metric": "score",
+            "agents": {
+              "combat_dqn_r_topology_agent": {
+                "mean": 9.46875,
+                "ci95": [
+                  7.71875,
+                  11.34375
+                ],
+                "board_means": [
+                  7.0,
+                  6.0,
+                  12.75,
+                  12.25,
+                  8.25,
+                  13.5,
+                  7.5,
+                  8.5
+                ],
+                "mean_score": 9.46875,
+                "mean_coins": 6.65625,
+                "mean_crates": 98.71875,
+                "mean_kills": 0.5625,
+                "mean_suicides": 0.15625,
+                "mean_bombs": 40.375,
+                "mean_steps": 367.34375,
+                "survival_rate": 0.84375,
+                "mean_invalid_actions": 0.0,
+                "mean_diagnostic_repeated_states": 87.71875,
+                "mean_diagnostic_max_no_progress_steps": 58.875,
+                "mean_diagnostic_progress_events": 44.90625,
+                "mean_diagnostic_initial_visible_coins": 0.0,
+                "mean_diagnostic_max_visible_coins": 2.4375,
+                "mean_diagnostic_final_visible_coins": 0.40625
+              }
+            },
+            "comparisons": {}
+          }
+        }
+      ]
+    },
+    {
+      "candidate": "combat_ddqn_r_topology_600",
+      "agent": "combat_dqn_r_topology_agent",
+      "scenario": "classic",
+      "lineup": "coin_collector",
+      "opponents": [
+        "coin_collector_agent"
+      ],
+      "checkpoints": [
+        {
+          "checkpoint_index": 0,
+          "checkpoint": "experiments/combat_ddqn_r_topology_300round_20260918/seed_0/checkpoints/episode_0600.pkl",
+          "summary": {
+            "metric": "score",
+            "agents": {
+              "combat_dqn_r_topology_agent": {
+                "mean": 3.21875,
+                "ci95": [
+                  2.4375,
+                  4.15625
+                ],
+                "board_means": [
+                  2.0,
+                  2.5,
+                  2.25,
+                  2.5,
+                  2.5,
+                  4.0,
+                  4.0,
+                  6.0
+                ],
+                "mean_score": 3.21875,
+                "mean_coins": 2.4375,
+                "mean_crates": 44.46875,
+                "mean_kills": 0.15625,
+                "mean_suicides": 0.09375,
+                "mean_bombs": 21.96875,
+                "mean_steps": 370.84375,
+                "survival_rate": 0.90625,
+                "mean_invalid_actions": 0.5,
+                "mean_diagnostic_repeated_states": 140.15625,
+                "mean_diagnostic_max_no_progress_steps": 71.28125,
+                "mean_diagnostic_progress_events": 45.46875,
+                "mean_diagnostic_initial_visible_coins": 0.0,
+                "mean_diagnostic_max_visible_coins": 2.75,
+                "mean_diagnostic_final_visible_coins": 0.03125
+              }
+            },
+            "comparisons": {}
+          }
+        },
+        {
+          "checkpoint_index": 1,
+          "checkpoint": "experiments/combat_ddqn_r_topology_300round_20260918/seed_1/checkpoints/episode_0600.pkl",
+          "summary": {
+            "metric": "score",
+            "agents": {
+              "combat_dqn_r_topology_agent": {
+                "mean": 4.125,
+                "ci95": [
+                  3.5625,
+                  4.6875
+                ],
+                "board_means": [
+                  5.0,
+                  3.75,
+                  4.5,
+                  5.0,
+                  3.75,
+                  2.75,
+                  5.0,
+                  3.25
+                ],
+                "mean_score": 4.125,
+                "mean_coins": 3.65625,
+                "mean_crates": 51.84375,
+                "mean_kills": 0.09375,
+                "mean_suicides": 0.0625,
+                "mean_bombs": 21.9375,
+                "mean_steps": 367.5625,
+                "survival_rate": 0.90625,
+                "mean_invalid_actions": 0.5,
+                "mean_diagnostic_repeated_states": 129.84375,
+                "mean_diagnostic_max_no_progress_steps": 97.09375,
+                "mean_diagnostic_progress_events": 44.59375,
+                "mean_diagnostic_initial_visible_coins": 0.0,
+                "mean_diagnostic_max_visible_coins": 2.53125,
+                "mean_diagnostic_final_visible_coins": 0.03125
+              }
+            },
+            "comparisons": {}
+          }
+        },
+        {
+          "checkpoint_index": 2,
+          "checkpoint": "experiments/combat_ddqn_r_topology_300round_20260918/seed_2/checkpoints/episode_0600.pkl",
+          "summary": {
+            "metric": "score",
+            "agents": {
+              "combat_dqn_r_topology_agent": {
+                "mean": 4.78125,
+                "ci95": [
+                  4.09375,
+                  5.53125
+                ],
+                "board_means": [
+                  4.0,
+                  6.5,
+                  3.25,
+                  4.25,
+                  4.5,
+                  5.0,
+                  4.5,
+                  6.25
+                ],
+                "mean_score": 4.78125,
+                "mean_coins": 4.3125,
+                "mean_crates": 62.0625,
+                "mean_kills": 0.09375,
+                "mean_suicides": 0.15625,
+                "mean_bombs": 27.0625,
+                "mean_steps": 320.9375,
+                "survival_rate": 0.78125,
+                "mean_invalid_actions": 0.40625,
+                "mean_diagnostic_repeated_states": 95.4375,
+                "mean_diagnostic_max_no_progress_steps": 74.1875,
+                "mean_diagnostic_progress_events": 47.0,
+                "mean_diagnostic_initial_visible_coins": 0.0,
+                "mean_diagnostic_max_visible_coins": 3.0,
+                "mean_diagnostic_final_visible_coins": 0.21875
+              }
+            },
+            "comparisons": {}
+          }
+        }
+      ]
+    },
+    {
+      "candidate": "combat_ddqn_r_topology_600",
+      "agent": "combat_dqn_r_topology_agent",
+      "scenario": "classic",
+      "lineup": "rule_based",
+      "opponents": [
+        "rule_based_agent"
+      ],
+      "checkpoints": [
+        {
+          "checkpoint_index": 0,
+          "checkpoint": "experiments/combat_ddqn_r_topology_300round_20260918/seed_0/checkpoints/episode_0600.pkl",
+          "summary": {
+            "metric": "score",
+            "agents": {
+              "combat_dqn_r_topology_agent": {
+                "mean": 2.875,
+                "ci95": [
+                  2.1875,
+                  3.625
+                ],
+                "board_means": [
+                  2.25,
+                  1.5,
+                  4.25,
+                  2.5,
+                  3.0,
+                  4.75,
+                  3.0,
+                  1.75
+                ],
+                "mean_score": 2.875,
+                "mean_coins": 2.5625,
+                "mean_crates": 42.15625,
+                "mean_kills": 0.0625,
+                "mean_suicides": 0.4375,
+                "mean_bombs": 21.1875,
+                "mean_steps": 302.8125,
+                "survival_rate": 0.4375,
+                "mean_invalid_actions": 1.09375,
+                "mean_diagnostic_repeated_states": 113.0625,
+                "mean_diagnostic_max_no_progress_steps": 35.09375,
+                "mean_diagnostic_progress_events": 45.84375,
+                "mean_diagnostic_initial_visible_coins": 0.0,
+                "mean_diagnostic_max_visible_coins": 2.65625,
+                "mean_diagnostic_final_visible_coins": 0.0
+              }
+            },
+            "comparisons": {}
+          }
+        },
+        {
+          "checkpoint_index": 1,
+          "checkpoint": "experiments/combat_ddqn_r_topology_300round_20260918/seed_1/checkpoints/episode_0600.pkl",
+          "summary": {
+            "metric": "score",
+            "agents": {
+              "combat_dqn_r_topology_agent": {
+                "mean": 4.46875,
+                "ci95": [
+                  3.71875,
+                  5.15625
+                ],
+                "board_means": [
+                  5.75,
+                  2.75,
+                  5.5,
+                  4.75,
+                  4.0,
+                  4.5,
+                  5.5,
+                  3.0
+                ],
+                "mean_score": 4.46875,
+                "mean_coins": 3.84375,
+                "mean_crates": 53.0,
+                "mean_kills": 0.125,
+                "mean_suicides": 0.28125,
+                "mean_bombs": 23.25,
+                "mean_steps": 301.71875,
+                "survival_rate": 0.59375,
+                "mean_invalid_actions": 1.25,
+                "mean_diagnostic_repeated_states": 76.21875,
+                "mean_diagnostic_max_no_progress_steps": 32.96875,
+                "mean_diagnostic_progress_events": 45.4375,
+                "mean_diagnostic_initial_visible_coins": 0.0,
+                "mean_diagnostic_max_visible_coins": 2.625,
+                "mean_diagnostic_final_visible_coins": 0.03125
+              }
+            },
+            "comparisons": {}
+          }
+        },
+        {
+          "checkpoint_index": 2,
+          "checkpoint": "experiments/combat_ddqn_r_topology_300round_20260918/seed_2/checkpoints/episode_0600.pkl",
+          "summary": {
+            "metric": "score",
+            "agents": {
+              "combat_dqn_r_topology_agent": {
+                "mean": 3.75,
+                "ci95": [
+                  2.875,
+                  4.71875
+                ],
+                "board_means": [
+                  3.25,
+                  1.75,
+                  3.75,
+                  3.25,
+                  5.0,
+                  3.5,
+                  3.0,
+                  6.5
+                ],
+                "mean_score": 3.75,
+                "mean_coins": 3.4375,
+                "mean_crates": 54.84375,
+                "mean_kills": 0.0625,
+                "mean_suicides": 0.40625,
+                "mean_bombs": 24.5,
+                "mean_steps": 246.78125,
+                "survival_rate": 0.4375,
+                "mean_invalid_actions": 1.15625,
+                "mean_diagnostic_repeated_states": 81.3125,
+                "mean_diagnostic_max_no_progress_steps": 37.21875,
+                "mean_diagnostic_progress_events": 46.84375,
+                "mean_diagnostic_initial_visible_coins": 0.0,
+                "mean_diagnostic_max_visible_coins": 2.875,
+                "mean_diagnostic_final_visible_coins": 0.1875
+              }
+            },
+            "comparisons": {}
+          }
+        }
+      ]
+    }
+  ]
+}

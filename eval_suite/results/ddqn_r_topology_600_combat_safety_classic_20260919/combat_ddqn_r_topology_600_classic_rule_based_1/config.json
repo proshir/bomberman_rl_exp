@@ -1,0 +1,38 @@
+{
+    "agents": [
+        "combat_dqn_r_topology_agent"
+    ],
+    "opponents": [
+        "rule_based_agent"
+    ],
+    "scenario": "classic",
+    "seeds": [
+        32000,
+        32001,
+        32002,
+        32003,
+        32004,
+        32005,
+        32006,
+        32007
+    ],
+    "agent_seeds": [
+        0
+    ],
+    "seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "max_steps": 400,
+    "metric": "score",
+    "output": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/eval_suite/results/ddqn_r_topology_600_combat_safety_classic_20260919/combat_ddqn_r_topology_600_classic_rule_based_1",
+    "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_ddqn_r_topology_300round_20260918/seed_1/checkpoints/episode_0600.pkl",
+    "feature_mode": "distance",
+    "bootstrap_samples": 2000,
+    "analysis_seed": 0,
+    "batch_size": 1,
+    "diagnostics": true,
+    "worker": null
+}

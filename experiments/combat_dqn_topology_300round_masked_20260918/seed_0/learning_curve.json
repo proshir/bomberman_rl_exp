@@ -1,0 +1,92 @@
+[
+    {
+        "episode": 0,
+        "scenario": "loot-crate",
+        "interactions": 0,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_dqn_topology_300round_masked_20260918/seed_0/checkpoints/episode_0000.pkl",
+        "mean": 0.0,
+        "ci95": [
+            0.0,
+            0.0
+        ],
+        "board_means": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "mean_score": 0.0,
+        "mean_coins": 0.0,
+        "mean_crates": 0.0,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 0.0,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0
+    },
+    {
+        "episode": 100,
+        "scenario": "loot-crate",
+        "interactions": 40000,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_dqn_topology_300round_masked_20260918/seed_0/checkpoints/episode_0100.pkl",
+        "mean": 15.15625,
+        "ci95": [
+            9.90625,
+            21.6875
+        ],
+        "board_means": [
+            12.0,
+            19.75,
+            36.0,
+            14.0,
+            15.25,
+            4.5,
+            8.5,
+            11.25
+        ],
+        "mean_score": 15.15625,
+        "mean_coins": 15.15625,
+        "mean_crates": 37.8125,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 13.875,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0
+    },
+    {
+        "episode": 200,
+        "scenario": "loot-crate",
+        "interactions": 80000,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_dqn_topology_300round_masked_20260918/seed_0/checkpoints/episode_0200.pkl",
+        "mean": 41.03125,
+        "ci95": [
+            38.74921875,
+            43.375
+        ],
+        "board_means": [
+            39.75,
+            37.75,
+            35.5,
+            39.0,
+            42.75,
+            45.75,
+            42.25,
+            45.5
+        ],
+        "mean_score": 41.03125,
+        "mean_coins": 41.03125,
+        "mean_crates": 100.53125,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 40.59375,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0
+    }
+]

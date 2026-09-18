@@ -1,0 +1,60 @@
+{
+    "agent": "combat_dqn_r_topology_agent",
+    "scenario": "loot-crate",
+    "curriculum": "none",
+    "diagnostics": false,
+    "opponents": [],
+    "seeds": [
+        0,
+        1,
+        2
+    ],
+    "rounds": 600,
+    "max_steps": 400,
+    "eval_every": 100,
+    "eval_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007
+    ],
+    "eval_seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "parallel_seeds": true,
+    "resume": true,
+    "output": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_ddqn_r_topology_300round_20260918/seed_2",
+    "worker": null,
+    "resumed_from_rounds": 300,
+    "evaluation_scenarios": [
+        "loot-crate"
+    ],
+    "hyperparameters": {},
+    "code_version": "aa9499005d4dd1415eca54de295e5e82a7611d06",
+    "source_hashes": {
+        "run_combat_training.py": "1c41d6fde1a11dc938cf8aeccf03c2a6d07743811ff8ce966985f3d228d4fb81",
+        "run_benchmark.py": "26d22915806a478e6f6eb52df86ae020d8b6a2045893863d8331f0f94468512d",
+        "environment.py": "853d9376605cee66d25f27c65b0c1213766d77f71bf35d444b00db06c36ae4ff",
+        "agents.py": "81741eb8a52694e5c3234cd6891367562360e08bec42d9f12fa52cf8fa241c67",
+        "settings.py": "f0b97a16aae57bfc0131d76fca064749435e4d82c23fb967f7e09bd1ace9603a",
+        "events.py": "8d7633de52d7abdc021e1ccfbf759f3fbc71c84be96445665fcdd82910739ed5",
+        "agent_code/combat_dqn_r_topology_agent/callbacks.py": "2875b580702139933b893c1a0368dee2d951ff49e47a17858ce0ccb8c2dc7f6f",
+        "agent_code/combat_dqn_r_topology_agent/features.py": "314bd36514ec2b1a8532bd716a439227b444c6c753be64209c7a665bfeb976a7",
+        "agent_code/combat_dqn_r_topology_agent/safety.py": "1bfa96ce84a88ce4be2079293c819c3b8a74a7d0933a9ce4a2179820c750b885",
+        "agent_code/combat_dqn_r_topology_agent/train.py": "714af95106b8ab88b9112e8ff8af90e40ac972751ce7f9cfb0655b5183efb52a"
+    },
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "1.26.4",
+    "sklearn": "1.9.1",
+    "seed": 2,
+    "board_start": 4600,
+    "start_episode": 300,
+    "resume_checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_ddqn_r_topology_300round_20260918/seed_2/checkpoints/episode_0300.pkl"
+}

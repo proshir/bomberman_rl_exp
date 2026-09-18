@@ -1,0 +1,64 @@
+{
+    "agent": "combat_dqn_topology_agent",
+    "scenario": "loot-crate",
+    "curriculum": "none",
+    "diagnostics": false,
+    "opponents": [],
+    "seeds": [
+        0,
+        1,
+        2
+    ],
+    "rounds": 300,
+    "max_steps": 400,
+    "eval_every": 100,
+    "eval_seeds": [
+        30000,
+        30001,
+        30002,
+        30003,
+        30004,
+        30005,
+        30006,
+        30007
+    ],
+    "eval_seats": [
+        0,
+        1,
+        2,
+        3
+    ],
+    "parallel_seeds": true,
+    "output": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_dqn_topology_300round_masked_20260918/seed_1",
+    "worker": null,
+    "evaluation_scenarios": [
+        "loot-crate"
+    ],
+    "hyperparameters": {},
+    "code_version": "ed48a764558be605056ffdc9aa7e1b244b26d77e",
+    "source_hashes": {
+        "run_combat_training.py": "c870782245b87fcb4eebf86fa771a6e3ac6eae14b396beb8aba355737d02186b",
+        "run_benchmark.py": "26d22915806a478e6f6eb52df86ae020d8b6a2045893863d8331f0f94468512d",
+        "environment.py": "853d9376605cee66d25f27c65b0c1213766d77f71bf35d444b00db06c36ae4ff",
+        "agents.py": "81741eb8a52694e5c3234cd6891367562360e08bec42d9f12fa52cf8fa241c67",
+        "settings.py": "f0b97a16aae57bfc0131d76fca064749435e4d82c23fb967f7e09bd1ace9603a",
+        "events.py": "8d7633de52d7abdc021e1ccfbf759f3fbc71c84be96445665fcdd82910739ed5",
+        "agent_code/combat_dqn_topology_agent/callbacks.py": "617536f12bc10ca6d54f5417302cf86481ae346c29c410aa6b7bf61d9a7b4290",
+        "agent_code/combat_dqn_topology_agent/features.py": "43d41bd74d47143d8aa646b25a6ae5af94de8255efa90a6db46a7fb61c382246",
+        "agent_code/combat_dqn_topology_agent/safety.py": "8b59ed563732a4ac6c3594d4fffe20248d413d1dd6a762a89ad0b72161c27ac6",
+        "agent_code/combat_dqn_topology_agent/train.py": "eaa89b425f038d9847a258018447c052e6e9c4db6e16b821fee770b44e4c5d03",
+        "agent_code/combat_dqn_agent/callbacks.py": "1f1ece42514667ea009f41f4d84d92797da064e9261cf370c8a6fce10bd600e3",
+        "agent_code/combat_dqn_agent/config.py": "195897e5c9e0d9651a969d3c899c1d87246037d940f261cdeafe0918ad7ad582",
+        "agent_code/combat_dqn_agent/model.py": "9cc9182657c30fe01c69145c9685005455eca1458fada461def978e8a7b0be02",
+        "agent_code/combat_dqn_agent/replay.py": "2dcd2715abbc65d88a0464765bffad26e5e904a6effd62519ada9bc6b69850bc",
+        "agent_code/combat_dqn_agent/train.py": "5f5f609207d8bc4d53441d2fb530e0ec28d5067a9837a4039ee8dd81b3cf889e",
+        "agent_code/combat_fqi_history_antistag_agent/features.py": "c1f97d7a28d911f8ebbf6ee673cd33cc4f6701301f44db2cba4bdab0784992e0",
+        "agent_code/combat_fqi_history_antistag_agent/safety.py": "49001c2065209892129feebc474c90875cf104f9fad2c3b1c142340af25c4d03",
+        "agent_code/combat_fqi_history_antistag_topology_agent/features.py": "3376f2382611216bea92f459cbdc0c85b8804831ce8d2df4f5a4a50bca87c740"
+    },
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "1.26.4",
+    "sklearn": "1.9.1",
+    "seed": 1,
+    "board_start": 4300
+}
