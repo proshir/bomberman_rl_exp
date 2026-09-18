@@ -36,7 +36,7 @@ features, or new reward shaping is included.
 
 ## Validation
 
-Nineteen focused history, safety, topology, and vanilla-DQN tests pass. They
+Twenty focused history, safety, topology, and vanilla-DQN tests pass. They
 cover replay capacity, vanilla terminal targets, tensor shapes, checkpoint
 contents, and one optimizer update. A two-round, 20-step CPU smoke run also
 completed fresh-process evaluation and checkpoint loading. It is software
