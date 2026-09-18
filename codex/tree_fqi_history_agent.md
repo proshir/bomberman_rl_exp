@@ -114,3 +114,34 @@ identical aggregate summaries. Evaluation wall time fell from 12.43 seconds to
 test also completed both checkpoint evaluations, reloaded the model, retained
 20 transitions, and reported zero invalid actions. Tree fitting during training
 is unchanged, preserving the current learning schedule.
+
+## 400-step training-horizon pilot
+
+Ran the same three seeds for 300 rounds with a 400-step episode limit, retaining
+all history-agent rewards, exploration settings, tree settings, and fitted-Q
+updates. Checkpoint evaluations during training remained at 100 steps. The
+three runs recorded 97,019, 93,822, and 95,196 transitions; each completed all
+300 rounds and used the full 30,000-transition replay buffer. Artifacts are in
+`experiments/tree_fqi_history_400step_pilot/`.
+
+Compared final 100-step-trained and 400-step-trained checkpoints on 16 new
+boards, four starting corners, and both 100- and 400-step limits. Artifacts are
+in `experiments/tree_fqi_history_400step_confirmation/`.
+
+| Evaluation limit | Trained for 100 steps | Trained for 400 steps |
+|---|---:|---:|
+| 100 steps: mean coins | 35.45 | **37.73** |
+| 400 steps: mean coins | 41.50 | 42.15 |
+| 400 steps: all-coin completions | **71/192 (37.0%)** | 48/192 (25.0%) |
+
+At 100 steps, the longer-horizon checkpoints gained 2.28 coins; the paired
+board-bootstrap 95% interval was [0.76, 3.74], conditional on the six frozen
+checkpoints. At 400 steps, the gain was only 0.65 coins with interval
+[-1.76, 2.89], which includes zero. Completion was lower for the longer-horizon
+checkpoints, and their repeated-state count was higher (230 versus 204 mean
+per game). Neither policy produced invalid actions.
+
+Conclusion: the training/evaluation horizon mismatch was worth testing, but
+raising the training limit alone did not improve 400-step completion. The next
+Stage 1 investigation should focus on remaining navigation loops and action
+value learning, rather than carrying this horizon change forward as a solution.

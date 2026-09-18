@@ -23,6 +23,14 @@ useful Stage 1 change, though most fresh games still did not complete. Agree on
 the Stage 1 exit criterion before moving to crates and survival. See
 [tree_fqi_history_agent.md](tree_fqi_history_agent.md).
 
+The 400-step training-horizon pilot is complete. Relative to the 100-step
+training baseline, it raised fresh-board collection at a 100-step evaluation
+from 35.45 to 37.73 coins, but at 400 steps the score gain was small and
+uncertain (42.15 versus 41.50) and completion fell from 71/192 to 48/192 games.
+Longer training episodes alone do not resolve the remaining navigation loops.
+Stay in Stage 1 and target the looping/action-value issue before adding crates
+and bombs; full protocol and results are in [tree_fqi_history_agent.md](tree_fqi_history_agent.md).
+
 ## Tree-based fitted Q implementation
 
 The user approved implementing tree-based fitted Q iteration in a simple style.

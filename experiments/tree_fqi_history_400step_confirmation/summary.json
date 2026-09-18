@@ -1,0 +1,508 @@
+{
+    "status": "fresh-board frozen-policy comparison of training horizons",
+    "rows": [
+        {
+            "training_horizon": "train_100",
+            "training_seed": 0,
+            "max_steps": 100,
+            "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_history_pilot/seed_0/checkpoints/episode_0300.pkl",
+            "checkpoint_hash": "27e118e2a9a4be50881de87063ae78a095dc29b2d1afd27d30fbed9c2838c48b",
+            "mean": 35.03125,
+            "ci95": [
+                32.48359375,
+                37.34375
+            ],
+            "board_means": [
+                38.5,
+                41.5,
+                38.0,
+                25.5,
+                36.25,
+                35.25,
+                30.75,
+                40.75,
+                33.0,
+                39.25,
+                34.5,
+                30.75,
+                34.5,
+                37.25,
+                40.25,
+                24.5
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 18.046875,
+            "games": 64,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        {
+            "training_horizon": "train_100",
+            "training_seed": 0,
+            "max_steps": 400,
+            "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_history_pilot/seed_0/checkpoints/episode_0300.pkl",
+            "checkpoint_hash": "27e118e2a9a4be50881de87063ae78a095dc29b2d1afd27d30fbed9c2838c48b",
+            "mean": 41.84375,
+            "ci95": [
+                38.34375,
+                45.0625
+            ],
+            "board_means": [
+                44.5,
+                45.0,
+                42.0,
+                31.75,
+                50.0,
+                42.5,
+                36.5,
+                49.5,
+                42.25,
+                47.25,
+                42.25,
+                37.75,
+                36.25,
+                47.75,
+                49.75,
+                24.5
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 174.796875,
+            "games": 64,
+            "successes": 31,
+            "completion_rate": 0.484375,
+            "mean_completion_steps": 161.38709677419354
+        },
+        {
+            "training_horizon": "train_100",
+            "training_seed": 1,
+            "max_steps": 100,
+            "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_history_pilot/seed_1/checkpoints/episode_0300.pkl",
+            "checkpoint_hash": "f179f23a5b80349353c255a0c238334328c0996d4ca6f564cabfb4301bdb0221",
+            "mean": 34.703125,
+            "ci95": [
+                32.999609375,
+                36.609765624999994
+            ],
+            "board_means": [
+                34.75,
+                36.25,
+                32.75,
+                30.0,
+                41.75,
+                30.75,
+                36.5,
+                43.5,
+                30.0,
+                31.5,
+                34.75,
+                34.5,
+                37.25,
+                34.0,
+                33.25,
+                33.75
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 20.21875,
+            "games": 64,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        {
+            "training_horizon": "train_100",
+            "training_seed": 1,
+            "max_steps": 400,
+            "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_history_pilot/seed_1/checkpoints/episode_0300.pkl",
+            "checkpoint_hash": "f179f23a5b80349353c255a0c238334328c0996d4ca6f564cabfb4301bdb0221",
+            "mean": 36.921875,
+            "ci95": [
+                34.718359375,
+                39.46875
+            ],
+            "board_means": [
+                36.5,
+                39.0,
+                34.5,
+                30.0,
+                47.0,
+                34.5,
+                38.25,
+                47.75,
+                30.0,
+                32.5,
+                37.5,
+                34.5,
+                38.5,
+                38.25,
+                36.0,
+                36.0
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 292.203125,
+            "games": 64,
+            "successes": 5,
+            "completion_rate": 0.078125,
+            "mean_completion_steps": 150.4
+        },
+        {
+            "training_horizon": "train_100",
+            "training_seed": 2,
+            "max_steps": 100,
+            "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_history_pilot/seed_2/checkpoints/episode_0300.pkl",
+            "checkpoint_hash": "2fc1607b7b0aeab23e5d44858b363262a2ecf49b782f4cff10e1d22a8f88498c",
+            "mean": 36.625,
+            "ci95": [
+                34.968359375,
+                38.344140624999994
+            ],
+            "board_means": [
+                43.25,
+                36.75,
+                36.75,
+                33.5,
+                36.75,
+                38.0,
+                36.25,
+                42.5,
+                29.5,
+                40.5,
+                38.75,
+                35.5,
+                36.75,
+                32.5,
+                36.5,
+                32.25
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 13.765625,
+            "games": 64,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        {
+            "training_horizon": "train_100",
+            "training_seed": 2,
+            "max_steps": 400,
+            "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_history_pilot/seed_2/checkpoints/episode_0300.pkl",
+            "checkpoint_hash": "2fc1607b7b0aeab23e5d44858b363262a2ecf49b782f4cff10e1d22a8f88498c",
+            "mean": 45.734375,
+            "ci95": [
+                43.796875,
+                47.531640624999994
+            ],
+            "board_means": [
+                50.0,
+                46.25,
+                47.0,
+                44.75,
+                47.0,
+                50.0,
+                46.5,
+                46.5,
+                35.0,
+                45.0,
+                50.0,
+                46.5,
+                43.75,
+                43.5,
+                50.0,
+                40.0
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 144.109375,
+            "games": 64,
+            "successes": 35,
+            "completion_rate": 0.546875,
+            "mean_completion_steps": 154.31428571428572
+        },
+        {
+            "training_horizon": "train_400",
+            "training_seed": 0,
+            "max_steps": 100,
+            "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_history_400step_pilot/seed_0/checkpoints/episode_0300.pkl",
+            "checkpoint_hash": "cadeea43f51f0b25a638c9561d41f6f660be7f2251d29a4d74705f6b85dba402",
+            "mean": 38.65625,
+            "ci95": [
+                36.624609375,
+                40.547265624999994
+            ],
+            "board_means": [
+                43.75,
+                40.75,
+                41.75,
+                39.75,
+                37.25,
+                40.0,
+                38.75,
+                43.0,
+                29.5,
+                41.5,
+                39.0,
+                34.0,
+                41.25,
+                30.0,
+                40.25,
+                38.0
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 9.34375,
+            "games": 64,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        {
+            "training_horizon": "train_400",
+            "training_seed": 0,
+            "max_steps": 400,
+            "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_history_400step_pilot/seed_0/checkpoints/episode_0300.pkl",
+            "checkpoint_hash": "cadeea43f51f0b25a638c9561d41f6f660be7f2251d29a4d74705f6b85dba402",
+            "mean": 44.015625,
+            "ci95": [
+                41.421484375,
+                46.34375
+            ],
+            "board_means": [
+                46.5,
+                46.25,
+                47.5,
+                47.5,
+                41.5,
+                42.75,
+                47.5,
+                46.75,
+                32.0,
+                48.0,
+                47.5,
+                37.5,
+                48.25,
+                34.75,
+                42.25,
+                47.75
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 271.078125,
+            "games": 64,
+            "successes": 5,
+            "completion_rate": 0.078125,
+            "mean_completion_steps": 137.6
+        },
+        {
+            "training_horizon": "train_400",
+            "training_seed": 1,
+            "max_steps": 100,
+            "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_history_400step_pilot/seed_1/checkpoints/episode_0300.pkl",
+            "checkpoint_hash": "8385ca106aa1587791a5e8347b51543c3528696471aebf7d67e207753a723759",
+            "mean": 38.859375,
+            "ci95": [
+                37.452734375,
+                40.0625
+            ],
+            "board_means": [
+                38.75,
+                40.75,
+                40.5,
+                39.25,
+                38.75,
+                43.0,
+                38.5,
+                36.25,
+                40.0,
+                41.5,
+                37.25,
+                39.5,
+                38.25,
+                32.5,
+                42.0,
+                35.0
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 9.96875,
+            "games": 64,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        {
+            "training_horizon": "train_400",
+            "training_seed": 1,
+            "max_steps": 400,
+            "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_history_400step_pilot/seed_1/checkpoints/episode_0300.pkl",
+            "checkpoint_hash": "8385ca106aa1587791a5e8347b51543c3528696471aebf7d67e207753a723759",
+            "mean": 42.03125,
+            "ci95": [
+                39.953125,
+                43.859375
+            ],
+            "board_means": [
+                38.75,
+                47.75,
+                42.25,
+                45.25,
+                41.25,
+                45.25,
+                47.25,
+                38.5,
+                45.0,
+                45.75,
+                37.25,
+                42.25,
+                39.0,
+                32.5,
+                44.75,
+                39.75
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 245.203125,
+            "games": 64,
+            "successes": 13,
+            "completion_rate": 0.203125,
+            "mean_completion_steps": 139.46153846153845
+        },
+        {
+            "training_horizon": "train_400",
+            "training_seed": 2,
+            "max_steps": 100,
+            "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_history_400step_pilot/seed_2/checkpoints/episode_0300.pkl",
+            "checkpoint_hash": "ee79c3119aa15e91774e05b4a888749db8328f4cf2c4b982792e7d35bd9b33e2",
+            "mean": 35.6875,
+            "ci95": [
+                33.077734375,
+                38.453906249999996
+            ],
+            "board_means": [
+                43.75,
+                29.5,
+                38.0,
+                29.75,
+                41.0,
+                43.5,
+                31.0,
+                43.25,
+                40.75,
+                30.5,
+                33.0,
+                37.5,
+                38.5,
+                27.75,
+                32.75,
+                30.5
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 17.21875,
+            "games": 64,
+            "successes": 0,
+            "completion_rate": 0.0,
+            "mean_completion_steps": null
+        },
+        {
+            "training_horizon": "train_400",
+            "training_seed": 2,
+            "max_steps": 400,
+            "checkpoint": "/teamspace/studios/this_studio/bomberman_rl/experiments/tree_fqi_history_400step_pilot/seed_2/checkpoints/episode_0300.pkl",
+            "checkpoint_hash": "ee79c3119aa15e91774e05b4a888749db8328f4cf2c4b982792e7d35bd9b33e2",
+            "mean": 40.40625,
+            "ci95": [
+                36.87421875,
+                44.172265624999994
+            ],
+            "board_means": [
+                50.0,
+                29.5,
+                44.75,
+                33.0,
+                50.0,
+                50.0,
+                39.75,
+                49.5,
+                48.5,
+                31.25,
+                37.75,
+                40.0,
+                44.75,
+                30.25,
+                35.0,
+                32.5
+            ],
+            "mean_invalid_actions": 0.0,
+            "mean_repeated_states": 174.953125,
+            "games": 64,
+            "successes": 30,
+            "completion_rate": 0.46875,
+            "mean_completion_steps": 135.13333333333333
+        }
+    ],
+    "policies": {
+        "100_steps/train_100": {
+            "mean_coins": 35.453125,
+            "run_means": [
+                35.03125,
+                34.703125,
+                36.625
+            ],
+            "mean_repeated_states": 17.34375,
+            "mean_invalid_actions": 0.0,
+            "completion_rate": 0.0
+        },
+        "100_steps/train_400": {
+            "mean_coins": 37.734375,
+            "run_means": [
+                38.65625,
+                38.859375,
+                35.6875
+            ],
+            "mean_repeated_states": 12.177083333333334,
+            "mean_invalid_actions": 0.0,
+            "completion_rate": 0.0
+        },
+        "400_steps/train_100": {
+            "mean_coins": 41.5,
+            "run_means": [
+                41.84375,
+                36.921875,
+                45.734375
+            ],
+            "mean_repeated_states": 203.703125,
+            "mean_invalid_actions": 0.0,
+            "completion_rate": 0.3697916666666667
+        },
+        "400_steps/train_400": {
+            "mean_coins": 42.151041666666664,
+            "run_means": [
+                44.015625,
+                42.03125,
+                40.40625
+            ],
+            "mean_repeated_states": 230.41145833333334,
+            "mean_invalid_actions": 0.0,
+            "completion_rate": 0.25
+        }
+    },
+    "100_steps/train_400_minus_train_100": {
+        "per_checkpoint_coin_differences": [
+            3.625,
+            4.15625,
+            -0.9375
+        ],
+        "mean_coin_difference": 2.28125,
+        "board_paired_ci95_conditional_on_checkpoints": [
+            0.7552083333333335,
+            3.739583333333333
+        ]
+    },
+    "400_steps/train_400_minus_train_100": {
+        "per_checkpoint_coin_differences": [
+            2.171875,
+            5.109375,
+            -5.328125
+        ],
+        "mean_coin_difference": 0.6510416666666666,
+        "board_paired_ci95_conditional_on_checkpoints": [
+            -1.7605468749999997,
+            2.890625
+        ]
+    },
+    "limitation": "Uncertainty is conditional on three frozen runs; this comparison does not measure uncertainty over additional training seeds."
+}
