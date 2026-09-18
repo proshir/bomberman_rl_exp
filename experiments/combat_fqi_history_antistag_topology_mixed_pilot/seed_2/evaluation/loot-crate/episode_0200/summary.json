@@ -1,0 +1,38 @@
+{
+    "metric": "coins",
+    "agents": {
+        "combat_fqi_history_antistag_topology_agent": {
+            "mean": 12.8125,
+            "ci95": [
+                9.96875,
+                15.59375
+            ],
+            "board_means": [
+                11.75,
+                15.75,
+                19.75,
+                14.5,
+                5.75,
+                11.0,
+                14.5,
+                9.5
+            ],
+            "mean_score": 12.8125,
+            "mean_coins": 12.8125,
+            "mean_crates": 37.65625,
+            "mean_kills": 0.0,
+            "mean_suicides": 0.0,
+            "mean_bombs": 15.28125,
+            "mean_steps": 400.0,
+            "survival_rate": 1.0,
+            "mean_invalid_actions": 0.0,
+            "mean_diagnostic_repeated_states": 279.71875,
+            "mean_diagnostic_max_no_progress_steps": 254.75,
+            "mean_diagnostic_progress_events": 26.90625,
+            "mean_diagnostic_initial_visible_coins": 0.0,
+            "mean_diagnostic_max_visible_coins": 4.53125,
+            "mean_diagnostic_final_visible_coins": 2.4375
+        }
+    },
+    "comparisons": {}
+}
