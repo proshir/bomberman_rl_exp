@@ -11,9 +11,12 @@ failure is documented in
 [`combat_fqi_history_antistag_topology_agent.md`](combat_fqi_history_antistag_topology_agent.md).
 
 Because the representation was becoming more complex than shallow tree FQI
-handled well, the next algorithm should be a minimal PyTorch vanilla-DQN
-comparison using the existing 32-feature representation. Double-DQN and other
-enhancements are deferred until this baseline is measured.
+handled well, added a minimal PyTorch vanilla-DQN comparison using the existing
+32-feature representation. It preserves the reward, events, safety filtering,
+and callback interfaces; it uses only a 128-128 MLP, replay, epsilon-greedy
+selection, random mini-batches, and periodic target-network copies. Double-DQN
+and other enhancements are deferred until this baseline is measured. See
+[`combat_dqn_agent.md`](combat_dqn_agent.md).
 
 ## Local-topology feature ablation completed
 

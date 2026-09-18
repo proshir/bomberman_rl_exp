@@ -194,9 +194,17 @@ pilot with zero invalid actions/self-deaths but lost substantial Coin Heaven
 navigation performance, showing that combat learning can cause catastrophic
 forgetting without a mixed curriculum or navigation distillation.
 
-The next algorithm progression is a deliberately small vanilla-DQN comparison
-using the existing 32-feature representation. Double-DQN and other extensions
-are deferred until that baseline has been measured.
+### Combat vanilla DQN — Implemented/software validated
+
+`combat_dqn_agent` is the deliberately minimal neural comparison. It uses the
+existing 32-feature history-aware combat representation, reward/events, and
+safety-constrained action selection, then replaces tree refitting with a
+128-128 ReLU MLP, replay buffer, policy/target networks, epsilon-greedy
+exploration, random mini-batch updates, and periodic target copies. Its target
+is the standard vanilla form: the target network both selects and evaluates the
+maximum next action. Double-DQN and other extensions are intentionally deferred.
+A short fresh-process smoke run passed; no substantial performance pilot has
+been registered yet.
 
 ## 6. Harvy / Arbiter advanced hybrid
 
