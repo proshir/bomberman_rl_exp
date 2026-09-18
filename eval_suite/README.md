@@ -26,6 +26,10 @@ the navigation regression, while Loot Crate tests whether the candidate still
 handles crates and bombs safely. A model should not be promoted to opponent
 training from loot-crate score alone.
 
+Fixed, non-training agents such as Harvy may provide one checkpoint path; the
+suite evaluates that checkpoint once per scenario rather than treating it as
+three independent training seeds.
+
 ## Run
 
 From the experiment repository:

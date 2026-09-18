@@ -55,8 +55,11 @@ def run_suite(manifest_path: Path, output: Path, python: str,
                    for scenario in scenarios]
     for candidate in manifest["candidates"]:
         checkpoints = candidate["checkpoints"]
-        if len(checkpoints) != 3:
-            raise ValueError(f'{candidate["name"]} must provide three checkpoints')
+        if len(checkpoints) not in (1, 3):
+            raise ValueError(
+                f'{candidate["name"]} must provide one fixed checkpoint or '
+                'three trained checkpoints'
+            )
         for lineup in lineups:
             scenario = lineup.get("scenario", "classic")
             opponents = lineup.get("opponents", [])
