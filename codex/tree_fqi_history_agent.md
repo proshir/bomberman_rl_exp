@@ -97,3 +97,20 @@ fresh-board comparison. Before advancing stages, decide whether 41.45 mean
 coins and a 33.3% all-coins completion rate within 400 steps are adequate for
 the team's Stage 1 exit criterion. The policy has improved, but it still does
 not finish most fresh games.
+
+## Training-runner speed improvement
+
+Before testing 400-step training, changed `src/run_training.py` so each frozen
+checkpoint evaluation sends all board/corner tasks to one benchmark worker
+batch. Previously the generic runner launched one Python process per game (32
+processes for the usual eight boards and four corners). This changes only
+evaluation orchestration; each task retains its board seed, agent seed, seat,
+step budget, and frozen checkpoint.
+
+On eight fresh 100-step games, the single-game and batched paths produced
+identical per-game records after excluding elapsed-time measurements and
+identical aggregate summaries. Evaluation wall time fell from 12.43 seconds to
+2.27 seconds, a 5.5x speedup in that check. A two-round training-driver smoke
+test also completed both checkpoint evaluations, reloaded the model, retained
+20 transitions, and reported zero invalid actions. Tree fitting during training
+is unchanged, preserving the current learning schedule.
