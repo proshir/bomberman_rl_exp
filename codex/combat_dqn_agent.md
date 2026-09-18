@@ -77,3 +77,25 @@ including masked targets, terminal masks, replay-mask preservation, and
 action-time next-feature consistency. A fresh three-round CPU smoke run saved
 and evaluated a checkpoint successfully. Existing pilot numbers remain
 pre-repair baselines until a corrected matched run is completed.
+
+## Standardized pre-combat evaluation
+
+The repaired 300-round checkpoint was compared with the history-FQI control
+using the pre-combat suite: three trained checkpoints, eight held-out boards,
+four seats, 400 steps, and no opponents. This gives 96 games per candidate and
+scenario. Every run had 100% survival and zero invalid actions.
+
+| Candidate | Coin Heaven mean coins | Loot Crate mean coins |
+|---|---:|---:|
+| History-FQI control | 18.14 | 19.35 |
+| Repaired vanilla DQN | 7.04 | **45.90** |
+
+The DQN is therefore strong on its training distribution (`loot-crate`) but
+does not transfer to Coin Heaven; neither candidate completed a Coin Heaven
+board within 400 steps in this suite. The DQN also repeated fewer states in
+Loot Crate (about 52 per game versus about 229 for FQI), while remaining safe.
+
+A fresh-board follow-up using seeds 31000--31007 confirmed the pattern: the
+repaired DQN scored 5.87 Coin Heaven coins and 45.51 Loot Crate coins, again
+with 100% survival and zero invalid actions. These evaluations are still
+solo, no-opponent gates and do not establish competition readiness.
