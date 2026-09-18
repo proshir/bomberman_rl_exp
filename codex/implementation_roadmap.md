@@ -15,6 +15,13 @@ the next default; a stronger spatial/action-conditioned representation or
 novelty identity should be tested separately. Details are in
 [`combat_fqi_history_antistag_topology_agent.md`](combat_fqi_history_antistag_topology_agent.md).
 
+The registered 600-round follow-up confirmed that this was not only a short
+training issue. Its strongest balanced checkpoint was around round 400 (33.70
+Coin Heaven coins and 7.03 loot-crate coins); round 600 fell to 28.07 and 3.06.
+Safety remained perfect, but navigation and crate collection stayed below the
+32-feature control. The topology patch is retained as a measured ablation, not
+as the submission model.
+
 ## Task 2 diagnostics and mixed curriculum pilot completed
 
 Added benchmark diagnostics for repeated states, no-progress stretches,
