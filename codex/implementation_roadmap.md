@@ -1,5 +1,20 @@
 # Implementation roadmap
 
+## Local-topology feature ablation completed
+
+Added a separate 46-feature combat FQI variant that appends a 3x3 wall/crate
+patch, local openness, adjacent-crate count, radius-two free-space count,
+dead-end, and corridor indicators to the existing history/anti-stagnation
+representation. The original 32-feature agent was preserved as the control.
+
+The three-seed, 300-round mixed-curriculum pilot remained safe (100% survival,
+zero invalid actions) but underperformed the control at round 300: 37.79 versus
+39.14 Coin Heaven coins and 8.62 versus 10.41 loot-crate coins. Repeated-state
+counts also remained high. This simple topology block is therefore rejected as
+the next default; a stronger spatial/action-conditioned representation or
+novelty identity should be tested separately. Details are in
+[`combat_fqi_history_antistag_topology_agent.md`](combat_fqi_history_antistag_topology_agent.md).
+
 ## Task 2 diagnostics and mixed curriculum pilot completed
 
 Added benchmark diagnostics for repeated states, no-progress stretches,
