@@ -21,6 +21,9 @@ __pycache__/
 /experiments/**/checkpoints/
 /experiments/**/replays/
 experiments/**/training.pkl
+/experiments/**/evaluation/**/batches/
+/experiments/**/evaluation/**/games/
+/experiments/*smoke*/
 *.pt
 *.pth
 *.ckpt
