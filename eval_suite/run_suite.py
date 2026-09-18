@@ -11,6 +11,7 @@ the resulting summaries without changing their values.
 from __future__ import annotations
 
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 import json
 import subprocess
 import sys
@@ -28,12 +29,25 @@ def load_json(path: Path):
         return json.load(handle)
 
 
-def run_suite(manifest_path: Path, output: Path, python: str) -> None:
+def run_one(spec):
+    """Run one independent benchmark subprocess."""
+    index, command, run_name, run_output, checkpoint_index, checkpoint = spec
+    print(f'[{index}] {run_name}', flush=True)
+    subprocess.run(command, cwd=ROOT, check=True)
+    return {
+        "run_name": run_name,
+        "checkpoint_index": checkpoint_index,
+        "checkpoint": checkpoint,
+        "summary": load_json(run_output / "summary.json"),
+    }
+
+
+def run_suite(manifest_path: Path, output: Path, python: str,
+              parallel: int = 1) -> None:
     manifest = load_json(manifest_path)
     output.mkdir(parents=True, exist_ok=False)
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
-    summaries = []
-    run_index = 0
+    specs = []
     scenarios = manifest.get("scenarios", [])
     lineups = manifest.get("opponent_lineups")
     if lineups is None:
@@ -48,7 +62,6 @@ def run_suite(manifest_path: Path, output: Path, python: str) -> None:
             opponents = lineup.get("opponents", [])
             lineup_name = lineup["name"]
             metric = "score" if opponents else "coins"
-            candidate_summary = []
             for checkpoint_index, checkpoint in enumerate(checkpoints):
                 checkpoint_path = (ROOT / checkpoint).resolve()
                 if not checkpoint_path.is_file():
@@ -71,22 +84,35 @@ def run_suite(manifest_path: Path, output: Path, python: str) -> None:
                     "--output", str(run_output),
                 ]
                 command = [part for part in command if part]
-                print(f'[{run_index + 1}] {run_name}', flush=True)
-                subprocess.run(command, cwd=ROOT, check=True)
-                summary = load_json(run_output / "summary.json")
-                candidate_summary.append({
-                    "checkpoint_index": checkpoint_index,
-                    "checkpoint": checkpoint,
-                    "summary": summary,
-                })
-                run_index += 1
+                specs.append((len(specs) + 1, command, run_name, run_output,
+                              checkpoint_index, checkpoint))
+    if parallel > 1:
+        with ThreadPoolExecutor(max_workers=parallel) as executor:
+            records = list(executor.map(run_one, specs))
+    else:
+        records = [run_one(spec) for spec in specs]
+
+    summaries = []
+    record_index = 0
+    for candidate in manifest["candidates"]:
+        checkpoints = candidate["checkpoints"]
+        for lineup in lineups:
+            scenario = lineup.get("scenario", "classic")
+            opponents = lineup.get("opponents", [])
+            lineup_name = lineup["name"]
+            candidate_summary = records[record_index:record_index + len(checkpoints)]
+            record_index += len(checkpoints)
             summaries.append({
                 "candidate": candidate["name"],
                 "agent": candidate["agent"],
                 "scenario": scenario,
                 "lineup": lineup_name,
                 "opponents": opponents,
-                "checkpoints": candidate_summary,
+                "checkpoints": [
+                    {key: record[key] for key in
+                     ("checkpoint_index", "checkpoint", "summary")}
+                    for record in candidate_summary
+                ],
             })
     result = {
         "manifest": str(manifest_path),
@@ -102,11 +128,16 @@ def main() -> None:
     parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
     parser.add_argument("--output", type=Path)
     parser.add_argument("--python", default=sys.executable)
+    parser.add_argument("--parallel", type=int, default=1,
+                        help="Run independent checkpoint evaluations concurrently.")
     args = parser.parse_args()
     if args.output is None:
         stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         args.output = Path(__file__).with_name("results") / stamp
-    run_suite(args.manifest.resolve(), args.output.resolve(), args.python)
+    if args.parallel < 1:
+        parser.error("--parallel must be positive")
+    run_suite(args.manifest.resolve(), args.output.resolve(), args.python,
+              args.parallel)
 
 
 if __name__ == "__main__":
