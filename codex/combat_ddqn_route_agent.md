@@ -523,6 +523,68 @@ The manifest is
 and the raw output is
 `/export/scratch/salitanl/bomberman_feature_variants_20260919/agent027_staged_replay_classic_600_cpu/`.
 
+## Agent 027 opponent-failure diagnosis (19 September 2026)
+
+The fixed Classic result was decomposed to determine whether Agent 027's
+remaining weakness was primarily the old navigation-loop problem or combat
+interaction. This is a diagnosis of the completed evaluation, not a new
+training run. The analysis used the three final 600-round checkpoints, boards
+`32000`--`32007`, four seats, 400 steps, and 96 games per opponent lineup.
+
+Against `rule_based_agent`, Agent 027 died in 54/96 games. The death events
+reported by the environment classify 36 as self-deaths and 18 as deaths from
+the opponent. There were 26/96 games with at least one invalid action, but
+34 of the 54 deaths occurred in games with no invalid action. Thus invalid
+movement is a contributing symptom, not the main cause. There were 31 games
+that reached the 400-step limit, whereas 51 deaths occurred before the limit;
+the old loop/timeout issue is therefore present but secondary. Agent 027
+received only 8 credited kills, although the opponent died in 24 games. Most
+opponent deaths were not the result of a reliably learned trap.
+
+| Held-out opponent | Survival | Self-deaths/game | Opponent deaths | Credited kills | Timeouts |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `peaceful_agent` | 93.8% | 0.06 | 47/96 | 47 | 85/96 |
+| `coin_collector_agent` | 75.0% | 0.23 | 25/96 | 15 | 63/96 |
+| `rule_based_agent` | 43.8% | 0.38 | 24/96 | 8 | 31/96 |
+
+The opponent gradient separates combat interaction from solo navigation. All
+576 held-out solo games had zero deaths, invalid actions, and suicides. The
+rule-based games are not simply more loop-prone: they end earlier through
+death, while passive games often reach the time limit because Agent 027 keeps
+clearing crates or waiting safely. The stored diagnostic repeat/no-progress
+values are game-level values shared by the candidate and opponent, so they
+cannot be treated as an Agent-027-only action trace.
+
+The implementation explains the failure. Agent 027's 65-value representation
+contains only compressed nearest-opponent direction and distance; it does not
+encode opponent bomb availability, opponent escape routes, contested escape
+tiles, or the result of an opponent bomb placed after the candidate action.
+The safety mask checks current legality and the currently known danger schedule.
+For a new own bomb it also reasons about possible opponent occupancy of escape
+tiles, but it does not simulate an opponent's future bomb placement. A move or
+bomb can therefore pass the current safety check and become lethal after the
+opponent changes the danger schedule. A currently legal destination can also
+become contested by simultaneous opponent movement, explaining some invalid
+actions without implying a static legality bug.
+
+The staged run supplied only about 50 training games per seed against the
+rule-based opponent, and all three classic opponents were stored under one
+`classic` replay category. The learner consequently saw limited rule-based
+experience and was not given a representation that distinguishes the
+opponent's tactical response. The evidence supports the following diagnosis:
+
+> Agent 027 is strong at solo navigation and crate collection but has reactive,
+> not adversarially robust, bomb safety. Its learned policy cannot estimate how
+> an opponent's next movement or bomb changes its escape plan.
+
+The next proposed Agent 029 change should therefore be one opponent-aware,
+action-conditioned feature group: opponent reachable area and escape routes,
+contested escape tiles, opponent bomb/threat timing, and own escape-region
+size after each candidate bomb. The solo Coin Heaven and Loot Crate suites
+remain regression gates. A detailed causal move-by-move attribution would
+require a new trace-enabled evaluation because the completed fixed suite saved
+aggregate game records but no action replay.
+
 ## Agent 028 dueling 256 architecture ablation (19 September 2026)
 
 Agent 028 kept Agent 027's 65 features, staged curriculum, scenario-balanced

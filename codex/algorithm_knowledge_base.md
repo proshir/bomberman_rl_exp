@@ -198,6 +198,16 @@ chooses the best candidate. Bombs are only considered useful if they hit a
 crate/opponent and have a found escape route. There is no multi-step tactical
 plan search in this family.
 
+The Agent 027 Classic diagnosis identifies an important boundary of this
+design: a current-state safety certificate is not an adversarial safety
+certificate. It can account for known bombs and possible opponent occupancy of
+an escape tile, but it does not roll forward an opponent's future bomb
+placement or tactical route denial. Agent 027 had 54/96 deaths against the
+rule-based opponent, including 36 self-deaths, while its solo held-out games
+had zero deaths. Opponent-aware action-conditioned escape features or a
+short-horizon opponent rollout are therefore distinct from simply adding more
+loop history. See [`combat_ddqn_route_agent.md`](combat_ddqn_route_agent.md).
+
 ### Combat reward
 
 The controlled combat variants use coin `+1`, kill `+5`, crate `+0.2`, reveal
