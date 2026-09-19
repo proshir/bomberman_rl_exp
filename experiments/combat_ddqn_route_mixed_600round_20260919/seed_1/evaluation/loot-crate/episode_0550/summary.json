@@ -1,0 +1,33 @@
+{
+    "metric": "coins",
+    "agents": {
+        "Agent_022_combat_ddqn_route_agent": {
+            "mean": 29.0,
+            "ci95": [
+                9.0,
+                46.0
+            ],
+            "board_means": [
+                46.0,
+                32.0,
+                9.0
+            ],
+            "mean_score": 29.0,
+            "mean_coins": 29.0,
+            "mean_crates": 73.33333333333333,
+            "mean_kills": 0.0,
+            "mean_suicides": 0.0,
+            "mean_bombs": 27.666666666666668,
+            "mean_steps": 400.0,
+            "survival_rate": 1.0,
+            "mean_invalid_actions": 0.0,
+            "mean_diagnostic_repeated_states": 143.0,
+            "mean_diagnostic_max_no_progress_steps": 111.0,
+            "mean_diagnostic_progress_events": 53.666666666666664,
+            "mean_diagnostic_initial_visible_coins": 0.0,
+            "mean_diagnostic_max_visible_coins": 7.333333333333333,
+            "mean_diagnostic_final_visible_coins": 3.6666666666666665
+        }
+    },
+    "comparisons": {}
+}

@@ -1,5 +1,55 @@
 # Implementation roadmap
 
+## Spatial hybrid Rainbow implementation (Phase 0)
+
+`Agent_023_spatial_hybrid_rainbow_agent` now exists as a self-contained
+deployment package.  It implements the fixed 5,912-value observation contract
+(20 x 17 x 17 spatial channels, 36 global values, and 16 values for each of
+six actions), a matching time-expanded safety mask, and a CPU-deployable
+spatial dueling quantile network.  Its framework hooks provide a conservative
+masked Double-DQN quantile/PER training fallback.  Contract tests confirm the
+feature shape and that illegal action banks are zeroed.  No checkpoint,
+teacher data, GPU job, or performance result exists yet; the CUDA-enabled
+model could not be instantiated in this shell because PyTorch is not
+installed.  The next step is a GPU-cluster preflight followed by Phase-0
+throughput and model-forward checks in the project training environment.
+
+## Route-aware DDQN mixed run completed
+
+The first `Agent_022_combat_ddqn_route_agent` experiment completed 600 rounds
+for seeds 0, 1, and 2 with alternating Coin Heaven/Loot Crate training and the
+official 400-step horizon. The run exited successfully in 15:22. At round 550,
+the nine-game internal aggregate reached 49.67 Coin Heaven coins, 77.8%
+completion, and 30.11 Loot Crate coins; at round 600 it reached 46.89, 55.6%,
+and 36.78 respectively. Survival remained 100%. Seed 1 at round 600 achieved
+50/50 Coin Heaven coins with 100% completion and 45 Loot Crate coins, while
+seed 0 retained a 245-step no-progress tail, so the improvement is promising
+but not uniformly stable.
+
+The feature package has passed its required aliasing test and supports both
+navigation and crate behavior, but its causal effect is not yet isolated: the
+new run also introduced a mixed curriculum relative to the crate-only repaired
+46-feature DDQN. Proposed next gates are the fixed 96-game pre-combat suite on
+rounds 500/550/600, fresh-board confirmation, classic-opponent evaluation of
+the selected checkpoint, and a matched 46-feature mixed-curriculum control.
+No further feature or reward change is accepted yet. See
+[`combat_ddqn_route_agent.md`](combat_ddqn_route_agent.md).
+
+## Route-aware Double-DQN successor implemented
+
+Added `Agent_022_combat_ddqn_route_agent` as a separate 52-input successor to
+the repaired 46-feature topology DQN. It preserves the shared safety mask,
+reward, replay, 128-128 MLP, optimizer, and masked Double-DQN target. It
+removes five exact local-topology duplicates, replaces coarse coin/crate
+direction-distance triples with action-conditioned exact route costs and
+reachability flags, and adds remaining time. A regression test proves that the
+new representation distinguishes the previously identical route-aliasing board
+pair and reverses its UP/DOWN route preference as required. No training result
+existed at implementation time; the initially proposed experiment was a fresh
+mixed Coin Heaven/Loot Crate, three-seed 300-round comparison. The completed
+600-round result is recorded in the newer section above. See
+[`combat_ddqn_route_agent.md`](combat_ddqn_route_agent.md).
+
 ## Combat topology failure and staged algorithm progression
 
 The 46-feature local-topology tree variant was extended from 300 to 600 rounds

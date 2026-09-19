@@ -1,0 +1,75 @@
+{
+    "agent": "Agent_022_combat_ddqn_route_agent",
+    "scenario": "loot-crate",
+    "curriculum": "mixed",
+    "diagnostics": true,
+    "opponents": [],
+    "seeds": [
+        0,
+        1,
+        2
+    ],
+    "rounds": 600,
+    "max_steps": 400,
+    "eval_every": 50,
+    "eval_seeds": [
+        33000,
+        33001,
+        33002
+    ],
+    "eval_seats": [
+        0
+    ],
+    "parallel_seeds": true,
+    "resume": false,
+    "output": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_ddqn_route_mixed_600round_20260919/seed_1",
+    "worker": null,
+    "evaluation_scenarios": [
+        "coin-heaven",
+        "loot-crate"
+    ],
+    "hyperparameters": {
+        "ALGORITHM": "ddqn",
+        "BATCH_SIZE": 128,
+        "EPSILON_DECAY_STEPS": 100000,
+        "EPSILON_END": 0.05,
+        "EPSILON_START": 1.0,
+        "GAMMA": 0.99,
+        "GRADIENT_CLIP_NORM": 10.0,
+        "HIDDEN_SIZE": 128,
+        "LEARNING_RATE": 0.0001,
+        "N_ACTIONS": 6,
+        "REPLAY_CAPACITY": 100000,
+        "TARGET_UPDATE_EVERY": 1000,
+        "TRAIN_EVERY": 4,
+        "WARMUP_TRANSITIONS": 5000
+    },
+    "code_version": "6a51466309e13fd6ebbe2bbad7ff5fc2ea28fe3a",
+    "source_hashes": {
+        "run_combat_training.py": "a1bfdf201b83067411464767a213650a0808890db466a7a05be248d545dd9768",
+        "run_benchmark.py": "26d22915806a478e6f6eb52df86ae020d8b6a2045893863d8331f0f94468512d",
+        "environment.py": "853d9376605cee66d25f27c65b0c1213766d77f71bf35d444b00db06c36ae4ff",
+        "agents.py": "81741eb8a52694e5c3234cd6891367562360e08bec42d9f12fa52cf8fa241c67",
+        "settings.py": "f0b97a16aae57bfc0131d76fca064749435e4d82c23fb967f7e09bd1ace9603a",
+        "events.py": "8d7633de52d7abdc021e1ccfbf759f3fbc71c84be96445665fcdd82910739ed5",
+        "agent_code/Agent_022_combat_ddqn_route_agent/callbacks.py": "c1bf078bc2e8c7bd1198dce70e97c6223d49613511d7fceac8e3fcedfe99f34f",
+        "agent_code/Agent_022_combat_ddqn_route_agent/features.py": "7ea943fd937afa837a61e6a867fb698e7327c53bed1af9d067bee5d5804f3c6d",
+        "agent_code/Agent_022_combat_ddqn_route_agent/safety.py": "a40308a88f6430f3ad600bc606febbaba578d645eee9c0451b54b8a14c16f90c",
+        "agent_code/Agent_022_combat_ddqn_route_agent/train.py": "917602cd86e70af062a30466abc07f375cb982f6df387aca995e8fd8bb3e3f12",
+        "agent_code/combat_dqn_agent/callbacks.py": "38def9fc123128441fcf034b69015ec292e71da7c974a89522c031c3d9363033",
+        "agent_code/combat_dqn_agent/config.py": "91db09edf4e8508005257e250c67e52b397efa9337330b4683ef259894a3c010",
+        "agent_code/combat_dqn_agent/model.py": "176ba922bb1423c07cd63683b2248fff06f836154596a58e69bed5c9f663ef30",
+        "agent_code/combat_dqn_agent/replay.py": "2dcd2715abbc65d88a0464765bffad26e5e904a6effd62519ada9bc6b69850bc",
+        "agent_code/combat_dqn_agent/train.py": "d293a4d88fba3ec5e29773ce6e01a43b3c8e30b8f0cf42683dc22187e8316ca8",
+        "agent_code/combat_fqi_agent/features.py": "bf62239017a23d8301a9685b6079441286e6ef539d92ba4810db6c9888c45c41",
+        "agent_code/combat_fqi_agent/safety.py": "1aaa51dfd299139f7e7e9b265aa828bf44115d44db5cc847018b6a389134c514",
+        "agent_code/combat_fqi_history_antistag_agent/features.py": "c1f97d7a28d911f8ebbf6ee673cd33cc4f6701301f44db2cba4bdab0784992e0",
+        "agent_code/combat_fqi_history_antistag_agent/safety.py": "49001c2065209892129feebc474c90875cf104f9fad2c3b1c142340af25c4d03"
+    },
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.5.3",
+    "sklearn": "1.9.1",
+    "seed": 1,
+    "board_start": 4600,
+    "start_episode": 0
+}

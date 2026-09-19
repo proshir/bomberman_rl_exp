@@ -23,6 +23,53 @@
   Implement the requested or explicitly approved scope; ask before changing
   the model, experimental strategy, or implementation stage.
 
+## Agent naming and numbering directive
+
+- The canonical implementation-agent directory is `src/agent_code/`. In this
+  experiment repository, `src/` is linked to the source repository; the
+  top-level `agent_code/` directory contains run logs and is not the source
+  agent registry.
+- Do not rename or move any existing agent directory. The enumeration below is
+  a reference ID only and is ordered by the first Git commit that introduced
+  each currently present directory. When multiple agents were introduced in
+  the same commit, use alphabetical order for the tie.
+- Every new agent directory must put its number first, using the format
+  `Agent_NNN_<descriptive_name>` (for example, `Agent_022_new_agent`). Consume
+  the next number exactly once and preserve the number permanently.
+- Keep this registry and the chronological account in
+  `codex/implementation_roadmap.md` synchronized when a new agent is added.
+
+Current agent enumeration, with existing directory names preserved:
+
+| Number | Existing directory | First introduced |
+| --- | --- | --- |
+| `Agent_000` | `random_agent` | 2019-01-30, `8fc573a` |
+| `Agent_001` | `user_agent` | 2019-01-30, `8fc573a` |
+| `Agent_002` | `peaceful_agent` | 2021-02-12, `0c27846` |
+| `Agent_003` | `rule_based_agent` | 2021-02-12, `0c27846` |
+| `Agent_004` | `tpl_agent` | 2021-02-12, `0c27846` |
+| `Agent_005` | `fail_agent` | 2021-03-16, `2d49d83` |
+| `Agent_006` | `coin_collector_agent` | 2022-02-17, `918e9b3` |
+| `Agent_007` | `q_table_agent` | 2026-09-10, `df39ed9` |
+| `Agent_008` | `q_table_masked_agent` | 2026-09-11, `3d8ee79` |
+| `Agent_009` | `linear_sarsa_agent` | 2026-09-11, `bf4dcbf` |
+| `Agent_010` | `linear_sarsa_loop_agent` | 2026-09-11, `7df0ec1` |
+| `Agent_011` | `q_table_loop_agent` | 2026-09-11, `7df0ec1` |
+| `Agent_012` | `tree_fqi_agent` | 2026-09-17, `8153877` |
+| `Agent_013` | `tree_fqi_loop_agent` | 2026-09-17, `219c530` |
+| `Agent_014` | `tree_fqi_history_agent` | 2026-09-18, `fd63ea1` |
+| `Agent_015` | `combat_fqi_agent` | 2026-09-18, `9d1c3bb` |
+| `Agent_016` | `combat_fqi_history_antistag_agent` | 2026-09-18, `3798be9` |
+| `Agent_017` | `dqn_coin_agent` | 2026-09-18, `3798be9` |
+| `Agent_018` | `combat_fqi_history_antistag_topology_agent` | 2026-09-18, `8c367bb` |
+| `Agent_019` | `combat_dqn_agent` | 2026-09-18, `3531cf5` |
+| `Agent_020` | `combat_dqn_topology_agent` | 2026-09-18, `71b0f5a` |
+| `Agent_021` | `combat_dqn_r_topology_agent` | 2026-09-18, `0e7ac9e` |
+| `Agent_022` | `Agent_022_combat_ddqn_route_agent` | 2026-09-19, pending commit |
+| `Agent_023` | `Agent_023_spatial_hybrid_rainbow_agent` | 2026-09-19, pending commit |
+
+The next available number is `Agent_024`.
+
 ## Codex note index
 
 Use the paths below to decide where to read or record information. Prefer
@@ -113,6 +160,10 @@ updating the most specific existing note instead of creating a duplicate.
 - [`codex/combat_dqn_r_topology_agent.md`](codex/combat_dqn_r_topology_agent.md)
   — Repaired 46-feature topology DQN, escape-safety repair, focused tests, and
   status of the required matched training comparison.
+- [`codex/combat_ddqn_route_agent.md`](codex/combat_ddqn_route_agent.md)
+  — Route-aware 52-feature Double-DQN successor, representation contract,
+  aliasing regression, completed three-seed mixed run, feature judgment, and
+  proposed fixed-suite/control evaluation gates.
 
 ## Where to record new work
 

@@ -159,6 +159,19 @@ updates, legal-action masking, gradient clipping, and linearly decayed epsilon.
 The online network selects the next action and the target network evaluates it
 (Double-DQN-like target). Training may use CUDA; official inference is CPU.
 
+### Spatial hybrid Rainbow — Implemented/contract validated
+
+`Agent_023_spatial_hybrid_rainbow_agent` is the first full-board successor.
+Its fixed input is 20 spatial 17x17 channels, 36 global/temporal values, and
+16 action-conditioned values for each of six actions (5,912 values total).
+It has a self-contained time-expanded safety mask and a GroupNorm residual-CNN
+dueling quantile architecture. The framework fallback implements masked
+Double-DQN selection, quantile regression, target updates, gradient clipping,
+and prioritized replay. Contract tests validate the tensor partition and that
+illegal actions have all-zero action banks. This status says only that the
+package and its focused tests exist: there is no trained checkpoint or pilot
+result yet.
+
 ## 5. Bomb-aware combat FQI
 
 Audit correction and repair (18 September 2026): the historical combat DQN

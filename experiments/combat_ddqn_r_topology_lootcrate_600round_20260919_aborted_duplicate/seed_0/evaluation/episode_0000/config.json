@@ -1,0 +1,28 @@
+{
+    "agents": [
+        "combat_dqn_r_topology_agent"
+    ],
+    "opponents": [],
+    "scenario": "loot-crate",
+    "seeds": [
+        33000,
+        33001,
+        33002
+    ],
+    "agent_seeds": [
+        0
+    ],
+    "seats": [
+        0
+    ],
+    "max_steps": 400,
+    "metric": "coins",
+    "output": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_ddqn_r_topology_lootcrate_600round_20260919/seed_0/evaluation/episode_0000",
+    "model_path": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_ddqn_r_topology_lootcrate_600round_20260919/seed_0/checkpoints/episode_0000.pkl",
+    "feature_mode": "distance",
+    "bootstrap_samples": 2000,
+    "analysis_seed": 0,
+    "batch_size": 3,
+    "diagnostics": true,
+    "worker": null
+}

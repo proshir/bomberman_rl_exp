@@ -1,0 +1,63 @@
+{
+    "agent": "combat_dqn_r_topology_agent",
+    "scenario": "loot-crate",
+    "curriculum": "mixed",
+    "diagnostics": true,
+    "opponents": [],
+    "seeds": [
+        0,
+        1,
+        2
+    ],
+    "rounds": 600,
+    "max_steps": 400,
+    "eval_every": 50,
+    "eval_seeds": [
+        33000,
+        33001,
+        33002
+    ],
+    "eval_seats": [
+        0
+    ],
+    "parallel_seeds": true,
+    "resume": false,
+    "output": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_ddqn_r_topology_mixed_600round_20260919",
+    "worker": null,
+    "evaluation_scenarios": [
+        "coin-heaven",
+        "loot-crate"
+    ],
+    "hyperparameters": {
+        "ALGORITHM": "ddqn",
+        "BATCH_SIZE": 128,
+        "EPSILON_DECAY_STEPS": 100000,
+        "EPSILON_END": 0.05,
+        "EPSILON_START": 1.0,
+        "GAMMA": 0.99,
+        "GRADIENT_CLIP_NORM": 10.0,
+        "HIDDEN_SIZE": 128,
+        "LEARNING_RATE": 0.0001,
+        "N_ACTIONS": 6,
+        "REPLAY_CAPACITY": 100000,
+        "TARGET_UPDATE_EVERY": 1000,
+        "TRAIN_EVERY": 4,
+        "WARMUP_TRANSITIONS": 5000
+    },
+    "code_version": "6a51466309e13fd6ebbe2bbad7ff5fc2ea28fe3a",
+    "source_hashes": {
+        "run_combat_training.py": "a1bfdf201b83067411464767a213650a0808890db466a7a05be248d545dd9768",
+        "run_benchmark.py": "26d22915806a478e6f6eb52df86ae020d8b6a2045893863d8331f0f94468512d",
+        "environment.py": "853d9376605cee66d25f27c65b0c1213766d77f71bf35d444b00db06c36ae4ff",
+        "agents.py": "81741eb8a52694e5c3234cd6891367562360e08bec42d9f12fa52cf8fa241c67",
+        "settings.py": "f0b97a16aae57bfc0131d76fca064749435e4d82c23fb967f7e09bd1ace9603a",
+        "events.py": "8d7633de52d7abdc021e1ccfbf759f3fbc71c84be96445665fcdd82910739ed5",
+        "agent_code/combat_dqn_r_topology_agent/callbacks.py": "31043d06baace59d75b5eb518e9144664de0477ce74940a2f637032effbfa8fd",
+        "agent_code/combat_dqn_r_topology_agent/features.py": "314bd36514ec2b1a8532bd716a439227b444c6c753be64209c7a665bfeb976a7",
+        "agent_code/combat_dqn_r_topology_agent/safety.py": "1bfa96ce84a88ce4be2079293c819c3b8a74a7d0933a9ce4a2179820c750b885",
+        "agent_code/combat_dqn_r_topology_agent/train.py": "5efb24c16031da7c22812da7bc90a67d982376bbfe23aed348fdab8b1f4474e7"
+    },
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "numpy": "2.5.3",
+    "sklearn": "1.9.1"
+}

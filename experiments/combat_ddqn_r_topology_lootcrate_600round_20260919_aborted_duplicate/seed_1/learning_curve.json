@@ -1,0 +1,126 @@
+[
+    {
+        "episode": 0,
+        "scenario": "loot-crate",
+        "interactions": 0,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_ddqn_r_topology_lootcrate_600round_20260919/seed_1/checkpoints/episode_0000.pkl",
+        "mean": 2.6666666666666665,
+        "ci95": [
+            2.0,
+            4.0
+        ],
+        "board_means": [
+            4.0,
+            2.0,
+            2.0
+        ],
+        "mean_score": 2.6666666666666665,
+        "mean_coins": 2.6666666666666665,
+        "mean_crates": 4.666666666666667,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 2.0,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0,
+        "mean_diagnostic_repeated_states": 375.0,
+        "mean_diagnostic_max_no_progress_steps": 376.0,
+        "mean_diagnostic_progress_events": 4.666666666666667,
+        "mean_diagnostic_initial_visible_coins": 0.0,
+        "mean_diagnostic_max_visible_coins": 2.0,
+        "mean_diagnostic_final_visible_coins": 0.0
+    },
+    {
+        "episode": 50,
+        "scenario": "loot-crate",
+        "interactions": 20000,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_ddqn_r_topology_lootcrate_600round_20260919/seed_1/checkpoints/episode_0050.pkl",
+        "mean": 15.0,
+        "ci95": [
+            3.0,
+            21.0
+        ],
+        "board_means": [
+            3.0,
+            21.0,
+            21.0
+        ],
+        "mean_score": 15.0,
+        "mean_coins": 15.0,
+        "mean_crates": 41.666666666666664,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 15.333333333333334,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0,
+        "mean_diagnostic_repeated_states": 258.0,
+        "mean_diagnostic_max_no_progress_steps": 205.66666666666666,
+        "mean_diagnostic_progress_events": 29.666666666666668,
+        "mean_diagnostic_initial_visible_coins": 0.0,
+        "mean_diagnostic_max_visible_coins": 5.666666666666667,
+        "mean_diagnostic_final_visible_coins": 2.0
+    },
+    {
+        "episode": 100,
+        "scenario": "loot-crate",
+        "interactions": 40000,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_ddqn_r_topology_lootcrate_600round_20260919/seed_1/checkpoints/episode_0100.pkl",
+        "mean": 28.333333333333332,
+        "ci95": [
+            16.0,
+            42.0
+        ],
+        "board_means": [
+            16.0,
+            42.0,
+            27.0
+        ],
+        "mean_score": 28.333333333333332,
+        "mean_coins": 28.333333333333332,
+        "mean_crates": 77.66666666666667,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 26.333333333333332,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0,
+        "mean_diagnostic_repeated_states": 178.66666666666666,
+        "mean_diagnostic_max_no_progress_steps": 155.66666666666666,
+        "mean_diagnostic_progress_events": 53.0,
+        "mean_diagnostic_initial_visible_coins": 0.0,
+        "mean_diagnostic_max_visible_coins": 6.0,
+        "mean_diagnostic_final_visible_coins": 1.6666666666666667
+    },
+    {
+        "episode": 150,
+        "scenario": "loot-crate",
+        "interactions": 60000,
+        "checkpoint": "/export/home/salitanl/projects/ml-project/bomberman_rl_exp/experiments/combat_ddqn_r_topology_lootcrate_600round_20260919/seed_1/checkpoints/episode_0150.pkl",
+        "mean": 43.0,
+        "ci95": [
+            40.0,
+            49.0
+        ],
+        "board_means": [
+            40.0,
+            49.0,
+            40.0
+        ],
+        "mean_score": 43.0,
+        "mean_coins": 43.0,
+        "mean_crates": 103.33333333333333,
+        "mean_kills": 0.0,
+        "mean_suicides": 0.0,
+        "mean_bombs": 37.0,
+        "mean_steps": 400.0,
+        "survival_rate": 1.0,
+        "mean_invalid_actions": 0.0,
+        "mean_diagnostic_repeated_states": 108.0,
+        "mean_diagnostic_max_no_progress_steps": 83.33333333333333,
+        "mean_diagnostic_progress_events": 74.66666666666667,
+        "mean_diagnostic_initial_visible_coins": 0.0,
+        "mean_diagnostic_max_visible_coins": 7.333333333333333,
+        "mean_diagnostic_final_visible_coins": 0.6666666666666666
+    }
+]
