@@ -1,5 +1,33 @@
 # Implementation roadmap
 
+## Sequential feature-group pilots completed (19 September 2026)
+
+Three separate agents were added on top of the repaired 46-feature topology
+DDQN so the proposed additions could be evaluated without combining changes:
+`Agent_024_combat_ddqn_action_safety_agent` adds 60 per-action bomb-consequence
+values, `Agent_025_combat_ddqn_short_cycle_agent` adds 19 compact recent-action
+and cycle values, and `Agent_026_combat_ddqn_target_coverage_agent` adds 12
+global target-coverage values. All preserve the mixed curriculum, 400-step
+horizon, safety mask, DDQN recipe, and three-seed protocol.
+
+Each agent completed a 300-round CPU run with seeds 0, 1, and 2 trained
+sequentially, followed by a 96-game-per-scenario final evaluation (eight held-
+out boards, four seats, three checkpoints). All three were safe with 100%
+survival, zero invalid actions, and zero suicides. Final means were:
+
+| Agent | Coin Heaven / completion | CH max no-progress | Loot Crate / crates |
+| --- | ---: | ---: | ---: |
+| Agent 024 action safety | 42.76 / 47.9% | 171.7 | 38.90 / 96.92 |
+| Agent 025 short cycle | **48.51 / 56.3%** | **133.2** | 37.17 / 93.18 |
+| Agent 026 target coverage | 37.76 / 30.2% | 233.0 | 37.13 / 92.67 |
+
+Agent 025 is the only branch promoted to a longer matched confirmation. It is
+better than the other new groups for navigation and loop reduction, but still
+below the latest fixed 46-feature mixed reference on Loot Crate, so no branch
+is promoted as the submission model and no groups should be combined yet. The
+raw CPU outputs are retained under
+`/export/scratch/salitanl/bomberman_feature_variants_20260919/`.
+
 ## Spatial hybrid Rainbow implementation (Phase 0)
 
 `Agent_023_spatial_hybrid_rainbow_agent` now exists as a self-contained

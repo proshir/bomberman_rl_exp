@@ -393,3 +393,48 @@ metric and is unstable: its seed 0 gets 37.34 Coin-Heaven coins/9.4%
 completion and only 21.53 Loot-Crate coins. The 46-feature mixed DDQN is the
 selected balanced candidate; route features should not be promoted without a
 separate change that addresses that instability.
+
+## Sequential single-group feature pilots (19 September 2026)
+
+The three proposed feature groups were then tested one at a time on the
+repaired 46-feature topology DDQN. All branches retained the mixed curriculum,
+400-step horizon, safety mask, reward, replay, network, optimizer, and three
+training seeds. Each ran for 300 rounds on CPU, with seeds trained sequentially
+inside its detached launch. The final evaluation used eight held-out boards and
+four seats per trained checkpoint: 96 games per scenario across the three
+checkpoints. CUDA was hidden explicitly.
+
+| Agent | Added group | Input size | Coin Heaven coins | Completion | CH max no-progress | Loot Crate coins | Crates |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| `Agent_024` | Per-action bomb consequences | 106 | 42.76 | 47.9% | 171.7 | **38.90** | **96.92** |
+| `Agent_025` | Compact short-cycle history | 65 | **48.51** | **56.3%** | **133.2** | 37.17 | 93.18 |
+| `Agent_026` | Global target coverage | 58 | 37.76 | 30.2% | 233.0 | 37.13 | 92.67 |
+
+The values are means across the three final seed summaries; the no-progress
+value is the corresponding mean diagnostic maximum. All 576 final evaluation
+games were safe: every branch had 100% survival, zero invalid actions, and zero
+suicides.
+
+`Agent_025_combat_ddqn_short_cycle_agent` is the only one-group addition worth
+promoting to a longer matched run. It reached 48.51 Coin-Heaven coins with
+56.3% completion and reduced the mean no-progress tail to 133.2, while its
+Coin-Heaven seed means were tightly grouped. It still trails the latest fixed
+46-feature mixed reference on Loot Crate (37.17 versus 46.20 coins and 93.18
+versus 114.30 crates), so this is a promising ablation, not a replacement
+winner. The 46-feature base exposes a previous-action/revisit/stagnation
+summary; Agent 025 is the first of these branches to expose explicit recent
+actions and two-/four-cycle indicators, backed by an internal eight-step
+window.
+
+`Agent_024` is the better secondary branch when crate collection is the
+priority: it led the three new agents on both Loot-Crate metrics, but its
+navigation score and completion were below Agent 025. `Agent_026` is rejected
+for now: target coverage did not reduce loops, had the largest seed variance,
+and its final Coin-Heaven score fell below both the 46-feature reference and
+the other new branches. No feature groups should be combined until Agent 025
+has a matched 600-round/fixed-suite confirmation.
+
+The raw CPU artifacts are retained under
+`/export/scratch/salitanl/bomberman_feature_variants_20260919/`:
+`agent024_action_safety_300_cpu`, `agent025_short_cycle_300_cpu`, and
+`agent026_target_coverage_300_cpu`.

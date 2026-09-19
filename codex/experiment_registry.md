@@ -40,6 +40,9 @@ sets, or evaluation protocols without an explicit note.
 | 46-feature DDQN Loot Crate-only baseline | Topology representation under the old specialist curriculum | Completed previously as a resumed 300-to-600-round, three-seed run at `experiments/combat_ddqn_r_topology_300round_20260918/`; fixed-suite and classic results are retained | [`combat_dqn_r_topology_agent.md`](combat_dqn_r_topology_agent.md) |
 | 52-feature DDQN Loot Crate-only follow-up | Route representation under the old specialist curriculum | Completed: fresh three-seed, 600-round run; final aggregate 47.89 Loot Crate coins and 118.44 crates, all with 100% survival; Coin Heaven was not trained/evaluated in this non-mixed protocol | [`combat_ddqn_route_agent.md`](combat_ddqn_route_agent.md) |
 | Fixed DDQN feature/curriculum 2×2 suite | Held-out comparison of 46/52 features × mixed/Loot-Crate-only training | Completed: 768 games, 96 per cell/scenario. Mixing is the dominant gain; 46-feature mixed is the selected balanced candidate (49.06 Coin Heaven / 64.6% completion; 46.20 Loot Crate / 114.30 crates). Route features do not improve the aggregate result. | [`combat_ddqn_route_agent.md`](combat_ddqn_route_agent.md) |
+| Agent 024 action-safety feature pilot | 46-feature mixed DDQN plus per-action bomb consequences | Completed CPU 300-round pilot: 42.76 Coin Heaven / 47.9% completion; 38.90 Loot Crate / 96.92 crates; safe but not the best balanced branch | [`combat_ddqn_route_agent.md`](combat_ddqn_route_agent.md) |
+| Agent 025 short-cycle feature pilot | 46-feature mixed DDQN plus compact recent-action/cycle summaries | Completed CPU 300-round pilot: 48.51 Coin Heaven / 56.3% completion; 37.17 Loot Crate / 93.18 crates; best one-group navigation branch, pending longer confirmation | [`combat_ddqn_route_agent.md`](combat_ddqn_route_agent.md) |
+| Agent 026 target-coverage feature pilot | 46-feature mixed DDQN plus compact global coin/crate coverage summaries | Completed CPU 300-round pilot: 37.76 Coin Heaven / 30.2% completion; 37.13 Loot Crate / 92.67 crates; rejected for now due loops and seed variance | [`combat_ddqn_route_agent.md`](combat_ddqn_route_agent.md) |
 | Pre-combat evaluation suite | Standardized gate before `classic` opponents | Completed comparison: repaired DQN 7.04 Coin Heaven / 45.90 Loot Crate versus FQI 18.14 / 19.35; fresh DQN boards confirmed 5.87 / 45.51 | [`../eval_suite/README.md`](../eval_suite/README.md) |
 | Classic DQN opponent suite | First competition-oriented evaluation | 288 fresh games completed: score 3.01 vs peaceful, 2.72 vs coin collector, 2.50 vs rule-based; rule-based survival only 35.4% with 0.75 invalid actions/game | [`combat_dqn_agent.md`](combat_dqn_agent.md) |
 
@@ -69,6 +72,15 @@ model. Results are non-monotonic and seed-dependent, and the run changed both
 representation and curriculum relative to the repaired 46-feature specialist.
 The fixed pre-combat suite and a matched 46-feature mixed DDQN control are
 therefore required before claiming that the new features caused the gain.
+
+The sequential one-group pilots keep the 46-feature mixed DDQN as the current
+balanced reference. Agent 025's explicit short-cycle summaries are the only
+new group promoted to a longer confirmation because they produced the best
+Coin-Heaven score, completion, and anti-loop diagnostic among the three, but
+they did not recover the reference's Loot-Crate score. Agent 024 is retained
+as a crate-focused secondary ablation; Agent 026 is rejected. The next run
+should extend Agent 025 under the fixed 600-round protocol before any feature
+combination or opponent training.
 
 The 18 September 2026 debugging session then audited the frozen DQN
 checkpoints and found that action-time safety masks were absent from vanilla

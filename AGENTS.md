@@ -65,10 +65,13 @@ Current agent enumeration, with existing directory names preserved:
 | `Agent_019` | `combat_dqn_agent` | 2026-09-18, `3531cf5` |
 | `Agent_020` | `combat_dqn_topology_agent` | 2026-09-18, `71b0f5a` |
 | `Agent_021` | `combat_dqn_r_topology_agent` | 2026-09-18, `0e7ac9e` |
-| `Agent_022` | `Agent_022_combat_ddqn_route_agent` | 2026-09-19, pending commit |
-| `Agent_023` | `Agent_023_spatial_hybrid_rainbow_agent` | 2026-09-19, pending commit |
+| `Agent_022` | `Agent_022_combat_ddqn_route_agent` | 2026-09-19, `cd0f205` |
+| `Agent_023` | `Agent_023_spatial_hybrid_rainbow_agent` | 2026-09-19, `cd0f205` |
+| `Agent_024` | `Agent_024_combat_ddqn_action_safety_agent` | 2026-09-19, `b19ba77` |
+| `Agent_025` | `Agent_025_combat_ddqn_short_cycle_agent` | 2026-09-19, `b19ba77` |
+| `Agent_026` | `Agent_026_combat_ddqn_target_coverage_agent` | 2026-09-19, `b19ba77` |
 
-The next available number is `Agent_024`.
+The next available number is `Agent_027`.
 
 ## Codex note index
 
