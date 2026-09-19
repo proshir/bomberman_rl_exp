@@ -2,6 +2,26 @@
 
 ## Sequential feature-group pilots completed (19 September 2026)
 
+## Agent 027: staged curriculum with scenario-balanced replay (19 September 2026)
+
+Approved as a training-method ablation of Agent 025, not a feature change:
+`Agent_027_combat_ddqn_short_cycle_staged_replay_agent` retains its exact
+65-value observation (the repaired 46-feature topology representation plus 19
+short-cycle values). It changes only how experience is scheduled and replayed:
+rounds 1--100 use 70% Coin Heaven / 30% Loot Crate, rounds 101--300 use 25% /
+75%, and rounds 301--600 use 50% one-opponent Classic with 25% each retained
+solo scenario. Classic opponents rotate through peaceful, coin-collector, and
+rule-based agents. The replay buffer stores a scenario tag and samples the
+currently targeted scenario proportions, retaining navigation and crate data
+during combat rather than using forgetting-prone hard blocks.
+
+The schedule, tag sampling, and transition into Classic passed a 302-round,
+one-step CPU smoke test: round 301 used `peaceful_agent`, round 302 used
+`coin_collector_agent`, and both recorded the 25% Coin Heaven / 25% Loot Crate
+/ 50% Classic replay target. The approved 600-round three-seed CPU experiment
+is next; it will use fixed held-out Coin Heaven and Loot Crate checks during
+training, followed by analysis before any promotion decision.
+
 Three separate agents were added on top of the repaired 46-feature topology
 DDQN so the proposed additions could be evaluated without combining changes:
 `Agent_024_combat_ddqn_action_safety_agent` adds 60 per-action bomb-consequence

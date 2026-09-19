@@ -70,8 +70,9 @@ Current agent enumeration, with existing directory names preserved:
 | `Agent_024` | `Agent_024_combat_ddqn_action_safety_agent` | 2026-09-19, `b19ba77` |
 | `Agent_025` | `Agent_025_combat_ddqn_short_cycle_agent` | 2026-09-19, `b19ba77` |
 | `Agent_026` | `Agent_026_combat_ddqn_target_coverage_agent` | 2026-09-19, `b19ba77` |
+| `Agent_027` | `Agent_027_combat_ddqn_short_cycle_staged_replay_agent` | 2026-09-19, `1f65c49` |
 
-The next available number is `Agent_027`.
+The next available number is `Agent_028`.
 
 ## Codex note index
 
