@@ -43,7 +43,7 @@ def run_one(spec):
 
 
 def run_suite(manifest_path: Path, output: Path, python: str,
-              parallel: int = 1) -> None:
+              parallel: int = 1, game_workers: int = 1) -> None:
     manifest = load_json(manifest_path)
     output.mkdir(parents=True, exist_ok=False)
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
@@ -86,6 +86,12 @@ def run_suite(manifest_path: Path, output: Path, python: str,
                     "--seats", *map(str, manifest["seats"]),
                     "--max-steps", str(manifest["max_steps"]),
                     "--metric", metric,
+                    # Keep games isolated, then let the benchmark schedule
+                    # them over CPU processes. This does not change boards,
+                    # checkpoints, or aggregation; it only removes the old
+                    # serial 32-game bottleneck inside each suite entry.
+                    "--batch-size", "1",
+                    "--parallel", str(game_workers),
                     "--diagnostics" if manifest.get("diagnostics") else "",
                     "--output", str(run_output),
                 ]
@@ -135,15 +141,22 @@ def main() -> None:
     parser.add_argument("--output", type=Path)
     parser.add_argument("--python", default=sys.executable)
     parser.add_argument("--parallel", type=int, default=1,
-                        help="Run independent checkpoint evaluations concurrently.")
+                        help="Run independent checkpoint/opponent entries concurrently.")
+    parser.add_argument(
+        "--game-workers", type=int, default=1,
+        help=("CPU game workers within each suite entry (total process budget "
+              "is approximately --parallel times --game-workers)."),
+    )
     args = parser.parse_args()
     if args.output is None:
         stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         args.output = Path(__file__).with_name("results") / stamp
     if args.parallel < 1:
         parser.error("--parallel must be positive")
+    if args.game_workers < 1:
+        parser.error("--game-workers must be positive")
     run_suite(args.manifest.resolve(), args.output.resolve(), args.python,
-              args.parallel)
+              args.parallel, args.game_workers)
 
 
 if __name__ == "__main__":

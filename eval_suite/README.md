@@ -47,12 +47,20 @@ export CUDA_VISIBLE_DEVICES=""
 export OMP_NUM_THREADS=1
 export MKL_NUM_THREADS=1
 export OPENBLAS_NUM_THREADS=1
-python3 eval_suite/run_suite.py
+export NUMEXPR_NUM_THREADS=1
+python3 eval_suite/run_suite.py --parallel 3 --game-workers 8
 ```
 
 The script calls the existing `src/run_benchmark.py`; it does not retrain any
 agent. Results are written below `eval_suite/results/<timestamp>/`, with one
 directory per candidate/checkpoint/scenario and a combined `suite_summary.json`.
+
+`--parallel` controls independent checkpoint/opponent entries and
+`--game-workers` controls isolated games inside each entry. Their product is
+the approximate CPU process budget; `--parallel 3 --game-workers 8` therefore
+uses at most 24 game processes. It preserves the exact checkpoints, boards,
+seats, action seeds, diagnostics, and result aggregation. Keep the math-thread
+limits at one so those processes do not oversubscribe the host.
 
 To evaluate a different checkpoint, edit `eval_suite/suite.json` and retain the
 same board seeds, seats, scenario, and horizon. Do not compare results from a
