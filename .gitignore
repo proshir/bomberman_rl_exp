@@ -1,5 +1,7 @@
 # Code has its own Git repository.
 /src/
+# Imported external-team agents; keep out of the project submission.
+/imported_agents/
 
 # Local Python environment and agent tooling.
 /env/

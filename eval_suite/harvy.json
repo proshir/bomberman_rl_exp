@@ -10,7 +10,7 @@
             "name": "harvy_fixed",
             "agent": "harvy",
             "checkpoints": [
-                "src/agent_code/harvy/my-saved-model.pt"
+                "imported_agents/harvy/my-saved-model.pt"
             ]
         }
     ]

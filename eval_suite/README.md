@@ -1,5 +1,13 @@
 # Pre-combat evaluation suite
 
+## Imported external-team agents
+
+External team agents used for reference comparisons are kept separately in
+`../imported_agents/` and excluded from the project repository via
+`.gitignore`. This currently includes `harvy` and `ruehl_based_agent`. Their
+checkpoints and evaluation results are reference artifacts only; they are not
+project-owned submission agents.
+
 Sahand was here.
 
 This suite is the gate to run before introducing `classic` games with
