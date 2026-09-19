@@ -522,3 +522,35 @@ The manifest is
 [`classic_agent027_staged_replay_600_20260919.json`](../eval_suite/classic_agent027_staged_replay_600_20260919.json)
 and the raw output is
 `/export/scratch/salitanl/bomberman_feature_variants_20260919/agent027_staged_replay_classic_600_cpu/`.
+
+## Agent 028 dueling 256 architecture ablation (19 September 2026)
+
+Agent 028 kept Agent 027's 65 features, staged curriculum, scenario-balanced
+replay, safety logic, and DDQN recipe, changing only the network to a
+`65--256--256` dueling MLP with value and advantage heads. Three seeds ran for
+600 rounds with normal held-out evaluations at rounds 200, 400, and 600, then
+the same 288-game Classic gate.
+
+| Checkpoint | Coin Heaven coins | Completion | CH max no-progress | Loot Crate coins | Crates |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 200 | 47.33 | 54.2% | 143.5 | 38.25 | 93.51 |
+| 400 | 49.06 | 47.9% | 155.9 | 44.90 | 111.50 |
+| 600 | 48.30 | 15.6% | 235.3 | 42.81 | 107.71 |
+
+The architecture change was negative relative to Agent 027: at round 600 it
+lost 0.96 Coin-Heaven coins, 44.8 percentage points of completion, 4.23
+Loot-Crate coins, and 8.66 crates. It also had much longer Coin-Heaven
+no-progress tails. The Classic gate was lower in every mean-score lineup:
+
+| Opponent | Agent 027 score | Agent 028 score | Agent 028 survival |
+| --- | ---: | ---: | ---: |
+| `peaceful_agent` | 10.02 | 9.70 | 90.6% |
+| `coin_collector_agent` | 5.38 | 4.45 | 76.0% |
+| `rule_based_agent` | 4.54 | 4.05 | 45.8% |
+
+Agent 028 is rejected as a promotion candidate. The dueling head and extra
+width did not improve this feature/curriculum regime; Agent 027 remains the
+stronger control. The run artifacts are
+`/export/scratch/salitanl/bomberman_feature_variants_20260919/agent028_dueling_256_600_cpu/`
+and
+`/export/scratch/salitanl/bomberman_feature_variants_20260919/agent028_dueling_256_classic_600_cpu/`.

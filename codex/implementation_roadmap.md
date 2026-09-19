@@ -43,6 +43,15 @@ beating the prior 46-feature reference on score in each lineup. Rule-based
 survival remains only 43.8%, so the next change should target combat safety
 while preserving opponent/solo replay balance.
 
+Agent 028's architecture-only follow-up is rejected. Replacing the 128-wide
+ordinary MLP with a 256--256 dueling MLP reduced the round-600 solo result to
+48.30 Coin-Heaven coins/15.6% completion and 42.81 Loot-Crate coins/107.71
+crates, versus Agent 027's 49.26/60.4% and 47.04/116.36. Its Classic scores
+also fell to 9.70/4.45/4.05 against peaceful/coin-collector/rule-based. More
+capacity and a dueling head are therefore not beneficial in this regime; the
+next change should address opponent-specific combat safety or replay quality,
+not widen the network again.
+
 Three separate agents were added on top of the repaired 46-feature topology
 DDQN so the proposed additions could be evaluated without combining changes:
 `Agent_024_combat_ddqn_action_safety_agent` adds 60 per-action bomb-consequence
