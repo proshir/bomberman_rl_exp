@@ -1,0 +1,23 @@
+{
+    "board_seeds": [32000, 32001, 32002, 32003, 32004, 32005, 32006, 32007],
+    "agent_seeds": [0],
+    "seats": [0, 1, 2, 3],
+    "max_steps": 400,
+    "diagnostics": true,
+    "opponent_lineups": [
+        {"name": "peaceful", "scenario": "classic", "opponents": ["peaceful_agent"]},
+        {"name": "coin_collector", "scenario": "classic", "opponents": ["coin_collector_agent"]},
+        {"name": "rule_based", "scenario": "classic", "opponents": ["rule_based_agent"]}
+    ],
+    "candidates": [
+        {
+            "name": "agent027_staged_replay_600",
+            "agent": "Agent_027_combat_ddqn_short_cycle_staged_replay_agent",
+            "checkpoints": [
+                "/export/scratch/salitanl/bomberman_feature_variants_20260919/agent027_short_cycle_staged_replay_600_cpu/seed_0/checkpoints/episode_0600.pkl",
+                "/export/scratch/salitanl/bomberman_feature_variants_20260919/agent027_short_cycle_staged_replay_600_cpu/seed_1/checkpoints/episode_0600.pkl",
+                "/export/scratch/salitanl/bomberman_feature_variants_20260919/agent027_short_cycle_staged_replay_600_cpu/seed_2/checkpoints/episode_0600.pkl"
+            ]
+        }
+    ]
+}
