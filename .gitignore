@@ -31,6 +31,7 @@ experiments/**/training.pkl
 /experiments/*diagnostics*/
 # Generated pre-combat suite outputs; retain the manifest and protocol only.
 /eval_suite/results/
+.jobctl/
 *.pt
 *.pth
 *.ckpt

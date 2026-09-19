@@ -673,3 +673,23 @@ Stage 1 and motivate focused representation experiments before advancing to
 crates and bombs. Details are in
 [`tree_navigation_diagnosis.md`](tree_navigation_diagnosis.md) and
 [`tree_fqi_history_loop_diagnosis.md`](tree_fqi_history_loop_diagnosis.md).
+
+## Agent 029 adversarial-window DDQN implementation (19 September 2026)
+
+`Agent_029_combat_ddqn_adversarial_window_agent` is an untrained, controlled
+successor to Agent 027. It retains Agent 027's 65-value observation, ordinary
+128-wide DDQN network, staged 100/200/300 curriculum, scenario-balanced replay,
+reward, and known-danger action mask. It appends exactly 36 learned inputs:
+six action-conditioned summaries for each of `UP`, `RIGHT`, `DOWN`, `LEFT`,
+`WAIT`, and `BOMB`. The 101-input representation records immediate legality,
+whether an opponent currently has a bomb, destination contestability after one
+opponent move, worst survival horizon and safe-frontier size through one bomb
+cycle, and whether an immediate opponent bomb shortens that horizon.
+
+The model deliberately enumerates one immediately planted bomb per armed
+opponent, rather than combining mutually exclusive enemy bombs or expanding all
+action sequences exponentially. Opponent movement is represented as a compact
+reachable-tile envelope. The new values do not hard-mask an action; the network
+must learn how to trade tactical danger against rewards. This is implementation
+and unit-test status only, not evidence of improvement. Any later run must use
+the existing Agent-027 solo regression suites and the 288-game Classic gate.

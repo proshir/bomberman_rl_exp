@@ -616,3 +616,24 @@ stronger control. The run artifacts are
 `/export/scratch/salitanl/bomberman_feature_variants_20260919/agent028_dueling_256_600_cpu/`
 and
 `/export/scratch/salitanl/bomberman_feature_variants_20260919/agent028_dueling_256_classic_600_cpu/`.
+
+## Agent 029 adversarial opponent-response window — implemented, untrained (19 September 2026)
+
+Agent 029 is a single-group successor to Agent 027's diagnosed adversarial
+weakness. It preserves the 65 Agent-027 inputs, ordinary 128-wide DDQN,
+staged curriculum, scenario-balanced replay, and current known-danger safety
+mask. It adds 36 inputs, six for every candidate action, for a 101-value
+observation. Each action receives: immediate legality, armed-opponent flag,
+one-step destination contestability, worst reachable survival time, worst
+safe-frontier size, and an immediate-opponent-bomb trap flag.
+
+The calculation covers one bomb cycle (`BOMB_TIMER + 1` future steps). For
+each armed opponent, it tests the one response that can explode within that
+window: placing a bomb at the opponent's current tile. A compact opponent
+movement-reachability envelope represents future contested escape tiles.
+Later move-then-bomb responses cannot explode before this window ends, so they
+are not fabricated as immediate explosions. The feature group is informative
+only: it does not add a new hard action veto or alter existing safety behavior.
+
+This branch has passed focused feature-contract and callback setup tests only.
+It has not been trained or evaluated, so it makes no performance claim.

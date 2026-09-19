@@ -72,8 +72,9 @@ Current agent enumeration, with existing directory names preserved:
 | `Agent_026` | `Agent_026_combat_ddqn_target_coverage_agent` | 2026-09-19, `b19ba77` |
 | `Agent_027` | `Agent_027_combat_ddqn_short_cycle_staged_replay_agent` | 2026-09-19, `1f65c49` |
 | `Agent_028` | `Agent_028_combat_ddqn_dueling_256_agent` | 2026-09-19, `c867b7e` |
+| `Agent_029` | `Agent_029_combat_ddqn_adversarial_window_agent` | 2026-09-19, uncommitted implementation |
 
-The next available number is `Agent_029`.
+The next available number is `Agent_030`.
 
 ## Codex note index
 
@@ -182,3 +183,24 @@ updating the most specific existing note instead of creating a duplicate.
   diagnostic rather than a new result when no new training/evaluation was run.
 - Keep `implementation_roadmap.md` as the concise project-level timeline and
   `final_project.md` as the source of assignment requirements.
+
+## Long-running training and evaluation jobs
+
+- Use [`jobctl`](jobctl) for detached training and evaluation commands that
+  need to survive terminal, SSH, or chat-session disconnects.
+- Give every job an explicit stable ID, for example
+  `agent029-train`, `agent029-normal`, and `agent029-classic`.
+- Queue dependent evaluations with `./jobctl start --after <training-id>`.
+  A dependent job starts only when every dependency succeeds; failed
+  dependencies block downstream jobs.
+- Inspect jobs with `./jobctl list`, `./jobctl status <id>`,
+  `./jobctl ps <id>`, and `./jobctl tail -f <id>`. Stop a specific job with
+  `./jobctl stop <id>`; this targets its recorded process group and does not
+  search for or kill unrelated Python processes.
+- Keep generated job metadata and logs in `.jobctl/`; this directory is
+  ignored by Git. Jobs not launched through `jobctl` do not have a safe
+  controller ID and should not be stopped by broad process-name matching.
+- For CPU-only evaluation, follow the cluster guidance: hide CUDA and limit
+  math-library threads with `--env CUDA_VISIBLE_DEVICES=` and the appropriate
+  `OMP_NUM_THREADS`, `MKL_NUM_THREADS`, `OPENBLAS_NUM_THREADS`, and
+  `NUMEXPR_NUM_THREADS` overrides.
