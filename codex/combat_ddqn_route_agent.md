@@ -467,3 +467,37 @@ The manifest is
 [`classic_agent025_short_cycle_300_20260919.json`](../eval_suite/classic_agent025_short_cycle_300_20260919.json)
 and the raw suite output is
 `/export/scratch/salitanl/bomberman_feature_variants_20260919/agent025_short_cycle_classic_300_cpu/`.
+
+## Agent 027 staged replay curriculum (19 September 2026)
+
+`Agent_027_combat_ddqn_short_cycle_staged_replay_agent` keeps Agent 025's
+65-value observation exactly, but changes training: 70% Coin Heaven / 30% Loot
+Crate for rounds 1--100, 25% / 75% for 101--300, then 50% Classic plus 25% of
+each retained solo scenario for 301--600. Classic rounds rotate one opponent
+at a time among peaceful, coin-collector, and rule-based. Scenario-tagged
+replay samples the active target proportions, so earlier data remains present
+during the later phase. Three seeds ran concurrently on CPU for 600 rounds;
+CUDA was hidden. The fixed held-out solo checks used eight boards, four seats,
+and 400 steps per checkpoint (96 games per scenario/checkpoint).
+
+| Checkpoint | Coin Heaven coins | Completion | CH max no-progress | Loot Crate coins | Crates | LC max no-progress |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 200 | 47.72 | 83.3% | 65.3 | 42.54 | 103.64 | 47.0 |
+| 400 | **49.83** | **89.6%** | **45.3** | 44.98 | 110.47 | 29.3 |
+| 600 | 49.26 | 60.4% | 119.5 | **47.04** | **116.36** | **17.3** |
+
+Every one of the 576 held-out solo games had 100% survival, zero invalid
+actions, and zero suicides. The final checkpoint improves the matched
+46-feature mixed reference's Loot Crate score/crates (47.04/116.36 versus
+46.20/114.30) and preserves its Coin Heaven score (49.26 versus 49.06), but
+its Coin Heaven completion is lower (60.4% versus 64.6%) and round 600
+regresses from Agent 027's round-400 navigation peak. This is a useful
+training-method result, but not a clean replacement claim: Agent 027 has 150
+Classic training rounds and fewer solo rounds than the all-solo mixed control.
+
+The in-training Classic episodes are diagnostic rather than a fair classic
+gate: across its 450 episodes, mean score was 6.49, coins 5.42, kills 0.22,
+survival 73.3%, invalid actions 0.35/game, and suicides 0.23/game. A fresh,
+fixed classic-suite evaluation of a preselected checkpoint is required before
+using those figures to claim combat performance. The final run artifacts are
+`/export/scratch/salitanl/bomberman_feature_variants_20260919/agent027_short_cycle_staged_replay_600_cpu/`.

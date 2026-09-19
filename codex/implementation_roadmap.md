@@ -18,9 +18,14 @@ during combat rather than using forgetting-prone hard blocks.
 The schedule, tag sampling, and transition into Classic passed a 302-round,
 one-step CPU smoke test: round 301 used `peaceful_agent`, round 302 used
 `coin_collector_agent`, and both recorded the 25% Coin Heaven / 25% Loot Crate
-/ 50% Classic replay target. The approved 600-round three-seed CPU experiment
-is next; it will use fixed held-out Coin Heaven and Loot Crate checks during
-training, followed by analysis before any promotion decision.
+/ 50% Classic replay target. The completed 600-round three-seed CPU experiment
+reached 49.26 Coin-Heaven coins/60.4% completion and 47.04 Loot-Crate
+coins/116.36 crates at its final checkpoint; the 400-round checkpoint was the
+navigation peak (49.83 coins, 89.6% completion). This supports staged replay
+as a promising balanced-skill mechanism, but it is not a direct replacement
+for the all-solo 46-feature control because Agent 027 received 150 Classic
+rounds. A fresh fixed classic gate must test one preselected checkpoint before
+any combat promotion decision.
 
 Three separate agents were added on top of the repaired 46-feature topology
 DDQN so the proposed additions could be evaluated without combining changes:
