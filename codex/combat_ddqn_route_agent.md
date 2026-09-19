@@ -501,3 +501,24 @@ survival 73.3%, invalid actions 0.35/game, and suicides 0.23/game. A fresh,
 fixed classic-suite evaluation of a preselected checkpoint is required before
 using those figures to claim combat performance. The final run artifacts are
 `/export/scratch/salitanl/bomberman_feature_variants_20260919/agent027_short_cycle_staged_replay_600_cpu/`.
+
+That fixed classic gate is now complete for the three final 600-round
+checkpoints: 288 fresh games on boards `32000`--`32007`, four seats, 400 steps,
+and one supplied opponent per lineup.
+
+| Opponent | Mean score | Mean coins | Mean kills | Survival | Invalid actions/game | Suicides/game |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| `peaceful_agent` | **10.02** | **7.57** | 0.49 | 93.8% | 0.03 | 0.06 |
+| `coin_collector_agent` | **5.38** | **4.59** | 0.16 | 75.0% | 0.22 | 0.23 |
+| `rule_based_agent` | **4.54** | **4.13** | 0.08 | 43.8% | 0.34 | 0.38 |
+
+Agent 027 exceeds both Agent 025 (scores 1.40/2.58/2.25) and the 46-feature
+combat-safety reference (5.99/4.04/3.70) on score in all three lineups. It is
+not yet a robust competition agent: rule-based survival is below the 46-feature
+reference's 49.0%, and self-deaths remain material. The result supports the
+value of real-opponent experience and staged replay; next work should focus on
+combat safety/escape behavior without discarding the retained solo rehearsal.
+The manifest is
+[`classic_agent027_staged_replay_600_20260919.json`](../eval_suite/classic_agent027_staged_replay_600_20260919.json)
+and the raw output is
+`/export/scratch/salitanl/bomberman_feature_variants_20260919/agent027_staged_replay_classic_600_cpu/`.

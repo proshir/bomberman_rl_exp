@@ -24,8 +24,11 @@ coins/116.36 crates at its final checkpoint; the 400-round checkpoint was the
 navigation peak (49.83 coins, 89.6% completion). This supports staged replay
 as a promising balanced-skill mechanism, but it is not a direct replacement
 for the all-solo 46-feature control because Agent 027 received 150 Classic
-rounds. A fresh fixed classic gate must test one preselected checkpoint before
-any combat promotion decision.
+rounds. Its subsequent fixed 288-game classic gate scored 10.02 against
+peaceful, 5.38 against coin-collector, and 4.54 against rule-based opponents,
+beating the prior 46-feature reference on score in each lineup. Rule-based
+survival remains only 43.8%, so the next change should target combat safety
+while preserving opponent/solo replay balance.
 
 Three separate agents were added on top of the repaired 46-feature topology
 DDQN so the proposed additions could be evaluated without combining changes:
