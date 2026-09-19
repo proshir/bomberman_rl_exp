@@ -438,3 +438,32 @@ The raw CPU artifacts are retained under
 `/export/scratch/salitanl/bomberman_feature_variants_20260919/`:
 `agent024_action_safety_300_cpu`, `agent025_short_cycle_300_cpu`, and
 `agent026_target_coverage_300_cpu`.
+
+## Agent 025 classic evaluation (19 September 2026)
+
+The three final 300-round Agent-025 checkpoints were evaluated in 288 fresh
+classic games: eight boards (`32000`--`32007`), four seats, 400 steps, and one
+supplied opponent per lineup. The CPU-only evaluation used the same classic
+protocol as the 46-feature DDQN reference.
+
+| Opponent | Mean score | Mean coins | Mean kills | Survival | Invalid actions/game | Suicides/game |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| `peaceful_agent` | 1.40 | 1.03 | 0.07 | 96.9% | 0.01 | 0.03 |
+| `coin_collector_agent` | 2.58 | 2.11 | 0.09 | 87.5% | 0.10 | 0.13 |
+| `rule_based_agent` | 2.25 | 2.09 | 0.03 | 54.2% | 0.60 | 0.39 |
+
+This does not promote Agent 025 to combat. Against the current 46-feature
+600-round combat-safety reference, it has lower score and coin collection in
+every lineup (reference: 5.99/4.04/3.70 score and 4.48/3.47/3.28 coins), but
+it commits fewer invalid actions against the coin collector and rule-based
+opponents (0.10 versus 0.47 and 0.60 versus 1.17 respectively). Rule-based
+survival is also slightly higher (54.2% versus 49.0%). This is an encouraging
+safety signal, but the comparison is not a pure feature claim because Agent
+025 has only 300 training rounds and no opponent experience. The next justified
+step remains a longer solo confirmation of Agent 025 before any combat-training
+change.
+
+The manifest is
+[`classic_agent025_short_cycle_300_20260919.json`](../eval_suite/classic_agent025_short_cycle_300_20260919.json)
+and the raw suite output is
+`/export/scratch/salitanl/bomberman_feature_variants_20260919/agent025_short_cycle_classic_300_cpu/`.

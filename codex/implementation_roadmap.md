@@ -28,6 +28,14 @@ is promoted as the submission model and no groups should be combined yet. The
 raw CPU outputs are retained under
 `/export/scratch/salitanl/bomberman_feature_variants_20260919/`.
 
+Agent 025's subsequent 288-game classic gate is complete: it averaged scores
+of 1.40 against `peaceful_agent`, 2.58 against `coin_collector_agent`, and
+2.25 against `rule_based_agent`. Rule-based survival reached 54.2% with 0.60
+invalid actions/game, an improvement over the 46-feature 600-round reference's
+49.0% and 1.17, but score and coin collection were lower in every lineup.
+Agent 025 is therefore not promoted to combat; the next gate remains a longer
+solo confirmation. See [`combat_ddqn_route_agent.md`](combat_ddqn_route_agent.md).
+
 ## Spatial hybrid Rainbow implementation (Phase 0)
 
 `Agent_023_spatial_hybrid_rainbow_agent` now exists as a self-contained
