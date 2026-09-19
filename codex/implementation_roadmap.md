@@ -4,6 +4,19 @@
 
 ## Agent 027: staged curriculum with scenario-balanced replay (19 September 2026)
 
+## Agent 028: 256-wide dueling DDQN architecture (19 September 2026)
+
+Approved as an architecture-only follow-up to Agent 027:
+`Agent_028_combat_ddqn_dueling_256_agent` keeps its exact 65-value short-cycle
+observation, scenario-balanced replay, safety mask, DDQN target, rewards, and
+staged curriculum. It changes the Q-network from Agent 027's ordinary
+65--128--128--6 MLP to a 65--256--256 dueling network: a scalar value head and
+six mean-centered action-advantage values. It has 84,487 trainable parameters.
+The shared DQN setup gained a default-preserving network-class hook so prior
+agents remain ordinary 128-wide MLPs. Compilation, direct setup/action, shape,
+parameter-count, and the existing 11-test DQN suite pass with CUDA hidden.
+No training result exists yet.
+
 Approved as a training-method ablation of Agent 025, not a feature change:
 `Agent_027_combat_ddqn_short_cycle_staged_replay_agent` retains its exact
 65-value observation (the repaired 46-feature topology representation plus 19
