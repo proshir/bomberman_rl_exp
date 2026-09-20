@@ -105,3 +105,121 @@ Loot Crate 45.07 versus 45.46).  Therefore 031 is not promoted as the overall
 successor.  Keep the callback repair; treat the 12 offensive features as a
 specific single-opponent improvement that needs a different combat-learning
 intervention before another feature expansion.
+
+## CPU versus GPU timing diagnostic — 20 September 2026
+
+A direct device comparison of Agent 031 used `src/benchmark_combat_device.py`,
+the original seed-0 113-input episode-600 checkpoint, and episodes 601–630 of
+the same 60/20/20 curriculum. Both processes ran on compgpu5 with one math-library
+thread; CUDA was hidden for the CPU baseline and physical GPU 0 (RTX 2080 Ti)
+was isolated for CUDA. GPU availability and actual CUDA execution were checked
+before the job. PyTorch was 2.14.0+cu130. No production checkpoint was changed.
+Evaluation was skipped for this timing diagnostic; normal replay warmup,
+batch size 128, update frequency, rewards, safety and per-round saves remained.
+
+| Measurement | CPU | RTX 2080 Ti |
+| --- | ---: | ---: |
+| Training time, 30 rounds | 37.196 s | 38.783 s |
+| Including learner/world setup | 40.030 s | 41.748 s |
+| Learner transitions | 7,816 | 7,816 |
+| Optimizer updates | 704 | 704 |
+| Training milliseconds per transition | 4.759 | 4.962 |
+| Feature extraction | 21.457 s | 21.483 s |
+| Optimizer calls, including replay sampling | 1.956 s | 2.890 s |
+| Median isolated update time | 2.114 ms | 3.325 ms |
+
+All 30 paired rounds matched on board, scenario, steps, score, coins, crates,
+kills, suicides, bombs, invalid moves, survival, replay counts and update counts.
+This is an observed short-run match, not a general guarantee of CPU/CUDA
+numerical equivalence. The isolated update diagnostic reset the original
+checkpoint and used identical seeded synthetic replay, 30 warmup updates, then
+three groups of 200 timed updates using the real optimizer implementation.
+It measures replay sampling, transfers and synchronized loss retrieval too.
+
+CUDA took 4.3% longer in this one paired timing run; the small elapsed-time
+difference should not be treated as a precise general speed ratio. There is
+no observed speed benefit from directly moving this implementation to GPU.
+CPU feature extraction consumed 57.7% of training time, while optimizer calls
+consumed 5.3% (this 30-round run includes the 5,000-transition replay warmup).
+The tiny 113–128–128–6 network and serial decision/update path do not provide
+enough work to offset CUDA overhead in this test. CPU feature/safety work is
+the first performance target; larger batches or parallel actors would be a
+separate training-system experiment, not a device-only switch.
+
+Artifacts: `/export/scratch/salitanl/bomberman_device_timing_20260920/{cpu,cuda}/`
+contains `timing.json`, config, round logs and disposable timing checkpoints.
+Job: `agent031-device-timing` (succeeded). The GPU process exited after timing.
+The JSON records the source commit, benchmark hash and initial checkpoint hash.
+
+Reproduce with a fresh output path for each device, from the source repository
+(check GPU ownership again before using physical GPU 0):
+
+```bash
+cd /export/home/salitanl/projects/ml-project/bomberman_rl
+export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
+export SDL_AUDIODRIVER=dummy SDL_VIDEODRIVER=dummy
+CUDA_VISIBLE_DEVICES=0 .venv/bin/python -c 'import torch; assert torch.cuda.is_available(); print(torch.cuda.get_device_name(0)); print(torch.ones(1, device="cuda").item())'
+CUDA_VISIBLE_DEVICES=0 .venv/bin/python benchmark_combat_device.py --device cuda --rounds 30 --config /export/scratch/salitanl/bomberman_feature_variants_20260920/offensive_feature_matched_v1/candidate113/seed_0/config.json --output /export/scratch/salitanl/bomberman_device_timing_repeat/cuda
+CUDA_VISIBLE_DEVICES='' .venv/bin/python benchmark_combat_device.py --device cpu --rounds 30 --config /export/scratch/salitanl/bomberman_feature_variants_20260920/offensive_feature_matched_v1/candidate113/seed_0/config.json --output /export/scratch/salitanl/bomberman_device_timing_repeat/cpu
+```
+
+Use jobctl for detached execution; keep the timing artifacts under scratch,
+not `/tmp`. This diagnostic does not launch a full training campaign.
+
+## Agent 032 optimized feature implementation — 20 September 2026
+
+Agent 032 is a separate agent directory. It keeps Agent 031's 113 inputs and
+the corrected Agent 030 training callbacks. Earlier agent directories are not
+modified. The optimization is confined to the feature module:
+
+- the opponent reachability envelope is computed once and reused across all
+  six action summaries;
+- action legality is computed once per state instead of once per response
+  search;
+- the opponent-window search uses local board bounds and hot-loop bindings;
+- the offensive survivor search uses the same state semantics with fewer
+  helper calls, repeated indexing operations and temporary allocations.
+
+The exact feature contract passed against Agent 031 on empty, armed,
+multi-opponent, crate, bomb and lingering-explosion states. The test covered
+the full 113-value vector and required exact equality. A feature-only benchmark
+of 600 identical calls measured 4.501 seconds for Agent 031 and 2.192 seconds
+for Agent 032: 2.05× throughput, or 51.3% less feature time. This is a
+microbenchmark, so it does not predict the same end-to-end training speedup;
+the environment, safety mask and rule-based opponents remain separate costs.
+
+The training callback smoke test loaded a migrated episode-600 checkpoint,
+ran one continuation round, wrote the episode-601 checkpoint and completed a
+real evaluation game. Job `agent032-feature-smoke` succeeded. A matched
+multi-seed training/evaluation run is still required before judging whether
+the faster implementation preserves learning behavior over long runs.
+
+## Agent 032 replay storage and transfer optimization — 20 September 2026
+
+Agent 032 now keeps its own replay implementation; Agents 027–031 are
+unchanged. The circular store uses fixed NumPy arrays for states, next states,
+actions, rewards, terminal flags and next-action masks instead of allocating a
+new tuple and several arrays for every transition. Scenario tags and the
+Agent030 80/20 combat-escape sampling quota are preserved.
+
+On sampling, reusable host staging arrays are filled with `np.take`. CUDA
+staging is pinned, and reusable device tensors receive the six batch fields
+with non-blocking copies. The optimizer consumes those tensors directly, so it
+does not create six new `as_tensor(..., device=...)` objects on each update.
+The public NumPy `sample()` API remains available for compatibility.
+
+The isolated benchmark used 10,000 stored 113-input transitions and 300
+128-transition batches. CPU sampling plus tensor construction fell from
+1.124 ms to 0.353 ms per batch (3.19×) in the latest CPU pass. On an RTX
+2080 Ti, CPU→GPU handoff fell from 1.161 ms to 0.417 ms (2.79×). These are replay/input-pipeline
+measurements, not end-to-end training speedups; the small network and feature
+extraction still dominate the complete run. Tests passed 12/12, including an
+actual Agent032 optimizer step, and the real-game smoke job
+`agent032-replay-smoke3` succeeded.
+
+Artifacts and commands:
+
+- source benchmark: `src/benchmark_agent032_replay.py`;
+- CPU result: run with `CUDA_VISIBLE_DEVICES= .venv/bin/python ... --device cpu`;
+- GPU job: `agent032-replay-gpu-bench`, using physical GPU 0;
+- smoke output: `/export/scratch/salitanl/bomberman_device_timing_20260920/agent032_replay_smoke3`.

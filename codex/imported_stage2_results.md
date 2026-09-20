@@ -50,7 +50,7 @@ result was not available, not a zero.
 | `imp_li_double_q` (Li-Jesse-Jiaze) | 16.69; 21.9%; 285.84 | 26.56; 67.47; 100% | Strong all-round tabular baseline, but below the two specialists. |
 | `imp_alii_arbiter` (Alii-Khaled) | 7.38; 0%; 400.00 | 9.44; 25.22; 100% | Safest neural/search hybrid after the leader; some useful crate play. |
 | `imp_alii_overlord` (Alii-Khaled) | **50.00; 100%; 133.75** | 4.72; 12.47; 100% | Fastest perfect open-board navigator; weak transfer to crates. |
-| `imp_alii_sentinel` (Alii-Khaled) | **50.00; 100%; 135.53** | 3.88; 10.56; 100% | Near-fastest perfect navigator; same crate-transfer gap. |
+| `imp_alii_sentinel` (Alii-Khaled) | **50.00; 100%; 135.53** | 3.88; 10.56; 100% | **Invalid checkpoint load:** the callback did not unwrap `best.pt`'s `q_net` field, leaving the network randomly initialized; these observations reflect the surrounding heuristic/safety logic and must not rank the trained policy. |
 | `imp_eric_kill` (ericgoldclub) | 19.91; 0%; 400.00 | 0.53; 6.56; 0% | Learns/encodes navigation better than its name suggests, but bombs itself in crate play. |
 | `imp_3j14_strong` (3j14) | 8.34; 0%; 400.00 | 0.38; 6.16; 9.4% | Some coin movement; unstable bombing and early self-death. |
 | `imp_eric_loot` (ericgoldclub) | 2.50; 0%; 400.00 | 0.00; 0.81; 90.6% | **Do not treat as a checkpoint score:** the callback expects `loot_crate_saved_model.pt`, while the staged artifact is named `loot_crate_agent_saved_model.pt`; it initialized a new DQN instead. |
@@ -76,7 +76,7 @@ implementation discussion below still distinguishes imported and local code.
 | Rank | Coin-heaven (coins; completion / mean completion step) | Loot-crate (coins; crates; survival) |
 | --- | --- | --- |
 | 1 | `imp_alii_overlord` (50.00; 100% / **133.75**) | `harvy` (**42.97; 109.19; 100%**) |
-| 2 | `imp_alii_sentinel` (50.00; 100% / 135.53) | `imp_li_deep_killer` (40.50; 97.03; 100%) |
+| 2 | `imp_alii_sentinel` (50.00; 100% / 135.53; **invalid trained-policy load**) | `imp_li_deep_killer` (40.50; 97.03; 100%) |
 | 3 | `imp_li_deep_killer` (50.00; 100% / 144.78) | `imp_li_sarsa_lambda` (36.13; 87.59; 96.9%) |
 | 4 | `harvy` (50.00; 100% / 194.09) | `imp_li_double_q` (26.56; 67.47; 100%) |
 | 5 | `imp_eric_kill` (19.91; 0%) | `ruehl_based_agent` (13.38; 44.63; 90.6%) |
@@ -93,11 +93,17 @@ loot-crate ordering is by mean collected coins, with crates and survival shown
 to explain the result.  `ruehl_based_agent` is included as a local control,
 not as an imported checkpoint.
 
+**2026-09-20 correction:** the Sentinel row above is retained as a record of
+the original games, but is not a valid ranking of its trained checkpoint.
+The callback loads `best.pt` with `strict=False` without unwrapping the
+`q_net` state dict. A separate combat rerun stages a corrected loader; it
+does not retroactively fix these Stage-2 games.
+
 Practical imported-agent ranking for a local-agent target is therefore:
 
 1. `imp_li_deep_killer`: the only verified imported policy that is elite on both fixed scenarios.
 2. `imp_li_sarsa_lambda` and `imp_li_double_q`: strongest verified crate specialists; Double-Q is the safer all-round comparison, SARSA is the better loot-crate target.
-3. `imp_alii_overlord` and `imp_alii_sentinel`: best navigation-speed references, but not good general Stage-2 targets until crate transfer improves.
+3. `imp_alii_overlord`: best verified navigation-speed reference, but not a good general Stage-2 target until crate transfer improves. Sentinel's historical score is not evidence of a trained-policy ranking.
 4. `imp_alii_arbiter`: useful safe hybrid reference, but substantially lower reward/collection than the table-based leaders here.
 
 Including the local references, Harvy is the strongest measured policy overall:

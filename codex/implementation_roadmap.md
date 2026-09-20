@@ -767,3 +767,21 @@ candidate. The offensive inputs produced the best single-rule-based score
 mixed-strong performance and regressed both solo checks. Agent 031 is not the
 overall successor; the next experiment should change combat learning/sampling
 rather than add another broad feature block.
+
+## Agent 032: optimized feature implementation (20 September 2026)
+
+The first speed target is feature extraction. Agent 032 copies the corrected
+Agent 031 representation and replay recipe into a new agent directory while
+leaving Agents 029–031 unchanged. Its feature searches reuse the opponent
+reachability envelope and per-state legality results across action-conditioned
+queries, and its survivor search reduces Python helper and allocation overhead.
+The complete 113-value vector is exactly equal to Agent 031 on representative
+crate, bomb, opponent and lingering-flame states. Six hundred feature calls
+were 2.05× faster in the first CPU microbenchmark, reducing feature time by
+51.3%. Agent 032 passed a one-round continuation and real-game smoke test.
+Its replay store is also preallocated, with reusable host staging arrays and
+device tensors for each batch size. Sampling plus tensor handoff measured
+3.19× faster on CPU and 2.79× faster on an RTX 2080 Ti than the previous
+list-of-tuples replay followed by per-field tensor construction in the latest
+300-batch pass. The next gate is a matched multi-seed run to measure end-to-end
+speed and confirm that the optimization preserves training outcomes.

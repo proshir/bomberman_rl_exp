@@ -76,8 +76,9 @@ Current agent enumeration, with existing directory names preserved:
 
 | `Agent_030` | `Agent_030_combat_ddqn_escape_replay_agent` | 2026-09-20, `a3c42ec`; callback-repaired matched control completed |
 | `Agent_031` | `Agent_031_combat_ddqn_offensive_escape_agent` | 2026-09-20, `a3c42ec`; matched evaluation completed; not promoted |
+| `Agent_032` | `Agent_032_combat_ddqn_optimized_features_agent` | 2026-09-20, separate optimized 113-input feature implementation; smoke-tested |
 
-The next available number is `Agent_032`.
+The next available number is `Agent_033`.
 
 ## Codex note index
 
