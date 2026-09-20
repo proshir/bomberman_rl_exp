@@ -210,3 +210,9 @@ updating the most specific existing note instead of creating a duplicate.
 From the workspace root, use the direct path `bomberman_rl_exp/jobctl ...`
 for training and evaluation job commands. Do not require a preceding `cd`
 into `bomberman_rl_exp`; this keeps commands copyable from the project root.
+
+## Reusable experiment runbook
+
+- [`codex/tournament_training_protocol.md`](codex/tournament_training_protocol.md) — complete reusable workflow for training a three-seed combat agent, creating the fixed classic-tournament manifest, running frozen evaluation, judging metrics, and preserving provenance.
+- [`codex/experiment_registry.md`](codex/experiment_registry.md) — record experiment identity, protocol changes, artifacts, and comparison status.
+- [`eval_suite/README.md`](eval_suite/README.md) — pre-combat Coin Heaven and Loot Crate evaluation protocol.
