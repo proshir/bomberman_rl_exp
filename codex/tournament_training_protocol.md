@@ -35,6 +35,12 @@ python3 src/run_combat_training.py \
   --parallel-seeds --output experiments/agent029_tournament_1000
 ```
 
+The runner defaults to eight CPU game workers and four concurrent frozen
+scenario evaluations per seed. Evaluation is read-only with respect to the
+learner, so this parallel scheduling preserves the training trajectory and
+metrics while reducing evaluation wall time. Use the explicit worker flags to
+lower the process budget on smaller hosts.
+
 Do not compare this run directly with the old 600-round Agent 027 result
 without recording the changed lineup distribution and budget.
 

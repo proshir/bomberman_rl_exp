@@ -204,3 +204,9 @@ updating the most specific existing note instead of creating a duplicate.
   math-library threads with `--env CUDA_VISIBLE_DEVICES=` and the appropriate
   `OMP_NUM_THREADS`, `MKL_NUM_THREADS`, `OPENBLAS_NUM_THREADS`, and
   `NUMEXPR_NUM_THREADS` overrides.
+
+## Jobctl command style
+
+From the workspace root, use the direct path `bomberman_rl_exp/jobctl ...`
+for training and evaluation job commands. Do not require a preceding `cd`
+into `bomberman_rl_exp`; this keeps commands copyable from the project root.

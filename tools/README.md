@@ -1,5 +1,10 @@
 # Experiment job control
 
+From the workspace root, invoke the controller as `bomberman_rl_exp/jobctl ...`.
+The examples below may use `./jobctl` only after explicitly entering the
+experiment directory; new commands should prefer the direct workspace-root
+form and omit `cd`.
+
 `../jobctl` gives every detached training/evaluation command a stable ID. The
 ID is the handle to use in a later chat message: `status`, `tail`, `ps`, and
 `stop` all operate on the exact process group started for that ID.
@@ -32,6 +37,12 @@ python3 src/run_combat_training.py \
   --curriculum tournament-combat --rounds 1000 --seeds 0 1 2 \
   --parallel-seeds --output /export/scratch/salitanl/agent029_tournament_1000
 ```
+
+Frozen evaluations use CPU parallelism by default: eight game workers inside
+four concurrent scenario evaluations per training seed. This changes only
+wall-clock scheduling; seeds, boards, metrics, and checkpoint learning are
+unchanged. Override with `--eval-workers` and `--eval-scenario-workers` when a
+smaller machine requires a lower process budget.
 
 The training runner automatically evaluates every saved checkpoint on the
 solo gates and all configured tournament lineups. Use

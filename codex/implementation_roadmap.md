@@ -692,6 +692,8 @@ tournament lineup. Added the frozen comparison template
 and the full protocol in
 [`tournament_training_protocol.md`](tournament_training_protocol.md).
 
+The runner now defaults to eight CPU game workers and four concurrent scenario evaluations per seed. This is an evaluation-scheduling optimization only: the learner, replay order, seeds, boards, and metrics remain unchanged.
+
 Status: infrastructure and smoke checks passed; no tournament-combat training
 result exists yet. The first scientific run must compare Agent 027 and Agent
 029 under identical seeds, budgets, lineups, and held-out seats. Promotion
