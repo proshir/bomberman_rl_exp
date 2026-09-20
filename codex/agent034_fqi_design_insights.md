@@ -141,6 +141,75 @@ pass the solo gates before Classic training, then receive explicit opponent
 coverage and opponent-aware escape filtering.  A high Loot Crate score is not
 competition evidence.
 
+### 7. Li `deep_learning_killer`: separate general safety ideas from its
+forbidden planner label
+
+The imported Li agent is a useful counterexample to the idea that a good
+all-round policy needs a large input or a neural deployment.  Despite its
+name, it deploys a 3,090-state JSON **tabular SARSA** policy over only six
+categorical values: the five immediate directional tiles (UP, RIGHT, DOWN,
+LEFT, WAIT) and bomb availability.  On the fixed solo suite it was the best
+verified imported all-round policy (50.00 Coin Heaven coins, 100% completion
+in 144.78 steps; 40.50 Loot Crate coins, 97.03 crates, 100% survival).  In
+the separate matched Classic comparison it was also the strongest general
+scorer (7.12 against one rule-based opponent and 5.22 / 81% survival against
+three).  These are good deployment targets, but neither suite verifies the
+repository's reported third-place tournament claim or identifies that claim
+with this exact checkpoint.
+
+Its small apparent state is not merely local.  Before table lookup it runs a
+time-aware BFS over bombs and explosions, computes how many horizon-reaching
+safe cells each first move has, and rewrites locally open/coin actions with no
+such continuation to `dead`.  It then evaluates each safe first move with a
+full-board heuristic dominated by reachable coins, with safe bomb-yielding
+crate positions, enemy proximity, and escape capacity as secondary terms.  A
+single selected movement is relabelled `target`; a bomb is relabelled `KILL!`
+only when a simulated placement removes an opponent's escape.  Thus the Q
+table mostly learns when to follow a compact planner recommendation, when to
+wait, and when to bomb; it is not discovering global path planning from the
+five-tile view.
+
+This supports two permissible lessons for Agent 034, and one explicit
+non-adoption:
+
+- **Retain an escape-continuation quantity.**  The existing hard safe-action
+  mask remains authoritative, but its time-expanded solver should expose a
+  bounded, deterministic per-action escape margin/count for diagnostics and
+  possible tie-breaking.  This is more informative than a static danger bit.
+  Reuse and audit the current safety solver rather than importing Li's
+  separate five-step implementation, whose bomb/explosion semantics are not
+  automatically equivalent to ours.
+- **Use exact board symmetries for data efficiency only when the complete
+  transition is transformed.**  Li updates rotated/reflected feature-action
+  pairs during online learning.  For FQI, test either canonical orientation or
+  augmentation by the eight unique dihedral board symmetries; transform the
+  action, directional route values, prior action/history, bomb coordinates,
+  and stored next-state safe mask together.  Do not copy Li's 12-loop scheme
+  verbatim: rotations combined with horizontal/vertical reflections contain
+  duplicate group elements and would silently reweight some samples.  This is
+  a data-distribution ablation, not a reason to weaken the safety mask or mix
+  it with the first feature experiment.
+
+Do **not** import, reproduce, or provide the learner with Li's `target` or
+`KILL!` labels, its full route/utility rank, or an equivalent one-hot action
+recommendation.  Those values are produced by a hand-written full-board
+evaluator that already selects the action it considers best.  In addition to
+being too close to the imported solution, that would violate the brief's
+specific rule that a feature must not deterministically return the best action.
+Agent 034's route costs/reachability and time-expanded safety quantities remain
+valid feature classes: the brief expressly permits pathfinding direction and
+lifesaving bomb-path information, and the FQI must still learn the trade-offs
+among safe actions.  Keep them independently defined, auditable, and below the
+level of a complete action selector.
+
+Li's strongly shaped online SARSA reward (for example, +50 for moving toward
+its heuristic target, +50/+500 for attack/kill labels, and -300 for a
+self-kill) is evidence that its planner and reward were co-designed.  It is
+not evidence to transplant those rewards into FQI: doing so would alter the
+objective at the same time as the representation and reinforce the prohibited
+planner label.  Keep the audited project reward fixed for the initial FQI
+comparison.
+
 ## Recommended Agent 034 hypothesis and first implementation boundary
 
 ### Hypothesis
@@ -288,5 +357,9 @@ decision.
 - `codex/combat_dqn_r_topology_agent.md`
 - `codex/combat_ddqn_route_agent.md`
 - `codex/offensive_feature_comparison.md`
+- `codex/imported_stage2_results.md`
+- `codex/imported_combat_results.md`
+- `imported_agents/Li-Jesse-Jiaze_MLE_project_bomberman__deep_learning_killer/features.py`
+- `imported_agents/Li-Jesse-Jiaze_MLE_project_bomberman__deep_learning_killer/train.py`
 - `codex/experiment_registry.md`
 - `codex/tournament_training_protocol.md`
