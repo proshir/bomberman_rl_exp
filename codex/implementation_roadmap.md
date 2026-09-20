@@ -719,3 +719,51 @@ reachable-tile envelope. The new values do not hard-mask an action; the network
 must learn how to trade tactical danger against rewards. This is implementation
 and unit-test status only, not evidence of improvement. Any later run must use
 the existing Agent-027 solo regression suites and the 288-game Classic gate.
+
+## Agent 030: combat-escape replay continuation (20 September 2026)
+
+Agent 030 preserves Agent 029’s 101-input representation and its model and
+optimizer state, then continues each trained seed from episode 600 to 900.
+The first continuation exposed a curriculum bug: its fresh replay buffer saw
+only Classic transitions after episode 600, despite nominal solo replay
+weights, and consequently forgot the solo tasks. The corrected opt-in
+`tournament-combat-retained-solo` schedule generates three three-rule-based
+Classic games, one Coin Heaven game, and one Loot Crate game in every five
+post-600 rounds. Exploration is reset only for this continuation, from 20% to
+5% over 60,000 new transitions.
+The intended replay buffer reserves 20% of available samples for combat bomb-escape
+sequences: the bomb action plus the next four decisions through detonation.
+This targets the observed 029 failure where the policy chooses a contested
+escape route after a safe bomb placement. The retained-solo run and its frozen
+evaluation completed, but a later callback audit found that inherited functions
+bypassed Agent 030's custom remember(). Escape tagging was inactive and epsilon
+fell to 5% by episode 602. Claims that it reached the intended floor around 750
+or that escape replay caused conservative behavior were unsupported.
+
+## Agent 031: matched offensive-feature comparison (20 September 2026)
+
+Agent 030's callback dispatch is now explicit for ordinary and terminal
+transitions; its exploration counter persists in checkpoints. Round logs expose
+that counter, before/after epsilon, replay counts and effective weights.
+Agent 031 appends four features per opponent (12 total) to the unchanged 101:
+blast exposure, reduction in surviving endpoints, newly predicted trap, and
+inverse route distance to a tile threatening the opponent. The three slots are
+sorted spatially and padded with zeros. These are conditional static-geometry
+estimates, not guaranteed kill predictions or new action masks.
+
+Both the corrected 101-input control and 113-input candidate start from the
+same three 029 episode-600 checkpoints. The candidate's extra first-layer
+columns and Adam moments start at zero; existing weights/moments are preserved.
+Both use the 60/20/20 retained-solo schedule through episode 900 and identical
+reward, exploration, replay, board seeds, seats and evaluation settings.
+Protocol, historical corrections and artifact paths are recorded in
+[`offensive_feature_comparison.md`](offensive_feature_comparison.md).
+
+The matched continuation and its 2,016-game frozen evaluation are now
+complete. The callback repair is retained: it raised rule-based survival from
+58.3% for 029 to 79.2% for the 101-input control and 88.5% for the 113-input
+candidate. The offensive inputs produced the best single-rule-based score
+(4.792 versus 4.521 for 029), but did not improve three-opponent or
+mixed-strong performance and regressed both solo checks. Agent 031 is not the
+overall successor; the next experiment should change combat learning/sampling
+rather than add another broad feature block.

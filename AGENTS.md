@@ -74,7 +74,10 @@ Current agent enumeration, with existing directory names preserved:
 | `Agent_028` | `Agent_028_combat_ddqn_dueling_256_agent` | 2026-09-19, `c867b7e` |
 | `Agent_029` | `Agent_029_combat_ddqn_adversarial_window_agent` | 2026-09-19, uncommitted implementation |
 
-The next available number is `Agent_030`.
+| `Agent_030` | `Agent_030_combat_ddqn_escape_replay_agent` | 2026-09-20, `a3c42ec`; callback-repaired matched control completed |
+| `Agent_031` | `Agent_031_combat_ddqn_offensive_escape_agent` | 2026-09-20, `a3c42ec`; matched evaluation completed; not promoted |
+
+The next available number is `Agent_032`.
 
 ## Codex note index
 
