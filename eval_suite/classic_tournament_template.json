@@ -1,0 +1,31 @@
+{
+  "board_seeds": [32000, 32001, 32002, 32003, 32004, 32005, 32006, 32007],
+  "agent_seeds": [0],
+  "seats": [0, 1, 2, 3],
+  "scenarios": ["classic"],
+  "max_steps": 400,
+  "diagnostics": true,
+  "opponent_lineups": [
+    {
+      "name": "three_rule_based",
+      "scenario": "classic",
+      "opponents": ["rule_based_agent", "rule_based_agent", "rule_based_agent"]
+    },
+    {
+      "name": "mixed_strong",
+      "scenario": "classic",
+      "opponents": ["rule_based_agent", "coin_collector_agent", "peaceful_agent"]
+    }
+  ],
+  "candidates": [
+    {
+      "name": "REPLACE_WITH_RUN_TAG",
+      "agent": "Agent_029_combat_ddqn_adversarial_window_agent",
+      "checkpoints": [
+        "REPLACE_WITH_SEED_0_CHECKPOINT",
+        "REPLACE_WITH_SEED_1_CHECKPOINT",
+        "REPLACE_WITH_SEED_2_CHECKPOINT"
+      ]
+    }
+  ]
+}

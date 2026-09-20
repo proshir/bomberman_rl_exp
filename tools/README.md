@@ -22,6 +22,22 @@ cd /export/home/salitanl/projects/ml-project/bomberman_rl_exp
     --curriculum staged-combat --rounds 600 --seeds 0 1 2 \
     --parallel-seeds --output /export/scratch/salitanl/agent029_staged_600
 
+For tournament-aligned training, use the opt-in four-player schedule. It
+rotates single-opponent rehearsal and true three-opponent lineups while
+retaining Coin Heaven and Loot Crate replay:
+
+```bash
+python3 src/run_combat_training.py \
+  --agent Agent_029_combat_ddqn_adversarial_window_agent \
+  --curriculum tournament-combat --rounds 1000 --seeds 0 1 2 \
+  --parallel-seeds --output /export/scratch/salitanl/agent029_tournament_1000
+```
+
+The training runner automatically evaluates every saved checkpoint on the
+solo gates and all configured tournament lineups. Use
+`eval_suite/classic_tournament_template.json` for an independent frozen
+comparison after replacing its checkpoint paths.
+
 ./jobctl start --id agent029-normal --after agent029-train -- \
   python3 eval_suite/run_suite.py \
     --manifest /path/to/agent029-normal.json --parallel 3 --game-workers 8

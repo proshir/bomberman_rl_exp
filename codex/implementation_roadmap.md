@@ -674,6 +674,30 @@ crates and bombs. Details are in
 [`tree_navigation_diagnosis.md`](tree_navigation_diagnosis.md) and
 [`tree_fqi_history_loop_diagnosis.md`](tree_fqi_history_loop_diagnosis.md).
 
+## Next implementation: tournament-aligned training and evaluation protocol
+
+Implemented an opt-in `tournament-combat` curriculum in
+`bomberman_rl/run_combat_training.py`, preserving the historical `mixed` and
+`staged-combat` protocols for reproducibility. The schedule uses Coin Heaven
+and Loot Crate pretraining, mixed solo and Classic lineups, then a
+competition-consolidation phase using three `rule_based_agent` opponents with
+retained solo replay. Classic training supports real four-player lineups, and
+replay tags include the complete lineup so difficult opponent experience is
+sampled explicitly.
+
+Automatic checkpoint evaluation now runs Coin Heaven and Loot Crate regression
+gates plus every configured Classic lineup, including the three-rule-based
+tournament lineup. Added the frozen comparison template
+[`classic_tournament_template.json`](../eval_suite/classic_tournament_template.json)
+and the full protocol in
+[`tournament_training_protocol.md`](tournament_training_protocol.md).
+
+Status: infrastructure and smoke checks passed; no tournament-combat training
+result exists yet. The first scientific run must compare Agent 027 and Agent
+029 under identical seeds, budgets, lineups, and held-out seats. Promotion
+requires frozen four-player score/rank evidence while preserving solo safety;
+the new protocol is not itself evidence that Agent 029 wins.
+
 ## Agent 029 adversarial-window DDQN implementation (19 September 2026)
 
 `Agent_029_combat_ddqn_adversarial_window_agent` is an untrained, controlled
