@@ -85,8 +85,11 @@ Current agent enumeration, with existing directory names preserved:
 | `Agent_038` | `Agent_038_symmetric_population_ddqn_agent` | 2026-09-21, 117-input route extension with D4 replay and population curriculum |
 | `Agent_039` | `Agent_039_compact_audit_ddqn_agent` | 2026-09-21, approved 104-input audit compression of Agent 038; implementation and contract tests complete |
 | `Agent_040` | `Agent_040_optimized_compact_ddqn_agent` | 2026-09-21, direct/cached 104-input Agent 039 successor; contract-tested, training pending |
+| `Agent_041` | `Agent_041_dynamic_nav_ddqn_agent` | 2026-09-21, Agent 040 successor with action-aligned coin navigation inputs; contract-tested |
+| `Agent_042` | `Agent_042_combat_progress_ddqn_agent` | 2026-09-21, Agent 041 successor with action-aligned combat progress, agent-local persistent history, and separate solo/combat exploration; 300-round solo gate completed, stagnation partially mitigated but not solved |
+| `Agent_043` | `Agent_043_novelty_credit_ddqn_agent` | 2026-09-21, Agent 042 successor with bounded novelty intervention, event-attributed progress, and three-step/potential-based credit assignment; 300-round solo gate passed and strict/20%-retention league branches active |
 
-The next available number is `Agent_041`.
+The next available number is `Agent_044`.
 
 ## Codex note index
 
@@ -200,6 +203,13 @@ updating the most specific existing note instead of creating a duplicate.
 - [`codex/Agent_040_Optimized_Compact_DDQN_Design.md`](codex/Agent_040_Optimized_Compact_DDQN_Design.md)
   — Direct/cached Agent 039 feature computation, optimized D4 transforms and
   replay indexes, contract validation, and initial CPU benchmark.
+- [`codex/Agent_042_Combat_Progress_DDQN_Design.md`](codex/Agent_042_Combat_Progress_DDQN_Design.md)
+  — Agent 042 diagnosis, action-aligned combat inputs, persistent local
+  history, separate exploration accounting, contract tests, and the 300-round
+  solo stagnation gate.
+- [`codex/Agent_043_Novelty_Credit_DDQN_Design.md`](codex/Agent_043_Novelty_Credit_DDQN_Design.md)
+  — Agent 043 novelty guard, event-attributed progress clock, three-step
+  returns, potential shaping, solo-gate result, and staged league protocol.
 - [`codex/agent034_compact_fqi_agent.md`](codex/agent034_compact_fqi_agent.md)
   — Compact route-aware tree-FQI implementation, dimensional contract,
   validation status, and limits.

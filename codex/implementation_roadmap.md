@@ -897,3 +897,38 @@ feature extraction and about 8x faster compact symmetry transforms; these are
 implementation benchmarks rather than learning results. The matched population
 training run is pending. See
 [`Agent_040_Optimized_Compact_DDQN_Design.md`](Agent_040_Optimized_Compact_DDQN_Design.md).
+
+## Agent 042: combat progress and persistent anti-loop DDQN (21 September 2026)
+
+Agent 042 retains Agent 041's 122-input dynamic coin-navigation
+representation, then adds 18 action-aligned combat-progress inputs (nearest
+opponent progress, reachable destination, and local pressure/bomb-hit value).
+It also changes progress detection to own visible coins plus own score,
+preserves the rolling eight-step history across unrelated global events, and
+separates solo and combat epsilon counters. The 140-input package supports
+zero-padded Agent 040/041 warm starts, D4 transforms, and the existing masked
+DDQN replay path. Contract tests pass; the three-seed 300-round solo gate
+reduced repeated states to 17.8 at round 150 but regressed to 109.8 by round
+300, so stagnation is only partially mitigated and no combat promotion is
+justified. See
+[`Agent_042_Combat_Progress_DDQN_Design.md`](Agent_042_Combat_Progress_DDQN_Design.md).
+
+## Agent 043: novelty and credit assignment (21 September 2026)
+
+Agent 043 implements the three most direct deferred Agent 042 fixes: a
+146-input action-aligned novelty block with a bounded safe loop intervention,
+event-attributed progress timing with solo observation fallbacks, and
+three-step DDQN returns plus bounded potential-based combat shaping. Agent 042
+checkpoint migration, D4 consistency, six contract tests, and a real-engine
+three-round smoke pass. Its three-seed 300-round Coin Heaven gate reached
+50.00 coins and 100% completion with 17.44 repeated states and a 21.31-step
+maximum no-progress interval, materially improving Agent 042's late checkpoint.
+The approved staged league job `agent043-staged-league-900-20260921` is active:
+100 pure Coin Heaven rounds, 200 balanced Coin Heaven/Loot Crate rounds, then
+600 complete four-player games split between three rule-based opponents and
+Arbiter + Deepkiller + rule-based. A matched parallel branch,
+`agent043-staged-league-memory-retention-900-20260921`, changes only the final
+phase to randomized ten-round blocks containing 80% Classic, 10% Coin Heaven,
+and 10% Loot Crate. This directly tests whether rehearsal prevents forgetting
+without erasing combat gains. See
+[`Agent_043_Novelty_Credit_DDQN_Design.md`](Agent_043_Novelty_Credit_DDQN_Design.md).

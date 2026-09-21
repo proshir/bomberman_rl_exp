@@ -602,7 +602,7 @@ writes.
 
 ## 13. Full Agent 037 regimen test in progress
 
-The substantive test requested after the smoke run is registered as:
+The substantive test requested after the smoke run was initially registered as:
 
 ```text
 agent037-regimen-continuation-1200-1500-20260921
@@ -620,13 +620,37 @@ checkpoints, and trains episodes 1201--1500 with:
 - checkpoint evaluation every 50 episodes on boards 34000--34007 and seats
   0--3, including both solo tasks and both Classic lineups.
 
-The run output is:
+That first launch reached and saved episode-1300 checkpoints, but was stopped at
+that clean boundary when the requested faster evaluation directive was applied.
+Its preserved output is:
 
 ```text
 /export/scratch/salitanl/agent037_regimen_continuation_1200_1500_20260921/
 ```
 
-The training runner evaluates the episode-1200 initializer and every scheduled
+The continuation was then relaunched from those episode-1300 checkpoints under
+the faster directive:
+
+```text
+agent037-regimen-continuation-1300-1500-workers8-20260921
+```
+
+The active output is:
+
+```text
+/export/scratch/salitanl/agent037_regimen_continuation_1300_1500_workers8_20260921/
+```
+
+This launch uses `--eval-every 150`, `--eval-workers 8`, and
+`--eval-scenario-workers 8`. The three training seeds remain one independent
+worker each under `--parallel-seeds`; increasing that to eight would duplicate
+seeds rather than accelerate this three-seed experiment. The episode-1300
+initializer evaluation has completed, and training is continuing toward
+episode 1500; scheduled evaluations are at episodes 1350 and 1500. The old
+episode-1200--1300 trajectory is preserved in the original output and the
+episode-1300 checkpoints are the exact warm-start boundary.
+
+The training runner evaluates the episode-1300 initializer and each scheduled
 checkpoint on the same development split, giving a paired baseline and
 continuation comparison. The separate queued evaluation was canceled before
 starting because it would have duplicated those games. The final result will
@@ -666,3 +690,15 @@ Primary interpretations and contracts are in:
 The raw Agent 032--038 scratch paths and job IDs are intentionally retained in
 their family notes and `jobctl` records; they should be copied to stable project
 storage before scratch cleanup.
+
+## 15. Agent 042 anti-stagnation ablation result
+
+The first implementation of the audit's anti-loop proposals is recorded in
+[`Agent_042_Combat_Progress_DDQN_Design.md`](Agent_042_Combat_Progress_DDQN_Design.md).
+The three-seed, 300-round solo gate improved the fixed Coin-Heaven diagnostic
+from 280.9 repeated states / 284.0 no-progress steps at round 50 to 17.8 /
+27.3 at round 150, but regressed to 109.8 / 116.6 at round 300. Agent 042
+therefore delays and reduces stagnation during its best checkpoint but does not
+solve late-training oscillation; it should not enter the Final_finetune combat
+curriculum without a longer continuation and a matched novelty/credit-
+assignment ablation.

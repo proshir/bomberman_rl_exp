@@ -57,9 +57,9 @@
       "name": "agent037_regimen_episode1500",
       "agent": "Agent_037_tournament_fast_ddqn_agent",
       "checkpoints": [
-        "/export/scratch/salitanl/agent037_regimen_continuation_1200_1500_20260921/training/seed_0/checkpoints/episode_1500.pkl",
-        "/export/scratch/salitanl/agent037_regimen_continuation_1200_1500_20260921/training/seed_1/checkpoints/episode_1500.pkl",
-        "/export/scratch/salitanl/agent037_regimen_continuation_1200_1500_20260921/training/seed_2/checkpoints/episode_1500.pkl"
+        "/export/scratch/salitanl/agent037_regimen_continuation_1300_1500_workers8_20260921/training/seed_0/checkpoints/episode_1500.pkl",
+        "/export/scratch/salitanl/agent037_regimen_continuation_1300_1500_workers8_20260921/training/seed_1/checkpoints/episode_1500.pkl",
+        "/export/scratch/salitanl/agent037_regimen_continuation_1300_1500_workers8_20260921/training/seed_2/checkpoints/episode_1500.pkl"
       ]
     }
   ]
