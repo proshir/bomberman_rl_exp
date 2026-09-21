@@ -84,8 +84,9 @@ Current agent enumeration, with existing directory names preserved:
 | `Agent_037` | `Agent_037_tournament_fast_ddqn_agent` | 2026-09-21, focused 101-input tournament DDQN continuation |
 | `Agent_038` | `Agent_038_symmetric_population_ddqn_agent` | 2026-09-21, 117-input route extension with D4 replay and population curriculum |
 | `Agent_039` | `Agent_039_compact_audit_ddqn_agent` | 2026-09-21, approved 104-input audit compression of Agent 038; implementation and contract tests complete |
+| `Agent_040` | `Agent_040_optimized_compact_ddqn_agent` | 2026-09-21, direct/cached 104-input Agent 039 successor; contract-tested, training pending |
 
-The next available number is `Agent_040`.
+The next available number is `Agent_041`.
 
 ## Codex note index
 
@@ -196,6 +197,9 @@ updating the most specific existing note instead of creating a duplicate.
 - [`codex/Agent_039_Compact_Audit_DDQN_Design.md`](codex/Agent_039_Compact_Audit_DDQN_Design.md)
   — Approved 104-input Agent 038 feature compression; implementation and
   contract-test status, with matched training comparison pending.
+- [`codex/Agent_040_Optimized_Compact_DDQN_Design.md`](codex/Agent_040_Optimized_Compact_DDQN_Design.md)
+  — Direct/cached Agent 039 feature computation, optimized D4 transforms and
+  replay indexes, contract validation, and initial CPU benchmark.
 - [`codex/agent034_compact_fqi_agent.md`](codex/agent034_compact_fqi_agent.md)
   — Compact route-aware tree-FQI implementation, dimensional contract,
   validation status, and limits.

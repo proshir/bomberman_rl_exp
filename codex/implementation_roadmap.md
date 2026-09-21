@@ -885,3 +885,15 @@ values. It adds one global armed-opponent flag and retains all four opponent
 response values per action. The 128--128 DDQN, replay contract, safety masks,
 and eight-way D4 replay augmentation remain unchanged. Contract and symmetry
 tests pass; matched three-seed training and evaluation are pending.
+
+## Agent 040: optimized compact DDQN (21 September 2026)
+
+Agent 040 keeps Agent 039's 104-input behavior and training contract while
+implementing the speed audit: direct compact feature assembly, per-state
+legality/safety/search reuse, cached route and opponent-window work,
+precomputed D4 index maps, dense replay tag indexes, and inference-mode action
+selection. Representative single-thread CPU checks show 1.81x faster fresh
+feature extraction and 8.7x faster compact symmetry transforms; these are
+implementation benchmarks rather than learning results. The matched population
+training run is pending. See
+[`Agent_040_Optimized_Compact_DDQN_Design.md`](Agent_040_Optimized_Compact_DDQN_Design.md).
