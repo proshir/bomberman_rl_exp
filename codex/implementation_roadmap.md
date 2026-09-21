@@ -783,8 +783,11 @@ Its replay store is also preallocated, with reusable host staging arrays and
 device tensors for each batch size. Sampling plus tensor handoff measured
 3.19× faster on CPU and 2.79× faster on an RTX 2080 Ti than the previous
 list-of-tuples replay followed by per-field tensor construction in the latest
-300-batch pass. The next gate is a matched multi-seed run to measure end-to-end
-speed and confirm that the optimization preserves training outcomes.
+300-batch pass. The later paired two-seed 1,200-round league run completed:
+the broad 24-lineup imported roster reached a best pooled relevant score of
+3.203 versus 3.641 for the built-in-roster control. The optimization is kept,
+but the broad league distribution is not promoted. See
+[`agent032_imported_league_pilot.md`](agent032_imported_league_pilot.md).
 
 ## Agent 034: compact route-aware FQI implementation (21 September 2026)
 
@@ -835,6 +838,50 @@ The 37-test focused/regression suite passes. A cache-bypassed dense-board
 benchmark measured 150.1 ms median and 155.6 ms p95 per decision on one CPU.
 Two real-engine mixed smoke episodes completed without invalid actions, and a
 separate one-episode-to-two-episode process resume preserved interactions from
-8 to 16 and wrote the resumed checkpoint. These results validate software and
-integration behavior only; no substantial learning or opponent comparison has
-been run for Agent 036.
+8 to 16 and wrote the resumed checkpoint. A later matched held-out solo
+evaluation averaged 21.64 Coin Heaven coins / 4.2% completion and 12.56 Loot
+Crate coins / 34.43 crates, with 100% survival and zero invalid actions. It was
+not promoted over Agent 035 because the small navigation gain came with a
+larger crate regression.
+
+## Agent 037: focused tournament DDQN result (21 September 2026)
+
+Agent 037 returned to the strongest corrected neural branch: the optimized
+101-input ordinary 128--128 DDQN. It continued the three corrected Agent 030
+episode-900 checkpoints for 300 rounds using two complete tournament-relevant
+lineups for 60% of games and retained 20% Coin Heaven / 20% Loot Crate.
+Episode 1,200 scored 3.490 against three rule-based opponents and 4.396 against
+the mixed built-in lineup, or 3.943 pooled, about 10.2% above the corrected
+source. Seed 0 episode 1,050 was selected for packaging/warm start. It remained
+weak against three Deep Killers, so the result supports focused training but
+not universal opponent robustness. Full results are in
+[`Agent_037_Tournament_Fast_DDQN_Design.md`](Agent_037_Tournament_Fast_DDQN_Design.md).
+
+## Agent 038 and the consolidated DDQN regimen (21 September 2026)
+
+Agent 038 is an active warm-versus-scratch population experiment with the
+Agent 037 101-value prefix, 16 route/reachability values, consistent random D4
+replay augmentation, and a small learned-agent population. Its two v2 jobs
+were running at the audit cutoff. Episode-0 measurements validate only that
+the zero-padded warm start preserves useful behavior. At round 150, scratch
+led Coin Heaven (49.85 versus 47.71) while warm retained much stronger Loot
+Crate behavior (44.04 versus 36.00); both were perfectly safe in the solo
+suite. This is still pre-population foundation evidence, not a population or
+promotion result.
+
+The cross-run audit now recommends freezing the ordinary 128--128 DDQN as the
+control, staging solo navigation and bombing before a focused two- or
+three-lineup population, retaining 20% of each solo task, tagging replay by
+complete lineup, selecting checkpoints across three seeds, and reserving new
+blind boards and unseen opponent rosters. See
+[`ddqn_training_regimen_20260921.md`](ddqn_training_regimen_20260921.md).
+
+## Agent 039: compact audit DDQN (21 September 2026)
+
+Agent 039 implements the approved 104-input compression of Agent 038. It drops
+the scalar previous-action index, the constant centre cell of the local patch,
+six action-legality copies, and six conditionally repeated armed-opponent
+values. It adds one global armed-opponent flag and retains all four opponent
+response values per action. The 128--128 DDQN, replay contract, safety masks,
+and eight-way D4 replay augmentation remain unchanged. Contract and symmetry
+tests pass; matched three-seed training and evaluation are pending.

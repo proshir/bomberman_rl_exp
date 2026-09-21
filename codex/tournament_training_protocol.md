@@ -1,5 +1,11 @@
 # Reusable combat-agent training and evaluation protocol
 
+> **21 September 2026 update:** this file preserves the historical Agent 027
+> workflow. Boards 32000--32007 and 33000--33007 have since influenced model
+> and checkpoint decisions and are development boards, not a blind final
+> test. For new DDQN runs, use the curriculum, board split, gates, and stopping
+> rules in [`ddqn_training_regimen_20260921.md`](ddqn_training_regimen_20260921.md).
+
 This is the copyable workflow for training a new combat agent, freezing its
 three training-seed checkpoints, and evaluating them under the classic
 tournament protocol used for Agent 027.

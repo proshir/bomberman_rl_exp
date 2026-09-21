@@ -1,7 +1,10 @@
 # Agent 037: Tournament-Focused Fast DDQN Design
 
-**Status:** design specification, not yet implemented or trained  
-**Date:** 21 September 2026  
+**Status:** implemented; three-seed 900-to-1200 continuation and frozen
+evaluation completed; seed-0 episode 1050 selected for the packaged/warm-start
+checkpoint
+**Date:** 21 September 2026
+
 **Proposed agent directory:** `Agent_037_tournament_fast_ddqn_agent`
 
 ## 1. Decision
@@ -506,3 +509,74 @@ The key scientific hypothesis is:
 This design gives that hypothesis a clean test, preserves the strongest known
 policy, and leaves enough time for a valid three-seed evaluation and a safe
 fallback before submission.
+
+## 15. Completed result (21 September 2026)
+
+Agent 037 was implemented with the exact 101-value prefix, Agent 032's fast
+feature/replay path, fresh replay, and the planned 60% focused-Classic / 20%
+Coin Heaven / 20% Loot Crate continuation. The successful training artifact
+is:
+
+```text
+/export/scratch/salitanl/agent037_tournament_fast_1200_20260921_v4/
+```
+
+Development pooled score across the two registered lineups was non-monotonic:
+
+| Global episode | Pooled score over three seeds |
+| ---: | ---: |
+| 900 source | 3.854 |
+| 950 | 3.922 |
+| 1,000 | **4.099** |
+| 1,050 | 3.943 |
+| 1,100 | 3.906 |
+| 1,150 | 3.760 |
+| 1,200 | 4.000 |
+
+The completed three-seed frozen episode-1,200 evaluation averaged 3.490
+against three rule-based opponents and 4.396 against the mixed built-in
+lineup, or 3.943 pooled. The corrected episode-900 source was 3.115 / 4.042,
+or 3.579 pooled, so the continuation improved the equal-weight pooled result
+by about 10.2%. This supports the design's main hypothesis: focused lineup
+experience improved the target distribution without a larger model.
+
+For packaging and the Agent 038 warm start, seed 0 at episode 1,050 was
+selected. It scored 3.5625 against three rule-based opponents with 78.1%
+survival, 37.5% outright-first rate, 46.9% joint-first rate, and mean rank
+2.156. It scored 4.78125 in the mixed built-in lineup.
+
+Generalization remained incomplete. Against the imported top agents, the
+selected checkpoint scored 4.156 in the mixed Deep-Killer lineup but only
+1.4375 against three Deep Killers and recorded no outright first places in
+the latter. Agent 037 is therefore a stronger focused control and a justified
+warm start, not evidence of universal opponent robustness.
+
+The successful frozen artifacts are:
+
+```text
+/export/scratch/salitanl/agent037_frozen_tournament_eval_20260921_v4/
+/export/scratch/salitanl/agent037_frozen_tournament_eval_episode1050_20260921/
+/export/scratch/salitanl/agent037_imported_top_combat_20260921_v2/
+```
+
+The original board split above documents the protocol actually run. Those
+boards have now informed design and checkpoint decisions and are development,
+not blind, for all future agents. See
+[`ddqn_training_regimen_20260921.md`](ddqn_training_regimen_20260921.md) for
+the replacement split and next training regimen.
+
+## 16. Regimen smoke test (21 September 2026)
+
+The validated seed-0 episode-1050 checkpoint was continued for 20 rounds using
+the repository `league-combat` schedule, both Agent 037 lineups, and CPU-only
+evaluation. The `jobctl` run `agent037-regimen-smoke-20260921` exited with code
+0 and wrote checkpoints at episodes 1060 and 1070 under
+`/export/scratch/salitanl/agent037_regimen_smoke_20260921/`. The six-test Agent
+037/Agent 032 contract suite also passed.
+
+This is a wiring result, not a promotion result. Solo safety stayed perfect;
+three-rule score rose from 2.00 to 3.25, while mixed-lineup score moved from
+6.00 to 4.50 over an eight-game evaluation slice. The generated episode log
+confirmed the 3 Classic / 1 Coin Heaven / 1 Loot Crate cycle and both lineup
+tags. Full interpretation is in
+[`ddqn_training_regimen_20260921.md`](ddqn_training_regimen_20260921.md).

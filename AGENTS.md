@@ -80,8 +80,12 @@ Current agent enumeration, with existing directory names preserved:
 | `Agent_033` | `Agent_033_population_replay_agent` and `Agent_033_population_frozen_agent` | 2026-09-21, pre-existing population variants; shared number requires later registry cleanup |
 | `Agent_034` | `Agent_034_compact_fqi_agent` | 2026-09-21, compact route-aware tree-FQI; initial pilot invalidated by same-step replay cache collision, schema-v2 repair validated but not retrained |
 | `Agent_035` | `Agent_035_compact_fqi_symmetry_agent` | 2026-09-21, corrected standalone Agent 034 successor with D4 replay augmentation and resumable training state; smoke-tested, not trained |
+| `Agent_036` | `Agent_036_compact_fqi_robust_agent` | 2026-09-21, robust compact FQI successor with decision-time and safety repairs |
+| `Agent_037` | `Agent_037_tournament_fast_ddqn_agent` | 2026-09-21, focused 101-input tournament DDQN continuation |
+| `Agent_038` | `Agent_038_symmetric_population_ddqn_agent` | 2026-09-21, 117-input route extension with D4 replay and population curriculum |
+| `Agent_039` | `Agent_039_compact_audit_ddqn_agent` | 2026-09-21, approved 104-input audit compression of Agent 038; implementation and contract tests complete |
 
-The next available number is `Agent_036`.
+The next available number is `Agent_040`.
 
 ## Codex note index
 
@@ -177,6 +181,21 @@ updating the most specific existing note instead of creating a duplicate.
   — Route-aware 52-feature Double-DQN successor, representation contract,
   aliasing regression, completed three-seed mixed run, feature judgment, and
   proposed fixed-suite/control evaluation gates.
+- [`codex/ddqn_training_regimen_20260921.md`](codex/ddqn_training_regimen_20260921.md)
+  — Cross-run evidence audit and the current recommended DDQN curriculum,
+  replay, evaluation, checkpoint-selection, early-stop, and compute regimen.
+- [`codex/agent032_imported_league_pilot.md`](codex/agent032_imported_league_pilot.md)
+  — Completed broad imported-opponent league versus built-in-roster control,
+  including the CPU/GPU decision and non-promotion result.
+- [`codex/Agent_037_Tournament_Fast_DDQN_Design.md`](codex/Agent_037_Tournament_Fast_DDQN_Design.md)
+  — Focused 101-input tournament continuation design and completed three-seed
+  results, package selection, and imported-opponent generalization audit.
+- [`codex/Agent_038_Symmetric_Population_DDQN_Design.md`](codex/Agent_038_Symmetric_Population_DDQN_Design.md)
+  — Active 117-input warm-versus-scratch population experiment; design and
+  run interpretation only until the registered jobs complete.
+- [`codex/Agent_039_Compact_Audit_DDQN_Design.md`](codex/Agent_039_Compact_Audit_DDQN_Design.md)
+  — Approved 104-input Agent 038 feature compression; implementation and
+  contract-test status, with matched training comparison pending.
 - [`codex/agent034_compact_fqi_agent.md`](codex/agent034_compact_fqi_agent.md)
   — Compact route-aware tree-FQI implementation, dimensional contract,
   validation status, and limits.

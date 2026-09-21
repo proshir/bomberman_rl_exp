@@ -1,9 +1,8 @@
 # Agent 032 one-learner imported-opponent league pilot
 
-Status: implementation and short end-to-end smoke passed on 2026-09-20;
-paired 600-round, two-seed CPU jobs launched after a matched device timing
-check. Results are **pending** until both jobs finish. Neither this note nor
-the source change claims a performance gain.
+Status: implementation, smoke, and paired two-seed 1,200-round CPU runs
+completed. The imported 24-lineup league did **not** beat the built-in-roster
+control and is not promoted.
 
 ## Design
 
@@ -82,3 +81,28 @@ learner trajectories and step totals. Normalize by steps: the GPU run was
 14.3% slower. This agrees with the earlier smaller non-league timing check.
 The active GPU training job was therefore stopped and replaced by a fresh
 CPU run; no mid-run replay-buffer migration was attempted.
+
+## Completed learning result
+
+Both parallel CPU branches completed two seeds through episode 1,200. The
+table below aggregates the two tournament-relevant evaluation lineups at the
+final checkpoint; the best pooled checkpoint is included because the curves
+were non-monotonic.
+
+| Branch | Episode | Coin Heaven | Loot Crate | Three rule-based | Mixed imported | Pooled combat | Combat survival |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Imported 24-lineup league | 1,200 | 49.22 | 46.59 | 3.156 | 2.906 | 3.031 | 0.641 |
+| Built-in-roster control | 1,200 | 49.75 | 47.00 | 3.750 | 2.844 | 3.297 | 0.641 |
+| Imported league, best pooled | 1,000 | -- | -- | -- | -- | 3.203 | -- |
+| Built-in control, best pooled | 1,000 | -- | -- | -- | -- | **3.641** | -- |
+
+The imported league never exceeded the control's best pooled checkpoint.
+Because the branches changed the roster and complete-lineup distribution
+together, this does not show that imported opponents are harmful. It shows
+that spreading the same finite 60% combat budget across 24 lineups was not an
+effective default. Subsequent Agent 037 evidence favors a smaller, focused set
+of complete four-player lineups with the same 20%/20% solo retention.
+
+Boards 32000--32003 were held out from these training trajectories, but they
+have now influenced later design choices. They must be treated as development
+boards for future agents, not reused as a blind final test.
