@@ -77,8 +77,11 @@ Current agent enumeration, with existing directory names preserved:
 | `Agent_030` | `Agent_030_combat_ddqn_escape_replay_agent` | 2026-09-20, `a3c42ec`; callback-repaired matched control completed |
 | `Agent_031` | `Agent_031_combat_ddqn_offensive_escape_agent` | 2026-09-20, `a3c42ec`; matched evaluation completed; not promoted |
 | `Agent_032` | `Agent_032_combat_ddqn_optimized_features_agent` | 2026-09-20, separate optimized 113-input feature implementation; smoke-tested |
+| `Agent_033` | `Agent_033_population_replay_agent` and `Agent_033_population_frozen_agent` | 2026-09-21, pre-existing population variants; shared number requires later registry cleanup |
+| `Agent_034` | `Agent_034_compact_fqi_agent` | 2026-09-21, compact route-aware tree-FQI; initial pilot invalidated by same-step replay cache collision, schema-v2 repair validated but not retrained |
+| `Agent_035` | `Agent_035_compact_fqi_symmetry_agent` | 2026-09-21, corrected standalone Agent 034 successor with D4 replay augmentation and resumable training state; smoke-tested, not trained |
 
-The next available number is `Agent_033`.
+The next available number is `Agent_036`.
 
 ## Codex note index
 
@@ -174,6 +177,15 @@ updating the most specific existing note instead of creating a duplicate.
   — Route-aware 52-feature Double-DQN successor, representation contract,
   aliasing regression, completed three-seed mixed run, feature judgment, and
   proposed fixed-suite/control evaluation gates.
+- [`codex/agent034_compact_fqi_agent.md`](codex/agent034_compact_fqi_agent.md)
+  — Compact route-aware tree-FQI implementation, dimensional contract,
+  validation status, and limits.
+- [`codex/agent035_compact_fqi_symmetry_agent.md`](codex/agent035_compact_fqi_symmetry_agent.md)
+  — Corrected compact FQI successor, eight-way symmetry contract, resumable
+  checkpoint state, diagnostics, and validation status.
+- [`codex/agent036_compact_fqi_robust_agent.md`](codex/agent036_compact_fqi_robust_agent.md)
+  — Robust compact FQI successor, decision-time/safety repairs, benchmark,
+  checkpoint-resume validation, and current evidence limits.
 
 ## Where to record new work
 

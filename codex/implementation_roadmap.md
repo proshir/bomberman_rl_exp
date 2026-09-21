@@ -785,3 +785,56 @@ device tensors for each batch size. Sampling plus tensor handoff measured
 list-of-tuples replay followed by per-field tensor construction in the latest
 300-batch pass. The next gate is a matched multi-seed run to measure end-to-end
 speed and confirm that the optimization preserves training outcomes.
+
+## Agent 034: compact route-aware FQI implementation (21 September 2026)
+
+`Agent_034_compact_fqi_agent` implements the compact candidate from
+[`Bomberman_Li_Deepkiller_Compact_FQI_Design.md`](Bomberman_Li_Deepkiller_Compact_FQI_Design.md).
+Its 22 logical entries are encoded as 28 numeric inputs: four coin-route
+costs and reachability flags, four crate-route costs and flags, three bomb
+values, seven previous-action indicators, and two history values. It reuses
+the combat FQI time-indexed safety model, stores decision-time features and
+masks, and fits six depth-8 trees from frozen masked targets. The route-alias
+witness and focused callback/target tests pass. This is implementation and
+validation status only; no training or performance comparison has run.
+
+## Agent 035: corrected compact FQI with symmetry (21 September 2026)
+
+`Agent_035_compact_fqi_symmetry_agent` preserves Agent 034 as the historical
+schema-v2 baseline and implements its audited corrections in a separately
+versioned successor. It expands crate-bomb targets across the full bomb ray,
+counts terminal events once, applies all eight unique square symmetries to
+directional features, actions, and both replay masks, honors curriculum replay
+weights without multiplying a scenario's share by its lineup count, and saves
+the replay, epsilon, RNG, completed-round, interaction, and timing state needed
+for process-level continuation. The agent is self-contained for submission.
+
+The focused 26-test set passes. A real 20-round runner smoke crossed the first
+augmented fit, saved and loaded a frozen checkpoint, and a separate two-round
+smoke resumed from the episode-1 checkpoint with replay and interaction counts
+continuing from 2 to 4. These are implementation checks, not evidence of
+learning quality; no substantial Agent 035 training has been launched.
+
+The three-seed mixed 300-round run and its final-checkpoint Classic gate are
+now complete. The episode-300 checkpoints were evaluated on eight fresh boards
+and four seats against separate peaceful, coin-collector, and rule-based
+opponents (288 games total). Mean scores were 0.84, 2.96, and 2.64, with
+100%, 91.7%, and 70.8% survival, respectively. The solo-trained compact FQI
+policy therefore passes the peaceful safety check but is not yet a strong
+combat policy, especially against the rule-based opponent.
+
+## Agent 036: robust compact FQI successor (21 September 2026)
+
+Agent 036 retains Agent 035's compact route features and D4 augmentation while
+repairing the audited decision-time callback convention, progress-history
+semantics, terminal-event accounting, bomb-escape timeline, useful-bomb policy
+configuration, and rare-group replay balancing. Its schema-v2 checkpoint also
+restores replay, epsilon, RNG, round/interaction counters, and diagnostics.
+
+The 37-test focused/regression suite passes. A cache-bypassed dense-board
+benchmark measured 150.1 ms median and 155.6 ms p95 per decision on one CPU.
+Two real-engine mixed smoke episodes completed without invalid actions, and a
+separate one-episode-to-two-episode process resume preserved interactions from
+8 to 16 and wrote the resumed checkpoint. These results validate software and
+integration behavior only; no substantial learning or opponent comparison has
+been run for Agent 036.
