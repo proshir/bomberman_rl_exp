@@ -52,7 +52,7 @@ single-threaded CPU execution, and the same fresh-state setup for both agents.
 |---|---:|---:|---:|
 | Fresh feature extraction, mean | 51.4 ms | 28.4 ms | 1.81x faster |
 | Cached repeat of an identical state | not available | 0.0014 ms | state reuse enabled |
-| Compact symmetry transform | 0.0673 ms | 0.0077 ms | 8.7x faster |
+| Compact symmetry transform | 0.0673 ms | 0.0077 ms | about 8x faster |
 | Replay sample plus CPU batch handoff | 0.3527 ms | 0.0835 ms | 4.23x faster |
 
 The feature benchmark is dominated by deterministic Python safety and board

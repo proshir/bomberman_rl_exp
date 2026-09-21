@@ -893,7 +893,7 @@ implementing the speed audit: direct compact feature assembly, per-state
 legality/safety/search reuse, cached route and opponent-window work,
 precomputed D4 index maps, dense replay tag indexes, and inference-mode action
 selection. Representative single-thread CPU checks show 1.81x faster fresh
-feature extraction and 8.7x faster compact symmetry transforms; these are
+feature extraction and about 8x faster compact symmetry transforms; these are
 implementation benchmarks rather than learning results. The matched population
 training run is pending. See
 [`Agent_040_Optimized_Compact_DDQN_Design.md`](Agent_040_Optimized_Compact_DDQN_Design.md).
