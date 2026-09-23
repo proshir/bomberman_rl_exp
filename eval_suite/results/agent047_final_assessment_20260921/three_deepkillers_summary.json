@@ -1,0 +1,35 @@
+{
+  "protocol": {
+    "scenario": "classic",
+    "games": 32,
+    "board_seeds": [32000, 32001, 32002, 32003, 32004, 32005, 32006, 32007],
+    "seats": [0, 1, 2, 3],
+    "lineup": [
+      "agent_047",
+      "li_deep_learning_killer",
+      "li_deep_learning_killer",
+      "li_deep_learning_killer"
+    ],
+    "max_steps": 400
+  },
+  "agent_047": {
+    "total_score": 68,
+    "mean_score": 2.125,
+    "cumulative_score_rank": 4,
+    "outright_firsts": 4,
+    "tied_firsts": 5,
+    "survival_rate": 0.84375,
+    "coins": 68,
+    "kills": 0,
+    "self_deaths": 1,
+    "invalid_actions": 11,
+    "mean_decision_ms": 10.631534545222005,
+    "max_decision_ms": 63.36384266614914,
+    "decisions_over_500ms": 0
+  },
+  "deep_learning_killers": [
+    {"total_score": 84, "mean_score": 2.625, "survival_rate": 0.90625},
+    {"total_score": 91, "mean_score": 2.84375, "survival_rate": 0.96875},
+    {"total_score": 79, "mean_score": 2.46875, "survival_rate": 0.96875}
+  ]
+}

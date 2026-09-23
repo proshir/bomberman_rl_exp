@@ -63,6 +63,14 @@ def main(argv=None) -> int:
     parser.add_argument("--eval-workers", type=int, default=8)
     parser.add_argument("--eval-scenario-workers", type=int, default=8)
     parser.add_argument(
+        "--initial-checkpoints", nargs="+", type=Path,
+        help="One Agent043 episode-0650 checkpoint per training seed.",
+    )
+    parser.add_argument(
+        "--no-eval", action="store_true",
+        help="Suppress frozen evaluations during online continuation.",
+    )
+    parser.add_argument(
         "--memory-retention", action="store_true",
         help=("After episode 300, retain 10 percent Coin Heaven and 10 percent "
               "Loot Crate alongside 80 percent complete four-player Classic "
@@ -72,6 +80,18 @@ def main(argv=None) -> int:
     args = parser.parse_args(argv)
     if args.rounds <= 300:
         parser.error("the staged league requires combat rounds after episode 300")
+    if args.initial_checkpoints is not None:
+        if len(args.initial_checkpoints) != len(args.seeds):
+            parser.error(
+                "--initial-checkpoints requires one path per training seed"
+            )
+        for checkpoint in args.initial_checkpoints:
+            if not checkpoint.is_file():
+                parser.error(f"Initial checkpoint does not exist: {checkpoint}")
+            if checkpoint.stem != "episode_0650":
+                parser.error(
+                    "Dataset warm-start checkpoints must be named episode_0650.pkl"
+                )
 
     run = args.output.resolve()
     run.mkdir(parents=True, exist_ok=False)
@@ -117,6 +137,13 @@ def main(argv=None) -> int:
         "--diagnostics",
         "--output", str(run / "training"),
     ]
+    if args.initial_checkpoints is not None:
+        command.extend([
+            "--initial-checkpoints",
+            *(str(path.resolve()) for path in args.initial_checkpoints),
+        ])
+    if args.no_eval:
+        command.append("--no-eval")
     for lineup in lineups:
         command.extend(["--classic-lineup", *lineup])
         command.extend(["--league-eval-lineup", *lineup])
@@ -154,6 +181,11 @@ def main(argv=None) -> int:
             "imp_alii_sentinel", "imp_alii_overlord", "harvy",
         ],
         "seeds": args.seeds,
+        "initial_checkpoints": (
+            [str(path.resolve()) for path in args.initial_checkpoints]
+            if args.initial_checkpoints is not None else None
+        ),
+        "no_eval": args.no_eval,
         "development_boards": list(range(34000, 34008)),
         "command": command,
     }

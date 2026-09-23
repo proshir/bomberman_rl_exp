@@ -932,3 +932,16 @@ phase to randomized ten-round blocks containing 80% Classic, 10% Coin Heaven,
 and 10% Loot Crate. This directly tests whether rehearsal prevents forgetting
 without erasing combat gains. See
 [`Agent_043_Novelty_Credit_DDQN_Design.md`](Agent_043_Novelty_Credit_DDQN_Design.md).
+
+## Agent 047: final package assessment (21 September 2026)
+
+Agent 047 packages the Agent 043 seed-1 mixed-300 continuation rather than
+introducing a new model architecture. Its final four-player screen confirms
+strong solo competence and useful tournament performance, but not uniform
+combat dominance. It ranked first by cumulative score against three Arbiters
+(5.375 points/game), while ranking fourth against three Deep Learning Killers
+(2.125 points/game, zero kills). Across five varied 32-game lineups it averaged
+4.419 points, survived 69.4% of games, and took 42 outright plus 15 tied
+firsts. This supports submission use with an explicit matchup-sensitivity
+caveat. See
+[`agent047_final_package_evaluation.md`](agent047_final_package_evaluation.md).

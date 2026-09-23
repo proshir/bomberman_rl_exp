@@ -1,0 +1,30 @@
+{
+  "protocol": {
+    "scenario": "classic",
+    "games": 32,
+    "board_seeds": [32000, 32001, 32002, 32003, 32004, 32005, 32006, 32007],
+    "seats": [0, 1, 2, 3],
+    "lineup": ["agent_047", "ali_arbiter", "ali_arbiter", "ali_arbiter"],
+    "max_steps": 400
+  },
+  "agent_047": {
+    "total_score": 172,
+    "mean_score": 5.375,
+    "cumulative_score_rank": 1,
+    "outright_firsts": 7,
+    "tied_firsts": 5,
+    "survival_rate": 0.625,
+    "coins": 82,
+    "kills": 18,
+    "self_deaths": 3,
+    "invalid_actions": 11,
+    "mean_decision_ms": 12.031915242754648,
+    "max_decision_ms": 55.745153687894344,
+    "decisions_over_500ms": 0
+  },
+  "arbiters": [
+    {"total_score": 113, "mean_score": 3.53125, "survival_rate": 0.1875},
+    {"total_score": 137, "mean_score": 4.28125, "survival_rate": 0.15625},
+    {"total_score": 150, "mean_score": 4.6875, "survival_rate": 0.3125}
+  ]
+}

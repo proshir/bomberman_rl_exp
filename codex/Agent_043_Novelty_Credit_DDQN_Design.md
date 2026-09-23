@@ -147,6 +147,16 @@ The paired result should answer whether 20% solo rehearsal prevents
 catastrophic forgetting without sacrificing too much combat exposure. Compare
 the same episode checkpoints and all three seeds rather than only episode 900.
 
+### Dataset warm-start continuation support
+
+`eval_suite/run_agent043_staged_league.py` also accepts one
+`episode_0650.pkl` checkpoint per training seed through
+`--initial-checkpoints`. The launcher validates both the checkpoint count and
+filename, forwards the resolved paths to `run_combat_training.py`, and records
+them in `provenance.json`. `--no-eval` can suppress intermediate frozen
+evaluations when the continuation is being used only to produce a later
+checkpoint. Neither option changes the default fresh staged-league protocol.
+
 ## Still open after this run
 
 Target persistence/enemy threat prediction and a bomb-specific offensive gate
