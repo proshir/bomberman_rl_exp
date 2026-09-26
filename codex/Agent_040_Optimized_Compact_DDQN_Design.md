@@ -87,8 +87,8 @@ and development boards 34000--34003, all four seats. There are 48 games per
 checkpoint/scenario. Input widths differ, so identical seed numbers do not
 imply identical initial networks or subsequent experience.
 
-New instrument: `src/diagnose_ddqn_behavior.py`. It captures the actual policy
-decision and computes diagnostics outside the timed callback. Outputs include
+The now-removed `src/diagnose_ddqn_behavior.py` instrument captured the actual
+policy decision and computed diagnostics outside the timed callback. Outputs include
 Q-values, full features, legal/safe candidates, bomb eligibility, own events,
 geometry-based distances, history, and the hypothetical Agent 041 navigation
 suffix for that same observation. It records checkpoint hashes. These suffixes

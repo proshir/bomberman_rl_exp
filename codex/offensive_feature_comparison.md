@@ -71,9 +71,10 @@ Artifact root:
   survival; for combat also outright wins, joint firsts, and midrank ties.
 - No checkpoint selection based on the frozen suite; final episode 900 is fixed.
 
-Entrypoint: `src/run_offensive_feature_comparison.py` prepares migrations and
-manifests, runs either training command, and evaluates/aggregates after both
-training jobs succeed. The job IDs are `agent030-callback-fixed-train`,
+The historical `src/run_offensive_feature_comparison.py` entrypoint prepared
+migrations and manifests, ran either training command, and evaluated and
+aggregated after both training jobs succeeded. The driver is no longer in the
+cleaned source checkout. The job IDs were `agent030-callback-fixed-train`,
 `agent031-offensive-train`, and `agent031-matched-eval`.
 
 Validation covers callback/terminal dispatch, actual escape tags, epsilon
@@ -108,7 +109,8 @@ intervention before another feature expansion.
 
 ## CPU versus GPU timing diagnostic — 20 September 2026
 
-A direct device comparison of Agent 031 used `src/benchmark_combat_device.py`,
+A direct device comparison of Agent 031 used the now-removed
+`src/benchmark_combat_device.py` helper,
 the original seed-0 113-input episode-600 checkpoint, and episodes 601–630 of
 the same 60/20/20 curriculum. Both processes ran on compgpu5 with one math-library
 thread; CUDA was hidden for the CPU baseline and physical GPU 0 (RTX 2080 Ti)
@@ -151,8 +153,10 @@ contains `timing.json`, config, round logs and disposable timing checkpoints.
 Job: `agent031-device-timing` (succeeded). The GPU process exited after timing.
 The JSON records the source commit, benchmark hash and initial checkpoint hash.
 
-Reproduce with a fresh output path for each device, from the source repository
-(check GPU ownership again before using physical GPU 0):
+The commands below record the original procedure. The helper is no longer in
+the cleaned source checkout, so these commands are historical rather than
+runnable there. The saved timing artifacts remain available. The original run
+used a fresh output path for each device and checked GPU ownership first:
 
 ```bash
 cd /export/home/salitanl/projects/ml-project/bomberman_rl
@@ -219,7 +223,7 @@ actual Agent032 optimizer step, and the real-game smoke job
 
 Artifacts and commands:
 
-- source benchmark: `src/benchmark_agent032_replay.py`;
+- source benchmark: the now-removed `src/benchmark_agent032_replay.py` helper;
 - CPU result: run with `CUDA_VISIBLE_DEVICES= .venv/bin/python ... --device cpu`;
 - GPU job: `agent032-replay-gpu-bench`, using physical GPU 0;
 - smoke output: `/export/scratch/salitanl/bomberman_device_timing_20260920/agent032_replay_smoke3`.

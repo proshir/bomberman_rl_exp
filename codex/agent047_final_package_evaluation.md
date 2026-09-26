@@ -59,6 +59,20 @@ combat opportunities into kills or enough coins.
 
 ## Additional checks and limitations
 
+### Post-consolidation replay check (25 September 2026)
+
+After consolidating Agent 047's feature and checkpoint files, I reran the two
+available 32-game classic lineups with the bundled checkpoint, CPU PyTorch
+2.14.0, seeds 32000–32007, all seats, and policy seed 0. The three-rule-based
+mean remained 5.125; the rule-based/Coin Collector/Peaceful mean remained
+5.59375. Every player outcome matched both the saved pre-consolidation package
+and the earlier pre-cleanup package game by game: score, coins, crates, kills,
+suicides, bombs, steps, survival, and invalid actions. Elapsed time was
+excluded. This confirms behavior equivalence for those two available lineups;
+it does not resolve the historical discrepancy below or cover absent external
+opponents. Detailed records are in
+[`agent047_file_merge_verification_20260925_venv/`](../eval_suite/results/agent047_file_merge_verification_20260925_venv/README.md).
+
 Solo evaluation over 32 games per scenario reached 50.00 Coin Heaven coins
 and 47.34 Loot Crate coins, both with 100% survival. An unmodified native
 32-round run against three rule-based agents scored 119 points, behind the

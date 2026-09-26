@@ -3,8 +3,9 @@
 ## Scope and evidence
 
 User requested diagnosis, not another training experiment or policy change.
-`src/diagnose_tree_navigation.py` replayed all 384 previously evaluated 400-step
-games (192 base, 192 loop). Coin counts and repeated-state counts match the saved
+The now-removed `src/diagnose_tree_navigation.py` helper replayed all 384
+previously evaluated 400-step games (192 base, 192 loop). Coin counts and
+repeated-state counts match the saved
 400-step records exactly; the 100-step prefixes also match all 384 shorter games.
 Checkpoint hashes were unchanged. No timeout warnings or errors occurred in the
 diagnostic logs. Traces and summary are in `experiments/tree_navigation_diagnosis/`.

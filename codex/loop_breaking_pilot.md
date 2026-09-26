@@ -48,8 +48,10 @@ intervention, legal alternative selection, and unchanged in-memory weights.
 All 96 original-policy game coin counts matched their saved results; all three
 checkpoint hashes remained unchanged. No unittest files were introduced.
 
-The shared comparison runner now accepts `--loop-agent` and derives the original
-agent name from the saved pilot configuration. Reproduce with a fresh output:
+The historical `run_loop_comparison.py` driver accepted `--loop-agent` and
+derived the original agent name from the saved pilot configuration. The driver
+has been removed from the cleaned source checkout; this records the original
+invocation, which is no longer runnable as-is:
 
 ```bash
 python src/run_loop_comparison.py --baseline experiments/linear_sarsa_pilot --loop-agent linear_sarsa_loop_agent --output experiments/linear_sarsa_loop_pilot
@@ -182,11 +184,12 @@ All 96 original-policy coin counts match the preserved pilot games exactly.
 All three source checkpoints retained their SHA-256 hashes after evaluation;
 the final source files match the recorded protocol hashes.
 
-From the project root:
+The historical driver is not included in the cleaned source checkout. This
+records the original invocation:
 
 ```bash
 python src/run_loop_comparison.py --output experiments/q_table_loop_pilot
 ```
 
-Use a new output directory when reproducing. The runner records the protocol
-before evaluating and writes its aggregate results to `summary.json`.
+The runner recorded the protocol before evaluating and wrote its aggregate
+results to `summary.json`.

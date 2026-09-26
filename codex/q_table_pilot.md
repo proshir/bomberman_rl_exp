@@ -123,3 +123,17 @@ and rich (7.55) suffered from larger tables and sparse visits. The full table
 and seed results are recorded in the roadmap and preserved in
 `experiments/q_table_features_*`. The distance result is exploratory because
 one of its three seeds reached only 8.56 coins.
+
+## Code readability review (2026-09-26)
+
+The `q_table_agent` review kept all four feature modes and the `distance`
+default. Feature construction now groups the four blocked directions and the
+two progress buckets in the same order as the related masked agent. The Q-table
+update stores the chosen action index once. Routine comments and docstrings
+were removed from both agent files.
+
+The final edits change names, grouping, formatting, and documentation. The
+feature tuple order, table lookup, action selection, terminal update, rewards,
+and checkpoint path remain the same, so the code review found no mechanism for
+an evaluation result to change. No further evaluation was requested for this
+review.
