@@ -1,6 +1,7 @@
 # Agent code review and cleanup plan
 
-**Status:** `q_table_agent`, `q_table_masked_agent`, `linear_sarsa_agent`, `linear_sarsa_loop_agent`, `q_table_loop_agent`, `tree_fqi_agent`, `tree_fqi_loop_agent`, `combat_fqi_agent`, `tree_fqi_history_agent`, `combat_fqi_history_antistag_agent`, `dqn_coin_agent`, and `combat_fqi_history_antistag_topology_agent` review passes complete; `combat_dqn_agent` is next.  
+**Status:** `q_table_agent`, `q_table_masked_agent`, `linear_sarsa_agent`, `linear_sarsa_loop_agent`, `q_table_loop_agent`, `tree_fqi_agent`, `tree_fqi_loop_agent`, `combat_fqi_agent`, `tree_fqi_history_agent`, `combat_fqi_history_antistag_agent`, `dqn_coin_agent`, `combat_fqi_history_antistag_topology_agent`, `combat_dqn_agent`, `combat_dqn_topology_agent`, `combat_dqn_r_topology_agent`, `Agent_022_combat_ddqn_route_agent`, `Agent_023_spatial_hybrid_rainbow_agent`, `Agent_024_combat_ddqn_action_safety_agent`, `Agent_025_combat_ddqn_short_cycle_agent`, `Agent_027_combat_ddqn_short_cycle_staged_replay_agent`, `Agent_028_combat_ddqn_dueling_256_agent`, `Agent_029_combat_ddqn_adversarial_window_agent`, `Agent_030_combat_ddqn_escape_replay_agent`, `Agent_031_combat_ddqn_offensive_escape_agent`, `Agent_032_combat_ddqn_optimized_features_agent`, `Agent_033_population_frozen_agent`, `Agent_034_compact_fqi_agent`, `Agent_035_compact_fqi_symmetry_agent`, `Agent_036_compact_fqi_robust_agent`, `Agent_037_tournament_fast_ddqn_agent`, `Agent_038_symmetric_population_ddqn_agent`, `Agent_039_compact_audit_ddqn_agent`, `Agent_040_optimized_compact_ddqn_agent`, `Agent_041_dynamic_nav_ddqn_agent`, `Agent_042_combat_progress_ddqn_agent`, `Agent_043_novelty_credit_ddqn_agent`, and `agent_047` review passes complete; `Agent_026_combat_ddqn_target_coverage_agent` is omitted from the review queue as requested; `Agent_041_dynamic_nav_ddqn_agent-edited` is next. Agents 028, 029, 030, 031, 034, 035, and 047 were selected out of sequence.
+
 **Scope:** Review one package at a time under `agent_code/`.  
 **Inventory:** [New agents since `0f55c1d`](repository_additions_review_since_0f55c1d.md). Earlier framework agents can also be reviewed if selected.
 
@@ -50,7 +51,7 @@ Review the current packages in this order, based on the first commit that introd
 | 32 | 2026-09-21 `c81b579` | `Agent_037_tournament_fast_ddqn_agent` | Tournament-focused continuation of corrected Agent 030; it also reuses implementation optimizations from Agent 032. |
 | 33 | 2026-09-21 `04c8087` | `Agent_038_symmetric_population_ddqn_agent` | Extends Agent 037's representation; compares a warm start with scratch training. |
 | 34 | 2026-09-21 `04c8087` | `Agent_039_compact_audit_ddqn_agent` | Controlled compact successor to Agent 038. |
-| 35 | 2026-09-21 `66ac9d8` | `Agent_040_optimized_compact_ddqn_agent` | Behavior-preserving implementation successor to Agent 039. |
+| 35 | 2026-09-21 `66ac9d8` | `Agent_040_optimized_compact_ddqn_agent` | Optimized compact successor to Agent 039; its starting source uses a 20% combat-escape replay share, compared with Agent 039's 10%. |
 | 36 | 2026-09-21 `8cc8bef` | `Agent_041_dynamic_nav_ddqn_agent` | Adds action-aligned navigation inputs to Agent 040. |
 | 37 | 2026-09-21 `8cc8bef` | `Agent_042_combat_progress_ddqn_agent` | Adds combat-progress inputs and agent-local history to Agent 041. |
 | 38 | 2026-09-21 `8cc8bef` | `Agent_043_novelty_credit_ddqn_agent` | Adds bounded novelty and credit assignment to Agent 042. |
@@ -171,3 +172,187 @@ This is a code quality and comprehension pass. Do not rewrite history, delete ge
 - Make a variant independent by copying the exact historical feature and safety implementations it used, then keeping those copies inside its package. Do not substitute a newer sibling implementation; it may contain behavior changes.
 - Preserve the concatenation order of base combat features, history features, and topology features. Treat the full vector as the fitted trees' input contract.
 - Use named records for cached action context and replay transitions when they replace positional tuples; first confirm every consumer and keep the stored values, history timing, and transition order the same.
+
+## Lessons from the `combat_dqn_agent` pass
+
+- Before editing a base agent, search descendant packages for imports and attribute access. Preserve public functions, constants, callback exports, feature-cache tuple positions, replay-batch field order, and checkpoint keys that later agents use.
+- Remove sibling-agent runtime imports by copying the behavior the package currently receives into its own modules. Keep its feature order, safety candidates, reward calculation, and helper names unchanged so the package runs independently and its descendants retain their interface.
+
+## Lessons from the `combat_dqn_topology_agent` pass
+
+- A standalone DQN variant needs its own callbacks, training, feature, safety, config, network, and replay modules. Keeping only a local feature encoder while forwarding the rest to a sibling still leaves a runtime dependency.
+- Preserve the DQN input as the 32 combat/history values followed by the 14 topology values. Keep the topology helper and its ordering local to the package.
+- When moving reward code into a local training module, check that every helper it calls is imported from the package. The copied reward function referenced `bomb_is_useful` and `earliest_danger`; add those local safety imports so the training path can execute.
+- Keep checkpoint defaults relative to the standalone package so variants with different input dimensions do not point at a sibling's checkpoint.
+
+## Lessons from the `combat_dqn_r_topology_agent` pass
+
+- When a package becomes a base for later agents, check all descendants for imports before removing re-exported training constants or feature functions. Keep the base feature vector and callback exports stable.
+- Preserve experiment settings that are fixed by the agent wrapper, such as the `ddqn` algorithm, and trace how the training runner supplies model and resume paths before making callbacks local.
+- Keep each repaired variant's checkpoint filename and input dimension local to its package; descendants may share feature code while still using separate checkpoints.
+
+## Lessons from the `Agent_022_combat_ddqn_route_agent` pass
+
+- Trace callback and training imports transitively. A local feature file alone does not make a package independent when setup, optimization, replay, model loading, or safety still comes from another agent.
+- Keep a successor's old feature blocks local, then replace the intended slices in place. For this route variant, the order remains the 14-value combat prefix, coin and crate routes, the nine-value combat suffix, three history values, nine topology values, and remaining time.
+- When localizing a fixed-algorithm wrapper, preserve its algorithm choice, checkpoint filename, resume override, and runner-facing training names alongside the model input contract.
+
+## Lessons from the `Agent_023_spatial_hybrid_rainbow_agent` pass
+
+- Treat the spatial model input as a checkpoint contract: 20 ordered 17×17 channels, followed by 36 global values and 16 values for each of the six ordered actions. Keep repeated feature slots when they are present in the trained representation.
+- Preserve the action-time feature-cache sequence in training callbacks. The pending transition is committed after the next decision state's features have been cached.
+- Preserve module and parameter names, architecture values, and checkpoint metadata while reformatting model code; these determine whether existing weights can load.
+- Search project source for consumers before removing config values. `N_STEP` had no reader in the package or Python source files in the project and was removed; keep that check away from evaluation artifacts.
+
+## Lessons from the `Agent_024_combat_ddqn_action_safety_agent` pass
+
+- Trace each safety helper to its caller before consolidating it. This package used the ordinary survival search for policy masks and training, but the opponent-aware search only for action-consequence features; keep the distinction explicit when making it standalone.
+- When replacing a positional callback cache with named fields, update every local consumer, including training, and confirm no other package imports the cache implementation.
+- Preserve the 46 topology inputs followed by ten values for each ordered action, along with the action-safety checkpoint filename and DDQN model/checkpoint structure.
+
+## Lessons from the `Agent_025_combat_ddqn_short_cycle_agent` pass
+
+- Keep Agent 025's 19 short-cycle values after the 46-value topology vector: two six-way action one-hots, two success flags, then reversal, wait run, two-step cycle, four-step cycle, and displacement.
+- When removing a wrapper's sibling callback dependency, reproduce its setup locally without mutating the sibling module's checkpoint globals. Keep the short-cycle checkpoint path, DDQN choice, network state names, and checkpoint format intact.
+- Descendant feature modules import Agent 025's action list, feature dimensions, short-cycle encoder, and main encoder. Keep those exports and their input order available while localizing the implementation.
+- A named feature-cache record is useful for the expanded action and position history, but update the training consumer at the same time and preserve when the pending transition is committed.
+
+## Lessons from the `Agent_027_combat_ddqn_short_cycle_staged_replay_agent` pass
+
+- Preserve the 65-value short-cycle input and the six action order; descendants reuse the feature exports, callback names, training constants, and scenario replay type.
+- Keep `ScenarioReplayBuffer.set_context`, `tags`, `indices_by_tag`, and `weights` stable. The training runner updates these each episode and reads the tag counts and active weights for its round records.
+- Keep the tuple feature-cache layout because descendant training wrappers read the feature vector at index zero. When localizing training, bind its fallback feature builder to the agent's own callbacks; the old imported topology trainer was bound to a 46-value feature builder.
+- Trace the active policy path before copying a re-exported safety module. This package's callbacks and training used the ordinary DQN safety search; its FQI safety re-export was not used by the policy or training path.
+- When a package becomes self-contained, update the training runner's source-hash list to track its local modules and drop the now-unused upstream feature file.
+
+## Lessons from the `Agent_028_combat_ddqn_dueling_256_agent` pass
+
+- A network ablation that forwards most of its behavior to a predecessor still needs local callbacks, config, features, replay, safety, and training code if the package must run independently. Copy the behavior it currently receives and keep the experiment's model change explicit.
+- Preserve the 65-value input and Agent 027's transition/cache/replay contracts. For the dueling network, retain the `trunk`, `value`, and `advantage` module names, 256-unit layers, mean-centered advantages, and checkpoint keys so existing weights and optimizer state keep their expected structure.
+- Keep the `dueling_256_checkpoint.pt` default, explicit runner model paths, DDQN selection, and resume path behavior while localizing setup and checkpoint helpers.
+- Once code is local, update the training runner's source-hash inputs to cover the local config, model, replay, and package entry file, and remove the predecessor paths that are no longer runtime dependencies.
+
+## Lessons from the `Agent_029_combat_ddqn_adversarial_window_agent` pass
+
+- Trace each safety import to its caller when a package uses more than one safety implementation. Agent 029's action mask and training use the ordinary DQN survival rules, while its 46-value base representation and opponent-window features use those shared movement/blast rules plus opponent reachability. Keep the opponent response as a learned feature rather than adding it to the action veto.
+- Preserve the 101-value order: 46 combat/topology values, 19 short-cycle values, then six opponent-window values for each of the six ordered actions. Keep feature exports used by Agents 030, 031, and 032, including the action list, `state_to_features`, and `short_cycle_features`.
+- When copying training locally, preserve the scenario replay interface and callback cache tuple because the training code and descendants consume them. Keep `MODEL_PATH`, `RESUME_PATH`, and callback exports available; Agent 030 sets those module values before delegating setup.
+- Hash the new agent-local config, model, replay, entry point, and base feature module in its training manifest. Keep Agent 029 source hashes for descendant agents that still import its callbacks or features.
+
+## Lessons from the `Agent_030_combat_ddqn_escape_replay_agent` pass
+
+- When removing a predecessor import, copy the behavior Agent 030 actually received through its callbacks, feature modules, replay base, and trainer. Keep its 101-value feature order, action order, checkpoint filename, and DDQN network structure intact.
+- Preserve the replay context API and the 20% `combat_escape` sample share. Set the transition tag before adding a transition and keep clearing it after each add so a later move does not inherit the previous tag.
+- Keep the 8-slot feature-cache tuple and commit pending transitions only after the next decision state's features are cached. Bind fallback next-feature construction to Agent 030's own callback module so it uses the matching 101-value representation.
+- Preserve the training constants and replay class exported from `train.py`; Agents 031, 032, and later descendants read those names. Check descendant source imports before narrowing a module's public surface.
+- Once the package is standalone, hash its local callbacks, feature modules, safety, config, model, replay, training, and package entry files in the runner. Descendants that import Agent 030 need those local paths in their own manifests.
+
+## Lessons from the `Agent_031_combat_ddqn_offensive_escape_agent` pass
+
+- Keep the 101 adversarial-window values in their established order and append the 12 offensive escape values. The checkpoint migration pads the first network layer from 101 to 113 inputs, so feature order and dimension remain a weight compatibility contract.
+- Localize the callback, safety, model, replay, and training code together. Agent 031 used a six-field feature-cache tuple from Agent 029, so its copied trainer must use Agent 031's own `next_features` when it needs to build a fallback state.
+- Preserve the `offensive_escape_checkpoint.pt` filename, Agent 030's combat escape replay tag and 20% sample share, and the trainer exports used by the runner. Keep the dedicated checkpoint preparation script in the run manifest, and hash Agent 031's local modules after removing upstream package imports.
+
+## Lessons from the `Agent_032_combat_ddqn_optimized_features_agent` pass
+
+- Preserve the 113-value order: the 46 base values, 19 short-cycle values, 36 opponent-window values, then 12 offensive summaries. Keep the optimized shared opponent envelope and local survivor search as implementation changes only.
+- Keep `ScenarioReplayBuffer`'s preallocated arrays, tag membership, compatibility views, `TransitionBatch` fields, and reusable `sample_torch` path. Later agents import these replay and feature APIs, so retain their names and behavior while localizing dependencies.
+- Bind the copied trainer to Agent 032's own callbacks and replay module. Its pending-transition cache uses the six-field Agent 029 layout, and the trainer fallback must call the matching local `next_features` function.
+- Update Agent 032's run manifest to hash its local modules and remove its upstream hashes. Keep Agent 032's feature and replay hashes in descendant manifests where those agents still import them.
+
+## Lessons from the `Agent_033_population_frozen_agent` pass
+
+- In a thin callback wrapper, inspect the delegated `setup` function: it may overwrite fields the wrapper assigned first. Bind local feature modules in the setup implementation that actually runs.
+- A frozen policy needs its inference dependency closure locally—callbacks, features, safety, model, and config—but does not need replay or training modules. Keep its checkpoint path and serialization format aligned with the paired learner.
+
+## Lessons from the `Agent_034_compact_fqi_agent` pass
+
+- Localize the complete safety dependency path: Agent 034 used combat FQI safety through both its policy mask and its reward calculation, and its crate route features also imported a combat FQI helper.
+- Preserve the 28-value feature order, `compact-routes-history-v2` schema, six-tree checkpoint, and the decision snapshot lookup at `new_state["step"] + 1`. The engine reports the post-action state with the old decision's step number.
+
+## Lessons from the `Agent_035_compact_fqi_symmetry_agent` pass
+
+- The D4 transform depends on Agent 035's 28-value layout: four action-aligned route groups, the directional part of the previous-action one-hot, and invariant bomb/history values. Keep the transform offsets aligned with the feature encoder.
+- Resume checkpoints include replay records, RNG state, counters, and fit diagnostics as well as trees. Keep the schema tuple and serialized field names stable; load the training schema lazily in callbacks to avoid the callbacks/training import cycle.
+
+## Lessons from the `Agent_036_compact_fqi_robust_agent` pass
+
+- Preserve the 28-value order: eight coin-route values, eight feasible-crate-route values, bomb availability/yield/escape count, seven previous-action flags, recent visits, and progress bucket. The symmetry transform depends on those directional offsets.
+- Agent 038 and Agent 040's original source imported Agent 036's route helpers. Agent 040 now keeps only the `candidate_crate_tiles` helper it uses; keep Agent 036's `movement_routes`, `feasible_crate_tiles`, and `candidate_crate_tiles` interfaces stable for current consumers.
+- The bomb-escape feature counts safe immediate follow-up actions from the same timed safety search used by the policy. Keep that shared timeline and the useful-bomb filter intact; remove an obsolete safety helper only after checking all package consumers.
+- Keep Agent 036's full checkpoint schema and saved training-state keys stable. It stores replay, RNG state, progress counters, fit diagnostics, and replay weights alongside the trees.
+
+## Lessons from the `Agent_037_tournament_fast_ddqn_agent` pass
+
+- Preserve Agent 037's 101-input layout as 46 base values, 19 short-cycle values, then 36 opponent-window values; later packages import its feature exports.
+- Keep the callback's six-field feature-cache tuple, 8-step histories, pending-transition timing, combat escape tag, and 20% replay share stable while localizing its callbacks and trainer.
+- Copy the safety and feature helpers Agent 037 actually used into its package. Keep DQN model parameter names, checkpoint fields, tournament checkpoint name, and DDQN selection intact.
+- Once standalone, hash Agent 037's local package entry point, base features, config, model, and replay in the runner. Retain Agent 037 feature hashes in descendant manifests that still import its encoder.
+
+## Lessons from the `Agent_038_symmetric_population_ddqn_agent` pass
+
+- Preserve the 117-value order: Agent 037's 101-value prefix followed by eight coin-route values and eight feasible-crate-route values. The route targets depend on Agent 036's opponent-aware bomb-survival search.
+- Keep the D4 action and feature permutations aligned with the vector offsets. Recompute the nearest-crate direction triplet after transformation because its breadth-first search uses direction order to break ties.
+- When warm-starting from Agent 037, pad the first layer's 16 new columns and matching Adam moments with zeros. Keep policy-only warm starts resetting the target, optimizer state, counters, and exploration schedule.
+- Preserve the 10% combat-escape replay share and transition tagging. Keep the standard DDQN action mask and the route-specific survival search as separate local implementations.
+- Hash Agent 038's local modules in its runner manifest. Descendants that import its wide feature interface should hash the local feature and safety modules they execute.
+
+## Lessons from the `Agent_039_compact_audit_ddqn_agent` pass
+
+- Preserve the 104-value mapping from Agent 038: keep the selected combat, topology, history, opponent-response, and route columns in order, then insert the state-wide armed-opponent flag at the expected position. Keep the 117-to-104 first-layer and optimizer-state migration aligned with that mapping.
+- For a standalone compact successor, keep the wide source encoder and its route-specific survival search local, then apply the compact mapping in the package's feature module. Keep ordinary action masking and route feasibility as separate safety paths.
+- Preserve the 10% combat-escape replay share, scenario replay API, six-action order, callback cache layout, and checkpoint conversion exports used by Agent 040.
+- Hash Agent 039's local modules in its runner manifest. Agent 040 originally forwarded checkpoint conversion to Agent 039; after localizing that helper, hash the Agent 040 checkpoint module and retain the Agent 039 hash only for agents that still import it.
+
+## Lessons from the `Agent_040_optimized_compact_ddqn_agent` pass
+
+- Keep Agent 040's direct 104-value encoder and per-state `StateContext` cache together. Descendants use its `StateContext`, `ACTIONS`, `MOVE_DELTAS`, feature size, action-mask callback, symmetry transforms, replay batch, and safety exports.
+- Copy the helper implementations into Agent 040 and use package-relative imports so its feature, safety, symmetry, checkpoint, model, and replay paths do not depend on another agent at runtime.
+- Preserve Agent 040's dense replay index pool and 20% combat-escape sample share. The 20% value comes from Agent 040's starting replay import; Agent 039 uses 10%, despite the stated implementation lineage.
+- Keep the 117-to-104 checkpoint conversion and Agent 040's migration and warm-start labels local. Normal setup continues to load the configured checkpoint directly and does not invoke conversion.
+- When localizing a base used by later agents, update the runner's source hashes for that package and include each local Agent 040 module its descendants import in their manifests. Remove old dependency hashes only when no remaining descendant import path uses them.
+- Static source checks can establish syntax, package-relative imports, and the public names consumed by descendants. They do not establish evaluation parity; do not run evaluation unless requested.
+
+## Lessons from the `Agent_041_dynamic_nav_ddqn_agent` pass
+
+- Preserve the 122-value order: Agent 040's 104 values, then six signed coin-route progress values, six reachability flags, and six normalized destination-visit counts. Each six-value block follows `UP`, `RIGHT`, `DOWN`, `LEFT`, `WAIT`, `BOMB`; symmetry transforms must permute only the four directions and leave `WAIT` and `BOMB` in place.
+- Keep navigation as observation data. The existing safety candidate set still controls final action selection, and the optional 104-to-122 checkpoint warm start zero-pads the added input columns and matching optimizer state.
+- For a self-contained successor, move the base feature/context, replay, symmetry, safety, callback, model, and training implementations into the package. Keep descendant-facing names such as `StateContext`, `MOVE_DELTAS`, and `_navigation_features` available from the local feature module.
+- A thin callback wrapper can mutate another package's model-path and checkpoint-loader globals. Copy the setup path locally, preserve its feature-size and checkpoint checks, and apply the optional checkpoint expansion inside the local setup.
+- When localizing training, compare imported constants, reward terms, pending-transition timing, replay tagging, epsilon counters, and checkpoint fields. Remove setup work whose object is immediately replaced only after confirming it does not advance a shared RNG or alter retained state.
+- Hash every local Agent 041 runtime module in its runner manifest. Keep the Agent 041 feature hash in descendant manifests because Agents 042 and 043 import that feature interface; remove its former upstream hashes only from Agent 041's own manifest.
+- Static checks confirmed the feature API, local imports, and source structure only. No tests or evaluation were run, so evaluation parity remains unverified.
+
+## Lessons from the `Agent_042_combat_progress_ddqn_agent` pass
+
+- Preserve the 140-value input order: Agent 040's 104-value base, Agent 041's 18 navigation values, then 18 combat-progress values. Keep all six-action blocks in `UP`, `RIGHT`, `DOWN`, `LEFT`, `WAIT`, `BOMB` order, and transform those blocks consistently under symmetry augmentation.
+- When localizing a descendant, copy its actual transitive runtime dependencies into the package and use package-relative imports. Keep Agent 043's expected feature, callback, replay, symmetry, checkpoint, and training exports available from Agent 042.
+- Retain Agent 042's solo and combat epsilon schedules, coin-and-score progress signature, position/action history, and combat-episode accounting when replacing inherited callback or training setup.
+- Compare copied shared helpers with the specific source version Agent 042 used. Similar names across agents can hide changed behavior; the bomb-value helper and replay settings need to match this package's prior behavior.
+- Hash every local Agent 042 runtime module in its own runner manifest. For descendants that import Agent 042 at runtime, include the local modules in their source-hash closure and remove upstream hashes only after tracing all remaining imports.
+- Static checks can verify feature order, exports, imports, and source structure. No tests or evaluation were run for this pass, so evaluation parity remains unverified.
+
+## Lessons from the `Agent_043_novelty_credit_ddqn_agent` pass
+
+- Keep the 146-value input as Agent 042's 140 values followed by six action-aligned novelty values. The novelty values use the existing candidate mask and rolling position history; symmetry augmentation must permute this final block with the earlier action blocks.
+- Preserve Agent 043's event-attributed progress clock, solo coin and score fallback, bounded loop guard, separate solo and combat exploration schedules, and three-step return queue. Its pending transition is committed after the next decision state's features are cached.
+- Replace inherited setup and checkpoint globals with local setup, model, and checkpoint code. Warm starts from 104, 122, or 140 inputs must pad the first network layer and matching optimizer state to 146 inputs; a 146-input checkpoint remains unchanged.
+- Trace inherited reward functions to their own imports. Agent 043's old combat-DQN reward reference used safety helpers that were absent from that module, so its local trainer now uses the same reward terms with its own safety imports before applying combat potential shaping. This repairs that training path; source review alone cannot establish prior training parity.
+- Keep the replay buffer's 20% combat-escape share and runner-facing training exports. Because Agent 043 intentionally retains its Agent 042 and combat-DQN dependencies, keep those upstream modules in its runner source-hash closure.
+- Static source checks confirmed local imports, retained policy functions, feature layout, and syntax. No evaluation was run, so evaluation parity remains unverified.
+- If the submitted Agent 047 copy is the standalone version, Agent 043 can keep its original Agent 042 and combat-DQN dependencies. A follow-up readability pass only needs to remove comments and docstrings; preserving those imports keeps the historical experimental lineage visible.
+
+## Lessons from the `agent_047` pass
+
+- The packaged continuation already keeps its runtime imports inside `agent_047`. Keep the bundled `training.pkl` path, 146-value feature order, feature schema, checkpoint migration labels, safety rules, symmetry maps, and three-step replay behavior as source contracts.
+- Remove stale predecessor prose and use the current package's names for internal state. A local context cache does not need an Agent 043 name, and a one-use alias for `QNetwork` adds no useful choice.
+- Define solo and combat exploration schedules once in callbacks, then import the same constants into training while preserving its exported names. This prevents the policy and training metadata from drifting apart.
+- Compare edited function bodies with the package's own starting source after excluding docstrings. This pass changed the local context name, removed the model-class alias, and corrected one feature error message; the remaining function bodies stayed the same. Static review does not establish evaluation parity.
+
+## Lessons for requested before/after evaluation checks
+
+- Run an evaluation comparison only when requested. Use the pre-edit source commit as the baseline in an isolated checkout, and run it separately from the edited working tree.
+- Use the same trained checkpoint for both versions whenever it is available. Match the runner, scenario, board seeds, action seeds, seats, opponents, step limit, and relevant environment settings; keep outputs in separate temporary directories.
+- Compare outcomes per game and per seed, including policy metrics and safety statistics. Ignore elapsed-time fields when checking behavioral equality because runtime measurements vary between runs.
+- If the trained checkpoint named by a prior manifest is unavailable, verify the path before substituting anything. A deterministic initialized checkpoint shared by both versions can provide a quick runtime comparison, but label it as a source-behavior check; it does not establish that the trained policy retains its prior evaluation result. Ask for the missing checkpoint to confirm trained-policy parity.
+- Report the baseline commit, evaluation settings, matched metrics, output locations, and any limitation that changes what the comparison can establish.
